@@ -1,0 +1,86 @@
+// ===== MOBILE NAVIGATION =====
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+const navLinksItems = document.querySelectorAll('.nav-links a');
+
+// Toggle mobile menu
+const toggleMenu = () => {
+  navLinks.classList.toggle('active');
+  burger.classList.toggle('active');
+};
+
+// Close mobile menu when link is clicked
+const closeMenu = () => {
+  navLinks.classList.remove('active');
+  burger.classList.remove('active');
+};
+
+// Event listeners
+burger.addEventListener('click', toggleMenu);
+navLinksItems.forEach(item => item.addEventListener('click', closeMenu));
+
+// ===== YOUR ORIGINAL p5.js CODE =====
+var points = [];
+var speedMultiplier = 0.005;
+var r1, r2, g1, g2, b1, b2;
+
+function setup() {
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent('p5-container');
+  angleMode(DEGREES);
+  noiseDetail(1);
+  restartSketch();
+  canvas.mousePressed(changeColors);
+  setInterval(restartSketch, 5000);
+}
+
+function restartSketch() {
+  background(10);
+  points = [];
+  var density = 40;
+  var space = width / density;
+
+  for (var x = 0; x < width; x += space) {
+    for (var y = 0; y < height; y += space) {
+      var p = createVector(x + random(-10, 10), y + random(-10, 10));
+      points.push(p);
+    }
+  }
+
+  r1 = random(255);
+  r2 = random(255);
+  g1 = random(255);
+  g2 = random(255);
+  b1 = random(255);
+  b2 = random(255);
+  speedMultiplier = random(0.002, 0.01);
+}
+
+function draw() {
+  noStroke();
+  for (var i = 0; i < points.length; i++) {
+    var r = map(points[i].x, 0, width, r1, r2);
+    var g = map(points[i].y, 0, height, g1, g2);
+    var b = map(points[i].x, 0, width, b1, b2);
+    var alpha = map(dist(width/2, height/2, points[i].x, points[i].y), 0, 500, 255, 0);
+
+    fill(r, g, b, alpha);
+    var angle = map(noise(points[i].x * speedMultiplier, points[i].y * speedMultiplier), 0, 1, 0, 720);
+    points[i].add(createVector(cos(angle), sin(angle)));
+    var size = map(width, 0, 1920, 1, 4);
+    ellipse(points[i].x, points[i].y, size);
+  }
+}
+
+function changeColors() {
+  r1 = random(255);
+  r2 = random(255);
+  g1 = random(255);
+  g2 = random(255);
+  b1 = random(255);
+  b2 = random(255);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
