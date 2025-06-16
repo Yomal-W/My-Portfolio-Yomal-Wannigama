@@ -320,19 +320,17 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(168,139,255,0.2);
   border-radius: 16px;
-  padding: 3.5rem 1.5rem 1.5rem 1.5rem;
+  padding: 2rem 1.5rem 1.5rem;
   color: rgba(255, 255, 255, 0.9);
   font-family: 'Overpass', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  position: relative;
 }
 
 .card-label {
-  position: absolute;
-  top: 12px;
-  left: 20px;
+  display: inline-block;
+  margin-bottom: 0.8rem;
   padding: 0.35rem 0.85rem;
   border-radius: 8px;
   font-size: 0.85rem;
@@ -348,6 +346,10 @@
 
 .card-label.limitation {
   background-color: #FFB3C6;
+}
+
+.card-content {
+  margin-top: 0.2rem;
 }
 
 @media (max-width: 768px) {
@@ -533,28 +535,28 @@
   </div>
 </section>
 
-<!--Competitior Analysis-->
+<!-- Competitor Analysis -->
 <section class="project-section competitor-analysis">
   <div class="project-text-blur">
     <h2>Competitor Analysis</h2>
 
     <!-- F1 Kids -->
     <div class="competitor-block">
-      <h3><span class="highlight-purple">F1 Kids</span></h3>
+      <h3 class="competitor-title">F1 Kids</h3>
       <div class="competitor-columns">
         <img src="images/skysports-f1-kids-f1_6286688.jpg" alt="F1 Kids Interface" class="competitor-img side" />
         <div class="text-cards">
           <div class="competitor-card">
-            <span class="card-label strength">Strengths</span>
-            <p>
+            <div class="card-label strength">Strengths</div>
+            <div class="card-content">
               F1 Kids tailors Formula 1 content specifically for a younger audience, using simplified language, engaging animations, and interactive elements that make complex motorsport rules understandable. It also introduces children to the broader context of the sport, fostering a connection to F1.
-            </p>
+            </div>
           </div>
           <div class="competitor-card">
-            <span class="card-label limitation">Limitations</span>
-            <p>
+            <div class="card-label limitation">Limitations</div>
+            <div class="card-content">
               While F1 Kids effectively engages children in a single sport, it lacks the breadth needed to handle the diverse range of sports found in the Olympics. Additionally, F1 Kids is heavily specialized for motorsport fans and might not appeal to a broader audience, such as children unfamiliar with or uninterested in racing.
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -562,47 +564,50 @@
 
     <!-- NFL on Nickelodeon -->
     <div class="competitor-block">
-      <h3><span class="highlight-purple">NFL on Nickelodeon</span></h3>
+      <h3 class="competitor-title">NFL on Nickelodeon</h3>
       <div class="competitor-columns">
         <img src="images/nfl-nickmas-game_3.png" alt="NFL on Nickelodeon Interface" class="competitor-img side" />
         <div class="text-cards">
           <div class="competitor-card">
-            <span class="card-label strength">Strengths</span>
-            <p>
+            <div class="card-label strength">Strengths</div>
+            <div class="card-content">
               NFL on Nickelodeon provides an interactive and entertaining experience, using slime animations, kid-friendly commentators, and simplified rule explanations to make American football accessible to young viewers. It has successfully made a complex, rule-heavy sport more appealing and easier to follow.
-            </p>
+            </div>
           </div>
           <div class="competitor-card">
-            <span class="card-label limitation">Limitations</span>
-            <p>
+            <div class="card-label limitation">Limitations</div>
+            <div class="card-content">
               Similar to F1 Kids, the NFL on Nickelodeon is tailored to a single sport (American football) and uses specific cultural references familiar to a Western audience, which may not resonate globally. Its highly stylized approach may not translate well to other sports that require different forms of explanation and engagement.
-            </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- NFL on Nickelodeon -->
+    <!-- YouTube Kids -->
     <div class="competitor-block">
-      <h3><span class="highlight-purple">YouTube Kids</span></h3>
+      <h3 class="competitor-title">YouTube Kids</h3>
       <div class="competitor-columns">
-        <img src="images/youtube-kids.JPG" alt="NFL on Nickelodeon Interface" class="competitor-img side" />
+        <img src="images/youtube-kids.JPG" alt="YouTube Kids Interface" class="competitor-img side" />
         <div class="text-cards">
           <div class="competitor-card">
-            <span class="card-label strength">Strengths</span>
-            <p>
+            <div class="card-label strength">Strengths</div>
+            <div class="card-content">
               YouTube Kids offers a vast library of content, covering a range of sports with tailored educational videos for children. The platform is highly accessible and allows kids to explore various sports at their own pace. It provides a safe environment where kids can learn about sports through video.
-            </p>
+            </div>
           </div>
           <div class="competitor-card">
-            <span class="card-label limitation">Limitations</span>
-            <p>
+            <div class="card-label limitation">Limitations</div>
+            <div class="card-content">
               While YouTube Kids has extensive content, it lacks real-time interactivity and live engagement. Children may not experience the excitement of watching sports as they happen, and the content is often pre-recorded, limiting opportunities for live feedback or dynamic explanations during events. Additionally, content on YouTube Kids varies in quality and consistency, which can affect how well sports are explained.
-            </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
 
 
 
