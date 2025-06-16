@@ -69,6 +69,303 @@
         padding-top: 100px;
       }
     }
+
+/* Problem section styling */
+.project-section {
+  padding: 60px 5%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  position: relative;
+}
+
+.project-text-blur.highlighted-problem {
+  max-width: 880px;
+  padding: 2rem 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  border-left: 6px solid #FFCB05; /* Olympic gold */
+}
+
+.project-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.project-section p {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 1.2rem;
+}
+
+/*Research questions section styling */
+.research-questions-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.research-questions-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.research-questions-section p {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+}
+
+.questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.question-card {
+  background: linear-gradient(135deg, rgba(168,139,255,0.2), rgba(255,255,255,0.05));
+  border: 1px solid rgba(168,139,255,0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.95);
+  line-height: 1.6;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.question-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(168, 139, 255, 0.25);
+}
+
+/* Highlight effect */
+.highlight {
+  background: rgba(255, 203, 5, 0.2); /* subtle yellow */
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* Online Ethnography section styling */
+.ethnography-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.ethnography-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.ethnography-block {
+  margin-top: 2.5rem;
+}
+
+.ethnography-block h3 {
+  font-size: 1.3rem;
+  font-family: 'Rubik', sans-serif;
+  color: #FFCB05;
+  margin-bottom: 0.5rem;
+}
+
+.ethnography-block p {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.ethnography-img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  margin-top: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Accent highlights */
+.highlight {
+  background: rgba(255, 203, 5, 0.15);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.highlight-purple {
+  color: #c1a8ff;
+  font-weight: 500;
+}
+
+
+/* Secondary Research section styling */
+.secondary-research .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.secondary-research h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.research-block {
+  margin-top: 2rem;
+}
+
+.research-block h3 {
+  font-size: 1.25rem;
+  font-family: 'Rubik', sans-serif;
+  color: #A88BFF;
+  margin-bottom: 0.5rem;
+}
+
+.research-block p {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.secondary-research .highlight {
+  background: rgba(168, 139, 255, 0.2); /* Soft purple glow */
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* Competitor Analysis section styling */
+.competitor-analysis .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.competitor-analysis h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.competitor-block {
+  margin-bottom: 4rem;
+}
+
+.competitor-block h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #C1A8FF;
+}
+
+.competitor-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.competitor-img.side {
+  flex: 1 1 50%;
+  max-width: 480px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  
+  /* Centering */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-cards {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.competitor-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(168,139,255,0.2);
+  border-radius: 16px;
+  padding: 3.5rem 1.5rem 1.5rem 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Overpass', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.card-label {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  padding: 0.35rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  color: #0e0e0e;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.card-label.strength {
+  background-color: #c1a8ff;
+}
+
+.card-label.limitation {
+  background-color: #FFB3C6;
+}
+
+@media (max-width: 768px) {
+  .competitor-columns {
+    flex-direction: column;
+  }
+
+  .competitor-img.side {
+    max-width: 100%;
+  }
+
+  .text-cards {
+    width: 100%;
+  }
+}
+
+
+
   </style>
 </head>
 
@@ -112,6 +409,207 @@
       <img src="images/olympics-phone-gif.gif" alt="Olympics App Demo" />
     </div>
   </section>
+
+<section class="project-section">
+  <div class="project-text-blur highlighted-problem">
+    <h2>The Problem</h2>
+    <p>
+      The Olympics feature a <span class="highlight">diverse array of sports</span>, many of which are 
+      <strong>unfamiliar to young viewers</strong>. As these children encounter 
+      <span class="highlight">lesser-known sports</span>, they often face 
+      <strong>confusion around the rules</strong>, leading to 
+      <span class="highlight">disengagement</span> and a <strong>lack of connection</strong> 
+      with the events.
+    </p>
+    <p>
+      Without <span class="highlight">accessible</span> and 
+      <span class="highlight">dynamic educational tools</span>, young spectators miss out on a 
+      <strong>deeper appreciation of the games</strong>, and the 
+      <span class="highlight">Olympics’ educational potential</span> is diminished.
+    </p>
+  </div>
+</section>
+
+<!-- Research Questions Section -->
+<section class="project-section research-questions-section">
+  <div class="project-text-blur">
+    <h2>Research Questions</h2>
+    <p>These guiding questions shaped our investigation into how young audiences interact with Olympic content and what design interventions can improve their experience:</p>
+
+      <div class="questions-grid">
+        <div class="question-card">
+          What challenges do children watching the Olympics face in understanding the rules and gameplay?
+        </div>
+        <div class="question-card">
+          What impact does the lack of interactive tools, real-time statistics and child-friendly explanations have on children's engagement and enjoyment of Olympic broadcasts?
+        </div>
+        <div class="question-card">
+          What types of interactive digital elements do children enjoy?
+        </div>
+        <div class="question-card">
+          To what extent do existing broadcast platforms and applications meet the needs of children in providing accessible and engaging explanations of Olympic sports, and how can these be improved?
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- Online Ethnography Section -->
+<section class="project-section ethnography-section">
+  <div class="project-text-blur">
+    <h2>Online Ethnography</h2>
+    <p>
+      To support the problem space, I conducted an online ethnography using community insights from 
+      <strong class="highlight-purple">Reddit</strong> and 
+      <strong class="highlight-purple">Quora</strong>. These platforms offered unfiltered perspectives 
+      from parents and general users about why children struggle to engage with sports broadcasts.
+    </p>
+
+    <div class="ethnography-block">
+      <h3>Children/toddlers watching sports on TV – Reddit</h3>
+      <p>
+        A Reddit user highlighted the impact of traditional TV on young viewers, emphasizing 
+        <span class="highlight">overstimulation, reduced social interaction</span>, and 
+        <span class="highlight">diminished learning time</span>. This insight points to the need for 
+        more <strong>mindful, balanced digital experiences</strong>.
+      </p>
+      <img src="images/reddit1 - olympics.JPG" alt="Reddit ethnography" class="ethnography-img" />
+    </div>
+
+    <div class="ethnography-block">
+      <h3>Why don't children like watching sports on TV? – Quora</h3>
+      <p>
+        On Quora, users shared how children often feel frustrated by the lack of interactivity in 
+        sports broadcasts. Compared to video games where they have agency, 
+        <span class="highlight">TV makes them passive observers</span>, which 
+        <strong>limits engagement and emotional connection</strong>.
+      </p>
+      <img src="images/quora1 - olympics.JPG" alt="Quora ethnography" class="ethnography-img" />
+    </div>
+  </div>
+</section>
+
+<!--Secondary research-->
+<section class="project-section secondary-research">
+  <div class="project-text-blur">
+    <h2>Secondary Research</h2>
+    <p>
+      To complement our ethnographic insights, we reviewed research articles and opinion pieces that explore how interactive features can support children's engagement with sports and the Olympics. These articles reinforce our problem scenario by showing how participation, emotional connection, and interactivity improve learning and retention for young viewers.
+    </p>
+
+    <div class="research-block">
+      <h3>How to Make Watching Sport at Home as Immersive as Possible</h3>
+      <p>
+        This article highlights how features like <span class="highlight">live stats, fan polls, and discussions</span> enhance broadcasts by making them more <strong>engaging and participatory</strong>. These tools help bridge the gap between <span class="highlight">passive viewing</span> and <span class="highlight">active interaction</span>, especially effective for kids raised on interactive platforms.
+      </p>
+    </div>
+
+    <div class="research-block">
+      <h3>Investigating the Use of Interactive Features for Children’s Television Programming</h3>
+      <p>
+        This research explores how <span class="highlight">characters directly asking questions</span> and interactive segments improve learning. These features help children <strong>retain knowledge and stay engaged</strong>, especially when watching unfamiliar or complex content. It strongly supports our aim to use interactive tools during Olympic broadcasts.
+      </p>
+    </div>
+
+    <div class="research-block">
+      <h3>Why It’s Important to Encourage Your Child to Watch the Olympics</h3>
+      <p>
+        This article emphasizes that the Olympics can teach values like <span class="highlight">heroism, perseverance, and patriotism</span>. Interactive features help <strong>translate these values</strong> to kids in more accessible ways, improving their emotional connection to the events.
+      </p>
+    </div>
+
+    <div class="research-block">
+      <h3>From Sedentary Viewer to Active Athlete</h3>
+      <p>
+        Watching the Olympics has been shown to <span class="highlight">inspire children to try new sports</span>. In Australia, admiration for athletes drives motivation. This underscores how <strong>interactive experiences can amplify inspiration</strong> and turn passive watching into active interest.
+      </p>
+    </div>
+
+    <div class="research-block">
+      <h3>A Lot Can Be Learned from Watching the Olympics with the Kids</h3>
+      <p>
+        This article discusses how <span class="highlight">interactive storytelling</span> can help bridge knowledge gaps and make Olympic values more relatable. With tools that foster <strong>emotional understanding</strong>, even unfamiliar sports become meaningful.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--Competitior Analysis-->
+<section class="project-section competitor-analysis">
+  <div class="project-text-blur">
+    <h2>Competitor Analysis</h2>
+
+    <!-- F1 Kids -->
+    <div class="competitor-block">
+      <h3><span class="highlight-purple">F1 Kids</span></h3>
+      <div class="competitor-columns">
+        <img src="images/skysports-f1-kids-f1_6286688.jpg" alt="F1 Kids Interface" class="competitor-img side" />
+        <div class="text-cards">
+          <div class="competitor-card">
+            <span class="card-label strength">Strengths</span>
+            <p>
+              F1 Kids tailors Formula 1 content specifically for a younger audience, using simplified language, engaging animations, and interactive elements that make complex motorsport rules understandable. It also introduces children to the broader context of the sport, fostering a connection to F1.
+            </p>
+          </div>
+          <div class="competitor-card">
+            <span class="card-label limitation">Limitations</span>
+            <p>
+              While F1 Kids effectively engages children in a single sport, it lacks the breadth needed to handle the diverse range of sports found in the Olympics. Additionally, F1 Kids is heavily specialized for motorsport fans and might not appeal to a broader audience, such as children unfamiliar with or uninterested in racing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NFL on Nickelodeon -->
+    <div class="competitor-block">
+      <h3><span class="highlight-purple">NFL on Nickelodeon</span></h3>
+      <div class="competitor-columns">
+        <img src="images/nfl-nickmas-game_3.png" alt="NFL on Nickelodeon Interface" class="competitor-img side" />
+        <div class="text-cards">
+          <div class="competitor-card">
+            <span class="card-label strength">Strengths</span>
+            <p>
+              NFL on Nickelodeon provides an interactive and entertaining experience, using slime animations, kid-friendly commentators, and simplified rule explanations to make American football accessible to young viewers. It has successfully made a complex, rule-heavy sport more appealing and easier to follow.
+            </p>
+          </div>
+          <div class="competitor-card">
+            <span class="card-label limitation">Limitations</span>
+            <p>
+              Similar to F1 Kids, the NFL on Nickelodeon is tailored to a single sport (American football) and uses specific cultural references familiar to a Western audience, which may not resonate globally. Its highly stylized approach may not translate well to other sports that require different forms of explanation and engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NFL on Nickelodeon -->
+    <div class="competitor-block">
+      <h3><span class="highlight-purple">YouTube Kids</span></h3>
+      <div class="competitor-columns">
+        <img src="images/youtube-kids.JPG" alt="NFL on Nickelodeon Interface" class="competitor-img side" />
+        <div class="text-cards">
+          <div class="competitor-card">
+            <span class="card-label strength">Strengths</span>
+            <p>
+              YouTube Kids offers a vast library of content, covering a range of sports with tailored educational videos for children. The platform is highly accessible and allows kids to explore various sports at their own pace. It provides a safe environment where kids can learn about sports through video.
+            </p>
+          </div>
+          <div class="competitor-card">
+            <span class="card-label limitation">Limitations</span>
+            <p>
+              While YouTube Kids has extensive content, it lacks real-time interactivity and live engagement. Children may not experience the excitement of watching sports as they happen, and the content is often pre-recorded, limiting opportunities for live feedback or dynamic explanations during events. Additionally, content on YouTube Kids varies in quality and consistency, which can affect how well sports are explained.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+
+
 
   <script src="script.js"></script>
 </body>
