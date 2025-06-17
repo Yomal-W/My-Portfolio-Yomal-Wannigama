@@ -155,6 +155,19 @@
   box-shadow: 0 12px 30px rgba(168, 139, 255, 0.25);
 }
 
+@media (max-width: 768px) {
+  .questions-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .question-card {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+
 /* Highlight effect */
 .highlight {
   background: rgba(255, 203, 5, 0.2); /* subtle yellow */
@@ -364,6 +377,229 @@
   .text-cards {
     width: 100%;
   }
+}
+
+/* Interview Section */
+.interview-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.interview-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.method-justification {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 1.2rem;
+}
+
+.interview-questions h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.3rem;
+  color: #C1A8FF;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.interview-questions ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.interview-questions li {
+  margin-bottom: 1.2rem;
+}
+
+.interview-questions em {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+/* Survey Section */
+.survey-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.survey-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.survey-section-block h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.4rem;
+  color: #c1a8ff;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.survey-question-image h4 {
+  font-size: 1.1rem;
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.survey-question-image img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+}
+
+.open-ended-response-block h4 {
+  font-size: 1.1rem;
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.open-ended-response-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Overpass', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.open-ended-response-list li {
+  margin-bottom: 0.8rem;
+}
+
+.more-responses {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* Contextual Observations */
+.observation-table-wrapper {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.contextual-observation h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.observation-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.observation-table thead {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.observation-table th, .observation-table td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  vertical-align: top;
+}
+
+.observation-table td a {
+  color: #c1a8ff;
+  text-decoration: underline;
+}
+
+.observation-table td em {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-style: italic;
+}
+
+.observation-table .positive {
+  background: rgba(168, 255, 181, 0.07);
+  border-left: 4px solid #4CAF50;
+}
+
+.observation-table .negative {
+  background: rgba(255, 99, 99, 0.07);
+  border-left: 4px solid #f44336;
+}
+
+.contextual-observation .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07); /* Match other sections */
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.observation-key {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  flex-wrap: wrap;
+}
+
+.key-box {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+}
+
+.key-box.positive {
+  background-color: #4CAF50; /* green */
+}
+
+.key-box.negative {
+  background-color: #f44336; /* red */
+}
+
+.observation-table td a {
+  color: #c1a8ff; /* soft purple that matches your headings */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.observation-table td a:hover {
+  color: #ffffff; /* subtle white on hover */
+  text-decoration: underline;
 }
 
 
@@ -608,11 +844,189 @@
   </div>
 </section>
 
+<!-- Interview Section -->
+<section class="project-section interview-section">
+  <div class="project-text-blur">
+    <h2>Research Method: Interviews <span class="highlight-purple">(Attitudinal Data)</span></h2>
 
+    <p class="method-justification">
+      <strong>Interviews</strong> were selected as a primary research method to gain 
+      <span class="highlight">in-depth insights</span> into children's interactive experiences with 
+      <span class="highlight">digital sports broadcasts</span>, such as the Olympics. By engaging directly with the children, we could explore their 
+      <span class="highlight">thoughts, preferences, and challenges</span> in a conversational manner that allowed for 
+      <span class="highlight">follow-up questions</span> and <span class="highlight">clarifications</span>.
+    </p>
+
+    <p class="method-justification">
+      This method is particularly valuable when studying <strong>young users</strong>, as it enables the interviewer to 
+      <span class="highlight">adjust questions in real-time</span> based on the child's responses, ensuring that the data collected is both 
+      <strong>rich and nuanced</strong>. Additionally, interviews offer the opportunity to observe 
+      <span class="highlight">non-verbal cues</span>, such as facial expressions and body language, which can provide 
+      <strong>further context</strong> to the responses given.
+    </p>
+
+    <div class="interview-questions">
+      <h3>Interview Questions</h3>
+      <ul>
+        <li><strong>What are some of your favourite games, apps, or websites that you use regularly?</strong><br><em>Follow-up:</em> What specific features do you enjoy the most about these?</li>
+        <li><strong>Can you describe an interactive tool or game that you found really fun or engaging?</strong><br><em>Follow-up:</em> What made it enjoyable for you?</li>
+        <li><strong>Do you prefer exploring apps on your own or following step-by-step guidance?</strong><br><em>Follow-up:</em> Why do you prefer this approach?</li>
+        <li><strong>How do you feel when you customise things in an app or game?</strong><br><em>Follow-up:</em> Can you give an example of when you enjoyed doing this?</li>
+        <li><strong>What kind of animations or visual effects do you like to see?</strong><br><em>Follow-up:</em> How do these affect your experience?</li>
+        <li><strong>Do you enjoy interactive quizzes or challenges?</strong><br><em>Follow-up:</em> What kind do you find most engaging?</li>
+        <li><strong>How important is it to see real-time updates or changes?</strong><br><em>Follow-up:</em> Can you describe a moment when this helped?</li>
+        <li><strong>What kind of features do you enjoy using with friends?</strong><br><em>Follow-up:</em> What makes those fun together?</li>
+        <li><strong>Do you prefer features that help you learn something or just for fun?</strong><br><em>Follow-up:</em> Why?</li>
+        <li><strong>If you could design your own interactive app/game, what would it include?</strong><br><em>Follow-up:</em> Why are these features important to you?</li>
+      </ul>
+    </div>
+
+    
+  </div>
+</section>
+
+<!--Survey Part 1-->
+<section class="project-section survey-section">
+  <div class="project-text-blur">
+    <h2>Research Method: Survey <span class="highlight-purple">(Behavioural / Attitudinal Data)</span></h2>
+
+    <p class="method-justification">
+      The use of <strong>surveys</strong> complements the interviews by allowing for the collection of both 
+      <span class="highlight">behavioural</span> and <span class="highlight">attitudinal</span> data on a broader scale. 
+      The two-section design, with one part aimed at parents and the other at children, ensures a 
+      <strong>comprehensive understanding</strong> of the interaction between young users and digital platforms.
+    </p>
+    <p class="method-justification">
+      Parents' input on <span class="highlight">behavioural data</span>, derived from their observations of their children's 
+      engagement with broadcasts, provides an <strong>external perspective</strong> on how these interactions occur 
+      in a natural setting. Meanwhile, the <strong>children's responses</strong> in the attitudinal section offer direct insights 
+      into their <span class="highlight">feelings, preferences, and motivations</span>. Surveys are particularly effective in 
+      reaching a <strong>larger sample size</strong>, enabling the identification of common patterns and 
+      <span class="highlight">trends across different user experiences</span>.
+    </p>
+
+  <div class="survey-section-block">
+    <h3 class="survey-subheading">
+      Section 1: What challenges do children watching the Olympics face in understanding the rules and gameplay? - <i>Behavioural</i>
+    </h3>
+
+    <!-- Question 1 Heading and Image -->
+    <div class="survey-question-image">
+      <h4>Question 1: Which part of a sport’s rules does your child find most challenging to understand? (22 responses)</h4>
+      <img src="images/olympics-survey-part1-question1.JPG" alt="Survey question pie chart: Which part of a sport’s rules does your child find most challenging to understand?" />
+    </div>
+
+    <!-- Question 2 Open-Ended Results -->
+    <div class="open-ended-response-block">
+      <h4>Question 2: Can you describe a specific Olympic sport that your child found difficult to follow, and what aspects seemed to confuse them? (21 responses)</h4>
+      <ul class="open-ended-response-list">
+        <li><strong>Golf:</strong> Unsure how points added up and the score system.</li>
+        <li><strong>Tennis:</strong> Confused by sets, games, and score tracking. Differences between men’s and women’s rules.</li>
+        <li><strong>Skateboarding:</strong> Unclear how judges scored out of 100.</li>
+        <li><strong>Badminton:</strong> Scoring system and player position shifts in doubles.</li>
+        <li><strong>Archery:</strong> Confusion about why not always aiming center; wind explained.</li>
+        <li class="more-responses">…16 more responses not shown for brevity</li>
+      </ul>
+    </div>
+  </div>
+
+  <!--Survey Part 2-->
+  <div class="survey-section-block">
+    <h3 class="survey-subheading">
+      Section 2: What impact does the lack of interactive tools, real-time statistics, and child-friendly explanations have on children's engagement and enjoyment of Olympic broadcasts? - <i>Attitudinal</i>
+    </h3>
+
+    <!-- Question 10 -->
+    <div class="open-ended-response-block">
+      <h4>Question 10: How does the absence of interactive tools affect your interest in watching lesser-known Olympic sports? (11 responses)</h4>
+      <ul class="open-ended-response-list">
+        <li>Not much, unless there’s no UI indicating the score</li>
+        <li>It makes it harder to follow as some rules are unclear</li>
+        <li>Without knowledge on how the sport is played, watching it and trying to piece together the rules becomes difficult.</li>
+        <li>Boring. Don’t know who’s winning or how to win</li>
+        <li>It makes the game less exciting and engaging</li>
+        <li class="more-responses">…6 more responses not shown for brevity</li>
+      </ul>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="survey-question-image">
+      <h4>Question 13: What type of interactive tool or feature would make you more engaged while watching the Olympics? (10 responses)</h4>
+      <img src="images/olympics-survey-part2-question13.JPG" alt="Bar chart of interactive tools that engage children during Olympic viewing" />
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Contextual Observation -->
+<section class="project-section contextual-observation">
+  <div class="project-text-blur">
+    <h2>Research Method: Contextual Observation <span class="highlight-purple">(Behavioural Data)</span></h2>
+
+    <p>
+      Contextual observation was conducted to assess how children naturally engage with sports content across different platforms. This method revealed <span class="highlight">non-verbal confusion</span>, <strong>attempts to seek clarity</strong>, and moments of <strong>positive emotional engagement</strong> with specific UI features like overlays or animations. Observations were logged across platforms such as <strong>Olympics.com</strong>, <strong>YouTube Kids</strong>, and <strong>F1/NFL streams</strong>.
+    </p>
+
+    <!--Key-->
+    <div class="observation-key">
+      <span><span class="key-box positive"></span> Positive feedback</span>
+      <span><span class="key-box negative"></span> Negative feedback</span>
+    </div>
+
+    <div class="observation-table-wrapper">
+      <table class="observation-table">
+        <thead>
+          <tr>
+            <th>User Goal / Task</th>
+            <th>Interface Example</th>
+            <th>Kid 1 Behaviour</th>
+            <th>Kid 2 Behaviour</th>
+            <th>Kid 3 Behaviour</th>
+            <th>Kid 4 Behaviour</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Olympics 2024</td>
+            <td><a href="https://olympics.com/en/paris-2024/sports/golf" target="_blank">Olympics Golf Page</a></td>
+            <td class="negative">Frown, “What does this mean, I’m so confused.”<br><em>Interface lacks clarity, causing immediate confusion.</em></td>
+            <td class="negative">“Let me google the rules first.”<br><em>User needed external help due to missing in-platform guidance.</em></td>
+            <td class="negative">“Is it the least amount of hits to win the game?”<br><em>Interpretation: Indicates basic scoring logic was unclear.</em></td>
+            <td class="negative">“What does birdie and bogey mean?”<br><em>	Interpretation: Unfamiliar terminology made it hard to follow.</em></td>
+          </tr>
+          <tr>
+            <td>Watch Golf Final Round</td>
+            <td><a href="https://olympics.com/en/paris-2024/sports/golf" target="_blank">Olympics Golf</a></td>
+            <td class="negative">Confused watching golf.<br><em>Interpretation: Needs rule clarity.</em></td>
+            <td class="negative">Used tablet to search rules.<br><em>Interpretation: Info not easily available.</em></td>
+            <td class="negative">Unsure of rules/scoring system.<br><em>Interpretation: No visual explanation or overlays resulted in confusion.</em></td>
+            <td class="positive">“I like the highlights and range of sports.”<br><em>Interpretation: Terminology is foreign.</em></td>
+          </tr>
+          <tr>
+            <td>Watch F1 Kids</td>
+            <td><a href="https://www.youtube.com/watch?v=3CoHquh_GEo&t=39s" target="_blank">YouTube</a></td>
+            <td class="positive">“I like the statistic/leaderboard overlay.”</td>
+            <td class="negative">“None of the games have rule explanations.”<br><em>Interpretation: No rule guidance leads to confusion.</em></td>
+            <td class="positive">“Cartoon and animated characters are cool.”<br><em>Interpretation: Gamified aesthetics increased interest and accessibility.</em></td>
+            <td class="positive">“I like the child-friendly commentary.”<br><em>Interpretation: Tailored language helped understanding.</em></td>
+          </tr>
+          <tr>
+            <td>Watch NFL on Nickelodeon</td>
+            <td><a href="https://www.youtube.com/watch?v=lInnBPIootI&ab_channel=NFL" target="_blank">YouTube</a></td>
+            <td class="negative">“I’m not into rugby, I wanna watch basketball.”<br><em>Interpretation: Sport mismatch.</em></td>
+            <td class="positive">“SpongeBob! I like the 3D animation overlay.”<br><em>Interpretation: Familiar characters and effects kept attention.</em></td>
+            <td class="positive">“That’s Young Sheldon.”<br><em>Interpretation: Familiar actors helped engagement.</em></td>
+            <td class="positive">“The colours are so cool.”<br><em>Interpretation: Metaverse effects aid enjoyment.</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
 
   </div>
-</section>
+
 
 
 
