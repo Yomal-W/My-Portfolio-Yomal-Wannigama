@@ -104,6 +104,25 @@
   margin-bottom: 1.2rem;
 }
 
+.appendix-links {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.appendix-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.appendix-links a:hover {
+  color: #C1A8FF;
+  text-decoration: underline;
+}
+
 /*Research questions section styling */
 .research-questions-section .project-text-blur {
   max-width: 1000px;
@@ -365,19 +384,88 @@
   margin-top: 0.2rem;
 }
 
+.feature-comparison {
+  margin-top: 4rem;
+}
+
+.feature-table-heading {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.6rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.feature-scroll-container {
+  overflow-x: auto;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.feature-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: white;
+}
+
+.feature-table th, .feature-table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  vertical-align: top;
+}
+
+.feature-table thead {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.feature-table td:first-child {
+  font-weight: 600;
+  color: #C1A8FF;
+  width: 230px;
+}
+
+.feature-table td {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.feature-table td:before {
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .competitor-columns {
     flex-direction: column;
-  }
-
-  .competitor-img.side {
-    max-width: 100%;
+    align-items: center;
   }
 
   .text-cards {
     width: 100%;
   }
+
+  .competitor-card {
+    width: 100%;
+  }
+
+  .observation-table th,
+  .observation-table td {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .observation-key {
+    gap: 1rem;
+    font-size: 0.85rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
+
 
 /* Interview Section */
 .interview-section .project-text-blur {
@@ -501,6 +589,8 @@
 .observation-table-wrapper {
   overflow-x: auto;
   margin-top: 2rem;
+  overflow-x: auto;
+  width: 100%;
 }
 
 .contextual-observation h2 {
@@ -626,403 +716,497 @@
   <!-- Background Canvas -->
   <div id="p5-container"></div>
 
-  <!-- Content -->
-  <section class="project-hero-section">
-    <!-- Left: Text -->
-    <div class="project-text-blur">
-      <div class="project-text">
-        <h1>Olympics Companion App</h1>
-        <p>A dual-screen Olympic viewing experience that engages kids through gamified interactions, trivia, and live athlete overlays.</p>
-        <p class="meta">
-          <strong>Project type:</strong> Interactive TV + Mobile App<br>
-          <strong>Role:</strong> UX Designer, Researcher<br>
-          <strong>Tools:</strong> Figma, Illustrator, p5.js<br>
-          <strong>Duration:</strong> Q2 2025
+    <!-- Content -->
+    <section class="project-hero-section">
+      <!-- Left: Text -->
+      <div class="project-text-blur">
+        <div class="project-text">
+          <h1>Olympics Companion App</h1>
+          <p>A dual-screen Olympic viewing experience that engages kids through gamified interactions, trivia, and live athlete overlays.</p>
+          <p class="meta">
+            <strong>Project type:</strong> Interactive TV + Mobile App<br>
+            <strong>Role:</strong> UX Designer, Researcher<br>
+            <strong>Tools:</strong> Figma, Illustrator, p5.js<br>
+            <strong>Duration:</strong> Q2 2024
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Demo GIF -->
+      <div class="project-gif">
+        <img src="images/olympics-phone-gif.gif" alt="Olympics App Demo" />
+      </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section class="project-section">
+      <div class="project-text-blur highlighted-problem">
+        <h2>The Problem</h2>
+        <p>
+          The Olympics feature a <span class="highlight">diverse array of sports</span>, many of which are 
+          <strong>unfamiliar to young viewers</strong>. As these children encounter 
+          <span class="highlight">lesser-known sports</span>, they often face 
+          <strong>confusion around the rules</strong>, leading to 
+          <span class="highlight">disengagement</span> and a <strong>lack of connection</strong> 
+          with the events.
         </p>
+        <p>
+          Without <span class="highlight">accessible</span> and 
+          <span class="highlight">dynamic educational tools</span>, young spectators miss out on a 
+          <strong>deeper appreciation of the games</strong>, and the 
+          <span class="highlight">Olympics’ educational potential</span> is diminished.
+        </p>
+
+        <!-- NEW: Appendix Links -->
+        <p class="appendix-links">
+          <a href="https://docs.google.com/document/d/1rCW3o-gO-Hc4va4n0nS-tEKPMtV5UiAl8XSl12exC3s/edit?usp=sharing" target="_blank">Research Appendix</a> 
+          → 
+          <a href="https://docs.google.com/document/d/1YF4vDwqQKHgSkcHpmQbhVzU4qH2uHwqKfTe5tRI9E0o/edit?usp=sharing" target="_blank">Usability Testing Appendix</a> 
+          → 
+          <a href="https://docs.google.com/document/d/1DAW19Hl10ZcTGFVtcKre2JJLXi2fUpI9b8bgkZuj5-w/edit?usp=sharing" target="_blank">Final Visual Report</a>
+        </p>
+
       </div>
-    </div>
+    </section>
 
-    <!-- Right: Demo GIF -->
-    <div class="project-gif">
-      <img src="images/olympics-phone-gif.gif" alt="Olympics App Demo" />
-    </div>
-  </section>
 
-<section class="project-section">
-  <div class="project-text-blur highlighted-problem">
-    <h2>The Problem</h2>
-    <p>
-      The Olympics feature a <span class="highlight">diverse array of sports</span>, many of which are 
-      <strong>unfamiliar to young viewers</strong>. As these children encounter 
-      <span class="highlight">lesser-known sports</span>, they often face 
-      <strong>confusion around the rules</strong>, leading to 
-      <span class="highlight">disengagement</span> and a <strong>lack of connection</strong> 
-      with the events.
-    </p>
-    <p>
-      Without <span class="highlight">accessible</span> and 
-      <span class="highlight">dynamic educational tools</span>, young spectators miss out on a 
-      <strong>deeper appreciation of the games</strong>, and the 
-      <span class="highlight">Olympics’ educational potential</span> is diminished.
-    </p>
-  </div>
-</section>
+    <!-- Research Questions Section -->
+    <section class="project-section research-questions-section">
+      <div class="project-text-blur">
+        <h2>Research Questions</h2>
+        <p>These guiding questions shaped our investigation into how young audiences interact with Olympic content and what design interventions can improve their experience:</p>
 
-<!-- Research Questions Section -->
-<section class="project-section research-questions-section">
-  <div class="project-text-blur">
-    <h2>Research Questions</h2>
-    <p>These guiding questions shaped our investigation into how young audiences interact with Olympic content and what design interventions can improve their experience:</p>
-
-      <div class="questions-grid">
-        <div class="question-card">
-          What challenges do children watching the Olympics face in understanding the rules and gameplay?
-        </div>
-        <div class="question-card">
-          What impact does the lack of interactive tools, real-time statistics and child-friendly explanations have on children's engagement and enjoyment of Olympic broadcasts?
-        </div>
-        <div class="question-card">
-          What types of interactive digital elements do children enjoy?
-        </div>
-        <div class="question-card">
-          To what extent do existing broadcast platforms and applications meet the needs of children in providing accessible and engaging explanations of Olympic sports, and how can these be improved?
-        </div>
-      </div>
-  </div>
-</section>
-
-<!-- Online Ethnography Section -->
-<section class="project-section ethnography-section">
-  <div class="project-text-blur">
-    <h2>Online Ethnography</h2>
-    <p>
-      To support the problem space, I conducted an online ethnography using community insights from 
-      <strong class="highlight-purple">Reddit</strong> and 
-      <strong class="highlight-purple">Quora</strong>. These platforms offered unfiltered perspectives 
-      from parents and general users about why children struggle to engage with sports broadcasts.
-    </p>
-
-    <div class="ethnography-block">
-      <h3>Children/toddlers watching sports on TV – Reddit</h3>
-      <p>
-        A Reddit user highlighted the impact of traditional TV on young viewers, emphasizing 
-        <span class="highlight">overstimulation, reduced social interaction</span>, and 
-        <span class="highlight">diminished learning time</span>. This insight points to the need for 
-        more <strong>mindful, balanced digital experiences</strong>.
-      </p>
-      <img src="images/reddit1 - olympics.JPG" alt="Reddit ethnography" class="ethnography-img" />
-    </div>
-
-    <div class="ethnography-block">
-      <h3>Why don't children like watching sports on TV? – Quora</h3>
-      <p>
-        On Quora, users shared how children often feel frustrated by the lack of interactivity in 
-        sports broadcasts. Compared to video games where they have agency, 
-        <span class="highlight">TV makes them passive observers</span>, which 
-        <strong>limits engagement and emotional connection</strong>.
-      </p>
-      <img src="images/quora1 - olympics.JPG" alt="Quora ethnography" class="ethnography-img" />
-    </div>
-  </div>
-</section>
-
-<!--Secondary research-->
-<section class="project-section secondary-research">
-  <div class="project-text-blur">
-    <h2>Secondary Research</h2>
-    <p>
-      To complement our ethnographic insights, we reviewed research articles and opinion pieces that explore how interactive features can support children's engagement with sports and the Olympics. These articles reinforce our problem scenario by showing how participation, emotional connection, and interactivity improve learning and retention for young viewers.
-    </p>
-
-    <div class="research-block">
-      <h3>How to Make Watching Sport at Home as Immersive as Possible</h3>
-      <p>
-        This article highlights how features like <span class="highlight">live stats, fan polls, and discussions</span> enhance broadcasts by making them more <strong>engaging and participatory</strong>. These tools help bridge the gap between <span class="highlight">passive viewing</span> and <span class="highlight">active interaction</span>, especially effective for kids raised on interactive platforms.
-      </p>
-    </div>
-
-    <div class="research-block">
-      <h3>Investigating the Use of Interactive Features for Children’s Television Programming</h3>
-      <p>
-        This research explores how <span class="highlight">characters directly asking questions</span> and interactive segments improve learning. These features help children <strong>retain knowledge and stay engaged</strong>, especially when watching unfamiliar or complex content. It strongly supports our aim to use interactive tools during Olympic broadcasts.
-      </p>
-    </div>
-
-    <div class="research-block">
-      <h3>Why It’s Important to Encourage Your Child to Watch the Olympics</h3>
-      <p>
-        This article emphasizes that the Olympics can teach values like <span class="highlight">heroism, perseverance, and patriotism</span>. Interactive features help <strong>translate these values</strong> to kids in more accessible ways, improving their emotional connection to the events.
-      </p>
-    </div>
-
-    <div class="research-block">
-      <h3>From Sedentary Viewer to Active Athlete</h3>
-      <p>
-        Watching the Olympics has been shown to <span class="highlight">inspire children to try new sports</span>. In Australia, admiration for athletes drives motivation. This underscores how <strong>interactive experiences can amplify inspiration</strong> and turn passive watching into active interest.
-      </p>
-    </div>
-
-    <div class="research-block">
-      <h3>A Lot Can Be Learned from Watching the Olympics with the Kids</h3>
-      <p>
-        This article discusses how <span class="highlight">interactive storytelling</span> can help bridge knowledge gaps and make Olympic values more relatable. With tools that foster <strong>emotional understanding</strong>, even unfamiliar sports become meaningful.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Competitor Analysis -->
-<section class="project-section competitor-analysis">
-  <div class="project-text-blur">
-    <h2>Competitor Analysis</h2>
-
-    <!-- F1 Kids -->
-    <div class="competitor-block">
-      <h3 class="competitor-title">F1 Kids</h3>
-      <div class="competitor-columns">
-        <img src="images/skysports-f1-kids-f1_6286688.jpg" alt="F1 Kids Interface" class="competitor-img side" />
-        <div class="text-cards">
-          <div class="competitor-card">
-            <div class="card-label strength">Strengths</div>
-            <div class="card-content">
-              F1 Kids tailors Formula 1 content specifically for a younger audience, using simplified language, engaging animations, and interactive elements that make complex motorsport rules understandable. It also introduces children to the broader context of the sport, fostering a connection to F1.
+          <div class="questions-grid">
+            <div class="question-card">
+              What challenges do children watching the Olympics face in understanding the rules and gameplay?
+            </div>
+            <div class="question-card">
+              What impact does the lack of interactive tools, real-time statistics and child-friendly explanations have on children's engagement and enjoyment of Olympic broadcasts?
+            </div>
+            <div class="question-card">
+              What types of interactive digital elements do children enjoy?
+            </div>
+            <div class="question-card">
+              To what extent do existing broadcast platforms and applications meet the needs of children in providing accessible and engaging explanations of Olympic sports, and how can these be improved?
             </div>
           </div>
-          <div class="competitor-card">
-            <div class="card-label limitation">Limitations</div>
-            <div class="card-content">
-              While F1 Kids effectively engages children in a single sport, it lacks the breadth needed to handle the diverse range of sports found in the Olympics. Additionally, F1 Kids is heavily specialized for motorsport fans and might not appeal to a broader audience, such as children unfamiliar with or uninterested in racing.
-            </div>
-          </div>
+      </div>
+    </section>
+
+    <!-- Online Ethnography Section -->
+    <section class="project-section ethnography-section">
+      <div class="project-text-blur">
+        <h2>Online Ethnography</h2>
+        <p>
+          To support the problem space, I conducted an online ethnography using community insights from 
+          <strong class="highlight-purple">Reddit</strong> and 
+          <strong class="highlight-purple">Quora</strong>. These platforms offered unfiltered perspectives 
+          from parents and general users about why children struggle to engage with sports broadcasts.
+        </p>
+
+        <div class="ethnography-block">
+          <h3>Children/toddlers watching sports on TV – Reddit</h3>
+          <p>
+            A Reddit user highlighted the impact of traditional TV on young viewers, emphasizing 
+            <span class="highlight">overstimulation, reduced social interaction</span>, and 
+            <span class="highlight">diminished learning time</span>. This insight points to the need for 
+            more <strong>mindful, balanced digital experiences</strong>.
+          </p>
+          <img src="images/reddit1 - olympics.JPG" alt="Reddit ethnography" class="ethnography-img" />
+        </div>
+
+        <div class="ethnography-block">
+          <h3>Why don't children like watching sports on TV? – Quora</h3>
+          <p>
+            On Quora, users shared how children often feel frustrated by the lack of interactivity in 
+            sports broadcasts. Compared to video games where they have agency, 
+            <span class="highlight">TV makes them passive observers</span>, which 
+            <strong>limits engagement and emotional connection</strong>.
+          </p>
+          <img src="images/quora1 - olympics.JPG" alt="Quora ethnography" class="ethnography-img" />
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- NFL on Nickelodeon -->
-    <div class="competitor-block">
-      <h3 class="competitor-title">NFL on Nickelodeon</h3>
-      <div class="competitor-columns">
-        <img src="images/nfl-nickmas-game_3.png" alt="NFL on Nickelodeon Interface" class="competitor-img side" />
-        <div class="text-cards">
-          <div class="competitor-card">
-            <div class="card-label strength">Strengths</div>
-            <div class="card-content">
-              NFL on Nickelodeon provides an interactive and entertaining experience, using slime animations, kid-friendly commentators, and simplified rule explanations to make American football accessible to young viewers. It has successfully made a complex, rule-heavy sport more appealing and easier to follow.
-            </div>
-          </div>
-          <div class="competitor-card">
-            <div class="card-label limitation">Limitations</div>
-            <div class="card-content">
-              Similar to F1 Kids, the NFL on Nickelodeon is tailored to a single sport (American football) and uses specific cultural references familiar to a Western audience, which may not resonate globally. Its highly stylized approach may not translate well to other sports that require different forms of explanation and engagement.
+    <!--Secondary research-->
+    <section class="project-section secondary-research">
+      <div class="project-text-blur">
+        <h2>Secondary Research</h2>
+        <p>
+          To complement our ethnographic insights, we reviewed research articles and opinion pieces that explore how interactive features can support children's engagement with sports and the Olympics. These articles reinforce our problem scenario by showing how participation, emotional connection, and interactivity improve learning and retention for young viewers.
+        </p>
+
+        <div class="research-block">
+          <h3>How to Make Watching Sport at Home as Immersive as Possible</h3>
+          <p>
+            This article highlights how features like <span class="highlight">live stats, fan polls, and discussions</span> enhance broadcasts by making them more <strong>engaging and participatory</strong>. These tools help bridge the gap between <span class="highlight">passive viewing</span> and <span class="highlight">active interaction</span>, especially effective for kids raised on interactive platforms.
+          </p>
+        </div>
+
+        <div class="research-block">
+          <h3>Investigating the Use of Interactive Features for Children’s Television Programming</h3>
+          <p>
+            This research explores how <span class="highlight">characters directly asking questions</span> and interactive segments improve learning. These features help children <strong>retain knowledge and stay engaged</strong>, especially when watching unfamiliar or complex content. It strongly supports our aim to use interactive tools during Olympic broadcasts.
+          </p>
+        </div>
+
+        <div class="research-block">
+          <h3>Why It’s Important to Encourage Your Child to Watch the Olympics</h3>
+          <p>
+            This article emphasizes that the Olympics can teach values like <span class="highlight">heroism, perseverance, and patriotism</span>. Interactive features help <strong>translate these values</strong> to kids in more accessible ways, improving their emotional connection to the events.
+          </p>
+        </div>
+
+        <div class="research-block">
+          <h3>From Sedentary Viewer to Active Athlete</h3>
+          <p>
+            Watching the Olympics has been shown to <span class="highlight">inspire children to try new sports</span>. In Australia, admiration for athletes drives motivation. This underscores how <strong>interactive experiences can amplify inspiration</strong> and turn passive watching into active interest.
+          </p>
+        </div>
+
+        <div class="research-block">
+          <h3>A Lot Can Be Learned from Watching the Olympics with the Kids</h3>
+          <p>
+            This article discusses how <span class="highlight">interactive storytelling</span> can help bridge knowledge gaps and make Olympic values more relatable. With tools that foster <strong>emotional understanding</strong>, even unfamiliar sports become meaningful.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competitor Analysis -->
+    <section class="project-section competitor-analysis">
+      <div class="project-text-blur">
+        <h2>Competitor Analysis</h2>
+        <p>
+          Competitor analysis was conducted to <span class="highlight">identify design strategies</span> that successfully 
+          <strong>engage young audiences</strong> with complex sports content. This method helped uncover 
+          <span class="highlight">interactive patterns, accessibility features</span>, and <strong>visual techniques</strong> 
+          used by leading platforms like F1 Kids, NFL on Nickelodeon, and YouTube Kids. These insights informed 
+          <span class="highlight">feature comparisons</span> and <strong>UI decisions</strong> for our solution.
+        </p>
+
+
+        <!-- F1 Kids -->
+        <div class="competitor-block">
+          <h3 class="competitor-title">F1 Kids</h3>
+          <div class="competitor-columns">
+            <img src="images/skysports-f1-kids-f1_6286688.jpg" alt="F1 Kids Interface" class="competitor-img side" />
+            <div class="text-cards">
+              <div class="competitor-card">
+                <div class="card-label strength">Strengths</div>
+                <div class="card-content">
+                  F1 Kids tailors Formula 1 content specifically for a younger audience, using simplified language, engaging animations, and interactive elements that make complex motorsport rules understandable. It also introduces children to the broader context of the sport, fostering a connection to F1.
+                </div>
+              </div>
+              <div class="competitor-card">
+                <div class="card-label limitation">Limitations</div>
+                <div class="card-content">
+                  While F1 Kids effectively engages children in a single sport, it lacks the breadth needed to handle the diverse range of sports found in the Olympics. Additionally, F1 Kids is heavily specialized for motorsport fans and might not appeal to a broader audience, such as children unfamiliar with or uninterested in racing.
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- YouTube Kids -->
-    <div class="competitor-block">
-      <h3 class="competitor-title">YouTube Kids</h3>
-      <div class="competitor-columns">
-        <img src="images/youtube-kids.JPG" alt="YouTube Kids Interface" class="competitor-img side" />
-        <div class="text-cards">
-          <div class="competitor-card">
-            <div class="card-label strength">Strengths</div>
-            <div class="card-content">
-              YouTube Kids offers a vast library of content, covering a range of sports with tailored educational videos for children. The platform is highly accessible and allows kids to explore various sports at their own pace. It provides a safe environment where kids can learn about sports through video.
-            </div>
-          </div>
-          <div class="competitor-card">
-            <div class="card-label limitation">Limitations</div>
-            <div class="card-content">
-              While YouTube Kids has extensive content, it lacks real-time interactivity and live engagement. Children may not experience the excitement of watching sports as they happen, and the content is often pre-recorded, limiting opportunities for live feedback or dynamic explanations during events. Additionally, content on YouTube Kids varies in quality and consistency, which can affect how well sports are explained.
+        <!-- NFL on Nickelodeon -->
+        <div class="competitor-block">
+          <h3 class="competitor-title">NFL on Nickelodeon</h3>
+          <div class="competitor-columns">
+            <img src="images/nfl-nickmas-game_3.png" alt="NFL on Nickelodeon Interface" class="competitor-img side" />
+            <div class="text-cards">
+              <div class="competitor-card">
+                <div class="card-label strength">Strengths</div>
+                <div class="card-content">
+                  NFL on Nickelodeon provides an interactive and entertaining experience, using slime animations, kid-friendly commentators, and simplified rule explanations to make American football accessible to young viewers. It has successfully made a complex, rule-heavy sport more appealing and easier to follow.
+                </div>
+              </div>
+              <div class="competitor-card">
+                <div class="card-label limitation">Limitations</div>
+                <div class="card-content">
+                  Similar to F1 Kids, the NFL on Nickelodeon is tailored to a single sport (American football) and uses specific cultural references familiar to a Western audience, which may not resonate globally. Its highly stylized approach may not translate well to other sports that require different forms of explanation and engagement.
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- YouTube Kids -->
+        <div class="competitor-block">
+          <h3 class="competitor-title">YouTube Kids</h3>
+          <div class="competitor-columns">
+            <img src="images/youtube-kids.JPG" alt="YouTube Kids Interface" class="competitor-img side" />
+            <div class="text-cards">
+              <div class="competitor-card">
+                <div class="card-label strength">Strengths</div>
+                <div class="card-content">
+                  YouTube Kids offers a vast library of content, covering a range of sports with tailored educational videos for children. The platform is highly accessible and allows kids to explore various sports at their own pace. It provides a safe environment where kids can learn about sports through video.
+                </div>
+              </div>
+              <div class="competitor-card">
+                <div class="card-label limitation">Limitations</div>
+                <div class="card-content">
+                  While YouTube Kids has extensive content, it lacks real-time interactivity and live engagement. Children may not experience the excitement of watching sports as they happen, and the content is often pre-recorded, limiting opportunities for live feedback or dynamic explanations during events. Additionally, content on YouTube Kids varies in quality and consistency, which can affect how well sports are explained.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature Comparison Table -->
+        <div class="feature-comparison">
+          <h3 class="feature-table-heading">Feature Comparison Table</h3>
+          <div class="feature-scroll-container">
+            <table class="feature-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>F1 Kids</th>
+                  <th>NFL on Nickelodeon</th>
+                  <th>YouTube Kids</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Shows most relevant kids sport content</td>
+                  <td>✓ Only for racing sport</td>
+                  <td>✓ Only for NFL</td>
+                  <td>✓ Offers variety via robust search</td>
+                </tr>
+                <tr>
+                  <td>Interactive statistics</td>
+                  <td>✓ Leaderboard overlay</td>
+                  <td>✓ Spongebob explains stats</td>
+                  <td>✗ Little to no interactive stats</td>
+                </tr>
+                <tr>
+                  <td>Real-time rule explanations</td>
+                  <td>✗ No explanations</td>
+                  <td>✓ Explained by child actors</td>
+                  <td>✗ None unless searched</td>
+                </tr>
+                <tr>
+                  <td>Visual aids / infographics</td>
+                  <td>✓ Cartoon overlays</td>
+                  <td>✓ AR animations for touchdowns</td>
+                  <td>✗ Minimal visual aids</td>
+                </tr>
+                <tr>
+                  <td>Child-friendly commentary</td>
+                  <td>✓ Peer-age commentary</td>
+                  <td>✓ Voiced by child-familiar characters</td>
+                  <td>✓ Family-friendly tone</td>
+                </tr>
+                <tr>
+                  <td>Interactive games/quizzes</td>
+                  <td>✓ Tests F1 physics understanding</td>
+                  <td>✓ Football position quizzes</td>
+                  <td>✓ Hands-on games for kids</td>
+                </tr>
+                <tr>
+                  <td>Interactive gameplay demos</td>
+                  <td>✗ Only real footage</td>
+                  <td>✗ No interactive demos</td>
+                  <td>✗ No interactive demos</td>
+                </tr>
+                <tr>
+                  <td>Expert commentary</td>
+                  <td>✓ Kids commentary + expert insight</td>
+                  <td>✓ Former players + kids commentary</td>
+                  <td>✓ Searchable expert commentary</td>
+                </tr>
+                <tr>
+                  <td>User experience</td>
+                  <td>✗ UX not tailored for kids</td>
+                  <td>✓ Metaverse-style visual layer</td>
+                  <td>✓ Intuitive UI/UX for children</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Interview Section -->
-<section class="project-section interview-section">
-  <div class="project-text-blur">
-    <h2>Research Method: Interviews <span class="highlight-purple">(Attitudinal Data)</span></h2>
+    <!-- Interview Section -->
+    <section class="project-section interview-section">
+      <div class="project-text-blur">
+        <h2>Research Method: Interviews <span class="highlight-purple">(Attitudinal Data)</span></h2>
 
-    <p class="method-justification">
-      <strong>Interviews</strong> were selected as a primary research method to gain 
-      <span class="highlight">in-depth insights</span> into children's interactive experiences with 
-      <span class="highlight">digital sports broadcasts</span>, such as the Olympics. By engaging directly with the children, we could explore their 
-      <span class="highlight">thoughts, preferences, and challenges</span> in a conversational manner that allowed for 
-      <span class="highlight">follow-up questions</span> and <span class="highlight">clarifications</span>.
-    </p>
+        <p class="method-justification">
+          <strong>Interviews</strong> were selected as a primary research method to gain 
+          <span class="highlight">in-depth insights</span> into children's interactive experiences with 
+          <span class="highlight">digital sports broadcasts</span>, such as the Olympics. By engaging directly with the children, we could explore their 
+          <span class="highlight">thoughts, preferences, and challenges</span> in a conversational manner that allowed for 
+          <span class="highlight">follow-up questions</span> and <span class="highlight">clarifications</span>.
+        </p>
 
-    <p class="method-justification">
-      This method is particularly valuable when studying <strong>young users</strong>, as it enables the interviewer to 
-      <span class="highlight">adjust questions in real-time</span> based on the child's responses, ensuring that the data collected is both 
-      <strong>rich and nuanced</strong>. Additionally, interviews offer the opportunity to observe 
-      <span class="highlight">non-verbal cues</span>, such as facial expressions and body language, which can provide 
-      <strong>further context</strong> to the responses given.
-    </p>
+        <p class="method-justification">
+          This method is particularly valuable when studying <strong>young users</strong>, as it enables the interviewer to 
+          <span class="highlight">adjust questions in real-time</span> based on the child's responses, ensuring that the data collected is both 
+          <strong>rich and nuanced</strong>. Additionally, interviews offer the opportunity to observe 
+          <span class="highlight">non-verbal cues</span>, such as facial expressions and body language, which can provide 
+          <strong>further context</strong> to the responses given.
+        </p>
 
-    <div class="interview-questions">
-      <h3>Interview Questions</h3>
-      <ul>
-        <li><strong>What are some of your favourite games, apps, or websites that you use regularly?</strong><br><em>Follow-up:</em> What specific features do you enjoy the most about these?</li>
-        <li><strong>Can you describe an interactive tool or game that you found really fun or engaging?</strong><br><em>Follow-up:</em> What made it enjoyable for you?</li>
-        <li><strong>Do you prefer exploring apps on your own or following step-by-step guidance?</strong><br><em>Follow-up:</em> Why do you prefer this approach?</li>
-        <li><strong>How do you feel when you customise things in an app or game?</strong><br><em>Follow-up:</em> Can you give an example of when you enjoyed doing this?</li>
-        <li><strong>What kind of animations or visual effects do you like to see?</strong><br><em>Follow-up:</em> How do these affect your experience?</li>
-        <li><strong>Do you enjoy interactive quizzes or challenges?</strong><br><em>Follow-up:</em> What kind do you find most engaging?</li>
-        <li><strong>How important is it to see real-time updates or changes?</strong><br><em>Follow-up:</em> Can you describe a moment when this helped?</li>
-        <li><strong>What kind of features do you enjoy using with friends?</strong><br><em>Follow-up:</em> What makes those fun together?</li>
-        <li><strong>Do you prefer features that help you learn something or just for fun?</strong><br><em>Follow-up:</em> Why?</li>
-        <li><strong>If you could design your own interactive app/game, what would it include?</strong><br><em>Follow-up:</em> Why are these features important to you?</li>
-      </ul>
-    </div>
+        <div class="interview-questions">
+          <h3>Interview Questions</h3>
+          <ul>
+            <li><strong>What are some of your favourite games, apps, or websites that you use regularly?</strong><br><em>Follow-up:</em> What specific features do you enjoy the most about these?</li>
+            <li><strong>Can you describe an interactive tool or game that you found really fun or engaging?</strong><br><em>Follow-up:</em> What made it enjoyable for you?</li>
+            <li><strong>Do you prefer exploring apps on your own or following step-by-step guidance?</strong><br><em>Follow-up:</em> Why do you prefer this approach?</li>
+            <li><strong>How do you feel when you customise things in an app or game?</strong><br><em>Follow-up:</em> Can you give an example of when you enjoyed doing this?</li>
+            <li><strong>What kind of animations or visual effects do you like to see?</strong><br><em>Follow-up:</em> How do these affect your experience?</li>
+            <li><strong>Do you enjoy interactive quizzes or challenges?</strong><br><em>Follow-up:</em> What kind do you find most engaging?</li>
+            <li><strong>How important is it to see real-time updates or changes?</strong><br><em>Follow-up:</em> Can you describe a moment when this helped?</li>
+            <li><strong>What kind of features do you enjoy using with friends?</strong><br><em>Follow-up:</em> What makes those fun together?</li>
+            <li><strong>Do you prefer features that help you learn something or just for fun?</strong><br><em>Follow-up:</em> Why?</li>
+            <li><strong>If you could design your own interactive app/game, what would it include?</strong><br><em>Follow-up:</em> Why are these features important to you?</li>
+          </ul>
+        </div>
 
-    
-  </div>
-</section>
+        
+      </div>
+    </section>
 
-<!--Survey Part 1-->
-<section class="project-section survey-section">
-  <div class="project-text-blur">
-    <h2>Research Method: Survey <span class="highlight-purple">(Behavioural / Attitudinal Data)</span></h2>
+    <!--Survey Part 1-->
+    <section class="project-section survey-section">
+      <div class="project-text-blur">
+        <h2>Research Method: Survey <span class="highlight-purple">(Behavioural / Attitudinal Data)</span></h2>
 
-    <p class="method-justification">
-      The use of <strong>surveys</strong> complements the interviews by allowing for the collection of both 
-      <span class="highlight">behavioural</span> and <span class="highlight">attitudinal</span> data on a broader scale. 
-      The two-section design, with one part aimed at parents and the other at children, ensures a 
-      <strong>comprehensive understanding</strong> of the interaction between young users and digital platforms.
-    </p>
-    <p class="method-justification">
-      Parents' input on <span class="highlight">behavioural data</span>, derived from their observations of their children's 
-      engagement with broadcasts, provides an <strong>external perspective</strong> on how these interactions occur 
-      in a natural setting. Meanwhile, the <strong>children's responses</strong> in the attitudinal section offer direct insights 
-      into their <span class="highlight">feelings, preferences, and motivations</span>. Surveys are particularly effective in 
-      reaching a <strong>larger sample size</strong>, enabling the identification of common patterns and 
-      <span class="highlight">trends across different user experiences</span>.
-    </p>
+        <p class="method-justification">
+          The use of <strong>surveys</strong> complements the interviews by allowing for the collection of both 
+          <span class="highlight">behavioural</span> and <span class="highlight">attitudinal</span> data on a broader scale. 
+          The two-section design, with one part aimed at parents and the other at children, ensures a 
+          <strong>comprehensive understanding</strong> of the interaction between young users and digital platforms.
+        </p>
+        <p class="method-justification">
+          Parents' input on <span class="highlight">behavioural data</span>, derived from their observations of their children's 
+          engagement with broadcasts, provides an <strong>external perspective</strong> on how these interactions occur 
+          in a natural setting. Meanwhile, the <strong>children's responses</strong> in the attitudinal section offer direct insights 
+          into their <span class="highlight">feelings, preferences, and motivations</span>. Surveys are particularly effective in 
+          reaching a <strong>larger sample size</strong>, enabling the identification of common patterns and 
+          <span class="highlight">trends across different user experiences</span>.
+        </p>
 
-  <div class="survey-section-block">
-    <h3 class="survey-subheading">
-      Section 1: What challenges do children watching the Olympics face in understanding the rules and gameplay? - <i>Behavioural</i>
-    </h3>
+      <div class="survey-section-block">
+        <h3 class="survey-subheading">
+          Section 1: What challenges do children watching the Olympics face in understanding the rules and gameplay? - <i>Behavioural</i>
+        </h3>
 
-    <!-- Question 1 Heading and Image -->
-    <div class="survey-question-image">
-      <h4>Question 1: Which part of a sport’s rules does your child find most challenging to understand? (22 responses)</h4>
-      <img src="images/olympics-survey-part1-question1.JPG" alt="Survey question pie chart: Which part of a sport’s rules does your child find most challenging to understand?" />
-    </div>
+        <!-- Question 1 Heading and Image -->
+        <div class="survey-question-image">
+          <h4>Question 1: Which part of a sport’s rules does your child find most challenging to understand? (22 responses)</h4>
+          <img src="images/olympics-survey-part1-question1.JPG" alt="Survey question pie chart: Which part of a sport’s rules does your child find most challenging to understand?" />
+        </div>
 
-    <!-- Question 2 Open-Ended Results -->
-    <div class="open-ended-response-block">
-      <h4>Question 2: Can you describe a specific Olympic sport that your child found difficult to follow, and what aspects seemed to confuse them? (21 responses)</h4>
-      <ul class="open-ended-response-list">
-        <li><strong>Golf:</strong> Unsure how points added up and the score system.</li>
-        <li><strong>Tennis:</strong> Confused by sets, games, and score tracking. Differences between men’s and women’s rules.</li>
-        <li><strong>Skateboarding:</strong> Unclear how judges scored out of 100.</li>
-        <li><strong>Badminton:</strong> Scoring system and player position shifts in doubles.</li>
-        <li><strong>Archery:</strong> Confusion about why not always aiming center; wind explained.</li>
-        <li class="more-responses">…16 more responses not shown for brevity</li>
-      </ul>
-    </div>
-  </div>
+        <!-- Question 2 Open-Ended Results -->
+        <div class="open-ended-response-block">
+          <h4>Question 2: Can you describe a specific Olympic sport that your child found difficult to follow, and what aspects seemed to confuse them? (21 responses)</h4>
+          <ul class="open-ended-response-list">
+            <li><strong>Golf:</strong> Unsure how points added up and the score system.</li>
+            <li><strong>Tennis:</strong> Confused by sets, games, and score tracking. Differences between men’s and women’s rules.</li>
+            <li><strong>Skateboarding:</strong> Unclear how judges scored out of 100.</li>
+            <li><strong>Badminton:</strong> Scoring system and player position shifts in doubles.</li>
+            <li><strong>Archery:</strong> Confusion about why not always aiming center; wind explained.</li>
+            <li class="more-responses">…16 more responses not shown for brevity</li>
+          </ul>
+        </div>
+      </div>
 
-  <!--Survey Part 2-->
-  <div class="survey-section-block">
-    <h3 class="survey-subheading">
-      Section 2: What impact does the lack of interactive tools, real-time statistics, and child-friendly explanations have on children's engagement and enjoyment of Olympic broadcasts? - <i>Attitudinal</i>
-    </h3>
+      <!--Survey Part 2-->
+      <div class="survey-section-block">
+        <h3 class="survey-subheading">
+          Section 2: What impact does the lack of interactive tools, real-time statistics, and child-friendly explanations have on children's engagement and enjoyment of Olympic broadcasts? - <i>Attitudinal</i>
+        </h3>
 
-    <!-- Question 10 -->
-    <div class="open-ended-response-block">
-      <h4>Question 10: How does the absence of interactive tools affect your interest in watching lesser-known Olympic sports? (11 responses)</h4>
-      <ul class="open-ended-response-list">
-        <li>Not much, unless there’s no UI indicating the score</li>
-        <li>It makes it harder to follow as some rules are unclear</li>
-        <li>Without knowledge on how the sport is played, watching it and trying to piece together the rules becomes difficult.</li>
-        <li>Boring. Don’t know who’s winning or how to win</li>
-        <li>It makes the game less exciting and engaging</li>
-        <li class="more-responses">…6 more responses not shown for brevity</li>
-      </ul>
-    </div>
+        <!-- Question 10 -->
+        <div class="open-ended-response-block">
+          <h4>Question 10: How does the absence of interactive tools affect your interest in watching lesser-known Olympic sports? (11 responses)</h4>
+          <ul class="open-ended-response-list">
+            <li>Not much, unless there’s no UI indicating the score</li>
+            <li>It makes it harder to follow as some rules are unclear</li>
+            <li>Without knowledge on how the sport is played, watching it and trying to piece together the rules becomes difficult.</li>
+            <li>Boring. Don’t know who’s winning or how to win</li>
+            <li>It makes the game less exciting and engaging</li>
+            <li class="more-responses">…6 more responses not shown for brevity</li>
+          </ul>
+        </div>
 
-    <!-- Question 13 -->
-    <div class="survey-question-image">
-      <h4>Question 13: What type of interactive tool or feature would make you more engaged while watching the Olympics? (10 responses)</h4>
-      <img src="images/olympics-survey-part2-question13.JPG" alt="Bar chart of interactive tools that engage children during Olympic viewing" />
-    </div>
-  </div>
-  </div>
-</section>
+        <!-- Question 13 -->
+        <div class="survey-question-image">
+          <h4>Question 13: What type of interactive tool or feature would make you more engaged while watching the Olympics? (10 responses)</h4>
+          <img src="images/olympics-survey-part2-question13.JPG" alt="Bar chart of interactive tools that engage children during Olympic viewing" />
+        </div>
+      </div>
+      </div>
+    </section>
 
-<!-- Contextual Observation -->
-<section class="project-section contextual-observation">
-  <div class="project-text-blur">
-    <h2>Research Method: Contextual Observation <span class="highlight-purple">(Behavioural Data)</span></h2>
+    <!-- Contextual Observation -->
+    <section class="project-section contextual-observation">
+      <div class="project-text-blur">
+        <h2>Research Method: Contextual Observation <span class="highlight-purple">(Behavioural Data)</span></h2>
 
-    <p>
-      Contextual observation was conducted to assess how children naturally engage with sports content across different platforms. This method revealed <span class="highlight">non-verbal confusion</span>, <strong>attempts to seek clarity</strong>, and moments of <strong>positive emotional engagement</strong> with specific UI features like overlays or animations. Observations were logged across platforms such as <strong>Olympics.com</strong>, <strong>YouTube Kids</strong>, and <strong>F1/NFL streams</strong>.
-    </p>
+        <p>
+          Contextual observation was conducted to assess how children naturally engage with sports content across different platforms. This method revealed <span class="highlight">non-verbal confusion</span>, <strong>attempts to seek clarity</strong>, and moments of <strong>positive emotional engagement</strong> with specific UI features like overlays or animations. Observations were logged across platforms such as <strong>Olympics.com</strong>, <strong>YouTube Kids</strong>, and <strong>F1/NFL streams</strong>.
+        </p>
 
-    <!--Key-->
-    <div class="observation-key">
-      <span><span class="key-box positive"></span> Positive feedback</span>
-      <span><span class="key-box negative"></span> Negative feedback</span>
-    </div>
+        <!--Key-->
+        <div class="observation-key">
+          <span><span class="key-box positive"></span> Positive feedback</span>
+          <span><span class="key-box negative"></span> Negative feedback</span>
+        </div>
 
-    <div class="observation-table-wrapper">
-      <table class="observation-table">
-        <thead>
-          <tr>
-            <th>User Goal / Task</th>
-            <th>Interface Example</th>
-            <th>Kid 1 Behaviour</th>
-            <th>Kid 2 Behaviour</th>
-            <th>Kid 3 Behaviour</th>
-            <th>Kid 4 Behaviour</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Olympics 2024</td>
-            <td><a href="https://olympics.com/en/paris-2024/sports/golf" target="_blank">Olympics Golf Page</a></td>
-            <td class="negative">Frown, “What does this mean, I’m so confused.”<br><em>Interface lacks clarity, causing immediate confusion.</em></td>
-            <td class="negative">“Let me google the rules first.”<br><em>User needed external help due to missing in-platform guidance.</em></td>
-            <td class="negative">“Is it the least amount of hits to win the game?”<br><em>Interpretation: Indicates basic scoring logic was unclear.</em></td>
-            <td class="negative">“What does birdie and bogey mean?”<br><em>	Interpretation: Unfamiliar terminology made it hard to follow.</em></td>
-          </tr>
-          <tr>
-            <td>Watch Golf Final Round</td>
-            <td><a href="https://olympics.com/en/paris-2024/sports/golf" target="_blank">Olympics Golf</a></td>
-            <td class="negative">Confused watching golf.<br><em>Interpretation: Needs rule clarity.</em></td>
-            <td class="negative">Used tablet to search rules.<br><em>Interpretation: Info not easily available.</em></td>
-            <td class="negative">Unsure of rules/scoring system.<br><em>Interpretation: No visual explanation or overlays resulted in confusion.</em></td>
-            <td class="positive">“I like the highlights and range of sports.”<br><em>Interpretation: Terminology is foreign.</em></td>
-          </tr>
-          <tr>
-            <td>Watch F1 Kids</td>
-            <td><a href="https://www.youtube.com/watch?v=3CoHquh_GEo&t=39s" target="_blank">YouTube</a></td>
-            <td class="positive">“I like the statistic/leaderboard overlay.”</td>
-            <td class="negative">“None of the games have rule explanations.”<br><em>Interpretation: No rule guidance leads to confusion.</em></td>
-            <td class="positive">“Cartoon and animated characters are cool.”<br><em>Interpretation: Gamified aesthetics increased interest and accessibility.</em></td>
-            <td class="positive">“I like the child-friendly commentary.”<br><em>Interpretation: Tailored language helped understanding.</em></td>
-          </tr>
-          <tr>
-            <td>Watch NFL on Nickelodeon</td>
-            <td><a href="https://www.youtube.com/watch?v=lInnBPIootI&ab_channel=NFL" target="_blank">YouTube</a></td>
-            <td class="negative">“I’m not into rugby, I wanna watch basketball.”<br><em>Interpretation: Sport mismatch.</em></td>
-            <td class="positive">“SpongeBob! I like the 3D animation overlay.”<br><em>Interpretation: Familiar characters and effects kept attention.</em></td>
-            <td class="positive">“That’s Young Sheldon.”<br><em>Interpretation: Familiar actors helped engagement.</em></td>
-            <td class="positive">“The colours are so cool.”<br><em>Interpretation: Metaverse effects aid enjoyment.</em></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+        <div class="observation-table-wrapper">
+          <table class="observation-table">
+            <thead>
+              <tr>
+                <th>User Goal / Task</th>
+                <th>Interface Example</th>
+                <th>Kid 1 Behaviour</th>
+                <th>Kid 2 Behaviour</th>
+                <th>Kid 3 Behaviour</th>
+                <th>Kid 4 Behaviour</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Olympics 2024</td>
+                <td><a href="https://olympics.com/en/paris-2024/sports/golf" target="_blank">Olympics Golf Page</a></td>
+                <td class="negative">Frown, “What does this mean, I’m so confused.”<br><em>Interface lacks clarity, causing immediate confusion.</em></td>
+                <td class="negative">“Let me google the rules first.”<br><em>User needed external help due to missing in-platform guidance.</em></td>
+                <td class="negative">“Is it the least amount of hits to win the game?”<br><em>Interpretation: Indicates basic scoring logic was unclear.</em></td>
+                <td class="negative">“What does birdie and bogey mean?”<br><em>	Interpretation: Unfamiliar terminology made it hard to follow.</em></td>
+              </tr>
+              <tr>
+                <td>Watch Golf Final Round</td>
+                <td><a href="https://olympics.com/en/paris-2024/sports/golf" target="_blank">Olympics Golf</a></td>
+                <td class="negative">Confused watching golf.<br><em>Interpretation: Needs rule clarity.</em></td>
+                <td class="negative">Used tablet to search rules.<br><em>Interpretation: Info not easily available.</em></td>
+                <td class="negative">Unsure of rules/scoring system.<br><em>Interpretation: No visual explanation or overlays resulted in confusion.</em></td>
+                <td class="positive">“I like the highlights and range of sports.”<br><em>Interpretation: Terminology is foreign.</em></td>
+              </tr>
+              <tr>
+                <td>Watch F1 Kids</td>
+                <td><a href="https://www.youtube.com/watch?v=3CoHquh_GEo&t=39s" target="_blank">YouTube</a></td>
+                <td class="positive">“I like the statistic/leaderboard overlay.”</td>
+                <td class="negative">“None of the games have rule explanations.”<br><em>Interpretation: No rule guidance leads to confusion.</em></td>
+                <td class="positive">“Cartoon and animated characters are cool.”<br><em>Interpretation: Gamified aesthetics increased interest and accessibility.</em></td>
+                <td class="positive">“I like the child-friendly commentary.”<br><em>Interpretation: Tailored language helped understanding.</em></td>
+              </tr>
+              <tr>
+                <td>Watch NFL on Nickelodeon</td>
+                <td><a href="https://www.youtube.com/watch?v=lInnBPIootI&ab_channel=NFL" target="_blank">YouTube</a></td>
+                <td class="negative">“I’m not into rugby, I wanna watch basketball.”<br><em>Interpretation: Sport mismatch.</em></td>
+                <td class="positive">“SpongeBob! I like the 3D animation overlay.”<br><em>Interpretation: Familiar characters and effects kept attention.</em></td>
+                <td class="positive">“That’s Young Sheldon.”<br><em>Interpretation: Familiar actors helped engagement.</em></td>
+                <td class="positive">“The colours are so cool.”<br><em>Interpretation: Metaverse effects aid enjoyment.</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
 
   </div>
