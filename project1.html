@@ -294,11 +294,14 @@
 /* Competitor Analysis section styling */
 .competitor-analysis .project-text-blur {
   max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
   padding: 2.5rem;
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  overflow: hidden; /* Ensures rounded corners apply to children */
 }
 
 .competitor-analysis h2 {
@@ -401,6 +404,26 @@
   border-radius: 12px;
 }
 
+.feature-scroll-container,
+.observation-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.feature-table,
+.observation-table {
+  min-width: 650px;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.06);
+}
+
 .feature-table {
   width: 100%;
   min-width: 720px;
@@ -463,6 +486,25 @@
     font-size: 0.85rem;
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .competitor-analysis .project-text-blur,
+  .contextual-observation .project-text-blur {
+    padding: 1.5rem;
+  }
+  
+  .feature-table,
+  .observation-table {
+    font-size: 0.85rem;
+  }
+  
+  .feature-table th, 
+  .feature-table td,
+  .observation-table th, 
+  .observation-table td {
+    padding: 0.8rem;
   }
 }
 
@@ -646,11 +688,14 @@
 
 .contextual-observation .project-text-blur {
   max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07); /* Match other sections */
+  background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  overflow: hidden; /* Ensures rounded corners apply to children */
 }
 
 .observation-key {
