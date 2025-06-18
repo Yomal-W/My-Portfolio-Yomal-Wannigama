@@ -780,7 +780,8 @@
   border-radius: 16px;
   backdrop-filter: blur(15px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-  padding: 2.5rem;
+  padding: 2.5rem;   
+  overflow-x: hidden;
 }
 
 .affinity-stack {
@@ -791,43 +792,45 @@
   margin-top: 2.2rem;
 }
 
-/* Top synthesis cards (stacked) */
+/* Top synthesis cards */
 .synth-card {
   width: 100%;
-  max-width: 560px;
-  min-width: 220px;
-  margin: 0 auto;
+  min-width: 0;
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   font-family: 'Rubik', sans-serif;
   font-size: 1.16rem;
   color: #2a164b;
   font-weight: 500;
-  padding: 1.8rem 2rem 1.2rem 2rem;
+  padding: 1.2rem 1.5rem; /* Equal top/bottom padding */
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
+  align-items: center;
+  justify-content: flex-start;
   border-left: 6px solid #C1A8FF;
-  background-clip: padding-box;
   background: #d5b3ff;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  hyphens: auto;
+  overflow: visible;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
+/* Variant for red card */
 .synth-card-red {
   background: #ffb3b3;
   border-left: 6px solid #FF5A5A;
 }
 
-.synth-card-author {
-  display: block;
-  font-size: 0.92rem;
-  color: #5b5b5b;
-  margin-top: 1.2rem;
-  font-weight: 400;
-  opacity: 0.9;
+/* Remove margin from text inside synth cards */
+.synth-card *,
+.synth-card-red * {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-/* Bottom row clusters (side by side) */
+/* Bottom row clusters */
 .affinity-bottom-row {
   display: flex;
   gap: 2rem;
@@ -835,19 +838,25 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
+  width: 100%;
 }
+
 .affinity-cluster-box {
   background: #d7eaff;
   border-radius: 16px;
   box-shadow: 0 4px 14px rgba(34,68,122,0.08);
   padding: 1.5rem 1.2rem;
-  min-width: 260px;
-  max-width: 420px;
+  min-width: 220px;
+  max-width: 440px;
   flex: 1 1 320px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
+
 .affinity-cluster-title {
   font-family: 'Rubik', sans-serif;
   font-size: 1.04rem;
@@ -858,6 +867,7 @@
   padding: 0.44rem 0.8rem;
   margin-bottom: 1.2rem;
   display: inline-block;
+  word-break: break-word;
 }
 
 .sticky-note {
@@ -868,26 +878,70 @@
   border-radius: 10px;
   box-shadow: 0 3px 9px rgba(180,160,80,0.10);
   margin-bottom: 1.1rem;
-  padding: 1.1rem 1.3rem;
+  padding: 1rem;
   font-weight: 400;
   position: relative;
   border-left: 5px solid #ffe669;
   word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: fit-content;
+  white-space: normal;
+  overflow: visible;
+  max-width: 100%; /* Prevents overflow */
 }
 
-/* Responsive for mobile: stack blue clusters */
+.sticky-note strong {
+  display: inline;
+  word-break: normal;
+  white-space: normal;
+}
+
+/* Responsive adjustments */
 @media (max-width: 900px) {
   .affinity-bottom-row {
     flex-direction: column;
     gap: 1.2rem;
     align-items: stretch;
   }
-  .synth-card, .affinity-cluster-box {
-    max-width: 100%;
+
+  .affinity-cluster-box {
     min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 1.2rem;
   }
+}
+
+@media (max-width: 600px) {
   .affinity-synthesis .affinity-blur {
-    padding: 1.2rem 0.5rem;
+    padding: 1.2rem;
+  }
+
+  .synth-card {
+    padding: 1.1rem 0.8rem;
+    font-size: 1.06rem;
+    border-radius: 15px;
+  }
+
+  .affinity-cluster-box {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem 0.6rem;
+  }
+
+  .affinity-cluster-title {
+    font-size: 0.98rem;
+  }
+
+  .sticky-note {
+    padding: 0.8rem;
+    font-size: 0.96rem;
+    border-radius: 8px;
+    margin-bottom: 0.7rem;
   }
 }
 
@@ -1417,17 +1471,17 @@
     <section class="project-section affinity-synthesis">
       <div class="project-text-blur affinity-blur">
         <h2>Data Synthesis: Affinity Diagram</h2>
-<p>
-  To synthesize qualitative findings from interviews, surveys, and contextual observations, we created an <span class="highlight">affinity diagram</span> using a color-coded system for clarity and traceability.
-</p>
-<ul style="font-family: 'Overpass', sans-serif; color: rgba(255,255,255,0.9); margin: 0.8rem 0 1.2rem; padding-left: 1.5rem; line-height: 1.6;">
-  <li><span style="color:#BCA9F7; font-weight:bold;">Purple notes</span> represent the <strong>overall theme or high-level insight</strong> synthesized from the data</li>
-  <li><span style="color:#FFB3B3; font-weight:bold;">Red notes</span> highlight <strong>key sub-themes or clustered insights</strong> that break down the overarching theme</li>
-  <li><span style="color:#FFEE99; font-weight:bold;">Yellow notes</span> display <strong>direct participant quotes</strong> and specific evidence from research methods</li>
-</ul>
-<p>
-  This technique allowed us to <strong class="highlight">cluster and visually connect</strong> recurring insights while making it easy to trace every theme back to its research source.
-</p>
+        <p>
+          To synthesize qualitative findings from interviews, surveys, and contextual observations, we created an <span class="highlight">affinity diagram</span> using a color-coded system for clarity and traceability.
+        </p>
+        <ul style="font-family: 'Overpass', sans-serif; color: rgba(255,255,255,0.9); margin: 0.8rem 0 1.2rem; padding-left: 1.5rem; line-height: 1.6;">
+          <li><span style="color:#BCA9F7; font-weight:bold;">Purple notes</span> represent the <strong>overall theme or high-level insight</strong> synthesized from the data</li>
+          <li><span style="color:#FFB3B3; font-weight:bold;">Red notes</span> highlight <strong>key sub-themes or clustered insights</strong> that break down the overarching theme</li>
+          <li><span style="color:#FFEE99; font-weight:bold;">Yellow notes</span> display <strong>direct participant quotes</strong> and specific evidence from research methods</li>
+        </ul>
+        <p>
+          This technique allowed us to <strong class="highlight">cluster and visually connect</strong> recurring insights while making it easy to trace every theme back to its research source.
+        </p>
 
         <div class="affinity-stack">
           <div class="synth-card synth-card-purple">
