@@ -194,6 +194,42 @@
   border-radius: 4px;
 }
 
+/* Research Stage Heading */
+.research-stage-heading {
+  padding: 40px 5% 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.section-title-blur {
+  max-width: 880px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.section-title-blur h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2.4rem;
+  color: #FFCB05;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.section-title-blur .subtitle {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+
 /* Online Ethnography section styling */
 .ethnography-section .project-text-blur {
   max-width: 1000px;
@@ -218,7 +254,7 @@
 .ethnography-block h3 {
   font-size: 1.3rem;
   font-family: 'Rubik', sans-serif;
-  color: #FFCB05;
+  color: #C1A8FF;
   margin-bottom: 0.5rem;
 }
 
@@ -248,7 +284,6 @@
   color: #c1a8ff;
   font-weight: 500;
 }
-
 
 /* Secondary Research section styling */
 .secondary-research .project-text-blur {
@@ -285,11 +320,7 @@
   color: rgba(255, 255, 255, 0.88);
 }
 
-.secondary-research .highlight {
-  background: rgba(168, 139, 255, 0.2); /* Soft purple glow */
-  padding: 0 4px;
-  border-radius: 4px;
-}
+
 
 /* Competitor Analysis section styling */
 .competitor-analysis .project-text-blur {
@@ -464,15 +495,24 @@
 @media (max-width: 768px) {
   .competitor-columns {
     flex-direction: column;
-    align-items: center;
+    gap: 1.5rem; /* Space between image & text cards */
   }
 
+  /* 2. Make text cards full width */
   .text-cards {
     width: 100%;
   }
 
+  /* 3. Adjust card styling */
   .competitor-card {
-    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* 4. Ensure image fits & centers */
+  .competitor-img.side {
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .observation-table th,
@@ -490,11 +530,6 @@
 }
 
 @media (max-width: 768px) {
-  .competitor-analysis .project-text-blur,
-  .contextual-observation .project-text-blur {
-    padding: 1.5rem;
-  }
-  
   .feature-table,
   .observation-table {
     font-size: 0.85rem;
@@ -814,6 +849,13 @@
       </div>
     </section>
 
+    <!-- Research Stage Heading -->
+    <section class="project-section research-stage-heading">
+      <div class="section-title-blur">
+        <h2>Research Stage</h2>
+        <p class="subtitle">A multi-method approach to uncover insights about how kids engage with Olympic broadcasts.</p>
+      </div>
+    </section>
 
     <!-- Research Questions Section -->
     <section class="project-section research-questions-section">
@@ -877,9 +919,7 @@
     <section class="project-section secondary-research">
       <div class="project-text-blur">
         <h2>Secondary Research</h2>
-        <p>
-          To complement our ethnographic insights, we reviewed research articles and opinion pieces that explore how interactive features can support children's engagement with sports and the Olympics. These articles reinforce our problem scenario by showing how participation, emotional connection, and interactivity improve learning and retention for young viewers.
-        </p>
+          <p> To complement our <span class="highlight">ethnographic insights</span>, we reviewed <span class="highlight">research articles</span> and <span class="highlight">opinion pieces</span> that explore how <strong class="highlight">interactive features</strong> can support children's engagement with sports and the Olympics. These articles reinforce our <span class="highlight">problem scenario</span> by showing how <strong class="highlight">participation</strong>, <strong class="highlight">emotional connection</strong>, and <strong class="highlight">interactivity</strong> improve <span class="highlight">learning</span> and <span class="highlight">retention</span> for young viewers. </p>
 
         <div class="research-block">
           <h3>How to Make Watching Sport at Home as Immersive as Possible</h3>
