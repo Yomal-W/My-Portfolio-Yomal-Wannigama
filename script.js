@@ -116,5 +116,32 @@ document.addEventListener('keydown', function(e) {
   if (e.key === "Escape") closeModal();
 });
 
+// ===== STORYBOARD IMAGE MODAL FUNCTIONALITY =====
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('.storyboard-img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const modalImg = document.getElementById('imgModalImg');
+      modalImg.src = this.src;
+      document.getElementById('imgModal').classList.add('active');
+      // Optional: highlight style per persona
+      if (this.alt.toLowerCase().includes('ben')) {
+        modalImg.style.outline = '4px solid #ffe16b'; // yellow for parent
+      } else {
+        modalImg.style.outline = '4px solid #c1a8ff'; // purple for kids
+      }
+    });
+  });
+});
+
+// Close modal for storyboard images
+function closeImgModal() {
+  document.getElementById('imgModal').classList.remove('active');
+  document.getElementById('imgModalImg').src = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === "Escape") closeImgModal();
+});
 
 
