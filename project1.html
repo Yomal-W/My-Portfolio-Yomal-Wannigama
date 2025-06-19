@@ -1129,6 +1129,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Add these: */
+  transition: transform 0.23s, box-shadow 0.22s;
+}
+
+.journey-map-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 14px 40px rgba(128,80,240,0.23);
+  z-index: 2;
 }
 
 .journey-map-card h3 {
@@ -1143,6 +1151,12 @@
   background: linear-gradient(120deg, rgba(255, 203, 5, 0.11), rgba(255,255,255,0.06));
   border-left: 5px solid #ffe16b;
   border-top: 3px solid #ffe16b;
+}
+
+.journey-map-card.kid {
+  background: linear-gradient(120deg, rgba(255, 203, 5, 0.11), rgba(255,255,255,0.06));
+  border-left: 5px solid #c1a8ff;
+  border-top: 3px solid #c1a8ff;
 }
 
 .journey-map-card.parent h3 {
@@ -1174,6 +1188,147 @@
     padding: 1rem 0.4rem 1rem;
   }
 }
+
+/* === Journey Map Modal Styles When Clicked === */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(12, 7, 30, 0.91);
+  justify-content: center;
+  align-items: center;
+  transition: background 0.25s;
+  cursor: zoom-out;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.modal-img {
+  max-width: 92vw;
+  max-height: 83vh;
+  border-radius: 18px;
+  box-shadow: 0 12px 60px rgba(40,20,70,0.46);
+  background: #222;
+  outline: 4px solid #ffe16b;
+  cursor: default;
+}
+
+/* === Storyboards === */
+.storyboards-section .project-text-blur {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.07);
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  padding: 2.5rem 2rem 2.5rem 2rem;
+}
+
+.storyboards-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2.1rem;
+  color: #fff;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.storyboard-justification {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.13rem;
+  color: rgba(255,255,255,0.89);
+  margin-bottom: 2.3rem;
+  line-height: 1.7;
+}
+.persona-block {
+  margin-bottom: 2.9rem;
+}
+.persona-label {
+  display: inline-block;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  font-size: 1.04rem;
+  letter-spacing: 0.3px;
+  border-radius: 1.2rem;
+  padding: 0.38rem 1.2rem;
+  margin-bottom: 1.3rem;
+  margin-left: 0.1rem;
+}
+.parent-label {
+  background: rgba(255,225,107,0.14);
+  color: #ffe16b;
+}
+.kid-label {
+  background: rgba(193,168,255,0.13);
+  color: #c1a8ff;
+}
+.storyboard-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+}
+.storyboard-glass-card {
+  background: rgba(255,255,255,0.11);
+  backdrop-filter: blur(9px);
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(34, 16, 80, 0.16);
+  transition: transform 0.22s, box-shadow 0.22s;
+  width: 180px;
+  padding: 1rem 0.7rem 1.15rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.storyboard-glass-card:hover {
+  transform: translateY(-3px) scale(1.045);
+  box-shadow: 0 10px 34px rgba(193,168,255,0.17);
+}
+.storyboard-glass-card img {
+  width: 100%;
+  max-width: 128px;
+  height: auto;
+  border-radius: 9px;
+  margin-bottom: 0.93rem;
+  background: #13121a;
+  box-shadow: 0 1.5px 5px rgba(60,40,80,0.11);
+}
+.storyboard-caption {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.98rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.42;
+  padding: 0 2px;
+}
+
+@media (max-width: 1000px) {
+  .storyboard-flex {
+    gap: 1.3rem;
+    justify-content: flex-start;
+  }
+  .storyboard-glass-card {
+    width: 46vw;
+    min-width: 140px;
+    max-width: 240px;
+    margin-bottom: 0.4rem;
+  }
+}
+@media (max-width: 700px) {
+  .storyboard-flex {
+    flex-direction: column;
+    gap: 1.13rem;
+    align-items: center;
+  }
+  .storyboard-glass-card {
+    width: 95vw;
+    min-width: 0;
+    max-width: 350px;
+  }
+  .persona-label {
+    margin-bottom: 1.1rem;
+  }
+}
+
 
 
 
@@ -1747,7 +1902,7 @@
 
         <!-- New appendix link -->
         <p class="appendix-links">
-          <a href="https://www.figma.com/board/dOAdCMhKWvdag9kuwXI4kH/DECO2200-A1---A2---A3-Appendix-J-NATHAN-YOMAL?node-id=0-1&t=Dc7oiXWvw4pEsxry-1" target="_blank">Find the full 5 affinity diagrams here</a>
+          <a href="https://www.figma.com/board/dOAdCMhKWvdag9kuwXI4kH/DECO2200-A1---A2---A3-Appendix-J-NATHAN-YOMAL?node-id=0-1&t=Dc7oiXWvw4pEsxry-1" target="_blank">View the complete version of this affinity diagram along with the remaining four</a>
         </p>
         
       </div>
@@ -1863,12 +2018,15 @@
       <div class="project-text-blur">
         <h2>Data Synthesis: User Journey Maps</h2>
         <p class="journey-justification">
-          To deepen our understanding of <span class="highlight">pain points</span> and <span class="highlight">opportunities</span> at each stage of Olympic broadcast engagement, we mapped user journeys for all three core personas. 
+          To deepen our understanding of <span class="highlight">pain points</span> and <span class="highlight">opportunities</span> at each stage of Olympic broadcast engagement, we mapped user journeys for all three core personas.
           <br><br>
-          These journey maps visualize the <strong>end-to-end experience</strong> for both parents and children—from initial interest to post-broadcast reflection. By charting <span class="highlight">actions, thoughts, and emotions</span> at every touchpoint, we identified moments of confusion, frustration, and delight. 
+          Each journey map is structured into clear <strong>phases</strong> that reflect the real sequence of interactions, from initial viewing to post-broadcast reflection. For every phase, we charted <span class="highlight">actions, thoughts, and emotions</span> to capture the user’s perspective, along with specific <strong>pain points</strong> and <strong>opportunities</strong> for improvement. 
+          <br><br>
+          This framework was shaped by insights from interviews and surveys, ensuring we captured both the behavioral flow and underlying motivations. By visualizing <strong>emotion trajectories</strong> and aligning them with concrete user feedback, the journey maps reveal not only where users struggle but also where meaningful intervention can create delight.
           <br><br>
           This synthesis process ensures that our design solutions <strong>directly address real user challenges</strong> and provide targeted improvements for each unique user type.
         </p>
+
         <div class="journey-maps-grid">
 
           <!-- Parent Journey Map -->
@@ -1878,21 +2036,195 @@
           </div>
 
           <!-- Kid Journey Map 1 -->
-          <div class="journey-map-card">
+          <div class="journey-map-card kid">
             <h3>Ella Thompson – Kid Journey Map</h3>
             <img src="images/Ella Thompson - kid - user journey map.png" alt="Ella Thompson Kid User Journey Map" class="journey-map-img"/>
           </div>
 
           <!-- Kid Journey Map 2 -->
-          <div class="journey-map-card">
+          <div class="journey-map-card kid">
             <h3>Liam Henry – Kid Journey Map</h3>
             <img src="images/Liam Henry - kid - user journey map.png" alt="Liam Henry Kid User Journey Map" class="journey-map-img"/>
           </div>
 
         </div>
+                
+        <!-- New appendix link -->
+        <p class="appendix-links">
+          <a href="https://www.figma.com/board/dOAdCMhKWvdag9kuwXI4kH/DECO2200-A1---A2---A3-Appendix-J-NATHAN-YOMAL?node-id=0-1&t=Dc7oiXWvw4pEsxry-1" target="_blank">Explore the 3 user journey maps here</a>
+        </p>
       </div>
     </section>
 
+    <!-- Storyboard-->
+    <section class="project-section storyboards-section">
+      <div class="project-text-blur">
+        <h2>Storyboards</h2>
+        <p class="storyboard-justification">
+          These storyboards bring to life the <span class="highlight">real user experiences</span> uncovered during our research, tracing the Olympic broadcast journey for all three core personas—<strong>Ben (Parent)</strong>, <strong>Ella (Kid)</strong>, and <strong>Liam (Kid)</strong>. Each sequence was mapped directly from our <span class="highlight">user journey maps</span>, capturing <strong>key moments of engagement, confusion, and learning</strong> across different household roles.
+          <br><br>
+          By visualizing these scenarios, we highlight <span class="highlight">pain points</span> (such as confusing rules or lack of accessible explanations), <span class="highlight">emotional reactions</span> (like frustration, boredom, or curiosity), and <span class="highlight">opportunities for delight and improvement</span> (including social learning and self-driven exploration). 
+          <br><br>
+          The storyboard format allows us to see not just what users do, but <strong>how they feel and adapt</strong> at every step—from initial discovery to sharing knowledge with peers. This method helps us empathize with both <span class="highlight">parental guidance needs</span> and <span class="highlight">children’s learning preferences</span>, ensuring our design solutions are <strong>user-centered, relevant, and grounded in real behavioral insights</strong>.
+        </p>
+
+
+        <!-- Ben Park (Parent Persona) Storyboard -->
+        <div class="persona-block persona-block-parent">
+          <div class="persona-label parent-label">Parent — Ben Park</div>
+          <div class="storyboard-flex">
+            <!-- Frame 1 -->
+            <div class="storyboard-glass-card">
+              <img src="images/ben-storyboard-1.JPG" alt="Ben and Ethan watching tennis">
+              <div class="storyboard-caption">
+                <strong>1</strong>
+                <div>
+                  <i>Watching Together</i><br>
+                  Ben sits down with Ethan to watch an Olympic tennis match, hoping for family bonding and learning.
+                </div>
+              </div>
+            </div>
+            <!-- Frame 2 -->
+            <div class="storyboard-glass-card">
+              <img src="images/ben-storyboard-2.JPG" alt="Tennis scoreboard confusion">
+              <div class="storyboard-caption">
+                <strong>2</strong>
+                <div>
+                  <i>Confusing Scoreboard</i><br>
+                  Ethan is puzzled by the complex tennis scoring and keeps asking Ben to explain what’s happening.
+                </div>
+              </div>
+            </div>
+            <!-- Frame 3 -->
+            <div class="storyboard-glass-card">
+              <img src="images/ben-storyboard-3.JPG" alt="Ethan bored and disengaged">
+              <div class="storyboard-caption">
+                <strong>3</strong>
+                <div>
+                  <i>Disengagement</i><br>
+                  Ben watches as Ethan quickly loses interest, calling the match “boring.”
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ella Thompson (Kid Persona) Storyboard -->
+        <div class="persona-block persona-block-kid">
+          <div class="persona-label kid-label">Kid — Ella Thompson</div>
+          <div class="storyboard-flex">
+            <!-- Frame 1 -->
+            <div class="storyboard-glass-card">
+              <img src="images/ella-storyboard-1.JPG" alt="Ella discovers a new sport highlight">
+              <div class="storyboard-caption">
+                <strong>1</strong>
+                <div>
+                  <i>Discovery</i><br>
+                  Ella stumbles upon a highlight video about a new Olympic sport on YouTube Kids—her curiosity is sparked by the visuals.
+                </div>
+              </div>
+            </div>
+            <!-- Frame 2 -->
+            <div class="storyboard-glass-card">
+              <img src="images/ella-storyboard-2.JPG" alt="Ella sees a VAR replay">
+              <div class="storyboard-caption">
+                <strong>2</strong>
+                <div>
+                  <i>Encountering Complexity</i><br>
+                  Ella notices a VAR (Video Assistant Referee) playback and finds the rules and tech confusing.
+                </div>
+              </div>
+            </div>
+            <!-- Frame 3 -->
+            <div class="storyboard-glass-card">
+              <img src="images/ella-storyboard-3.JPG" alt="Ella is confused">
+              <div class="storyboard-caption">
+                <strong>3</strong>
+                <div>
+                  <i>Confusion</i><br>
+                  Ella feels lost by the rules, and it makes her hesitant to keep watching.
+                </div>
+              </div>
+            </div>
+            <!-- Frame 4 -->
+            <div class="storyboard-glass-card">
+              <img src="images/ella-storyboard-4.JPG" alt="Ella asks a friend">
+              <div class="storyboard-caption">
+                <strong>4</strong>
+                <div>
+                  <i>Seeking Help</i><br>
+                  She asks a friend (who knows more about the sport) for help understanding what's going on.
+                </div>
+              </div>
+            </div>
+            <!-- Frame 5 -->
+            <div class="storyboard-glass-card">
+              <img src="images/ella-storyboard-5.JPG" alt="Ella and friend discuss">
+              <div class="storyboard-caption">
+                <strong>5</strong>
+                <div>
+                  <i>Social Learning</i><br>
+                  Ella and her friend discuss the sport’s rules for ten minutes, clarifying doubts together.
+                </div>
+              </div>
+            </div>
+            <!-- Frame 6 -->
+            <div class="storyboard-glass-card">
+              <img src="images/ella-storyboard-6.JPG" alt="Ella watches with friends">
+              <div class="storyboard-caption">
+                <strong>6</strong>
+                <div>
+                  <i>Re-engagement</i><br>
+                  Now understanding, Ella joins her friends to watch and enjoy the rest of the match together.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Liam Henry (Kid Persona) Storyboard -->
+        <div class="persona-block persona-block-kid">
+          <div class="persona-label kid-label">Kid — Liam Henry</div>
+          <div class="storyboard-flex">
+            <!-- Frame 1 -->
+            <div class="storyboard-glass-card">
+              <img src="images/liam-storyboard-1.JPG" alt="Liam watches Olympic golf with laptop">
+              <div class="storyboard-caption">
+                <strong>1</strong>
+                <div>
+                  <i>Multi-screen Discovery</i><br>
+                  Liam spots an unfamiliar Olympic sport (golf) on TV and opens his laptop, eager to learn more on his own.
+                </div>
+              </div>
+            </div>
+            <!-- Frame 2 -->
+            <div class="storyboard-glass-card">
+              <img src="images/liam-storyboard-2.JPG" alt="Liam confused by golf terms">
+              <div class="storyboard-caption">
+                <strong>2</strong>
+                <div>
+                  <i>Rule Confusion</i><br>
+                  He’s puzzled by the terminology (“birdie?” “bogey?”) and struggles to follow the game, feeling a bit stuck.
+                </div>
+              </div>
+            </div>
+            <!-- Frame 3 -->
+            <div class="storyboard-glass-card">
+              <img src="images/liam-storyboard-3.JPG" alt="Liam searches for golf rules online">
+              <div class="storyboard-caption">
+                <strong>3</strong>
+                <div>
+                  <i>Independent Research</i><br>
+                  Determined, Liam turns to Google and YouTube for tutorials and step-by-step guides, gradually building his understanding through self-directed exploration.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
 
 
 
@@ -1901,7 +2233,11 @@
 
   </div>
 
-  
+  <!-- Modal for Full-Size Journey Map -->
+  <div id="journeyMapModal" class="modal-overlay" onclick="closeModal()">
+    <img id="modalImg" src="" alt="Full Journey Map" class="modal-img"/>
+  </div>
+
 
 
   <script src="script.js"></script>

@@ -85,3 +85,36 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
+// ===== JOURNEY MAP MODAL FUNCTIONALITY =====
+
+// Wait for DOM to load
+document.addEventListener("DOMContentLoaded", function() {
+  // Attach click listeners to journey map images
+  document.querySelectorAll('.journey-map-img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const modalImg = document.getElementById('modalImg');
+      modalImg.src = this.src;
+      document.getElementById('journeyMapModal').classList.add('active');
+      // Change modal border based on which image
+      if (this.alt.toLowerCase().includes('ben park')) {
+        modalImg.style.outline = '4px solid #ffe16b'; // yellow for Ben Park (parent)                                      
+      } else {
+        modalImg.style.outline = '4px solid #c1a8ff'; // purple for kids
+      }
+    });
+  });
+});
+
+// Close modal when clicking overlay or pressing Escape
+function closeModal() {
+  document.getElementById('journeyMapModal').classList.remove('active');
+  document.getElementById('modalImg').src = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === "Escape") closeModal();
+});
+
+
+
