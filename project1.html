@@ -1083,6 +1083,97 @@
   }
 }
 
+/* User Journey Section */
+.user-journey-section .project-text-blur {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  backdrop-filter: blur(13px);
+  box-shadow: 0 14px 40px rgba(128,80,240,0.13);
+}
+
+.user-journey-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.journey-justification {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.13rem;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 2.2rem;
+  line-height: 1.7;
+}
+
+.journey-maps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.journey-map-card {
+  background: linear-gradient(120deg, rgba(193,168,255,0.11) 70%, rgba(255,255,255,0.06) 100%);
+  border-radius: 14px;
+  box-shadow: 0 7px 28px rgba(160, 130, 250, 0.10);
+  padding: 1.2rem 1rem 1rem;
+  font-family: 'Rubik', sans-serif;
+  color: rgba(255,255,255,0.98);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journey-map-card h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.11rem;
+  color: #C1A8FF;
+  margin-bottom: 1.1rem;
+  font-weight: 700;
+}
+
+.journey-map-card.parent {
+  background: linear-gradient(120deg, rgba(255, 203, 5, 0.11), rgba(255,255,255,0.06));
+  border-left: 5px solid #ffe16b;
+  border-top: 3px solid #ffe16b;
+}
+
+.journey-map-card.parent h3 {
+  color: #ffe16b;
+}
+
+.journey-map-img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1100px) {
+  .journey-maps-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .journey-maps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .journey-map-card {
+    padding: 1rem 0.4rem 1rem;
+  }
+}
 
 
 
@@ -1766,17 +1857,51 @@
         </div>
       </div>
     </section>
+    
+    <!-- User Journey Maps Section -->
+    <section class="project-section user-journey-section">
+      <div class="project-text-blur">
+        <h2>Data Synthesis: User Journey Maps</h2>
+        <p class="journey-justification">
+          To deepen our understanding of <span class="highlight">pain points</span> and <span class="highlight">opportunities</span> at each stage of Olympic broadcast engagement, we mapped user journeys for all three core personas. 
+          <br><br>
+          These journey maps visualize the <strong>end-to-end experience</strong> for both parents and children—from initial interest to post-broadcast reflection. By charting <span class="highlight">actions, thoughts, and emotions</span> at every touchpoint, we identified moments of confusion, frustration, and delight. 
+          <br><br>
+          This synthesis process ensures that our design solutions <strong>directly address real user challenges</strong> and provide targeted improvements for each unique user type.
+        </p>
+        <div class="journey-maps-grid">
+
+          <!-- Parent Journey Map -->
+          <div class="journey-map-card parent">  <!-- Added 'parent' class here -->
+            <h3>Ben Park – Parent Journey Map</h3>
+            <img src="images/Ben Park - parent - user journey map.png" alt="Ben Park Parent User Journey Map" class="journey-map-img"/>
+          </div>
+
+          <!-- Kid Journey Map 1 -->
+          <div class="journey-map-card">
+            <h3>Ella Thompson – Kid Journey Map</h3>
+            <img src="images/Ella Thompson - kid - user journey map.png" alt="Ella Thompson Kid User Journey Map" class="journey-map-img"/>
+          </div>
+
+          <!-- Kid Journey Map 2 -->
+          <div class="journey-map-card">
+            <h3>Liam Henry – Kid Journey Map</h3>
+            <img src="images/Liam Henry - kid - user journey map.png" alt="Liam Henry Kid User Journey Map" class="journey-map-img"/>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
 
 
 
 
-
-
+    
 
   </div>
 
-
+  
 
 
   <script src="script.js"></script>

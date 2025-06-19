@@ -84,3 +84,4 @@ function changeColors() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+
