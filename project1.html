@@ -1505,7 +1505,69 @@
 }
 
 
+/* === Low-Fidelity Wireframes Section === */
+.wireframes-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
 
+.wireframe-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.wireframe-block {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.wireframe-block h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.3rem;
+  color: #C1A8FF;
+  margin-bottom: 1.5rem;
+}
+
+.wireframe-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+
+.wireframe-img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(193, 168, 255, 0.25);
+}
+
+.wireframe-caption {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .wireframe-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .wireframe-block {
+    max-width: 100%;
+  }
+}
 
   </style>
 </head>
@@ -2445,6 +2507,51 @@
         <p class="appendix-links" style="margin-top:1.2rem;">
           <a href="https://www.figma.com/board/dOAdCMhKWvdag9kuwXI4kH/DECO2200-A1---A2---A3-Appendix-J-NATHAN-YOMAL?node-id=0-1&t=Dc7oiXWvw4pEsxry-1" target="_blank">
             Explore the other 2 brainstorms here
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Low-Fidelity Wireframes Section -->
+    <section class="project-section wireframes-section">
+      <div class="project-text-blur">
+        <h2>Sketching: Low-Fidelity Wireframe</h2>
+        <p>
+          We each created wireframes for our solutions. For an example Yomal's initial wireframe sketches were created to explore the core functionality and layout of both the <span class="highlight">mobile companion app</span> and <span class="highlight">TV overlay interface</span>. These low-fidelity concepts helped visualize key interactions before moving to digital prototypes. <span class="concept-author">(Yomal – displayed below)</span>
+        </p>
+
+        <div class="wireframe-grid">
+          <!-- Mobile Wireframe -->
+          <div class="wireframe-block">
+            <h3>Mobile Companion App</h3>
+            <img 
+              src="images/mobile-low-fidelity-wireframe-yomal.JPG" 
+              alt="Mobile companion app wireframe sketch" 
+              class="wireframe-img journey-map-img"
+              style="max-width: 320px;"
+            />
+            <p class="wireframe-caption">
+              <strong>Key features:</strong> Live sport explanations, interactive quizzes, athlete profiles, and synchronized viewing with TV broadcast.
+            </p>
+          </div>
+
+          <!-- TV Wireframe -->
+          <div class="wireframe-block">
+            <h3>TV Overlay Interface</h3>
+            <img 
+              src="images/tv-low-fidelity-wireframe-yomal.JPG" 
+              alt="TV overlay wireframe sketch" 
+              class="wireframe-img journey-map-img"
+              style="max-width: 400px;"
+            />
+            <p class="wireframe-caption">
+              <strong>Key features:</strong> Simplified scoreboards, rule explanations, and visual indicators that sync with the mobile app.
+            </p>
+          </div>
+        </div>
+        <p class="appendix-links" style="margin-top:1.2rem;">
+          <a href="https://www.figma.com/board/dOAdCMhKWvdag9kuwXI4kH/DECO2200-A1---A2---A3-Appendix-J-NATHAN-YOMAL?node-id=0-1&t=Dc7oiXWvw4pEsxry-1" target="_blank">
+            Explore the other 2 low-fidelity sketches here
           </a>
         </p>
       </div>
