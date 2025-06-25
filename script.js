@@ -144,3 +144,38 @@ document.addEventListener('keydown', function(e) {
   if (e.key === "Escape") closeImgModal();
 });
 
+// === Brainstorm image modal ===
+document.addEventListener("DOMContentLoaded", function() {
+  const brainstormTrigger = document.getElementById('brainstormTrigger');
+  const brainstormModal = document.getElementById('brainstormModal');
+  const brainstormModalImg = document.getElementById('brainstormModalImg');
+  
+  if (brainstormTrigger && brainstormModal && brainstormModalImg) {
+    // Open modal on click or keyboard
+    function openModal() {
+      brainstormModalImg.src = brainstormTrigger.src;
+      brainstormModalImg.alt = brainstormTrigger.alt + " (enlarged)";
+      brainstormModal.classList.add('open');
+      brainstormModal.focus();
+    }
+    brainstormTrigger.addEventListener('click', openModal);
+    brainstormTrigger.addEventListener('keydown', function(e) {
+      if (e.key === "Enter" || e.key === " ") openModal();
+    });
+
+    // Close modal on click outside image or on Escape
+    brainstormModal.addEventListener('click', function (event) {
+      if (event.target === brainstormModal) {
+        brainstormModal.classList.remove('open');
+        brainstormModalImg.src = "";
+      }
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape" && brainstormModal.classList.contains('open')) {
+        brainstormModal.classList.remove('open');
+        brainstormModalImg.src = "";
+      }
+    });
+  }
+});
+
