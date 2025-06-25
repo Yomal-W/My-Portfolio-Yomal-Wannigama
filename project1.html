@@ -442,6 +442,8 @@
   margin: 1rem 0;
   border-radius: 12px;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #c1a8ff #23222e;
 }
 
 .feature-table,
@@ -490,6 +492,21 @@
 
 .feature-table td:before {
   font-weight: bold;
+}
+
+/* For Chrome, Edge, and Safari */ /* Helps woth scroll across*/
+.observation-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+  border-radius: 7px;
+  background: #23222e;
+}
+.observation-table-wrapper::-webkit-scrollbar-thumb {
+  background: #c1a8ff;
+  border-radius: 7px;
+}
+.observation-table-wrapper::-webkit-scrollbar-track {
+  background: #23222e;
+  border-radius: 7px;
 }
 
 @media (max-width: 768px) {
@@ -1434,21 +1451,17 @@
     <!-- The Problem Section -->
     <section class="project-section">
       <div class="project-text-blur highlighted-problem">
-        <h2>The Problem</h2>
-        <p>
-          The Olympics feature a <span class="highlight">diverse array of sports</span>, many of which are 
-          <strong>unfamiliar to young viewers</strong>. As these children encounter 
-          <span class="highlight">lesser-known sports</span>, they often face 
-          <strong>confusion around the rules</strong>, leading to 
-          <span class="highlight">disengagement</span> and a <strong>lack of connection</strong> 
-          with the events.
-        </p>
-        <p>
-          Without <span class="highlight">accessible</span> and 
-          <span class="highlight">dynamic educational tools</span>, young spectators miss out on a 
-          <strong>deeper appreciation of the games</strong>, and the 
-          <span class="highlight">Olympics’ educational potential</span> is diminished.
-        </p>
+        <h2>The Problem Statement</h2>
+          <p>
+            Despite the Olympics' global appeal, <span class="highlight">young viewers consistently struggle to engage</span> with Olympic broadcasts, especially when it comes to <strong>lesser-known sports</strong> with complex or unfamiliar rules. <span class="highlight">Traditional, passive TV formats</span> do not resonate with children who are used to <strong>interactive, dynamic digital experiences</strong> such as games and apps.
+          </p>
+          <p>
+            This results in <span class="highlight">reduced interest, confusion, and missed educational opportunities</span> for young audiences. Parents also express concern about <strong>overstimulation and the developmental impact</strong> of extended, unengaging screen time.
+          </p>
+          <p>
+            <strong>There is a clear need</strong> for <span class="highlight">engaging, interactive, and educational solutions</span> that bridge the understanding gap for young viewers, making Olympic broadcasts not just more accessible, but also supportive of <strong>children’s well-being and learning</strong>.
+          </p>
+
 
         <!-- NEW: Appendix Links -->
         <p class="appendix-links">
@@ -2282,11 +2295,17 @@
     </section>
 
 
-
+    <!-- Research Stage Heading -->
+    <section class="project-section research-stage-heading">
+      <div class="section-title-blur">
+        <h2>Usability Testing + Mid-Fidelity wireframes and Hi-Fidelity mockups</h2>
+        <p class="subtitle">This section covers usability testing conducted on mid-fidelity wireframes (basic layouts) and hi-fidelity mockups (detailed, polished designs) to evaluate user experience and functionality.</p>
+      </div>
+    </section>
 
     
 
-  </div>
+  </div> <!--Container close div tag-->
 
   <!-- Modals for Journey Maps and Images -->
   <div id="journeyMapModal" class="modal-overlay" onclick="closeModal()">
