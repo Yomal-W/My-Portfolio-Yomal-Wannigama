@@ -1566,6 +1566,300 @@
   }
 }
 
+/* === Solution-Based User Journey Maps Section === */
+.solution-journey-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.solution-journey-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.solution-journey-card {
+  background: linear-gradient(120deg, rgba(193,168,255,0.14) 70%, rgba(255,255,255,0.06) 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 7px 28px rgba(160, 130, 250, 0.12);
+  border-left: 5px solid #c1a8ff;
+}
+
+.solution-journey-card h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.4rem;
+  color: #C1A8FF;
+  margin-bottom: 0.5rem;
+}
+
+.solution-meta {
+  margin-bottom: 1.5rem;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.solution-author {
+  display: block;
+  font-weight: 600;
+  color: #FFCB05;
+}
+
+.solution-concept {
+  font-style: italic;
+}
+
+.solution-journey-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+
+.solution-journey-img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(193, 168, 255, 0.25);
+}
+
+.solution-key-points {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(193, 168, 255, 0.3);
+}
+
+.solution-key-points h4 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.1rem;
+  color: #C1A8FF;
+  margin-bottom: 0.8rem;
+}
+
+.solution-key-points ul {
+  padding-left: 1.2rem;
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+.solution-key-points li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .solution-journey-card {
+    padding: 1.5rem;
+  }
+  
+  .solution-journey-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* === Decision Matrix Section === */
+.decision-matrix-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.matrix-key {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #FFCB05;
+}
+
+.matrix-key h4 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.1rem;
+  color: #C1A8FF;
+  margin-bottom: 0.8rem;
+}
+
+.key-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+
+.key-item {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.key-box {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.key-box.negative-2 {
+  background-color: #f44336;
+}
+
+.key-box.negative-1 {
+  background-color: #FF8A80;
+}
+
+.key-box.positive-1 {
+  background-color: #81C784;
+}
+
+.key-box.positive-2 {
+  background-color: #4CAF50;
+}
+
+.matrix-scroll-container {
+  overflow-x: auto;
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 12px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #c1a8ff #23222e;
+}
+
+.decision-matrix {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.decision-matrix th, .decision-matrix td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.decision-matrix thead {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.decision-matrix td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  width: 30%;
+}
+
+.decision-matrix td:nth-child(2) {
+  font-weight: 600;
+  color: #ffe16b;
+}
+
+.negative-2 {
+  background-color: rgba(244, 67, 54, 0.15);
+  color: #f44336;
+  font-weight: 600;
+}
+
+.negative {
+  background-color: rgba(255, 138, 128, 0.15);
+  color: #FF8A80;
+  font-weight: 600;
+}
+
+.positive {
+  background-color: rgba(129, 199, 132, 0.15);
+  color: #81C784;
+  font-weight: 600;
+}
+
+.positive-2 {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.summary-row td {
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.positive-summary {
+  color: #4CAF50;
+}
+
+.negative-summary {
+  color: #f44336;
+}
+
+.final-row td {
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.final-score {
+  color: #C1A8FF;
+}
+
+.matrix-conclusion {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(193, 168, 255, 0.3);
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+}
+
+.matrix-conclusion strong {
+  color: #FFCB05;
+}
+
+/* For Chrome, Edge, and Safari */
+.matrix-scroll-container::-webkit-scrollbar {
+  height: 8px;
+  border-radius: 7px;
+  background: #23222e;
+}
+.matrix-scroll-container::-webkit-scrollbar-thumb {
+  background: #c1a8ff;
+  border-radius: 7px;
+}
+.matrix-scroll-container::-webkit-scrollbar-track {
+  background: #23222e;
+  border-radius: 7px;
+}
+
+@media (max-width: 768px) {
+  .decision-matrix {
+    font-size: 0.85rem;
+  }
+  
+  .decision-matrix th, 
+  .decision-matrix td {
+    padding: 0.8rem;
+  }
+  
+  .key-items {
+    grid-template-columns: 1fr;
+  }
+}
+
   </style>
 </head>
 
@@ -2551,6 +2845,183 @@
             Explore the other 2 low-fidelity sketches here
           </a>
         </p>
+      </div>
+    </section>
+
+    <!-- Solution-Based User Journey Maps Section -->
+    <section class="project-section solution-journey-section">
+      <div class="project-text-blur">
+        <h2>Solution-Based User Journey Maps</h2>
+        <p>
+          Building on our initial research, we created solution-based journey maps that demonstrate how each persona would interact with our proposed designs. These maps visualize the <span class="highlight">improved experience</span> by applying our solutions to the pain points identified earlier.
+        </p>
+        <p>
+          Each team member selected one persona and mapped their journey through our proposed solution, showing how key interactions would address their specific needs and challenges.
+        </p>
+
+        <div class="solution-journey-grid">
+          <!-- Ella Thompson Solution Journey -->
+          <div class="solution-journey-card">
+            <h3>Ella Thompson with Companion App Solution</h3>
+            <div class="solution-meta">
+              <span class="solution-author">Yomal's Solution</span>
+              <span class="solution-concept">Broadcasted Olympics TV Augmented Viewing Experience with Companion Mobile App for Kids</span>
+            </div>
+            <img 
+              src="images/ella thompson persona - solution based user journey map.png" 
+              alt="Ella Thompson solution-based user journey map" 
+              class="solution-journey-img journey-map-img"
+            />
+            <div class="solution-key-points">
+              <h4>Key Improvements:</h4>
+              <ul>
+                <li>Instant rule explanations through the companion app</li>
+                <li>Social features to discuss with friends in real-time</li>
+                <li>Gamified learning with rewards for engagement</li>
+                <li>Simplified visual overlays on TV broadcast</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <p class="appendix-links">
+          <a href="https://www.figma.com/board/dOAdCMhKWvdag9kuwXI4kH/DECO2200-A1---A2---A3-Appendix-J-NATHAN-YOMAL?node-id=0-1&t=Dc7oiXWvw4pEsxry-1" target="_blank">
+            View all solution-based journey maps here
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Decision Matrix Section -->
+    <section class="project-section decision-matrix-section">
+      <div class="project-text-blur">
+        <h2>Design Concepts' Decision Matrix</h2>
+        <p>
+          To objectively evaluate our three solution concepts, we created a decision matrix with weighted criteria based on our research findings. This systematic approach helped us identify which concept best addressed our users' needs while aligning with the project requirements.
+        </p>
+
+        <div class="matrix-key">
+          <h4>Scoring Key:</h4>
+          <div class="key-items">
+            <div class="key-item"><span class="key-box negative-2"></span> -- or -2 = Really bad</div>
+            <div class="key-item"><span class="key-box negative-1"></span> - or -1 = Missing effectiveness</div>
+            <div class="key-item"><span class="key-box positive-1"></span> + or +1 = Works to an extent</div>
+            <div class="key-item"><span class="key-box positive-2"></span> ++ or +2 = Works amazing</div>
+          </div>
+        </div>
+
+        <div class="matrix-scroll-container">
+          <table class="decision-matrix">
+            <thead>
+              <tr>
+                <th>Criteria</th>
+                <th>Weight (1-3)</th>
+                <th>Concept 1 - Yomal</th>
+                <th>Concept 2 - J</th>
+                <th>Concept 3 - Nathan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fit with the design brief</td>
+                <td>2</td>
+                <td class="negative">-</td>
+                <td class="positive">+</td>
+                <td class="positive">+</td>
+              </tr>
+              <tr>
+                <td>Includes interactions between users/stakeholders</td>
+                <td>3</td>
+                <td class="positive-2">++</td>
+                <td class="positive-2">++</td>
+                <td class="positive-2">++</td>
+              </tr>
+              <tr>
+                <td>Multi-modal/omni-channel interactions</td>
+                <td>3</td>
+                <td class="positive-2">++</td>
+                <td class="positive-2">++</td>
+                <td class="negative-2">--</td>
+              </tr>
+              <tr>
+                <td>Helps understand sports rules and scoring</td>
+                <td>3</td>
+                <td class="positive-2">++</td>
+                <td class="positive-2">++</td>
+                <td class="positive">+</td>
+              </tr>
+              <tr>
+                <td>Utilizes visual aids and interactive explanations</td>
+                <td>2</td>
+                <td class="positive">+</td>
+                <td class="positive-2">++</td>
+                <td class="negative-2">--</td>
+              </tr>
+              <tr>
+                <td>User-friendliness (kid-friendly)</td>
+                <td>3</td>
+                <td class="positive-2">++</td>
+                <td class="negative-2">--</td>
+                <td class="positive-2">++</td>
+              </tr>
+              <tr>
+                <td>Promotes collaboration/shared experience</td>
+                <td>2</td>
+                <td class="positive">+</td>
+                <td class="negative">-</td>
+                <td class="negative">-</td>
+              </tr>
+              <tr>
+                <td>Allows self-guided exploration</td>
+                <td>2</td>
+                <td class="positive">+</td>
+                <td class="positive">+</td>
+                <td class="negative">-</td>
+              </tr>
+              <tr>
+                <td>Customization features</td>
+                <td>1</td>
+                <td class="negative-2">--</td>
+                <td class="negative-2">--</td>
+                <td class="negative-2">--</td>
+              </tr>
+              <tr>
+                <td>Visually appealing animations</td>
+                <td>3</td>
+                <td class="positive-2">++</td>
+                <td class="positive">+</td>
+                <td class="negative-2">--</td>
+              </tr>
+              <tr class="summary-row">
+                <td><strong>Number of pluses</strong></td>
+                <td></td>
+                <td class="positive-summary">36</td>
+                <td class="positive-summary">27</td>
+                <td class="positive-summary">15</td>
+              </tr>
+              <tr class="summary-row">
+                <td><strong>Number of minuses</strong></td>
+                <td></td>
+                <td class="negative-summary">-4</td>
+                <td class="negative-summary">-10</td>
+                <td class="negative-summary">-22</td>
+              </tr>
+              <tr class="final-row">
+                <td><strong>Overall total</strong></td>
+                <td></td>
+                <td class="final-score">32</td>
+                <td class="final-score">17</td>
+                <td class="final-score">-7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="matrix-conclusion">
+          <p>
+            <strong>Outcome:</strong> Yomal's concept scored highest with <span class="highlight-purple">32 points</span>, demonstrating superior alignment with our research findings and design goals. The dual-screen interactive experience particularly excelled in multi-channel interactions and kid-friendly usability.
+          </p>
+        </div>
       </div>
     </section>
 
