@@ -1663,43 +1663,38 @@
 }
 
 /* === Decision Matrix Section === */
+/* === Decision Matrix Section === */
 .decision-matrix-section .project-text-blur {
   max-width: 1000px;
+  margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255,255,255,0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  overflow-x: hidden;
 }
 
+/* Scoring Key Styling */
 .matrix-key {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255,255,255,0.08);
   border-radius: 12px;
-  padding: 1.2rem;
-  margin: 1.5rem 0;
+  padding: 1.2rem 1rem 1.3rem 1.1rem;
+  margin: 1.6rem 0 1.7rem 0;
   border-left: 4px solid #FFCB05;
 }
 
 .matrix-key h4 {
   font-family: 'Rubik', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   color: #C1A8FF;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
 }
 
 .key-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.8rem;
-}
-
-.key-item {
-  font-family: 'Overpass', sans-serif;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.85);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.7rem 1.6rem;
 }
 
 .key-box {
@@ -1708,129 +1703,27 @@
   height: 16px;
   border-radius: 4px;
   margin-right: 0.5rem;
+  vertical-align: middle;
 }
+.key-box.negative-2 { background-color: #f44336;}
+.key-box.negative   { background-color: #FF8A80;}
+.key-box.positive-1 { background-color: #81C784;}
+.key-box.positive-2 { background-color: #4CAF50;}
 
-.key-box.negative-2 {
-  background-color: #f44336;
-}
-
-.key-box.negative-1 {
-  background-color: #FF8A80;
-}
-
-.key-box.positive-1 {
-  background-color: #81C784;
-}
-
-.key-box.positive-2 {
-  background-color: #4CAF50;
-}
-
+/* Matrix Table Scroll */
 .matrix-scroll-container {
-  overflow-x: auto;
   width: 100%;
+  overflow-x: auto;
   margin: 2rem 0;
+  background: rgba(255,255,255,0.06);
   border-radius: 12px;
+  padding: 0.25rem 0.1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: #c1a8ff #23222e;
 }
 
-.decision-matrix {
-  width: 100%;
-  min-width: 700px;
-  border-collapse: collapse;
-  font-family: 'Overpass', sans-serif;
-  font-size: 0.95rem;
-  color: white;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.decision-matrix th, .decision-matrix td {
-  padding: 1rem;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.decision-matrix thead {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.decision-matrix td:first-child {
-  text-align: left;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.95);
-  width: 30%;
-}
-
-.decision-matrix td:nth-child(2) {
-  font-weight: 600;
-  color: #ffe16b;
-}
-
-.negative-2 {
-  background-color: rgba(244, 67, 54, 0.15);
-  color: #f44336;
-  font-weight: 600;
-}
-
-.negative {
-  background-color: rgba(255, 138, 128, 0.15);
-  color: #FF8A80;
-  font-weight: 600;
-}
-
-.positive {
-  background-color: rgba(129, 199, 132, 0.15);
-  color: #81C784;
-  font-weight: 600;
-}
-
-.positive-2 {
-  background-color: rgba(76, 175, 80, 0.15);
-  color: #4CAF50;
-  font-weight: 600;
-}
-
-.summary-row td {
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.positive-summary {
-  color: #4CAF50;
-}
-
-.negative-summary {
-  color: #f44336;
-}
-
-.final-row td {
-  font-weight: 700;
-  font-size: 1.1rem;
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.final-score {
-  color: #C1A8FF;
-}
-
-.matrix-conclusion {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(193, 168, 255, 0.3);
-  font-family: 'Overpass', sans-serif;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.7;
-}
-
-.matrix-conclusion strong {
-  color: #FFCB05;
-}
-
-/* For Chrome, Edge, and Safari */
 .matrix-scroll-container::-webkit-scrollbar {
   height: 8px;
   border-radius: 7px;
@@ -1845,20 +1738,123 @@
   border-radius: 7px;
 }
 
+/* Matrix Table Styling */
+.decision-matrix {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.97rem;
+  color: white;
+  border-radius: 12px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.decision-matrix th,
+.decision-matrix td {
+  padding: 1rem 1.1rem;
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: transparent;
+  white-space: nowrap;
+}
+
+.decision-matrix th {
+  background: rgba(255,255,255,0.13);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.04rem;
+}
+
+.decision-matrix td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: rgba(255,255,255,0.95);
+  width: 34%;
+  white-space: normal;
+}
+
+.decision-matrix td:nth-child(2) {
+  font-weight: 600;
+  color: #ffe16b;
+}
+
+/* Cell Color Types */
+.negative-2 {
+  background-color: rgba(244, 67, 54, 0.16) !important;
+  color: #f44336;
+  font-weight: 600;
+}
+.negative {
+  background-color: rgba(255, 138, 128, 0.16) !important;
+  color: #FF8A80;
+  font-weight: 600;
+}
+.positive {
+  background-color: rgba(129, 199, 132, 0.16) !important;
+  color: #81C784;
+  font-weight: 600;
+}
+.positive-2 {
+  background-color: rgba(76, 175, 80, 0.15) !important;
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+/* Summary and Totals */
+.summary-row td {
+  font-weight: 600;
+  background: rgba(255,255,255,0.08);
+}
+.positive-summary {
+  color: #4CAF50;
+}
+.negative-summary {
+  color: #f44336;
+}
+.final-row td {
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: rgba(255,255,255,0.12);
+}
+.final-score {
+  color: #C1A8FF;
+}
+
+.matrix-conclusion {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(193, 168, 255, 0.3);
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+}
+.matrix-conclusion strong {
+  color: #FFCB05;
+}
+
+
+
 @media (max-width: 768px) {
-  .decision-matrix {
-    font-size: 0.85rem;
+  .decision-matrix-section .project-text-blur {
+    padding: 2.5rem !important;
   }
-  
+  .decision-matrix {
+    font-size: 0.9rem;
+    min-width: 540px;
+  }
   .decision-matrix th, 
   .decision-matrix td {
     padding: 0.8rem;
   }
-  
   .key-items {
     grid-template-columns: 1fr;
   }
 }
+
+
+
 
   </style>
 </head>
@@ -2897,16 +2893,16 @@
       <div class="project-text-blur">
         <h2>Design Concepts' Decision Matrix</h2>
         <p>
-          To objectively evaluate our three solution concepts, we created a decision matrix with weighted criteria based on our research findings. This systematic approach helped us identify which concept best addressed our users' needs while aligning with the project requirements.
+          To objectively evaluate our three solution concepts, we created a decision matrix with weighted criteria based on our research findings.
         </p>
 
         <div class="matrix-key">
           <h4>Scoring Key:</h4>
           <div class="key-items">
-            <div class="key-item"><span class="key-box negative-2"></span> -- or -2 = Really bad</div>
-            <div class="key-item"><span class="key-box negative-1"></span> - or -1 = Missing effectiveness</div>
-            <div class="key-item"><span class="key-box positive-1"></span> + or +1 = Works to an extent</div>
-            <div class="key-item"><span class="key-box positive-2"></span> ++ or +2 = Works amazing</div>
+            <span class="key-box negative-2"></span> -- or -2 = Really bad &nbsp;
+            <span class="key-box negative"></span> - or -1 = Missing effectiveness &nbsp;
+            <span class="key-box positive-1"></span> + or +1 = Works to an extent &nbsp;
+            <span class="key-box positive-2"></span> ++ or +2 = Works amazing
           </div>
         </div>
 
@@ -2962,14 +2958,14 @@
                 <td>3</td>
                 <td class="positive-2">++</td>
                 <td class="negative-2">--</td>
-                <td class="positive-2">++</td>
+                <td class="positive">+</td>
               </tr>
               <tr>
                 <td>Promotes collaboration/shared experience</td>
                 <td>2</td>
                 <td class="positive">+</td>
                 <td class="negative">-</td>
-                <td class="negative">-</td>
+                <td class="positive">+</td>
               </tr>
               <tr>
                 <td>Allows self-guided exploration</td>
@@ -2982,8 +2978,8 @@
                 <td>Customization features</td>
                 <td>1</td>
                 <td class="negative-2">--</td>
-                <td class="negative-2">--</td>
-                <td class="negative-2">--</td>
+                <td class="negative">-</td>
+                <td class="negative">-</td>
               </tr>
               <tr>
                 <td>Visually appealing animations</td>
@@ -2992,38 +2988,40 @@
                 <td class="positive">+</td>
                 <td class="negative-2">--</td>
               </tr>
-              <tr class="summary-row">
+              <tr style="background: rgba(255,255,255,0.06)">
                 <td><strong>Number of pluses</strong></td>
                 <td></td>
-                <td class="positive-summary">36</td>
-                <td class="positive-summary">27</td>
-                <td class="positive-summary">15</td>
+                <td style="color:#81C784"><strong>36</strong></td>
+                <td style="color:#81C784"><strong>27</strong></td>
+                <td style="color:#81C784"><strong>14</strong></td>
               </tr>
-              <tr class="summary-row">
+              <tr style="background: rgba(255,255,255,0.06)">
                 <td><strong>Number of minuses</strong></td>
                 <td></td>
-                <td class="negative-summary">-4</td>
-                <td class="negative-summary">-10</td>
-                <td class="negative-summary">-22</td>
+                <td style="color:#f44336"><strong>-4</strong></td>
+                <td style="color:#f44336"><strong>-10</strong></td>
+                <td style="color:#f44336"><strong>-8</strong></td>
               </tr>
-              <tr class="final-row">
+              <tr style="background: rgba(255,255,255,0.10)">
                 <td><strong>Overall total</strong></td>
                 <td></td>
-                <td class="final-score">32</td>
-                <td class="final-score">17</td>
-                <td class="final-score">-7</td>
+                <td style="color:#C1A8FF; font-weight:700"><strong>32</strong></td>
+                <td style="color:#C1A8FF; font-weight:700"><strong>17</strong></td>
+                <td style="color:#C1A8FF; font-weight:700"><strong>6</strong></td>
               </tr>
             </tbody>
           </table>
         </div>
 
+
         <div class="matrix-conclusion">
           <p>
-            <strong>Outcome:</strong> Yomal's concept scored highest with <span class="highlight-purple">32 points</span>, demonstrating superior alignment with our research findings and design goals. The dual-screen interactive experience particularly excelled in multi-channel interactions and kid-friendly usability.
+            <strong>Outcome:</strong> Yomal's concept scored highest with <span class="highlight-purple">32 points</span>, demonstrating superior alignment with our research findings and design goals.
           </p>
         </div>
       </div>
     </section>
+
 
   </div> <!--Container close div tag-->
 
