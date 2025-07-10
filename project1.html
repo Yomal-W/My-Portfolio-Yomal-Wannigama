@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,7 +125,7 @@
   text-decoration: underline;
 }
 
-/*Research questions section styling */
+/* === Research questions section styling === */
 .research-questions-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
@@ -194,7 +196,7 @@
   border-radius: 4px;
 }
 
-/* Research Stage Heading */
+/* === Research Stage Heading === */
 .research-stage-heading {
   padding: 40px 5% 20px;
   display: flex;
@@ -230,7 +232,7 @@
 }
 
 
-/* Online Ethnography section styling */
+/* === Online Ethnography section styling === */
 .ethnography-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
@@ -285,7 +287,7 @@
   font-weight: 500;
 }
 
-/* Secondary Research section styling */
+/* === Secondary Research section styling === */
 .secondary-research .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
@@ -322,7 +324,7 @@
 
 
 
-/* Competitor Analysis section styling */
+/* === Competitor Analysis section styling === */
 .competitor-analysis .project-text-blur {
   max-width: 1000px;
   width: 100%;
@@ -561,7 +563,7 @@
 }
 
 
-/* Interview Section */
+/* === Interview Section === */
 .interview-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
@@ -612,7 +614,7 @@
   font-size: 0.95rem;
 }
 
-/* Survey Section */
+/* === Survey Section === */
 .survey-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
@@ -679,7 +681,7 @@
   margin-top: 0.5rem;
 }
 
-/* Contextual Observations */
+/* === Contextual Observations === */
 .observation-table-wrapper {
   overflow-x: auto;
   margin-top: 2rem;
@@ -768,14 +770,9 @@
   margin-right: 0.5rem;
   border-radius: 4px;
 }
+.key-box.positive-dm { background-color: #4CAF50; } 
+.key-box.negative-dm { background-color: #f44336; }
 
-.key-box.positive {
-  background-color: #4CAF50; /* green */
-}
-
-.key-box.negative {
-  background-color: #f44336; /* red */
-}
 
 .observation-table td a {
   color: #c1a8ff; /* soft purple that matches your headings */
@@ -789,7 +786,7 @@
   text-decoration: underline;
 }
 
-/* Affinity Diagram Section */
+/* === Affinity Diagram Section ===*/
 .affinity-synthesis .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
@@ -1693,11 +1690,21 @@
 
 .key-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 0.7rem 1.6rem;
 }
 
-.key-box {
+.key-legend {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.87);
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  gap: 0.6em;
+}
+
+.matrix-key-box {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -1705,10 +1712,11 @@
   margin-right: 0.5rem;
   vertical-align: middle;
 }
-.key-box.negative-2 { background-color: #f44336;}
-.key-box.negative   { background-color: #FF8A80;}
-.key-box.positive-1 { background-color: #81C784;}
-.key-box.positive-2 { background-color: #4CAF50;}
+.matrix-key-box.negative-2-co { background-color: #f44336;}
+.matrix-key-box.negative-co   { background-color: #FF8A80;}
+.matrix-key-box.positive-1-co { background-color: #81C784;}
+.matrix-key-box.positive-2-co { background-color: #4CAF50;}
+
 
 /* Matrix Table Scroll */
 .matrix-scroll-container {
@@ -1781,23 +1789,23 @@
 }
 
 /* Cell Color Types */
-.negative-2 {
-  background-color: rgba(244, 67, 54, 0.16) !important;
+.decision-matrix td.negative-2 {
+  background-color: rgba(244, 67, 54, 0.16);
   color: #f44336;
   font-weight: 600;
 }
-.negative {
-  background-color: rgba(255, 138, 128, 0.16) !important;
+.decision-matrix td.negative {
+  background-color: rgba(255, 138, 128, 0.16);
   color: #FF8A80;
   font-weight: 600;
 }
-.positive {
-  background-color: rgba(129, 199, 132, 0.16) !important;
+.decision-matrix td.positive {
+  background-color: rgba(129, 199, 132, 0.16);
   color: #81C784;
   font-weight: 600;
 }
-.positive-2 {
-  background-color: rgba(76, 175, 80, 0.15) !important;
+.decision-matrix td.positive-2 {
+  background-color: rgba(76, 175, 80, 0.15);
   color: #4CAF50;
   font-weight: 600;
 }
@@ -1834,8 +1842,6 @@
   color: #FFCB05;
 }
 
-
-
 @media (max-width: 768px) {
   .decision-matrix-section .project-text-blur {
     padding: 2.5rem !important;
@@ -1852,7 +1858,6 @@
     grid-template-columns: 1fr;
   }
 }
-
 
 
 
@@ -2316,8 +2321,8 @@
 
         <!--Key-->
         <div class="observation-key">
-          <span><span class="key-box positive"></span> Positive feedback</span>
-          <span><span class="key-box negative"></span> Negative feedback</span>
+          <span><span class="key-box positive-dm"></span> Positive feedback</span>
+          <span><span class="key-box negative-dm"></span> Negative feedback</span>
         </div>
 
         <div class="observation-table-wrapper">
@@ -2896,15 +2901,15 @@
           To objectively evaluate our three solution concepts, we created a decision matrix with weighted criteria based on our research findings.
         </p>
 
-        <div class="matrix-key">
-          <h4>Scoring Key:</h4>
-          <div class="key-items">
-            <span class="key-box negative-2"></span> -- or -2 = Really bad &nbsp;
-            <span class="key-box negative"></span> - or -1 = Missing effectiveness &nbsp;
-            <span class="key-box positive-1"></span> + or +1 = Works to an extent &nbsp;
-            <span class="key-box positive-2"></span> ++ or +2 = Works amazing
-          </div>
+      <div class="matrix-key">
+        <h4>Scoring Key:</h4>
+        <div class="key-items">
+          <span class="key-legend"><span class="matrix-key-box negative-2-co"></span> -- or -2 = Really bad</span>
+          <span class="key-legend"><span class="matrix-key-box negative-co"></span> - or -1 = Missing effectiveness</span>
+          <span class="key-legend"><span class="matrix-key-box positive-1-co"></span> + or +1 = Works to an extent</span>
+          <span class="key-legend"><span class="matrix-key-box positive-2-co"></span> ++ or +2 = Works amazing</span>
         </div>
+      </div>
 
         <div class="matrix-scroll-container">
           <table class="decision-matrix">
