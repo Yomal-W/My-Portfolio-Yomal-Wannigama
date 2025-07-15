@@ -2141,7 +2141,7 @@
 
 @media (max-width: 768px) {
   .multimodality-section .project-text-blur {
-    padding: 1.8rem;
+    padding: 2.5rem;
   }
   
   .multimodality-section h2 {
@@ -2200,6 +2200,211 @@
   }
 }
 
+
+  /* === Card Sorting Section Styling === */
+  .card-sorting-section .project-text-blur {
+    max-width: 1000px;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .goal-card {
+    background: linear-gradient(135deg, rgba(168,139,255,0.15), rgba(255,255,255,0.05));
+    border: 1px solid rgba(168,139,255,0.25);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .goal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(168, 139, 255, 0.15);
+  }
+
+  .goal-number {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.8rem;
+    color: #FFCB05;
+    line-height: 1;
+    min-width: 40px;
+  }
+
+  .goal-content {
+    font-family: 'Overpass', sans-serif;
+  }
+
+  .goal-content strong {
+    color: #C1A8FF;
+    font-size: 1.05rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .goal-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .participant-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .participant-card {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 1.5rem;
+    border-left: 4px solid;
+  }
+
+  .participant-card:nth-child(1) {
+    border-left-color: #C1A8FF;
+  }
+
+  .participant-card:nth-child(2) {
+    border-left-color: #FFCB05;
+  }
+
+  .participant-card h4 {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .participant-card ul {
+    padding-left: 1.2rem;
+    font-family: 'Overpass', sans-serif;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  .participant-card li {
+    margin-bottom: 0.5rem;
+  }
+
+  .card-set-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .sorting-card {
+    background: rgba(193, 168, 255, 0.1);
+    border: 1px solid rgba(193, 168, 255, 0.3);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .sorting-card:hover {
+    background: rgba(193, 168, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(193, 168, 255, 0.15);
+  }
+
+    .sorting-results {
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.2rem;
+  }
+
+  .sorting-results h5 {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .result-group {
+    margin-bottom: 1rem;
+  }
+
+  .group-label {
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  .grouped-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .grouped-cards span {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 0.4rem 0.7rem;
+    font-family: 'Overpass', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.9);
+  }
+
+  @media (max-width: 768px) {
+    .goals-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .participant-columns {
+      flex-direction: column;
+    }
+    
+    .participant-card {
+      min-width: 100%;
+    }
+    
+    .card-set-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .grouped-cards {
+      grid-template-columns: 1fr;
+    }
+    
+    .grouped-cards span {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card-set-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .goal-card {
+      padding: 1.2rem;
+    }
+  }
   </style>
 </head>
 
@@ -3443,6 +3648,14 @@
           <h4>Leaderboard (Phone)</h4>
           <p>Track quiz scores against friends and global players</p>
         </div>
+        <div class="feature-card mobile-feature">
+          <h4>Bottom navigation bar (Phone)</h4>
+          <p>Quick and easy access to the app's core features</p>
+        </div>
+        <div class="feature-card mobile-feature">
+          <h4>Replay and Summary screen (Phone)</h4>
+          <p>An engaging wrap-up after each Olympic event</p>
+        </div>
       </div>
     </div>
 
@@ -3462,6 +3675,188 @@
           <div class="point-icon">👪</div>
           <p><strong>Family Mode:</strong> Parents can monitor activity through linked accounts</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Card Sorting Section -->
+<section class="project-section card-sorting-section">
+  <div class="project-text-blur">
+    <h2>Card Sorting Research</h2>
+      <p>
+        Our <span class="highlight">multi-device ecosystem</span> creates a <strong>seamless dual-screen experience</strong> that keeps young viewers engaged through synchronized content and complementary features across platforms. This experience was <span class="highlight">tested with five participants</span>, including <strong>three children and two parents</strong>, to ensure its effectiveness and appeal for both kids and their families.
+      </p>
+
+    <div class="research-block">
+      <h3>Test Goals</h3>
+      <div class="goals-grid">
+        <div class="goal-card">
+          <div class="goal-number">1</div>
+          <div class="goal-content">
+            <strong>Determine how children categorize augmented elements</strong>
+            <p>Kids' understanding of sports and interactivity differs from adults, so understanding their logic helps create natural-feeling interactions.</p>
+          </div>
+        </div>
+        <div class="goal-card">
+          <div class="goal-number">2</div>
+          <div class="goal-content">
+            <strong>Explore child-parent interaction differences</strong>
+            <p>Parents may prioritize educational aspects while children focus on fun elements, guiding our feature prioritization.</p>
+          </div>
+        </div>
+        <div class="goal-card">
+          <div class="goal-number">3</div>
+          <div class="goal-content">
+            <strong>Identify themes in children's sports thinking</strong>
+            <p>Understanding appealing aspects helps design highlight exciting content in both app and AR experiences.</p>
+          </div>
+        </div>
+        <div class="goal-card">
+          <div class="goal-number">4</div>
+          <div class="goal-content">
+            <strong>Refine navigation systems</strong>
+            <p>Balancing education and entertainment requires clear organization based on user feedback.</p>
+          </div>
+        </div>
+        <div class="goal-card">
+          <div class="goal-number">5</div>
+          <div class="goal-content">
+            <strong>Reveal areas needing simplification</strong>
+            <p>Olympic terminology might confuse children; card sorting helps simplify without losing depth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-block">
+      <h3>Method Explanation & Justification</h3>
+      <p>
+        Card sorting helped organize features and content for both the augmented TV experience and companion mobile app. Participants classified content like athlete trivia, statistics, and sport explanations according to their intuitive understanding, ensuring alignment with user expectations.
+      </p>
+      <p>
+        We conducted card sorting after analyzing low-fidelity sketches, which revealed navigation issues. The initial designs lacked clear navigation elements and had overcrowded screens. Card sorting provided essential data on users' mental models, which we used to refine our mid-fidelity wireframes and simplify the experience.
+      </p>
+    </div>
+
+    <div class="research-block">
+      <h3>Participant Criteria & Results</h3>
+      <div class="participant-columns">
+        <div class="participant-card">
+          <h4>Children (Ages 8-12)</h4>
+          <ul>
+            <li>Provided direct understanding of children's mental models</li>
+            <li>Helped simplify navigation for younger audiences</li>
+            <li>Revealed natural categorization of features</li>
+          </ul>
+          
+          <div class="sorting-results">
+            <h5>Participant 1 (Age 10)</h5>
+            <div class="result-group">
+              <div class="group-label" style="background: rgba(193,168,255,0.2);">Fun & Interactive</div>
+              <div class="grouped-cards">
+                <span>Animated Athlete Overlays</span>
+                <span>Quiz Questions</span>
+                <span>Interactive Scores</span>
+                <span>Olympic Trivia</span>
+              </div>
+            </div>
+            <div class="result-group">
+              <div class="group-label" style="background: rgba(255,203,5,0.2);">Game & Scores</div>
+              <div class="grouped-cards">
+                <span>Athletes' Statistics</span>
+                <span>Live Broadcast</span>
+                <span>Medal Count</span>
+              </div>
+            </div>
+            <div class="result-group">
+              <div class="group-label" style="background: rgba(129,199,132,0.2);">Rules & History</div>
+              <div class="grouped-cards">
+                <span>Sports Rules</span>
+                <span>Historical Highlights</span>
+              </div>
+            </div>
+            <div class="result-group">
+              <div class="group-label" style="background: rgba(255,138,128,0.2);">Settings</div>
+              <div class="grouped-cards">
+                <span>Parent Controls</span>
+                <span>Notifications</span>
+              </div>
+            </div>
+            <p class="appendix-links">
+              <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+                View the remaining 2 child participant's sorting results here
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="participant-card">
+          <h4>Parents</h4>
+          <ul>
+            <li>Offered perspective on content control and safety</li>
+            <li>Helped create appropriate content categories</li>
+            <li>Ensured structure balanced engagement with security</li>
+          </ul>
+          
+          <div class="sorting-results">
+            <h5>Participant 2 (Age 40)</h5>
+            <div class="result-group">
+              <div class="group-label" style="background: rgba(193,168,255,0.2);">Engagement Features</div>
+              <div class="grouped-cards">
+                <span>Live Broadcast</span>
+                <span>Animated Athlete Overlays</span>
+                <span>Quiz Questions</span>
+                <span>Interactive Scores</span>
+              </div>
+            </div>
+            <div class="result-group">
+              <div class="group-label" style="background: rgba(255,203,5,0.2);">Educational</div>
+              <div class="grouped-cards">
+                <span>Sports Rules</span>
+                <span>Historical Highlights</span>
+                <span>Olympic Trivia</span>
+              </div>
+            </div>
+            <div class="result-group">
+              <div class="group-label" style="background: rgba(129,199,132,0.2);">Personalization & Control</div>
+              <div class="grouped-cards">
+                <span>Parent Controls</span>
+                <span>Notifications</span>
+              </div>
+            </div>
+            <div class="result-group">
+              <div class="group-label" style="background: rgba(255,138,128,0.2);">Performance Data</div>
+              <div class="grouped-cards">
+                <span>Athletes' Statistics</span>
+                <span>Medal Count</span>
+              </div>
+            </div>
+            <p class="appendix-links">
+              <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+                View the final parent participant's sorting results here
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-block">
+      <h3>Card Set Used for Sorting</h3>
+      <div class="card-set-grid">
+        <span class="sorting-card">Athletes' Statistics</span>
+        <span class="sorting-card">Live Broadcast</span>
+        <span class="sorting-card">Animated Athlete Overlays</span>
+        <span class="sorting-card">Quiz Questions</span>
+        <span class="sorting-card">Interactive Scores</span>
+        <span class="sorting-card">Parent Controls</span>
+        <span class="sorting-card">Olympic Trivia</span>
+        <span class="sorting-card">Historical Highlights</span>
+        <span class="sorting-card">Sports Rules</span>
+        <span class="sorting-card">Medal Count</span>
+        <span class="sorting-card">Notifications</span>
+        <span class="sorting-card">Social Sharing Options</span>
       </div>
     </div>
   </div>
