@@ -179,3 +179,18 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+// === Mid-Fidelity Wireframe Image Modal ===
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('.mid-fi-wireframe-img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      // Use the same modal as journey-map for consistency
+      const modalImg = document.getElementById('modalImg');
+      modalImg.src = this.src;
+      document.getElementById('journeyMapModal').classList.add('active');
+      // Optional: adjust outline color if needed
+      modalImg.style.outline = '4px solid #c1a8ff';
+    });
+  });
+});

@@ -2405,6 +2405,507 @@
       padding: 1.2rem;
     }
   }
+
+  /* === Mid-Fidelity Screens Section Styling === */
+.mid-fidelity-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.mid-fidelity-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2.5rem 0;
+  justify-content: space-between;
+}
+
+.mid-fidelity-column {
+  flex: 1;
+  min-width: 300px;
+  max-width: 48%;
+}
+
+.mid-fidelity-column h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.3rem;
+  color: #C1A8FF;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(193, 168, 255, 0.3);
+}
+
+.screen-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid rgba(193, 168, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screen-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(193, 168, 255, 0.15);
+}
+
+.mid-fidelity-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.mid-fidelity-img:hover {
+  transform: scale(1.02);
+}
+
+.mid-fidelity-img.mobile {
+  max-width: 220px;   /* You can adjust to 200px, 240px, etc. as you prefer */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.screen-caption {
+  margin-top: 1rem;
+  font-family: 'Overpass', sans-serif;
+}
+
+.screen-caption h4 {
+  font-family: 'Rubik', sans-serif;
+  color: #FFCB05;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.screen-caption p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.mid-fidelity-features {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(193, 168, 255, 0.2);
+}
+
+.mid-fidelity-features h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.3rem;
+  color: #C1A8FF;
+  margin-bottom: 1.5rem;
+}
+
+.mid-fidelity-features .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.mid-fidelity-features .feature-card {
+  background: linear-gradient(135deg, rgba(168,139,255,0.15), rgba(255,255,255,0.05));
+  border: 1px solid rgba(168,139,255,0.25);
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.mid-fidelity-features .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(168, 139, 255, 0.15);
+}
+
+.mid-fidelity-features .feature-card h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+}
+
+.mid-fidelity-features .feature-card p {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .mid-fidelity-column {
+    max-width: 100%;
+  }
+  
+  .mid-fidelity-features .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Think Aloud Section Styling === */
+.think-aloud-section .project-text-blur {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.think-aloud-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1.4rem;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.method-justification {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.12rem;
+  color: rgba(255,255,255,0.90);
+  margin-bottom: 2.2rem;
+  line-height: 1.7;
+}
+
+.goals-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 1.4rem 0 2rem 0;
+}
+.goal-card {
+  background: rgba(193,168,255,0.11);
+  border-left: 4px solid #C1A8FF;
+  border-radius: 14px;
+  box-shadow: 0 7px 28px rgba(160, 130, 250, 0.10);
+  padding: 1.2rem 1rem 1rem;
+  font-family: 'Rubik', sans-serif;
+  color: rgba(255,255,255,0.98);
+  min-width: 185px;
+  flex: 1 1 180px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.goal-card:hover {
+  transform: translateY(-4px) scale(1.025);
+  box-shadow: 0 14px 40px rgba(128,80,240,0.13);
+}
+.goal-number {
+  font-size: 2rem;
+  color: #c1a8ff;
+  font-weight: 800;
+  margin-right: 0.8rem;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin-top: -0.25rem;
+  line-height: 1;
+}
+.goal-content {
+  flex: 1;
+}
+.goal-content strong {
+  color: #c1a8ff;
+  font-size: 1.07rem;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+.highlight-goal {
+  background: rgba(255,203,5,0.15) !important;
+  border-left: 4px solid #FFCB05 !important;
+}
+
+.feature-test-details-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+
+.detail-card {
+  background: rgba(255,255,255,0.11);
+  border-radius: 12px;
+  padding: 1.25rem 1.1rem 1.1rem 1.1rem;
+  box-shadow: 0 2px 12px rgba(193,168,255,0.10);
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.97);
+  min-width: 240px;
+  flex: 1 1 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.detail-card h4 {
+  font-family: 'Rubik', sans-serif;
+  color: #c1a8ff;
+  font-size: 1.09rem;
+  margin-bottom: 0.38rem;
+  margin-top: 0; /* Good */
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.detail-card ul {
+  padding-left: 1.1em;
+  margin: 0;
+  color: rgba(255,255,255,0.93);
+  font-size: 1.01rem;
+  line-height: 1.6;
+}
+
+.detail-card p {
+  margin-top: 0;
+}
+
+
+@media (max-width: 1000px) {
+  .feature-test-details-row {
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+}
+
+.participant-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.4rem;
+}
+.participant-card {
+  flex: 1 1 300px;
+  min-width: 0;
+  max-width: 100%;
+  background: rgba(193,168,255,0.11);
+  border-left: 4px solid #C1A8FF;
+  border-radius: 14px;
+  padding: 1.5rem 1.1rem;
+  margin-bottom: 0.7rem;
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.98);
+  box-shadow: 0 5px 18px rgba(128,80,240,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+.participant-card.parent {
+  background: rgba(255,203,5,0.10);
+  border-left: 4px solid #FFCB05;
+}
+.participant-card h4 {
+  color: #fff;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.07rem;
+  margin-bottom: 1rem;
+}
+.participant-card ul {
+  color: rgba(255,255,255,0.94);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.participant-card li strong {
+  color: #c1a8ff;
+}
+
+@media (max-width: 900px) {
+  .goals-grid, .participant-results, .feature-test-details-row {
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+  .participant-card {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    padding: 1.2rem 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .think-aloud-section .project-text-blur {
+    border-radius: 13px;
+  }
+  .goal-card {
+    padding: 1rem 0.6rem;
+    border-radius: 10px;
+    margin-bottom: 0.7rem;
+  }
+  .participant-card {
+    padding: 1rem 0.7rem;
+    border-radius: 10px;
+  }
+  .detail-card {
+    padding: 0.9rem 0.6rem;
+    border-radius: 10px;
+    min-width: 0;
+  }
+}
+
+/* --- Top Down User Testing Synthesis Section --- */
+
+/* Example Feature Cards */
+.synth-card {
+  width: 100%;
+  min-width: 0;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.18rem;
+  font-weight: 500;
+  padding: 1.05rem 1.4rem;
+  margin-bottom: 0.6rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  line-height: 1.44;
+  border-left: 6px solid transparent;
+}
+
+/* Color Variants */
+.synth-blue {
+  background: #2075b7;
+  color: #fff;
+  border-left-color: #2075b7;
+}
+.synth-purple {
+  background: #ede7f6;
+  color: #4527A0;
+  border-left-color: #7E57C2;
+}
+.synth-yellow {
+  background: #fff8e1;
+  color: #FF8F00;
+  border-left-color: #FFCA28;
+}
+
+/* Feedback Cluster Cards */
+.affinity-cluster-box {
+  border-radius: 16px;
+  padding: 1.3rem 1.2rem 1.2rem 1.2rem;
+  min-width: 220px;
+  max-width: 430px;
+  flex: 1 1 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 0.4rem;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  box-shadow: 0 4px 14px rgba(34,68,122,0.07);
+  border: 1px solid transparent;
+}
+
+.affinity-positive {
+  background: #e8f5e9;
+  border-color: #81C784;
+}
+.affinity-negative {
+  background: #ffebee;
+  border-color: #FF8A80;
+}
+.affinity-grey {
+  background: #fafafa;
+  border-color: #9E9E9E;
+}
+
+/* Cluster Titles */
+.affinity-cluster-title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.06rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.47rem 1.0rem;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+}
+
+.title-positive {
+  background: #81C784;
+  color: #1B5E20;
+}
+.title-negative {
+  background: #FF8A80;
+  color: #B71C1C;
+}
+.title-grey {
+  background: #9E9E9E;
+  color: #212121;
+}
+
+/* Sticky Note (Feedback) */
+.sticky-note {
+  border-radius: 9px;
+  padding: 1rem;
+  font-size: 1.03rem;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  box-sizing: border-box;
+  border-left: 5px solid transparent;
+  background: #f4f4f4;
+}
+
+.note-positive {
+  background: #e8f5e9;
+  border-left-color: #81C784;
+  color: #145A32;
+}
+.note-negative {
+  background: #ffebee;
+  border-left-color: #FF8A80;
+  color: #A93226;
+}
+.note-grey {
+  background: #fafafa;
+  border-left-color: #9E9E9E;
+  color: #424242;
+}
+
+.affinity-bottom-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.1rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (max-width: 950px) {
+  .affinity-bottom-row {
+    flex-direction: column;
+    gap: 1.1rem;
+    align-items: stretch;
+  }
+}
+
+/* Improved Features List */
+.improved-features-list {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(50,50,50,0.95);
+  margin: 0.8rem 0 1.2rem 0;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
   </style>
 </head>
 
@@ -3861,6 +4362,302 @@
     </div>
   </div>
 </section>
+
+<!-- Mid-Fidelity Screens Section -->
+<section class="project-section mid-fidelity-section">
+  <div class="project-text-blur">
+    <h2>Mid-Fidelity Screens</h2>
+    <p class="project-section-text">
+      The creation of <span class="highlight">mid-fidelity wireframes</span> marked a pivotal stage in the design process, allowing us to move from conceptualisation into <strong>refined user experience testing</strong>. These wireframes provided a <span class="highlight">functional representation</span> of the app’s layout, navigation, and features—<strong>without the distractions of high-detail visuals</strong>. This balance enabled us to conduct meaningful usability testing, specifically through the <span class="highlight">think-aloud method</span>, to gather real-time feedback on the app’s structure and flow.<br><br>
+      By focusing on key elements like <span class="highlight">content placement</span>, <strong>user paths</strong>, and interactive features, we refined the app’s usability. The <span class="highlight">flexibility</span> of mid-fidelity wireframes made it easy to <strong>quickly iterate</strong> and implement changes based on user feedback, as opposed to high-fidelity wireframes, which require more time and resources to adjust. This approach minimised the cost of redesign and allowed us to <span class="highlight">explore multiple interaction possibilities</span>.<br><br>
+      The <span class="highlight">insights gained</span> from testing the mid-fidelity wireframes—particularly through the think-aloud method—informed key improvements for the high-fidelity mockups. This iterative approach ensured our final design was not only <strong>visually appealing</strong>, but also <span class="highlight">intuitive and easy to navigate</span>, addressing usability concerns early and resulting in a functionally sound product.
+    </p>
+    <p>
+      These screens represent a more structured vision of the app, integrating insights from our <span class="highlight">card sorting exercise</span> and early usability testing. The mid-fidelity phase allowed us to focus on <strong>layout and functionality</strong> without the distraction of final visuals, while maintaining flexibility for quick iterations based on user feedback.
+    </p>
+
+    <div class="mid-fidelity-grid">
+      <!-- Mobile Screens Column -->
+      <div class="mid-fidelity-column">
+        <h3>Mobile Companion App - <i>example</i></h3>
+          <div class="screen-card">
+            <img src="images/mid-fidelity-mobile-live-chat.png" alt="Mobile Live Chat Screen" class="mid-fidelity-img mobile mid-fi-wireframe-img" loading="lazy">
+            <div class="screen-caption">
+              <h4>Live Chat Interface</h4>
+              <p>Moderated chat with other viewers during events, with safety features for young users.</p>
+            </div>
+          </div>
+      </div>
+
+      <!-- TV Screens Column -->
+      <div class="mid-fidelity-column">
+        <h3>TV Overlay Interface - <i>example</i></h3>
+        <div class="screen-card">
+          <img src="images/mid-fidelity-tv-animated-athlete-multiple-choice-overlay.png" alt="TV Animated Athlete Overlay" class="mid-fidelity-img mid-fi-wireframe-img" loading="lazy">
+          <div class="screen-caption">
+            <h4>Animated Athlete Multiple Choice Overlay</h4>
+            <p>Animated athlete avatar explains rules and asks quiz questions directly on the TV screen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="appendix-links">
+      <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+        Explore the rest of the mid-fidelity wireframes here
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Think Aloud Method Section -->
+<section class="project-section think-aloud-section"> 
+  <div class="project-text-blur">
+    <h2>Usability Testing: Think Aloud Method</h2>
+    <div class="method-justification">
+      <p>
+        From the card sorting method we got a basic sitemap of what content and visual hierarchy the screens should look like for both TV and phones. This information was used to create our mid-fidelity wireframes on Figma. To assess how intuitive our features and navigation are, we needed to understand user thoughts as they moved through the interface of our mobile application and TV screens.
+      </p>
+      <p>
+        The think aloud testing method allows users to verbalise their thoughts, provoked by scenarios we give them. Consequently, we can hear their misconceptions about the design of our user interface and use this data to redesign it for our mockups (hi-fidelity wireframes). Additionally, the think aloud method has many benefits consisting of being <span class="highlight">cheap, robust, flexible, convincing and easy to learn</span>.
+      </p>
+      <p>
+        The participants from the card sorting were re-used for the think aloud. We decided this would be optimal as they already had a grasp of our concept. Hence their responses and thoughts will be more detailed as they already have a brief on what the app might've looked like before we showed them our mid-fidelity wireframes.
+      </p>
+    </div>
+
+    <div class="research-block">
+      <h3>Relevant Usability Goals</h3>
+<div class="goals-grid">
+  <div class="goal-card">
+    <div class="goal-number">1</div>
+    <div class="goal-content">
+      <strong>Homepage navigation</strong>
+      <p>Utility – How easily can users navigate between the homepage tabs?</p>
+    </div>
+  </div>
+  <div class="goal-card">
+    <div class="goal-number">2</div>
+    <div class="goal-content">
+      <strong>Quiz interaction</strong>
+      <p>Efficiency – How easy is it to answer quiz options and review feedback?</p>
+    </div>
+  </div>
+  <div class="goal-card">
+    <div class="goal-number">3</div>
+    <div class="goal-content">
+      <strong>Live chat input</strong>
+      <p>Effectiveness – How often can users successfully input a question into the live chat?</p>
+    </div>
+  </div>
+  <div class="goal-card">
+    <div class="goal-number">4</div>
+    <div class="goal-content">
+      <strong>Sport selection recall</strong>
+      <p>Memorability – Can users remember how to select a sport to watch?</p>
+    </div>
+  </div>
+  <div class="goal-card">
+    <div class="goal-number">5</div>
+    <div class="goal-content">
+      <strong>Leaderboard understanding</strong>
+      <p>Learnability – How easily do users grasp the concept of the leaderboard/ranking system?</p>
+    </div>
+  </div>
+  <div class="goal-card">
+    <div class="goal-number">6</div>
+    <div class="goal-content">
+      <strong>Page navigation</strong>
+      <p>Utility – How easily can users navigate between different pages?</p>
+    </div>
+  </div>
+  <div class="goal-card">
+    <div class="goal-number">7</div>
+    <div class="goal-content">
+      <strong>Highlighted question recall</strong>
+      <p>Memorability – Can users remember where the highlighted live chat question appears?</p>
+    </div>
+  </div>
+  <div class="goal-card">
+    <div class="goal-number">8</div>
+    <div class="goal-content">
+      <strong>Animated quiz response</strong>
+      <p>Efficiency – How efficiently can viewers see the question posed by the animated athlete on TV and answer on their phone?</p>
+    </div>
+  </div>
+  <div class="goal-card">
+    <div class="goal-number">9</div>
+    <div class="goal-content">
+      <strong>Kid’s commentary recall</strong>
+      <p>Memorability – Can users remember where the kid’s commentary video appears on the TV?</p>
+    </div>
+  </div>
+  <div class="goal-card">
+    <div class="goal-number">10</div>
+    <div class="goal-content">
+      <strong>Replay layout effectiveness</strong>
+      <p>Effectiveness – How effective is the replay and summary layout in breaking down key moments visually?</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <div class="research-block">
+      <h3>Example from data - <i>Feature Tested: Home Page (Phone)</i></h3>
+      <p>
+        The home page consists of a preview video of what sport is being streamed on the TV, an indicator of how many people are watching the live-stream, a title for the two teams playing against each other being streamed on the TV, the game week of the Olympics and the location of where the sport is being held. The key information however is within the 4 primary tabs of the home page.
+      </p>
+      <!-- FIXED: Uniform Cards and Responsive Columns -->
+      <div class="feature-test-details-row">
+        <div class="detail-card highlight-goal">
+          <h4>Relevant Goal to Feature</h4>
+          <div><strong>Goal 1:</strong> To evaluate how easily user's can navigate between the homepage tabs – <span class="highlight-purple">Utility</span></div>
+        </div>
+        <div class="detail-card">
+          <h4>Task Scenario</h4>
+          <p>
+            "Imagine you are watching a live Olympic event on TV while using the companion app on your phone. The home page of the app gives you key information about the match and four tabs: Overview, Statistics, Lineups, and Live Chat. Your task is to navigate through these tabs and explore the features of the app."
+          </p>
+        </div>
+        <div class="detail-card">
+          <h4>Success Criteria</h4>
+          <ul>
+            <li>Users (both children and parents) can quickly and intuitively navigate between the four primary home tabs</li>
+            <li>Clear understanding of each tab's purpose and content</li>
+            <li>Minimal confusion or hesitation when switching between tabs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-block">
+      <h3>Test Results</h3>
+      <div class="participant-results">
+        <div class="participant-card child">
+          <h4>Participant 1 (Child, Age 10)</h4>
+          <ul>
+            <li><strong>Overview Tab:</strong> "I understand the sport better now. The rules are explained simply, so I don't feel lost. It was visually structured in an easy way for me"</li>
+            <li><strong>Statistics Tab:</strong> "I don't think the column graph visual is detailed enough"</li>
+            <li><strong>Lineups Tab:</strong> "It's cool to see the players' positions, but I would like some more pictures or fun icons."</li>
+            <li><strong>Live Chat Tab:</strong> "I love asking questions! I hope they answer mine. It's fun because I feel involved in the game."</li>
+          </ul>
+        </div>
+        <div class="participant-card parent">
+          <h4>Participant 2 (Parent, Age 40)</h4>
+          <ul>
+            <li><strong>Overview Tab:</strong> "This is quite educational. I appreciate that it's written in a way my child can understand."</li>
+            <li><strong>Statistics Tab:</strong> "The data is simple and visual enough for my child to follow. It's a good way to keep them engaged."</li>
+            <li><strong>Lineups Tab:</strong> "It's easy to see who's playing where. It could be useful for teaching my child about team formations."</li>
+            <li><strong>Live Chat Tab:</strong> "The live chat is interesting for kids, though I'd like some controls to make sure my child isn't sending inappropriate questions."</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="appendix-links">
+      <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+        Explore the complete think aloud testing data here
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Top Down User Testing Synthesis Section -->
+<section class="project-section think-aloud-section">
+  <div class="project-text-blur">
+    <h2>Top Down User Testing Synthesis</h2>
+    <p class="method-justification">
+      The <span class="highlight">top-down thematic analysis</span> approach was highly effective in synthesising our think-aloud data because it allowed us to structure feedback and insights in a <strong>clear, hierarchical manner</strong>. By starting with the feature, moving down to the task and goals, and finally analysing the feedback (both positive and negative), we could easily <span class="highlight">pinpoint specific flaws</span> in the user experience. This method not only helped us organise the data but also facilitated <strong>targeted improvements</strong>, which were implemented in the high-fidelity mockups.
+    </p>
+    <p class="method-justification">
+      Additionally, the use of <span class="highlight">color-coded feedback</span> (green for positive, red for negative, and grey for suggested improvements) provided a quick visual reference to identify areas of concern and brainstorm solutions. This approach ensured that we captured <strong>detailed user feedback</strong>, both good and bad, and translated it directly into <span class="highlight">actionable changes</span>. This iterative process was crucial in refining the design for the final version.
+    </p>
+
+    <div class="feature-test-details-row">
+      <div class="detail-card">
+        <h4>Method Structure</h4>
+        <ul>
+          <li><strong>Feature:</strong> The specific UI component being tested</li>
+          <li><strong>Task:</strong> What users were asked to do with it</li>
+          <li><strong>Goals:</strong> What we aimed to learn from testing</li>
+          <li><strong>Feedback:</strong> Color-coded user reactions</li>
+        </ul>
+      </div>
+      <div class="detail-card">
+        <h4>Color Coding Key</h4>
+        <ul>
+          <li><span style="color:#388e3c">Green</span> = Positive feedback</li>
+          <li><span style="color:#c62828">Red</span> = Negative feedback</li>
+          <li><span style="color:#757575">Grey</span> = Suggested improvements</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="affinity-stack">
+      <h3>Example from data - Feature Tested: Navigation Bar (Phone)</h3>
+      <div class="synth-card synth-blue">
+        Feature 6 - Navigation Bar (Phone)
+      </div>
+      <div class="synth-card synth-purple">
+        Task 6 - Use the navigation bar to switch between the Home page, Quiz, Leaderboard, and Replay screens
+      </div>
+      <div class="synth-card synth-yellow">
+        How easily can users navigate between the different pages (utility)
+      </div>
+
+      <div class="affinity-bottom-row">
+        <!-- Positive Feedback -->
+        <div class="affinity-cluster-box affinity-positive">
+          <div class="affinity-cluster-title title-positive">
+            Positive Feedback
+          </div>
+          <div class="sticky-note note-positive">
+            "I liked how the buttons were big enough to tap easily" - Kid participant
+          </div>
+        </div>
+        <!-- Negative Feedback -->
+        <div class="affinity-cluster-box affinity-negative">
+          <div class="affinity-cluster-title title-negative">
+            Negative Feedback
+          </div>
+          <div class="sticky-note note-negative">
+            "The label 'Reels' wasn't immediately clear but I figured it out after using it" - Kid participant
+          </div>
+        </div>
+        <!-- Suggested Improvements -->
+        <div class="affinity-cluster-box affinity-grey">
+          <div class="affinity-cluster-title title-grey">
+            Suggested Improvements
+          </div>
+          <div class="sticky-note note-grey">
+            Changed the label "Reels" to self-explanatory word "Replay" as it more clearly relates to the actual content on the page
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-block" style="margin-top: 2rem;">
+      <h3>Implementation in Hi-Fidelity</h3>
+      <p>
+        The navigation bar was refined in the high-fidelity mockups to address these findings. The improved version features:
+      </p>
+      <ul class="improved-features-list">
+        <li>Clearer iconography with text labels</li>
+        <li>More intuitive naming ("Replay" instead of "Reels")</li>
+        <li>Visual feedback on active tab</li>
+        <li>Slightly larger tap targets</li>
+      </ul>
+    </div>
+
+    <p class="appendix-links">
+      <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+        Explore the rest of the top-down data for other features here
+      </a>
+    </p>
+  </div>
+</section>
+
 
   </div> <!--Container close div tag-->
 
