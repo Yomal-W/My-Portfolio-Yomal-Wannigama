@@ -194,3 +194,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+// === Iteration Modal ===
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.iteration-enlargeable').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const modalImg = document.getElementById('iterationModalImg');
+      modalImg.src = this.src;
+      document.getElementById('iterationModal').classList.add('active');
+      modalImg.style.outline = '4px solid #c1a8ff'; // Purple outline
+    });
+  });
+});
+function closeIterationModal() {
+  document.getElementById('iterationModal').classList.remove('active');
+  document.getElementById('iterationModalImg').src = '';
+}
+document.addEventListener('keydown', function (e) {
+  if (e.key === "Escape") closeIterationModal();
+});
+

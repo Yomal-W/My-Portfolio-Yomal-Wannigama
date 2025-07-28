@@ -2897,6 +2897,146 @@
   }
 }
 
+/* === Iteration Section Styling === */
+.iteration-1-to-2-section .project-text-blur {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.iteration-1-to-2-section .project-text-blur h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.4rem;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.iteration-1-to-2-section .project-text-blur h3 {
+  font-family: 'Rubik', sans-serif;
+  margin-top: 2.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
+
+.iteration-block {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(193, 168, 255, 0.17);
+}
+
+.iteration-block:last-child {
+  border-bottom: none;
+}
+
+.iteration-comparison {
+  display: flex;
+  gap: 2.2rem;
+  margin-top: 1.2rem;
+}
+
+.iteration-column {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.iteration-column h4 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 0.8rem;
+  font-size: 1.13rem;
+  font-weight: 600;
+}
+
+.iteration-img {
+  width: 55%; /* Adjust percentage as needed */
+  margin: 0 auto; /* Centers the smaller image */
+  border-radius: 13px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  transition: transform 0.23s, box-shadow 0.22s;
+}
+
+.iteration-img:hover,
+.iteration-img:focus-visible {
+  transform: scale(1.028);
+  box-shadow: 0 4px 32px 0 rgba(193,168,255,0.20), 0 2px 16px rgba(0,0,0,0.17);
+  z-index: 2;
+}
+
+
+.feedback-note {
+  padding: 1rem 1.1rem;
+  border-radius: 11px;
+  margin-top: 0.8rem;
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.01rem;
+  line-height: 1.65;
+}
+
+.feedback-note.negative {
+  background: rgba(255, 138, 128, 0.20);
+  border-left: 4px solid #FF8A80;
+  color: #fff;
+}
+
+.feedback-note.improvement {
+  background: rgba(129, 199, 132, 0.17);
+  border-left: 4px solid #81C784;
+  color: #fff;
+}
+
+.feedback-note ul {
+  margin: 0.5em 0 0 1.1em;
+  padding: 0;
+  color: rgba(255,255,255,0.93);
+  font-size: 1.01rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .project-text-blur {
+    padding: 1.2rem;
+    border-radius: 14px;
+    max-width: 99vw;
+  }
+  .iteration-comparison {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .iteration-block {
+    padding-bottom: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-text-blur {
+    padding: 0.7rem;
+    border-radius: 10px;
+  }
+  .iteration-column {
+    gap: 0.8rem;
+  }
+  .iteration-img {
+    border-radius: 8px;
+  }
+  .feedback-note {
+    padding: 0.8rem 0.6rem;
+    border-radius: 8px;
+  }
+}
+
+
+
   </style>
 </head>
 
@@ -4393,11 +4533,11 @@
       </div>
     </div>
 
-    <div class="appendix-links">
+    <p class="appendix-links">
       <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
         Explore the rest of the mid-fidelity wireframes here
       </a>
-    </div>
+    </p>
   </div>
 </section>
 
@@ -4545,11 +4685,11 @@
       </div>
     </div>
 
-    <div class="appendix-links">
+    <p class="appendix-links">
       <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
-        Explore the complete think aloud testing data here
+        Explore the the complete think aloud data here
       </a>
-    </div>
+    </p>
   </div>
 </section>
 
@@ -4635,6 +4775,104 @@
   </div>
 </section>
 
+<!-- Iteration 1 to Iteration 2 Section -->
+<section class="project-section iteration-1-to-2-section">
+  <div class="project-text-blur">
+    <h2>Iteration 1 (Mid-Fidelity) to Iteration 2 (Hi-Fidelity)</h2>
+    <p>
+      Our design evolved significantly based on user feedback from think-aloud testing. Below are two key examples where critical feedback directly informed improvements from mid-fidelity to high-fidelity versions.
+    </p>
+
+    <!-- Navigation Bar Example -->
+    <div class="iteration-block">
+      <h3>1. Navigation Bar Redesign</h3>
+      <div class="iteration-comparison">
+        <div class="iteration-column">
+          <h4>Mid-Fidelity (Iteration 1)</h4>
+          <img src="images/mid - fid - iteration 1 - navigation bar.png" alt="Mid-fidelity navigation bar with confusing 'Reels' label" class="iteration-img iteration-enlargeable">
+          <div class="feedback-note negative">
+            <strong>Severity: High</strong><br>
+            "The label 'Reels' wasn't immediately clear but I figured it out after using it" - Kid participant
+          </div>
+        </div>
+        <div class="iteration-column">
+          <h4>Hi-Fidelity (Iteration 2)</h4>
+          <img src="images/high - fid - iteration 2 - navigation bar.png" alt="Improved hi-fidelity navigation bar with 'Replay' label" class="iteration-img iteration-enlargeable">
+          <div class="feedback-note improvement">
+            <strong>Key Changes:</strong>
+            <ul>
+              <li>Renamed "Reels" to more intuitive "Replay"</li>
+              <li>Added clearer iconography</li>
+              <li>Improved visual hierarchy</li>
+              <li>Enhanced active state visibility</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Player Position Example -->
+    <div class="iteration-block">
+      <h3>2. Player Position Enhancement</h3>
+      <div class="iteration-comparison">
+        <div class="iteration-column">
+          <h4>Mid-Fidelity (Iteration 1)</h4>
+          <img src="images/mid - fid - iteration 1 - player position.png" alt="Basic player position display" class="iteration-img iteration-enlargeable">
+          <div class="feedback-note negative">
+            <strong>Severity: Moderate</strong><br>
+            "Seeing the players' positions is helpful. I'd like to see more detailed information about the positions here though." - Kid participant
+          </div>
+        </div>
+        <div class="iteration-column">
+          <h4>Hi-Fidelity (Iteration 2)</h4>
+          <img src="images/high - fid - iteration 2 - player position.png" alt="Enhanced player position information" class="iteration-img iteration-enlargeable">
+          <div class="feedback-note improvement">
+            <strong>Key Changes:</strong>
+            <ul>
+              <li>Added position-specific statistics</li>
+              <li>Included role explanations</li>
+              <li>Improved visual representation</li>
+              <li>Added quick facts about each position</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question posed by viewers to commentators overlay (TV) -->
+    <div class="iteration-block">
+      <h3>3. Question posed by viewers to commentators overlay Enhancement</h3>
+      <div class="iteration-comparison">
+        <div class="iteration-column">
+          <h4>Mid-Fidelity (Iteration 1)</h4>
+          <img src="images/mid - fid - iteration 1 - Olympic sport selection (TV).png" alt="Basic player position display" class="iteration-img iteration-enlargeable">
+          <div class="feedback-note negative">
+            <strong>Severity: Moderate</strong><br>
+            “I thought it was on the top left, but it was actually above the commentary video in the bottom left corner. It was a little confusing.” - kid
+          </div>
+        </div>
+        <div class="iteration-column">
+          <h4>Hi-Fidelity (Iteration 2)</h4>
+          <img src="images/high - fid - iteration 2 - Olympic sport selection (TV).png" alt="Enhanced player position information" class="iteration-img iteration-enlargeable">
+          <div class="feedback-note improvement">
+            <strong>Key Changes:</strong>
+            <ul>
+              <li>Use more vibrant colors or higher contrast against the background to draw attention to the overlay and make it stand out more.</li>
+              <li>Made the overlay larger to improve readability for younger viewers.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="appendix-links">
+      <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+        Explore the rest of the mid-fidelity to high-fidelity iteration changes here
+      </a>
+    </p>
+  </div>
+</section>
+
+
 
   </div> <!--Container close div tag-->
 
@@ -4648,6 +4886,11 @@
   <div id="brainstormModal" class="brainstorm-modal" tabindex="-1" aria-modal="true" role="dialog">
     <img src="" alt="Enlarged Brainstorm Sketch" class="brainstorm-modal-img" id="brainstormModalImg">
   </div>
+  <!-- Iteration Modal 1 to 2 Overlay -->
+  <div id="iterationModal" class="modal-overlay" onclick="closeIterationModal()">
+    <img id="iterationModalImg" class="modal-img" src="" alt="Full Screen View"/>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
