@@ -3035,7 +3035,226 @@
   }
 }
 
+/* === A/B Testing Section Styling === */
+.ab-testing-section .project-text-blur {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
 
+.ab-testing-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #FFFFFF;
+}
+
+.ab-testing-comparison {
+  display: flex;
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+
+.version-column {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.version-column:hover {
+  transform: translateY(-5px);
+}
+
+.version-column h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
+}
+
+.version-1 h3 {
+  color: #FF8A80; /* Soft red for version 1 */
+}
+
+.version-2 h3 {
+  color: #81C784; /* Soft green for version 2 */
+}
+
+.version-meta {
+  margin-bottom: 1.2rem;
+}
+
+.preference-score {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+}
+
+.version-1 .preference-score {
+  background: rgba(255, 138, 128, 0.2);
+  color: #FF8A80;
+}
+
+.version-2 .preference-score {
+  background: rgba(129, 199, 132, 0.2);
+  color: #81C784;
+}
+
+.version-img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+.feedback-note {
+  padding: 1.2rem;
+  border-radius: 10px;
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.6;
+}
+
+.feedback-note.negative {
+  background: rgba(255, 138, 128, 0.15);
+  border-left: 4px solid #FF8A80;
+}
+
+.feedback-note.improvement {
+  background: rgba(129, 199, 132, 0.15);
+  border-left: 4px solid #81C784;
+}
+
+.feedback-source {
+  font-style: italic;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.testing-conclusion {
+  background: rgba(193, 168, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  border-left: 4px solid #C1A8FF;
+}
+
+.testing-conclusion h4 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.testing-conclusion ul {
+  margin-left: 1.2rem;
+  padding-left: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.testing-conclusion li {
+  margin-bottom: 0.5rem;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ab-testing-comparison {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+}
+
+@media (max-width: 600px) {
+  .version-column {
+    padding: 1rem;
+  }
+  
+  .version-img {
+    border-radius: 8px;
+  }
+}
+
+/* === Heuristic Evaluation Section Styling === */
+.heuristic-evaluation-section .project-text-blur {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.heuristic-evaluation-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.8rem;
+  color: #FFFFFF;
+}
+
+
+.heuristic-table-container {
+  margin: 2.5rem 0;
+  overflow-x: auto;
+}
+
+.heuristic-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Overpass', sans-serif;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.heuristic-table th {
+  background: rgba(193, 168, 255, 0.2);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+}
+
+.heuristic-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.heuristic-table tr:last-child td {
+  border-bottom: none;
+}
+
+.heuristic-table tr:hover td {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .heuristic-table th, 
+  .heuristic-table td {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heuristic-table th, 
+  .heuristic-table td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
 
   </style>
 </head>
@@ -4872,6 +5091,110 @@
   </div>
 </section>
 
+<!-- A/B Testing Section -->
+<section class="project-section ab-testing-section">
+  <div class="project-text-blur">
+    <h2>A/B Testing: Color Palette Exploration</h2>
+    <p>
+      Based on feedback about our visual style needing to better reflect our younger target audience, we conducted A/B testing with 8 design experts to evaluate two new color palettes inspired by sports and playfulness.
+    </p>
+
+    <div class="ab-testing-comparison">
+      <!-- Version 1 -->
+      <div class="version-column version-1">
+        <h3>Version 1</h3>
+        <div class="version-meta">
+          <span class="preference-score">0/8 preferred this version</span>
+        </div>
+        <img src="images/AB testing - V1.png" alt="Version 1 color palette" class="version-img">
+        <div class="feedback-note negative">
+          <p>Experts found Version 1 difficult to read and felt the colour palette made the app look cheap rather than appealing to a younger audience.</p>
+          <p class="feedback-source">Expert Feedback Summarised</p>
+        </div>
+      </div>
+
+      <!-- Version 2 -->
+      <div class="version-column version-2">
+        <h3>Version 2</h3>
+        <div class="version-meta">
+          <span class="preference-score">8/8 preferred this version</span>
+        </div>
+        <img src="images/AB testing - V2.png" alt="Version 2 color palette" class="version-img">
+        <div class="feedback-note improvement">
+          <p>Experts unanimously preferred Version 2, describing it as easy on the eye, highly readable, and much better aligned with a playful, sporty vibe for kids.</p>
+          <p class="feedback-source">Expert Feedback Summarised</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testing-conclusion">
+      <h4>Key Findings</h4>
+      <ul>
+        <li>100% of experts preferred Version 2's color palette</li>
+        <li>Version 2's light purple improved readability while maintaining sporty energy</li>
+        <li>Version 1's colors were perceived as "cheap" and hard to read</li>
+      </ul>
+    </div>
+    <p class="appendix-links">
+      <a href="https://docs.google.com/document/d/11whn30TEOq88ay90-zRGmZFnui3fJEBoOz3DthXUto0/edit?usp=sharing" target="_blank">
+        Explore the A/B testing data from experts here
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- Heuristic Evaluation Section -->
+<section class="project-section heuristic-evaluation-section">
+  <div class="project-text-blur">
+    <h2>Heuristic Evaluation</h2>
+      <p>
+        The <span class="highlight">heuristic evaluation</span> method enabled us to efficiently identify usability flaws before user testing by leveraging <strong>Nielsen's 10 principles</strong> as a framework. Six experts analyzed key features like navigation and feedback systems, helping us <span class="highlight">pinpoint violations</span> of established usability standards. This structured approach ensured we addressed <strong>fundamental UX issues</strong> early, creating a more intuitive foundation for subsequent iterations.
+      </p>    
+    <div class="heuristic-table-container">
+      <table class="heuristic-table">
+        <thead>
+          <tr>
+            <th>Features</th>
+            <th>Usability Test Goals</th>
+            <th>Task Scenarios</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Feature 4 - Olympic sport viewing selection screen (TV)</td>
+            <td>Memorability</td>
+            <td>On the TV screen, select football/soccer on TV screen grid</td>
+          </tr>
+          <tr>
+            <td>Feature 2 - Quiz and feedback screens (Phone)</td>
+            <td>Efficiency</td>
+            <td>On the TV screen, as soon as the quiz pop up. Select a quiz answer on the phone screen</td>
+          </tr>
+          <tr>
+            <td>Feature 1 - Home page (Phone)</td>
+            <td>Utility</td>
+            <td>On the Phone, navigate through home screen tabs to discover different information</td>
+          </tr>
+          <tr>
+            <td>Feature 6 - Bottom navigation bar (Phone)</td>
+            <td>Utility</td>
+            <td>On the Phone, use the bottom navigation bar to navigate through different screens, send a question to the chat</td>
+          </tr>
+          <tr>
+            <td>Feature 5 - Leaderboard screen (Phone)</td>
+            <td>Learnability</td>
+            <td>On the Phone, Navigate to the leaderboard screen, check your current ranking, and explore the difference between the global and friends' rankings</td>
+          </tr>
+          <tr>
+            <td>Feature 10 - Replay and Summary screen (Phone)</td>
+            <td>Effectiveness</td>
+            <td>On the Phone, review what happened during the games using the companion app</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
 
   </div> <!--Container close div tag-->
