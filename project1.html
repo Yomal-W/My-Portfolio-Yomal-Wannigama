@@ -3202,7 +3202,150 @@
   color: #FFFFFF;
 }
 
+.heuristic-evaluation-section p {
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
 
+/* Expert Feedback Case Study */
+.expert-feedback-case {
+  margin: 2.5rem 0;
+  padding: 1.8rem;
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 14px;
+  border-left: 4px solid #C1A8FF;
+}
+
+.expert-feedback-case h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.4rem;
+  color: #C1A8FF;
+  margin-bottom: 1.5rem;
+}
+
+.expert-feedback-case h4 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+  margin: 1.2rem 0;
+}
+
+.violation-card {
+  background: rgba(255, 138, 128, 0.15);
+  padding: 1.2rem;
+  border-radius: 10px;
+  border-left: 4px solid #FF8A80;
+}
+
+.heuristic-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+  font-family: 'Overpass Mono', monospace;
+}
+
+.severity-meter {
+  margin-top: 1rem;
+  font-family: 'Overpass', sans-serif;
+}
+
+.severity-meter span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.meter-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.meter-fill {
+  height: 100%;
+  background: #FF8A80;
+  border-radius: 3px;
+}
+
+.meter-label {
+  position: absolute;
+  right: 0;
+  top: -1.5rem;
+  font-size: 0.8rem;
+  color: #FF8A80;
+}
+
+.solution-steps {
+  counter-reset: step;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.solution-steps li {
+  position: relative;
+  margin-bottom: 0.8rem;
+  padding-left: 2rem;
+  list-style: none;
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.6;
+}
+
+.solution-steps li:before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  background: #4C00AE;
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Iteration Comparison */
+.iteration-comparison {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.8rem;
+}
+
+.iteration-column {
+  flex: 1;
+}
+
+.iteration-column h4 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.iteration-column img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Existing Table Styling */
 .heuristic-table-container {
   margin: 2.5rem 0;
   overflow-x: auto;
@@ -3239,8 +3382,21 @@
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* Responsive */
+/* Responsive Adjustments */
 @media (max-width: 900px) {
+  .heuristic-evaluation-section .project-text-blur {
+    padding: 1.8rem;
+  }
+  
+  .feedback-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .iteration-comparison {
+    flex-direction: column;
+  }
+  
   .heuristic-table th, 
   .heuristic-table td {
     padding: 0.8rem;
@@ -3249,10 +3405,26 @@
 }
 
 @media (max-width: 600px) {
+  .heuristic-evaluation-section .project-text-blur {
+    padding: 1.2rem;
+  }
+  
+  .expert-feedback-case {
+    padding: 1.2rem;
+  }
+  
   .heuristic-table th, 
   .heuristic-table td {
     padding: 0.6rem;
     font-size: 0.9rem;
+  }
+  
+  .heuristic-evaluation-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .expert-feedback-case h3 {
+    font-size: 1.2rem;
   }
 }
 
@@ -4422,779 +4594,819 @@
       </div>
     </section>
 
-<!-- Multi-modality Experience Justification -->
-<!-- Multi-modality Experience Section -->
-<section class="project-section multimodality-section">
-  <div class="project-text-blur">
-    <h2>Dual-Screen Olympic Experience</h2>
-    <p>
-      Our <span class="highlight">multi-device ecosystem</span> creates a <strong>seamless dual-screen experience</strong> that keeps young viewers engaged through synchronized content and complementary features across platforms.
-    </p>
+    <!-- Multi-modality Experience Justification -->
+    <!-- Multi-modality Experience Section -->
+    <section class="project-section multimodality-section">
+      <div class="project-text-blur">
+        <h2>Dual-Screen Olympic Experience</h2>
+        <p>
+          Our <span class="highlight">multi-device ecosystem</span> creates a <strong>seamless dual-screen experience</strong> that keeps young viewers engaged through synchronized content and complementary features across platforms.
+        </p>
 
-    <!-- Dual Screen Demo -->
-    <div class="dual-screen-container">
-      <div class="device-demo tv-demo">
-        <div class="device-header">
-          <h3>TV Broadcast Features</h3>
-          <div class="device-label">Main Screen</div>
-        </div>
-        <img src="images/olympics-for-kids-tv.gif" alt="TV interface with interactive overlays" class="device-gif tv-gif">
-        <div class="quiz-interface">
-          <div class="quiz-question">Which country won the most gold medals in the 2020 Olympics?</div>
-          <div class="quiz-options">
-            <span class="quiz-option">A. China</span>
-            <span class="quiz-option">B. USA</span>
-            <span class="quiz-option">C. Japan</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="sync-indicator">
-        <div class="sync-line"></div>
-        <div class="sync-icon">↔</div>
-        <div class="sync-line"></div>
-      </div>
-
-      <div class="device-demo mobile-demo">
-        <div class="device-header">
-          <h3>Mobile Companion Features</h3>
-          <div class="device-label">Interactive Layer</div>
-        </div>
-        <img src="images/olympics-phone-gif.gif" alt="Mobile companion app interface" class="device-gif phone-gif">
-      </div>
-    </div>
-
-    <!-- Feature Comparison -->
-    <div class="feature-comparison">
-      <div class="feature-grid">
-        <div class="feature-card tv-feature">
-          <h4>Olympic Viewing Selection</h4>
-          <p>Simplified sport navigation with visual previews</p>
-        </div>
-        <div class="feature-card mobile-feature">
-          <h4>Home Page (Phone)</h4>
-          <p>Personalized event recommendations and quick access</p>
-        </div>
-        <div class="feature-card tv-feature">
-          <h4>Animated Athlete Prompts</h4>
-          <p>3D athlete avatars explain rules and pose quiz questions</p>
-        </div>
-        <div class="feature-card mobile-feature">
-          <h4>Quiz & Feedback (Phone)</h4>
-          <p>Interactive knowledge checks with instant scoring</p>
-        </div>
-        <div class="feature-card tv-feature">
-          <h4>Kid's Commentary</h4>
-          <p>Picture-in-picture reactions from young fans</p>
-        </div>
-        <div class="feature-card mobile-feature">
-          <h4>Live Chat (Phone)</h4>
-          <p>Moderated discussions with other viewers</p>
-        </div>
-        <div class="feature-card tv-feature">
-          <h4>Question Overlay</h4>
-          <p>Submit questions directly to commentators</p>
-        </div>
-        <div class="feature-card mobile-feature">
-          <h4>Leaderboard (Phone)</h4>
-          <p>Track quiz scores against friends and global players</p>
-        </div>
-        <div class="feature-card mobile-feature">
-          <h4>Bottom navigation bar (Phone)</h4>
-          <p>Quick and easy access to the app's core features</p>
-        </div>
-        <div class="feature-card mobile-feature">
-          <h4>Replay and Summary screen (Phone)</h4>
-          <p>An engaging wrap-up after each Olympic event</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Synergy Explanation -->
-    <div class="synergy-box">
-      <h3>How They Work Together</h3>
-      <div class="synergy-points">
-        <div class="synergy-point">
-          <div class="point-icon">🔀</div>
-          <p><strong>Synchronized Content:</strong> Mobile quizzes activate during relevant TV moments</p>
-        </div>
-        <div class="synergy-point">
-          <div class="point-icon">📲</div>
-          <p><strong>Second Screen:</strong> Detailed stats appear on mobile when TV shows highlights</p>
-        </div>
-        <div class="synergy-point">
-          <div class="point-icon">👪</div>
-          <p><strong>Family Mode:</strong> Parents can monitor activity through linked accounts</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Card Sorting Section -->
-<section class="project-section card-sorting-section">
-  <div class="project-text-blur">
-    <h2>Card Sorting Research</h2>
-      <p>
-        Our <span class="highlight">multi-device ecosystem</span> creates a <strong>seamless dual-screen experience</strong> that keeps young viewers engaged through synchronized content and complementary features across platforms. This experience was <span class="highlight">tested with five participants</span>, including <strong>three children and two parents</strong>, to ensure its effectiveness and appeal for both kids and their families.
-      </p>
-
-    <div class="research-block">
-      <h3>Test Goals</h3>
-      <div class="goals-grid">
-        <div class="goal-card">
-          <div class="goal-number">1</div>
-          <div class="goal-content">
-            <strong>Determine how children categorize augmented elements</strong>
-            <p>Kids' understanding of sports and interactivity differs from adults, so understanding their logic helps create natural-feeling interactions.</p>
-          </div>
-        </div>
-        <div class="goal-card">
-          <div class="goal-number">2</div>
-          <div class="goal-content">
-            <strong>Explore child-parent interaction differences</strong>
-            <p>Parents may prioritize educational aspects while children focus on fun elements, guiding our feature prioritization.</p>
-          </div>
-        </div>
-        <div class="goal-card">
-          <div class="goal-number">3</div>
-          <div class="goal-content">
-            <strong>Identify themes in children's sports thinking</strong>
-            <p>Understanding appealing aspects helps design highlight exciting content in both app and AR experiences.</p>
-          </div>
-        </div>
-        <div class="goal-card">
-          <div class="goal-number">4</div>
-          <div class="goal-content">
-            <strong>Refine navigation systems</strong>
-            <p>Balancing education and entertainment requires clear organization based on user feedback.</p>
-          </div>
-        </div>
-        <div class="goal-card">
-          <div class="goal-number">5</div>
-          <div class="goal-content">
-            <strong>Reveal areas needing simplification</strong>
-            <p>Olympic terminology might confuse children; card sorting helps simplify without losing depth.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="research-block">
-      <h3>Method Explanation & Justification</h3>
-      <p>
-        Card sorting helped organize features and content for both the augmented TV experience and companion mobile app. Participants classified content like athlete trivia, statistics, and sport explanations according to their intuitive understanding, ensuring alignment with user expectations.
-      </p>
-      <p>
-        We conducted card sorting after analyzing low-fidelity sketches, which revealed navigation issues. The initial designs lacked clear navigation elements and had overcrowded screens. Card sorting provided essential data on users' mental models, which we used to refine our mid-fidelity wireframes and simplify the experience.
-      </p>
-    </div>
-
-    <div class="research-block">
-      <h3>Participant Criteria & Results</h3>
-      <div class="participant-columns">
-        <div class="participant-card">
-          <h4>Children (Ages 8-12)</h4>
-          <ul>
-            <li>Provided direct understanding of children's mental models</li>
-            <li>Helped simplify navigation for younger audiences</li>
-            <li>Revealed natural categorization of features</li>
-          </ul>
-          
-          <div class="sorting-results">
-            <h5>Participant 1 (Age 10)</h5>
-            <div class="result-group">
-              <div class="group-label" style="background: rgba(193,168,255,0.2);">Fun & Interactive</div>
-              <div class="grouped-cards">
-                <span>Animated Athlete Overlays</span>
-                <span>Quiz Questions</span>
-                <span>Interactive Scores</span>
-                <span>Olympic Trivia</span>
+        <!-- Dual Screen Demo -->
+        <div class="dual-screen-container">
+          <div class="device-demo tv-demo">
+            <div class="device-header">
+              <h3>TV Broadcast Features</h3>
+              <div class="device-label">Main Screen</div>
+            </div>
+            <img src="images/olympics-for-kids-tv.gif" alt="TV interface with interactive overlays" class="device-gif tv-gif">
+            <div class="quiz-interface">
+              <div class="quiz-question">Which country won the most gold medals in the 2020 Olympics?</div>
+              <div class="quiz-options">
+                <span class="quiz-option">A. China</span>
+                <span class="quiz-option">B. USA</span>
+                <span class="quiz-option">C. Japan</span>
               </div>
             </div>
-            <div class="result-group">
-              <div class="group-label" style="background: rgba(255,203,5,0.2);">Game & Scores</div>
-              <div class="grouped-cards">
-                <span>Athletes' Statistics</span>
-                <span>Live Broadcast</span>
-                <span>Medal Count</span>
-              </div>
+          </div>
+
+          <div class="sync-indicator">
+            <div class="sync-line"></div>
+            <div class="sync-icon">↔</div>
+            <div class="sync-line"></div>
+          </div>
+
+          <div class="device-demo mobile-demo">
+            <div class="device-header">
+              <h3>Mobile Companion Features</h3>
+              <div class="device-label">Interactive Layer</div>
             </div>
-            <div class="result-group">
-              <div class="group-label" style="background: rgba(129,199,132,0.2);">Rules & History</div>
-              <div class="grouped-cards">
-                <span>Sports Rules</span>
-                <span>Historical Highlights</span>
-              </div>
-            </div>
-            <div class="result-group">
-              <div class="group-label" style="background: rgba(255,138,128,0.2);">Settings</div>
-              <div class="grouped-cards">
-                <span>Parent Controls</span>
-                <span>Notifications</span>
-              </div>
-            </div>
-            <p class="appendix-links">
-              <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
-                View the remaining 2 child participant's sorting results here
-              </a>
-            </p>
+            <img src="images/olympics-phone-gif.gif" alt="Mobile companion app interface" class="device-gif phone-gif">
           </div>
         </div>
 
-        <div class="participant-card">
-          <h4>Parents</h4>
-          <ul>
-            <li>Offered perspective on content control and safety</li>
-            <li>Helped create appropriate content categories</li>
-            <li>Ensured structure balanced engagement with security</li>
-          </ul>
-          
-          <div class="sorting-results">
-            <h5>Participant 2 (Age 40)</h5>
-            <div class="result-group">
-              <div class="group-label" style="background: rgba(193,168,255,0.2);">Engagement Features</div>
-              <div class="grouped-cards">
-                <span>Live Broadcast</span>
-                <span>Animated Athlete Overlays</span>
-                <span>Quiz Questions</span>
-                <span>Interactive Scores</span>
-              </div>
+        <!-- Feature Comparison -->
+        <div class="feature-comparison">
+          <div class="feature-grid">
+            <div class="feature-card tv-feature">
+              <h4>Olympic Viewing Selection</h4>
+              <p>Simplified sport navigation with visual previews</p>
             </div>
-            <div class="result-group">
-              <div class="group-label" style="background: rgba(255,203,5,0.2);">Educational</div>
-              <div class="grouped-cards">
-                <span>Sports Rules</span>
-                <span>Historical Highlights</span>
-                <span>Olympic Trivia</span>
-              </div>
+            <div class="feature-card mobile-feature">
+              <h4>Home Page (Phone)</h4>
+              <p>Personalized event recommendations and quick access</p>
             </div>
-            <div class="result-group">
-              <div class="group-label" style="background: rgba(129,199,132,0.2);">Personalization & Control</div>
-              <div class="grouped-cards">
-                <span>Parent Controls</span>
-                <span>Notifications</span>
-              </div>
+            <div class="feature-card tv-feature">
+              <h4>Animated Athlete Prompts</h4>
+              <p>3D athlete avatars explain rules and pose quiz questions</p>
             </div>
-            <div class="result-group">
-              <div class="group-label" style="background: rgba(255,138,128,0.2);">Performance Data</div>
-              <div class="grouped-cards">
-                <span>Athletes' Statistics</span>
-                <span>Medal Count</span>
-              </div>
+            <div class="feature-card mobile-feature">
+              <h4>Quiz & Feedback (Phone)</h4>
+              <p>Interactive knowledge checks with instant scoring</p>
             </div>
-            <p class="appendix-links">
-              <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
-                View the final parent participant's sorting results here
-              </a>
-            </p>
+            <div class="feature-card tv-feature">
+              <h4>Kid's Commentary</h4>
+              <p>Picture-in-picture reactions from young fans</p>
+            </div>
+            <div class="feature-card mobile-feature">
+              <h4>Live Chat (Phone)</h4>
+              <p>Moderated discussions with other viewers</p>
+            </div>
+            <div class="feature-card tv-feature">
+              <h4>Question Overlay</h4>
+              <p>Submit questions directly to commentators</p>
+            </div>
+            <div class="feature-card mobile-feature">
+              <h4>Leaderboard (Phone)</h4>
+              <p>Track quiz scores against friends and global players</p>
+            </div>
+            <div class="feature-card mobile-feature">
+              <h4>Bottom navigation bar (Phone)</h4>
+              <p>Quick and easy access to the app's core features</p>
+            </div>
+            <div class="feature-card mobile-feature">
+              <h4>Replay and Summary screen (Phone)</h4>
+              <p>An engaging wrap-up after each Olympic event</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="research-block">
-      <h3>Card Set Used for Sorting</h3>
-      <div class="card-set-grid">
-        <span class="sorting-card">Athletes' Statistics</span>
-        <span class="sorting-card">Live Broadcast</span>
-        <span class="sorting-card">Animated Athlete Overlays</span>
-        <span class="sorting-card">Quiz Questions</span>
-        <span class="sorting-card">Interactive Scores</span>
-        <span class="sorting-card">Parent Controls</span>
-        <span class="sorting-card">Olympic Trivia</span>
-        <span class="sorting-card">Historical Highlights</span>
-        <span class="sorting-card">Sports Rules</span>
-        <span class="sorting-card">Medal Count</span>
-        <span class="sorting-card">Notifications</span>
-        <span class="sorting-card">Social Sharing Options</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Mid-Fidelity Screens Section -->
-<section class="project-section mid-fidelity-section">
-  <div class="project-text-blur">
-    <h2>Mid-Fidelity Screens</h2>
-    <p class="project-section-text">
-      The creation of <span class="highlight">mid-fidelity wireframes</span> marked a pivotal stage in the design process, allowing us to move from conceptualisation into <strong>refined user experience testing</strong>. These wireframes provided a <span class="highlight">functional representation</span> of the app’s layout, navigation, and features—<strong>without the distractions of high-detail visuals</strong>. This balance enabled us to conduct meaningful usability testing, specifically through the <span class="highlight">think-aloud method</span>, to gather real-time feedback on the app’s structure and flow.<br><br>
-      By focusing on key elements like <span class="highlight">content placement</span>, <strong>user paths</strong>, and interactive features, we refined the app’s usability. The <span class="highlight">flexibility</span> of mid-fidelity wireframes made it easy to <strong>quickly iterate</strong> and implement changes based on user feedback, as opposed to high-fidelity wireframes, which require more time and resources to adjust. This approach minimised the cost of redesign and allowed us to <span class="highlight">explore multiple interaction possibilities</span>.<br><br>
-      The <span class="highlight">insights gained</span> from testing the mid-fidelity wireframes—particularly through the think-aloud method—informed key improvements for the high-fidelity mockups. This iterative approach ensured our final design was not only <strong>visually appealing</strong>, but also <span class="highlight">intuitive and easy to navigate</span>, addressing usability concerns early and resulting in a functionally sound product.
-    </p>
-    <p>
-      These screens represent a more structured vision of the app, integrating insights from our <span class="highlight">card sorting exercise</span> and early usability testing. The mid-fidelity phase allowed us to focus on <strong>layout and functionality</strong> without the distraction of final visuals, while maintaining flexibility for quick iterations based on user feedback.
-    </p>
-
-    <div class="mid-fidelity-grid">
-      <!-- Mobile Screens Column -->
-      <div class="mid-fidelity-column">
-        <h3>Mobile Companion App - <i>example</i></h3>
-          <div class="screen-card">
-            <img src="images/mid-fidelity-mobile-live-chat.png" alt="Mobile Live Chat Screen" class="mid-fidelity-img mobile mid-fi-wireframe-img" loading="lazy">
-            <div class="screen-caption">
-              <h4>Live Chat Interface</h4>
-              <p>Moderated chat with other viewers during events, with safety features for young users.</p>
+        <!-- Synergy Explanation -->
+        <div class="synergy-box">
+          <h3>How They Work Together</h3>
+          <div class="synergy-points">
+            <div class="synergy-point">
+              <div class="point-icon">🔀</div>
+              <p><strong>Synchronized Content:</strong> Mobile quizzes activate during relevant TV moments</p>
             </div>
-          </div>
-      </div>
-
-      <!-- TV Screens Column -->
-      <div class="mid-fidelity-column">
-        <h3>TV Overlay Interface - <i>example</i></h3>
-        <div class="screen-card">
-          <img src="images/mid-fidelity-tv-animated-athlete-multiple-choice-overlay.png" alt="TV Animated Athlete Overlay" class="mid-fidelity-img mid-fi-wireframe-img" loading="lazy">
-          <div class="screen-caption">
-            <h4>Animated Athlete Multiple Choice Overlay</h4>
-            <p>Animated athlete avatar explains rules and asks quiz questions directly on the TV screen.</p>
+            <div class="synergy-point">
+              <div class="point-icon">📲</div>
+              <p><strong>Second Screen:</strong> Detailed stats appear on mobile when TV shows highlights</p>
+            </div>
+            <div class="synergy-point">
+              <div class="point-icon">👪</div>
+              <p><strong>Family Mode:</strong> Parents can monitor activity through linked accounts</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <p class="appendix-links">
-      <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
-        Explore the rest of the mid-fidelity wireframes here
-      </a>
-    </p>
-  </div>
-</section>
-
-<!-- Think Aloud Method Section -->
-<section class="project-section think-aloud-section"> 
-  <div class="project-text-blur">
-    <h2>Usability Testing: Think Aloud Method</h2>
-    <div class="method-justification">
-      <p>
-        From the card sorting method we got a basic sitemap of what content and visual hierarchy the screens should look like for both TV and phones. This information was used to create our mid-fidelity wireframes on Figma. To assess how intuitive our features and navigation are, we needed to understand user thoughts as they moved through the interface of our mobile application and TV screens.
-      </p>
-      <p>
-        The think aloud testing method allows users to verbalise their thoughts, provoked by scenarios we give them. Consequently, we can hear their misconceptions about the design of our user interface and use this data to redesign it for our mockups (hi-fidelity wireframes). Additionally, the think aloud method has many benefits consisting of being <span class="highlight">cheap, robust, flexible, convincing and easy to learn</span>.
-      </p>
-      <p>
-        The participants from the card sorting were re-used for the think aloud. We decided this would be optimal as they already had a grasp of our concept. Hence their responses and thoughts will be more detailed as they already have a brief on what the app might've looked like before we showed them our mid-fidelity wireframes.
-      </p>
-    </div>
-
-    <div class="research-block">
-      <h3>Relevant Usability Goals</h3>
-        <div class="goals-grid">
-          <div class="goal-card">
-            <div class="goal-number">1</div>
-            <div class="goal-content">
-              <strong>Homepage navigation</strong>
-              <p>Utility – How easily can users navigate between the homepage tabs?</p>
-            </div>
-          </div>
-          <div class="goal-card">
-            <div class="goal-number">2</div>
-            <div class="goal-content">
-              <strong>Quiz interaction</strong>
-              <p>Efficiency – How easy is it to answer quiz options and review feedback?</p>
-            </div>
-          </div>
-          <div class="goal-card">
-            <div class="goal-number">3</div>
-            <div class="goal-content">
-              <strong>Live chat input</strong>
-              <p>Effectiveness – How often can users successfully input a question into the live chat?</p>
-            </div>
-          </div>
-          <div class="goal-card">
-            <div class="goal-number">4</div>
-            <div class="goal-content">
-              <strong>Sport selection recall</strong>
-              <p>Memorability – Can users remember how to select a sport to watch?</p>
-            </div>
-          </div>
-          <div class="goal-card">
-            <div class="goal-number">5</div>
-            <div class="goal-content">
-              <strong>Leaderboard understanding</strong>
-              <p>Learnability – How easily do users grasp the concept of the leaderboard/ranking system?</p>
-            </div>
-          </div>
-          <div class="goal-card">
-            <div class="goal-number">6</div>
-            <div class="goal-content">
-              <strong>Page navigation</strong>
-              <p>Utility – How easily can users navigate between different pages?</p>
-            </div>
-          </div>
-          <div class="goal-card">
-            <div class="goal-number">7</div>
-            <div class="goal-content">
-              <strong>Highlighted question recall</strong>
-              <p>Memorability – Can users remember where the highlighted live chat question appears?</p>
-            </div>
-          </div>
-          <div class="goal-card">
-            <div class="goal-number">8</div>
-            <div class="goal-content">
-              <strong>Animated quiz response</strong>
-              <p>Efficiency – How efficiently can viewers see the question posed by the animated athlete on TV and answer on their phone?</p>
-            </div>
-          </div>
-          <div class="goal-card">
-            <div class="goal-number">9</div>
-            <div class="goal-content">
-              <strong>Kid’s commentary recall</strong>
-              <p>Memorability – Can users remember where the kid’s commentary video appears on the TV?</p>
-            </div>
-          </div>
-          <div class="goal-card">
-            <div class="goal-number">10</div>
-            <div class="goal-content">
-              <strong>Replay layout effectiveness</strong>
-              <p>Effectiveness – How effective is the replay and summary layout in breaking down key moments visually?</p>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div class="research-block">
-      <h3>Example from data - <i>Feature Tested: Home Page (Phone)</i></h3>
-      <p>
-        The home page consists of a preview video of what sport is being streamed on the TV, an indicator of how many people are watching the live-stream, a title for the two teams playing against each other being streamed on the TV, the game week of the Olympics and the location of where the sport is being held. The key information however is within the 4 primary tabs of the home page.
-      </p>
-      <!-- FIXED: Uniform Cards and Responsive Columns -->
-      <div class="feature-test-details-row">
-        <div class="detail-card highlight-goal">
-          <h4>Relevant Goal to Feature</h4>
-          <div><strong>Goal 1:</strong> To evaluate how easily user's can navigate between the homepage tabs – <span class="highlight-purple">Utility</span></div>
-        </div>
-        <div class="detail-card">
-          <h4>Task Scenario</h4>
+    <!-- Card Sorting Section -->
+    <section class="project-section card-sorting-section">
+      <div class="project-text-blur">
+        <h2>Card Sorting Research</h2>
           <p>
-            "Imagine you are watching a live Olympic event on TV while using the companion app on your phone. The home page of the app gives you key information about the match and four tabs: Overview, Statistics, Lineups, and Live Chat. Your task is to navigate through these tabs and explore the features of the app."
+            Our <span class="highlight">multi-device ecosystem</span> creates a <strong>seamless dual-screen experience</strong> that keeps young viewers engaged through synchronized content and complementary features across platforms. This experience was <span class="highlight">tested with five participants</span>, including <strong>three children and two parents</strong>, to ensure its effectiveness and appeal for both kids and their families.
+          </p>
+
+        <div class="research-block">
+          <h3>Test Goals</h3>
+          <div class="goals-grid">
+            <div class="goal-card">
+              <div class="goal-number">1</div>
+              <div class="goal-content">
+                <strong>Determine how children categorize augmented elements</strong>
+                <p>Kids' understanding of sports and interactivity differs from adults, so understanding their logic helps create natural-feeling interactions.</p>
+              </div>
+            </div>
+            <div class="goal-card">
+              <div class="goal-number">2</div>
+              <div class="goal-content">
+                <strong>Explore child-parent interaction differences</strong>
+                <p>Parents may prioritize educational aspects while children focus on fun elements, guiding our feature prioritization.</p>
+              </div>
+            </div>
+            <div class="goal-card">
+              <div class="goal-number">3</div>
+              <div class="goal-content">
+                <strong>Identify themes in children's sports thinking</strong>
+                <p>Understanding appealing aspects helps design highlight exciting content in both app and AR experiences.</p>
+              </div>
+            </div>
+            <div class="goal-card">
+              <div class="goal-number">4</div>
+              <div class="goal-content">
+                <strong>Refine navigation systems</strong>
+                <p>Balancing education and entertainment requires clear organization based on user feedback.</p>
+              </div>
+            </div>
+            <div class="goal-card">
+              <div class="goal-number">5</div>
+              <div class="goal-content">
+                <strong>Reveal areas needing simplification</strong>
+                <p>Olympic terminology might confuse children; card sorting helps simplify without losing depth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-block">
+          <h3>Method Explanation & Justification</h3>
+          <p>
+            Card sorting helped organize features and content for both the augmented TV experience and companion mobile app. Participants classified content like athlete trivia, statistics, and sport explanations according to their intuitive understanding, ensuring alignment with user expectations.
+          </p>
+          <p>
+            We conducted card sorting after analyzing low-fidelity sketches, which revealed navigation issues. The initial designs lacked clear navigation elements and had overcrowded screens. Card sorting provided essential data on users' mental models, which we used to refine our mid-fidelity wireframes and simplify the experience.
           </p>
         </div>
-        <div class="detail-card">
-          <h4>Success Criteria</h4>
-          <ul>
-            <li>Users (both children and parents) can quickly and intuitively navigate between the four primary home tabs</li>
-            <li>Clear understanding of each tab's purpose and content</li>
-            <li>Minimal confusion or hesitation when switching between tabs</li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    <div class="research-block">
-      <h3>Test Results</h3>
-      <div class="participant-results">
-        <div class="participant-card child">
-          <h4>Participant 1 (Child, Age 10)</h4>
-          <ul>
-            <li><strong>Overview Tab:</strong> "I understand the sport better now. The rules are explained simply, so I don't feel lost. It was visually structured in an easy way for me"</li>
-            <li><strong>Statistics Tab:</strong> "I don't think the column graph visual is detailed enough"</li>
-            <li><strong>Lineups Tab:</strong> "It's cool to see the players' positions, but I would like some more pictures or fun icons."</li>
-            <li><strong>Live Chat Tab:</strong> "I love asking questions! I hope they answer mine. It's fun because I feel involved in the game."</li>
-          </ul>
-        </div>
-        <div class="participant-card parent">
-          <h4>Participant 2 (Parent, Age 40)</h4>
-          <ul>
-            <li><strong>Overview Tab:</strong> "This is quite educational. I appreciate that it's written in a way my child can understand."</li>
-            <li><strong>Statistics Tab:</strong> "The data is simple and visual enough for my child to follow. It's a good way to keep them engaged."</li>
-            <li><strong>Lineups Tab:</strong> "It's easy to see who's playing where. It could be useful for teaching my child about team formations."</li>
-            <li><strong>Live Chat Tab:</strong> "The live chat is interesting for kids, though I'd like some controls to make sure my child isn't sending inappropriate questions."</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+        <div class="research-block">
+          <h3>Participant Criteria & Results</h3>
+          <div class="participant-columns">
+            <div class="participant-card">
+              <h4>Children (Ages 8-12)</h4>
+              <ul>
+                <li>Provided direct understanding of children's mental models</li>
+                <li>Helped simplify navigation for younger audiences</li>
+                <li>Revealed natural categorization of features</li>
+              </ul>
+              
+              <div class="sorting-results">
+                <h5>Participant 1 (Age 10)</h5>
+                <div class="result-group">
+                  <div class="group-label" style="background: rgba(193,168,255,0.2);">Fun & Interactive</div>
+                  <div class="grouped-cards">
+                    <span>Animated Athlete Overlays</span>
+                    <span>Quiz Questions</span>
+                    <span>Interactive Scores</span>
+                    <span>Olympic Trivia</span>
+                  </div>
+                </div>
+                <div class="result-group">
+                  <div class="group-label" style="background: rgba(255,203,5,0.2);">Game & Scores</div>
+                  <div class="grouped-cards">
+                    <span>Athletes' Statistics</span>
+                    <span>Live Broadcast</span>
+                    <span>Medal Count</span>
+                  </div>
+                </div>
+                <div class="result-group">
+                  <div class="group-label" style="background: rgba(129,199,132,0.2);">Rules & History</div>
+                  <div class="grouped-cards">
+                    <span>Sports Rules</span>
+                    <span>Historical Highlights</span>
+                  </div>
+                </div>
+                <div class="result-group">
+                  <div class="group-label" style="background: rgba(255,138,128,0.2);">Settings</div>
+                  <div class="grouped-cards">
+                    <span>Parent Controls</span>
+                    <span>Notifications</span>
+                  </div>
+                </div>
+                <p class="appendix-links">
+                  <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+                    View the remaining 2 child participant's sorting results here
+                  </a>
+                </p>
+              </div>
+            </div>
 
-    <p class="appendix-links">
-      <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
-        Explore the the complete think aloud data here
-      </a>
-    </p>
-  </div>
-</section>
-
-<!-- Top Down User Testing Synthesis Section -->
-<section class="project-section think-aloud-section">
-  <div class="project-text-blur">
-    <h2>Top Down User Testing Synthesis</h2>
-    <p class="method-justification">
-      The <span class="highlight">top-down thematic analysis</span> approach was highly effective in synthesising our think-aloud data because it allowed us to structure feedback and insights in a <strong>clear, hierarchical manner</strong>. By starting with the feature, moving down to the task and goals, and finally analysing the feedback (both positive and negative), we could easily <span class="highlight">pinpoint specific flaws</span> in the user experience. This method not only helped us organise the data but also facilitated <strong>targeted improvements</strong>, which were implemented in the high-fidelity mockups.
-    </p>
-    <p class="method-justification">
-      Additionally, the use of <span class="highlight">color-coded feedback</span> (green for positive, red for negative, and grey for suggested improvements) provided a quick visual reference to identify areas of concern and brainstorm solutions. This approach ensured that we captured <strong>detailed user feedback</strong>, both good and bad, and translated it directly into <span class="highlight">actionable changes</span>. This iterative process was crucial in refining the design for the final version.
-    </p>
-
-    <div class="feature-test-details-row">
-      <div class="detail-card">
-        <h4>Method Structure</h4>
-        <ul>
-          <li><strong>Feature:</strong> The specific UI component being tested</li>
-          <li><strong>Task:</strong> What users were asked to do with it</li>
-          <li><strong>Goals:</strong> What we aimed to learn from testing</li>
-          <li><strong>Feedback:</strong> Color-coded user reactions</li>
-        </ul>
-      </div>
-      <div class="detail-card">
-        <h4>Color Coding Key</h4>
-        <ul>
-          <li><span style="color:#388e3c">Green</span> = Positive feedback</li>
-          <li><span style="color:#c62828">Red</span> = Negative feedback</li>
-          <li><span style="color:#757575">Grey</span> = Suggested improvements</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="affinity-stack">
-      <h3>Example from data - Feature Tested: Navigation Bar (Phone)</h3>
-      <div class="synth-card synth-blue">
-        Feature 6 - Navigation Bar (Phone)
-      </div>
-      <div class="synth-card synth-purple">
-        Task 6 - Use the navigation bar to switch between the Home page, Quiz, Leaderboard, and Replay screens
-      </div>
-      <div class="synth-card synth-yellow">
-        How easily can users navigate between the different pages (utility)
-      </div>
-
-      <div class="affinity-bottom-row">
-        <!-- Positive Feedback -->
-        <div class="affinity-cluster-box affinity-positive">
-          <div class="affinity-cluster-title title-positive">
-            Positive Feedback
-          </div>
-          <div class="sticky-note note-positive">
-            "I liked how the buttons were big enough to tap easily" - Kid participant
-          </div>
-        </div>
-        <!-- Negative Feedback -->
-        <div class="affinity-cluster-box affinity-negative">
-          <div class="affinity-cluster-title title-negative">
-            Negative Feedback
-          </div>
-          <div class="sticky-note note-negative">
-            "The label 'Reels' wasn't immediately clear but I figured it out after using it" - Kid participant
+            <div class="participant-card">
+              <h4>Parents</h4>
+              <ul>
+                <li>Offered perspective on content control and safety</li>
+                <li>Helped create appropriate content categories</li>
+                <li>Ensured structure balanced engagement with security</li>
+              </ul>
+              
+              <div class="sorting-results">
+                <h5>Participant 2 (Age 40)</h5>
+                <div class="result-group">
+                  <div class="group-label" style="background: rgba(193,168,255,0.2);">Engagement Features</div>
+                  <div class="grouped-cards">
+                    <span>Live Broadcast</span>
+                    <span>Animated Athlete Overlays</span>
+                    <span>Quiz Questions</span>
+                    <span>Interactive Scores</span>
+                  </div>
+                </div>
+                <div class="result-group">
+                  <div class="group-label" style="background: rgba(255,203,5,0.2);">Educational</div>
+                  <div class="grouped-cards">
+                    <span>Sports Rules</span>
+                    <span>Historical Highlights</span>
+                    <span>Olympic Trivia</span>
+                  </div>
+                </div>
+                <div class="result-group">
+                  <div class="group-label" style="background: rgba(129,199,132,0.2);">Personalization & Control</div>
+                  <div class="grouped-cards">
+                    <span>Parent Controls</span>
+                    <span>Notifications</span>
+                  </div>
+                </div>
+                <div class="result-group">
+                  <div class="group-label" style="background: rgba(255,138,128,0.2);">Performance Data</div>
+                  <div class="grouped-cards">
+                    <span>Athletes' Statistics</span>
+                    <span>Medal Count</span>
+                  </div>
+                </div>
+                <p class="appendix-links">
+                  <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+                    View the final parent participant's sorting results here
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Suggested Improvements -->
-        <div class="affinity-cluster-box affinity-grey">
-          <div class="affinity-cluster-title title-grey">
-            Suggested Improvements
-          </div>
-          <div class="sticky-note note-grey">
-            Changed the label "Reels" to self-explanatory word "Replay" as it more clearly relates to the actual content on the page
+
+        <div class="research-block">
+          <h3>Card Set Used for Sorting</h3>
+          <div class="card-set-grid">
+            <span class="sorting-card">Athletes' Statistics</span>
+            <span class="sorting-card">Live Broadcast</span>
+            <span class="sorting-card">Animated Athlete Overlays</span>
+            <span class="sorting-card">Quiz Questions</span>
+            <span class="sorting-card">Interactive Scores</span>
+            <span class="sorting-card">Parent Controls</span>
+            <span class="sorting-card">Olympic Trivia</span>
+            <span class="sorting-card">Historical Highlights</span>
+            <span class="sorting-card">Sports Rules</span>
+            <span class="sorting-card">Medal Count</span>
+            <span class="sorting-card">Notifications</span>
+            <span class="sorting-card">Social Sharing Options</span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <p class="appendix-links">
-      <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
-        Explore the rest of the top-down data for other features here
-      </a>
-    </p>
-  </div>
-</section>
+    <!-- Mid-Fidelity Screens Section -->
+    <section class="project-section mid-fidelity-section">
+      <div class="project-text-blur">
+        <h2>Mid-Fidelity Screens</h2>
+        <p class="project-section-text">
+          The creation of <span class="highlight">mid-fidelity wireframes</span> marked a pivotal stage in the design process, allowing us to move from conceptualisation into <strong>refined user experience testing</strong>. These wireframes provided a <span class="highlight">functional representation</span> of the app’s layout, navigation, and features—<strong>without the distractions of high-detail visuals</strong>. This balance enabled us to conduct meaningful usability testing, specifically through the <span class="highlight">think-aloud method</span>, to gather real-time feedback on the app’s structure and flow.<br><br>
+          By focusing on key elements like <span class="highlight">content placement</span>, <strong>user paths</strong>, and interactive features, we refined the app’s usability. The <span class="highlight">flexibility</span> of mid-fidelity wireframes made it easy to <strong>quickly iterate</strong> and implement changes based on user feedback, as opposed to high-fidelity wireframes, which require more time and resources to adjust. This approach minimised the cost of redesign and allowed us to <span class="highlight">explore multiple interaction possibilities</span>.<br><br>
+          The <span class="highlight">insights gained</span> from testing the mid-fidelity wireframes—particularly through the think-aloud method—informed key improvements for the high-fidelity mockups. This iterative approach ensured our final design was not only <strong>visually appealing</strong>, but also <span class="highlight">intuitive and easy to navigate</span>, addressing usability concerns early and resulting in a functionally sound product.
+        </p>
+        <p>
+          These screens represent a more structured vision of the app, integrating insights from our <span class="highlight">card sorting exercise</span> and early usability testing. The mid-fidelity phase allowed us to focus on <strong>layout and functionality</strong> without the distraction of final visuals, while maintaining flexibility for quick iterations based on user feedback.
+        </p>
 
-<!-- Iteration 1 to Iteration 2 Section -->
-<section class="project-section iteration-1-to-2-section">
-  <div class="project-text-blur">
-    <h2>Iteration 1 (Mid-Fidelity) to Iteration 2 (Hi-Fidelity)</h2>
-    <p>
-      Our design evolved significantly based on user feedback from think-aloud testing. Below are two key examples where critical feedback directly informed improvements from mid-fidelity to high-fidelity versions.
-    </p>
+        <div class="mid-fidelity-grid">
+          <!-- Mobile Screens Column -->
+          <div class="mid-fidelity-column">
+            <h3>Mobile Companion App - <i>example</i></h3>
+              <div class="screen-card">
+                <img src="images/mid-fidelity-mobile-live-chat.png" alt="Mobile Live Chat Screen" class="mid-fidelity-img mobile mid-fi-wireframe-img" loading="lazy">
+                <div class="screen-caption">
+                  <h4>Live Chat Interface</h4>
+                  <p>Moderated chat with other viewers during events, with safety features for young users.</p>
+                </div>
+              </div>
+          </div>
 
-    <!-- Navigation Bar Example -->
-    <div class="iteration-block">
-      <h3>1. Navigation Bar Redesign</h3>
-      <div class="iteration-comparison">
-        <div class="iteration-column">
-          <h4>Mid-Fidelity (Iteration 1)</h4>
-          <img src="images/mid - fid - iteration 1 - navigation bar.png" alt="Mid-fidelity navigation bar with confusing 'Reels' label" class="iteration-img iteration-enlargeable">
-          <div class="feedback-note negative">
-            <strong>Severity: High</strong><br>
-            "The label 'Reels' wasn't immediately clear but I figured it out after using it" - Kid participant
+          <!-- TV Screens Column -->
+          <div class="mid-fidelity-column">
+            <h3>TV Overlay Interface - <i>example</i></h3>
+            <div class="screen-card">
+              <img src="images/mid-fidelity-tv-animated-athlete-multiple-choice-overlay.png" alt="TV Animated Athlete Overlay" class="mid-fidelity-img mid-fi-wireframe-img" loading="lazy">
+              <div class="screen-caption">
+                <h4>Animated Athlete Multiple Choice Overlay</h4>
+                <p>Animated athlete avatar explains rules and asks quiz questions directly on the TV screen.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="iteration-column">
-          <h4>Hi-Fidelity (Iteration 2)</h4>
-          <img src="images/high - fid - iteration 2 - navigation bar.png" alt="Improved hi-fidelity navigation bar with 'Replay' label" class="iteration-img iteration-enlargeable">
-          <div class="feedback-note improvement">
-            <strong>Key Changes:</strong>
+
+        <p class="appendix-links">
+          <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+            Explore the rest of the mid-fidelity wireframes here
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Think Aloud Method Section -->
+    <section class="project-section think-aloud-section"> 
+      <div class="project-text-blur">
+        <h2>Usability Testing: Think Aloud Method</h2>
+        <div class="method-justification">
+          <p>
+            From the card sorting method we got a basic sitemap of what content and visual hierarchy the screens should look like for both TV and phones. This information was used to create our mid-fidelity wireframes on Figma. To assess how intuitive our features and navigation are, we needed to understand user thoughts as they moved through the interface of our mobile application and TV screens.
+          </p>
+          <p>
+            The think aloud testing method allows users to verbalise their thoughts, provoked by scenarios we give them. Consequently, we can hear their misconceptions about the design of our user interface and use this data to redesign it for our mockups (hi-fidelity wireframes). Additionally, the think aloud method has many benefits consisting of being <span class="highlight">cheap, robust, flexible, convincing and easy to learn</span>.
+          </p>
+          <p>
+            The participants from the card sorting were re-used for the think aloud. We decided this would be optimal as they already had a grasp of our concept. Hence their responses and thoughts will be more detailed as they already have a brief on what the app might've looked like before we showed them our mid-fidelity wireframes.
+          </p>
+        </div>
+
+        <div class="research-block">
+          <h3>Relevant Usability Goals</h3>
+            <div class="goals-grid">
+              <div class="goal-card">
+                <div class="goal-number">1</div>
+                <div class="goal-content">
+                  <strong>Homepage navigation</strong>
+                  <p>Utility – How easily can users navigate between the homepage tabs?</p>
+                </div>
+              </div>
+              <div class="goal-card">
+                <div class="goal-number">2</div>
+                <div class="goal-content">
+                  <strong>Quiz interaction</strong>
+                  <p>Efficiency – How easy is it to answer quiz options and review feedback?</p>
+                </div>
+              </div>
+              <div class="goal-card">
+                <div class="goal-number">3</div>
+                <div class="goal-content">
+                  <strong>Live chat input</strong>
+                  <p>Effectiveness – How often can users successfully input a question into the live chat?</p>
+                </div>
+              </div>
+              <div class="goal-card">
+                <div class="goal-number">4</div>
+                <div class="goal-content">
+                  <strong>Sport selection recall</strong>
+                  <p>Memorability – Can users remember how to select a sport to watch?</p>
+                </div>
+              </div>
+              <div class="goal-card">
+                <div class="goal-number">5</div>
+                <div class="goal-content">
+                  <strong>Leaderboard understanding</strong>
+                  <p>Learnability – How easily do users grasp the concept of the leaderboard/ranking system?</p>
+                </div>
+              </div>
+              <div class="goal-card">
+                <div class="goal-number">6</div>
+                <div class="goal-content">
+                  <strong>Page navigation</strong>
+                  <p>Utility – How easily can users navigate between different pages?</p>
+                </div>
+              </div>
+              <div class="goal-card">
+                <div class="goal-number">7</div>
+                <div class="goal-content">
+                  <strong>Highlighted question recall</strong>
+                  <p>Memorability – Can users remember where the highlighted live chat question appears?</p>
+                </div>
+              </div>
+              <div class="goal-card">
+                <div class="goal-number">8</div>
+                <div class="goal-content">
+                  <strong>Animated quiz response</strong>
+                  <p>Efficiency – How efficiently can viewers see the question posed by the animated athlete on TV and answer on their phone?</p>
+                </div>
+              </div>
+              <div class="goal-card">
+                <div class="goal-number">9</div>
+                <div class="goal-content">
+                  <strong>Kid’s commentary recall</strong>
+                  <p>Memorability – Can users remember where the kid’s commentary video appears on the TV?</p>
+                </div>
+              </div>
+              <div class="goal-card">
+                <div class="goal-number">10</div>
+                <div class="goal-content">
+                  <strong>Replay layout effectiveness</strong>
+                  <p>Effectiveness – How effective is the replay and summary layout in breaking down key moments visually?</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="research-block">
+          <h3>Example from data - <i>Feature Tested: Home Page (Phone)</i></h3>
+          <p>
+            The home page consists of a preview video of what sport is being streamed on the TV, an indicator of how many people are watching the live-stream, a title for the two teams playing against each other being streamed on the TV, the game week of the Olympics and the location of where the sport is being held. The key information however is within the 4 primary tabs of the home page.
+          </p>
+          <!-- FIXED: Uniform Cards and Responsive Columns -->
+          <div class="feature-test-details-row">
+            <div class="detail-card highlight-goal">
+              <h4>Relevant Goal to Feature</h4>
+              <div><strong>Goal 1:</strong> To evaluate how easily user's can navigate between the homepage tabs – <span class="highlight-purple">Utility</span></div>
+            </div>
+            <div class="detail-card">
+              <h4>Task Scenario</h4>
+              <p>
+                "Imagine you are watching a live Olympic event on TV while using the companion app on your phone. The home page of the app gives you key information about the match and four tabs: Overview, Statistics, Lineups, and Live Chat. Your task is to navigate through these tabs and explore the features of the app."
+              </p>
+            </div>
+            <div class="detail-card">
+              <h4>Success Criteria</h4>
+              <ul>
+                <li>Users (both children and parents) can quickly and intuitively navigate between the four primary home tabs</li>
+                <li>Clear understanding of each tab's purpose and content</li>
+                <li>Minimal confusion or hesitation when switching between tabs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-block">
+          <h3>Test Results</h3>
+          <div class="participant-results">
+            <div class="participant-card child">
+              <h4>Participant 1 (Child, Age 10)</h4>
+              <ul>
+                <li><strong>Overview Tab:</strong> "I understand the sport better now. The rules are explained simply, so I don't feel lost. It was visually structured in an easy way for me"</li>
+                <li><strong>Statistics Tab:</strong> "I don't think the column graph visual is detailed enough"</li>
+                <li><strong>Lineups Tab:</strong> "It's cool to see the players' positions, but I would like some more pictures or fun icons."</li>
+                <li><strong>Live Chat Tab:</strong> "I love asking questions! I hope they answer mine. It's fun because I feel involved in the game."</li>
+              </ul>
+            </div>
+            <div class="participant-card parent">
+              <h4>Participant 2 (Parent, Age 40)</h4>
+              <ul>
+                <li><strong>Overview Tab:</strong> "This is quite educational. I appreciate that it's written in a way my child can understand."</li>
+                <li><strong>Statistics Tab:</strong> "The data is simple and visual enough for my child to follow. It's a good way to keep them engaged."</li>
+                <li><strong>Lineups Tab:</strong> "It's easy to see who's playing where. It could be useful for teaching my child about team formations."</li>
+                <li><strong>Live Chat Tab:</strong> "The live chat is interesting for kids, though I'd like some controls to make sure my child isn't sending inappropriate questions."</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <p class="appendix-links">
+          <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+            Explore the the complete think aloud data here
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Top Down User Testing Synthesis Section -->
+    <section class="project-section think-aloud-section">
+      <div class="project-text-blur">
+        <h2>Top Down User Testing Synthesis</h2>
+        <p class="method-justification">
+          The <span class="highlight">top-down thematic analysis</span> approach was highly effective in synthesising our think-aloud data because it allowed us to structure feedback and insights in a <strong>clear, hierarchical manner</strong>. By starting with the feature, moving down to the task and goals, and finally analysing the feedback (both positive and negative), we could easily <span class="highlight">pinpoint specific flaws</span> in the user experience. This method not only helped us organise the data but also facilitated <strong>targeted improvements</strong>, which were implemented in the high-fidelity mockups.
+        </p>
+        <p class="method-justification">
+          Additionally, the use of <span class="highlight">color-coded feedback</span> (green for positive, red for negative, and grey for suggested improvements) provided a quick visual reference to identify areas of concern and brainstorm solutions. This approach ensured that we captured <strong>detailed user feedback</strong>, both good and bad, and translated it directly into <span class="highlight">actionable changes</span>. This iterative process was crucial in refining the design for the final version.
+        </p>
+
+        <div class="feature-test-details-row">
+          <div class="detail-card">
+            <h4>Method Structure</h4>
             <ul>
-              <li>Renamed "Reels" to more intuitive "Replay"</li>
-              <li>Added clearer iconography</li>
-              <li>Improved visual hierarchy</li>
-              <li>Enhanced active state visibility</li>
+              <li><strong>Feature:</strong> The specific UI component being tested</li>
+              <li><strong>Task:</strong> What users were asked to do with it</li>
+              <li><strong>Goals:</strong> What we aimed to learn from testing</li>
+              <li><strong>Feedback:</strong> Color-coded user reactions</li>
+            </ul>
+          </div>
+          <div class="detail-card">
+            <h4>Color Coding Key</h4>
+            <ul>
+              <li><span style="color:#388e3c">Green</span> = Positive feedback</li>
+              <li><span style="color:#c62828">Red</span> = Negative feedback</li>
+              <li><span style="color:#757575">Grey</span> = Suggested improvements</li>
             </ul>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Player Position Example -->
-    <div class="iteration-block">
-      <h3>2. Player Position Enhancement</h3>
-      <div class="iteration-comparison">
-        <div class="iteration-column">
-          <h4>Mid-Fidelity (Iteration 1)</h4>
-          <img src="images/mid - fid - iteration 1 - player position.png" alt="Basic player position display" class="iteration-img iteration-enlargeable">
-          <div class="feedback-note negative">
-            <strong>Severity: Moderate</strong><br>
-            "Seeing the players' positions is helpful. I'd like to see more detailed information about the positions here though." - Kid participant
+        <div class="affinity-stack">
+          <h3>Example from data - Feature Tested: Navigation Bar (Phone)</h3>
+          <div class="synth-card synth-blue">
+            Feature 6 - Navigation Bar (Phone)
+          </div>
+          <div class="synth-card synth-purple">
+            Task 6 - Use the navigation bar to switch between the Home page, Quiz, Leaderboard, and Replay screens
+          </div>
+          <div class="synth-card synth-yellow">
+            How easily can users navigate between the different pages (utility)
+          </div>
+
+          <div class="affinity-bottom-row">
+            <!-- Positive Feedback -->
+            <div class="affinity-cluster-box affinity-positive">
+              <div class="affinity-cluster-title title-positive">
+                Positive Feedback
+              </div>
+              <div class="sticky-note note-positive">
+                "I liked how the buttons were big enough to tap easily" - Kid participant
+              </div>
+            </div>
+            <!-- Negative Feedback -->
+            <div class="affinity-cluster-box affinity-negative">
+              <div class="affinity-cluster-title title-negative">
+                Negative Feedback
+              </div>
+              <div class="sticky-note note-negative">
+                "The label 'Reels' wasn't immediately clear but I figured it out after using it" - Kid participant
+              </div>
+            </div>
+            <!-- Suggested Improvements -->
+            <div class="affinity-cluster-box affinity-grey">
+              <div class="affinity-cluster-title title-grey">
+                Suggested Improvements
+              </div>
+              <div class="sticky-note note-grey">
+                Changed the label "Reels" to self-explanatory word "Replay" as it more clearly relates to the actual content on the page
+              </div>
+            </div>
           </div>
         </div>
-        <div class="iteration-column">
-          <h4>Hi-Fidelity (Iteration 2)</h4>
-          <img src="images/high - fid - iteration 2 - player position.png" alt="Enhanced player position information" class="iteration-img iteration-enlargeable">
-          <div class="feedback-note improvement">
-            <strong>Key Changes:</strong>
-            <ul>
-              <li>Added position-specific statistics</li>
-              <li>Included role explanations</li>
-              <li>Improved visual representation</li>
-              <li>Added quick facts about each position</li>
-            </ul>
+
+        <p class="appendix-links">
+          <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+            Explore the rest of the top-down data for other features here
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Iteration 1 to Iteration 2 Section -->
+    <section class="project-section iteration-1-to-2-section">
+      <div class="project-text-blur">
+        <h2>Iteration 1 (Mid-Fidelity) to Iteration 2 (Hi-Fidelity)</h2>
+        <p>
+          Our design evolved significantly based on user feedback from think-aloud testing. Below are two key examples where critical feedback directly informed improvements from mid-fidelity to high-fidelity versions.
+        </p>
+
+        <!-- Navigation Bar Example -->
+        <div class="iteration-block">
+          <h3>1. Navigation Bar Redesign</h3>
+          <div class="iteration-comparison">
+            <div class="iteration-column">
+              <h4>Mid-Fidelity (Iteration 1)</h4>
+              <img src="images/mid - fid - iteration 1 - navigation bar.png" alt="Mid-fidelity navigation bar with confusing 'Reels' label" class="iteration-img iteration-enlargeable">
+              <div class="feedback-note negative">
+                <strong>Severity: High</strong><br>
+                "The label 'Reels' wasn't immediately clear but I figured it out after using it" - Kid participant
+              </div>
+            </div>
+            <div class="iteration-column">
+              <h4>Hi-Fidelity (Iteration 2)</h4>
+              <img src="images/high - fid - iteration 2 - navigation bar.png" alt="Improved hi-fidelity navigation bar with 'Replay' label" class="iteration-img iteration-enlargeable">
+              <div class="feedback-note improvement">
+                <strong>Key Changes:</strong>
+                <ul>
+                  <li>Renamed "Reels" to more intuitive "Replay"</li>
+                  <li>Added clearer iconography</li>
+                  <li>Improved visual hierarchy</li>
+                  <li>Enhanced active state visibility</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Question posed by viewers to commentators overlay (TV) -->
-    <div class="iteration-block">
-      <h3>3. Question posed by viewers to commentators overlay Enhancement</h3>
-      <div class="iteration-comparison">
-        <div class="iteration-column">
-          <h4>Mid-Fidelity (Iteration 1)</h4>
-          <img src="images/mid - fid - iteration 1 - Olympic sport selection (TV).png" alt="Basic player position display" class="iteration-img iteration-enlargeable">
-          <div class="feedback-note negative">
-            <strong>Severity: Moderate</strong><br>
-            “I thought it was on the top left, but it was actually above the commentary video in the bottom left corner. It was a little confusing.” - kid
+        <!-- Player Position Example -->
+        <div class="iteration-block">
+          <h3>2. Player Position Enhancement</h3>
+          <div class="iteration-comparison">
+            <div class="iteration-column">
+              <h4>Mid-Fidelity (Iteration 1)</h4>
+              <img src="images/mid - fid - iteration 1 - player position.png" alt="Basic player position display" class="iteration-img iteration-enlargeable">
+              <div class="feedback-note negative">
+                <strong>Severity: Moderate</strong><br>
+                "Seeing the players' positions is helpful. I'd like to see more detailed information about the positions here though." - Kid participant
+              </div>
+            </div>
+            <div class="iteration-column">
+              <h4>Hi-Fidelity (Iteration 2)</h4>
+              <img src="images/high - fid - iteration 2 - player position.png" alt="Enhanced player position information" class="iteration-img iteration-enlargeable">
+              <div class="feedback-note improvement">
+                <strong>Key Changes:</strong>
+                <ul>
+                  <li>Added position-specific statistics</li>
+                  <li>Included role explanations</li>
+                  <li>Improved visual representation</li>
+                  <li>Added quick facts about each position</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="iteration-column">
-          <h4>Hi-Fidelity (Iteration 2)</h4>
-          <img src="images/high - fid - iteration 2 - Olympic sport selection (TV).png" alt="Enhanced player position information" class="iteration-img iteration-enlargeable">
-          <div class="feedback-note improvement">
-            <strong>Key Changes:</strong>
-            <ul>
-              <li>Use more vibrant colors or higher contrast against the background to draw attention to the overlay and make it stand out more.</li>
-              <li>Made the overlay larger to improve readability for younger viewers.</li>
-            </ul>
+
+        <!-- Question posed by viewers to commentators overlay (TV) -->
+        <div class="iteration-block">
+          <h3>3. Question posed by viewers to commentators overlay Enhancement</h3>
+          <div class="iteration-comparison">
+            <div class="iteration-column">
+              <h4>Mid-Fidelity (Iteration 1)</h4>
+              <img src="images/mid - fid - iteration 1 - Olympic sport selection (TV).png" alt="Basic player position display" class="iteration-img iteration-enlargeable">
+              <div class="feedback-note negative">
+                <strong>Severity: Moderate</strong><br>
+                “I thought it was on the top left, but it was actually above the commentary video in the bottom left corner. It was a little confusing.” - kid
+              </div>
+            </div>
+            <div class="iteration-column">
+              <h4>Hi-Fidelity (Iteration 2)</h4>
+              <img src="images/high - fid - iteration 2 - Olympic sport selection (TV).png" alt="Enhanced player position information" class="iteration-img iteration-enlargeable">
+              <div class="feedback-note improvement">
+                <strong>Key Changes:</strong>
+                <ul>
+                  <li>Use more vibrant colors or higher contrast against the background to draw attention to the overlay and make it stand out more.</li>
+                  <li>Made the overlay larger to improve readability for younger viewers.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
+        <p class="appendix-links">
+          <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
+            Explore the rest of the mid-fidelity to high-fidelity iteration changes here
+          </a>
+        </p>
       </div>
-    </div>
-    <p class="appendix-links">
-      <a href="https://docs.google.com/document/d/1E_7KBGN1P0-cvqmCIBoMnyJhZBNJ4VVwAGPP4dgjtak/edit?usp=sharing" target="_blank">
-        Explore the rest of the mid-fidelity to high-fidelity iteration changes here
-      </a>
-    </p>
-  </div>
-</section>
+    </section>
 
-<!-- A/B Testing Section -->
-<section class="project-section ab-testing-section">
-  <div class="project-text-blur">
-    <h2>A/B Testing: Color Palette Exploration</h2>
-    <p>
-      Based on feedback about our visual style needing to better reflect our younger target audience, we conducted A/B testing with 8 design experts to evaluate two new color palettes inspired by sports and playfulness.
-    </p>
+    <!-- A/B Testing Section -->
+    <section class="project-section ab-testing-section">
+      <div class="project-text-blur">
+        <h2>A/B Testing: Color Palette Exploration</h2>
+        <p>
+          Based on feedback about our visual style needing to better reflect our younger target audience, we conducted A/B testing with 8 design experts to evaluate two new color palettes inspired by sports and playfulness.
+        </p>
 
-    <div class="ab-testing-comparison">
-      <!-- Version 1 -->
-      <div class="version-column version-1">
-        <h3>Version 1</h3>
-        <div class="version-meta">
-          <span class="preference-score">0/8 preferred this version</span>
+        <div class="ab-testing-comparison">
+          <!-- Version 1 -->
+          <div class="version-column version-1">
+            <h3>Version 1</h3>
+            <div class="version-meta">
+              <span class="preference-score">0/8 preferred this version</span>
+            </div>
+            <img src="images/AB testing - V1.png" alt="Version 1 color palette" class="version-img">
+            <div class="feedback-note negative">
+              <p>Experts found Version 1 difficult to read and felt the colour palette made the app look cheap rather than appealing to a younger audience.</p>
+              <p class="feedback-source">Expert Feedback Summarised</p>
+            </div>
+          </div>
+
+          <!-- Version 2 -->
+          <div class="version-column version-2">
+            <h3>Version 2</h3>
+            <div class="version-meta">
+              <span class="preference-score">8/8 preferred this version</span>
+            </div>
+            <img src="images/AB testing - V2.png" alt="Version 2 color palette" class="version-img">
+            <div class="feedback-note improvement">
+              <p>Experts unanimously preferred Version 2, describing it as easy on the eye, highly readable, and much better aligned with a playful, sporty vibe for kids.</p>
+              <p class="feedback-source">Expert Feedback Summarised</p>
+            </div>
+          </div>
         </div>
-        <img src="images/AB testing - V1.png" alt="Version 1 color palette" class="version-img">
-        <div class="feedback-note negative">
-          <p>Experts found Version 1 difficult to read and felt the colour palette made the app look cheap rather than appealing to a younger audience.</p>
-          <p class="feedback-source">Expert Feedback Summarised</p>
+
+        <div class="testing-conclusion">
+          <h4>Key Findings</h4>
+          <ul>
+            <li>100% of experts preferred Version 2's color palette</li>
+            <li>Version 2's light purple improved readability while maintaining sporty energy</li>
+            <li>Version 1's colors were perceived as "cheap" and hard to read</li>
+          </ul>
+        </div>
+        <p class="appendix-links">
+          <a href="https://docs.google.com/document/d/11whn30TEOq88ay90-zRGmZFnui3fJEBoOz3DthXUto0/edit?usp=sharing" target="_blank">
+            Explore the A/B testing data from experts here
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Heuristic Evaluation Section -->
+    <section class="project-section heuristic-evaluation-section">
+      <div class="project-text-blur">
+        <h2>Heuristic Evaluation</h2>
+          <p>
+            The <span class="highlight">heuristic evaluation</span> method enabled us to efficiently identify usability flaws before user testing by leveraging <strong>Nielsen's 10 principles</strong> as a framework. Six experts analyzed key features like navigation and feedback systems, helping us <span class="highlight">pinpoint violations</span> of established usability standards. This structured approach ensured we addressed <strong>fundamental UX issues</strong> early, creating a more intuitive foundation for subsequent iterations.
+          </p>  
+
+        <!-- Expert Feedback Example -->
+        <div class="expert-feedback-case">
+          <h3>Key Refinement Example: Sport Selection Visibility</h3>
+          <div class="feedback-grid">
+            <div class="feedback-problem">
+              <h4>Identified Issue (Severity: 3/4)</h4>
+              <div class="violation-card">
+                <span class="heuristic-tag">H1: Visibility of system status</span>
+                <p>"Minimal feedback leaves users unsure of selected sport, reducing clarity. Like when using a TV remote, how do they know which card they're on?"</p>
+                <div class="severity-meter">
+                  <span>Severity:</span>
+                  <div class="meter-bar">
+                    <div class="meter-fill" style="width: 75%"></div>
+                    <span class="meter-label">3 - Major usability problem</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feedback-solution">
+              <h4>Implemented Solution</h4>
+              <ol class="solution-steps">
+                <li>Added prominent visual cues (border + color change) for selected sports, leveraging existing mental models of hover effects</li>
+                <li>Incorporated remote control instructions to address TV navigation accessibility</li>
+              </ol>
+            </div>
+          </div>
+          <div class="iteration-comparison">
+            <div class="iteration-column">
+              <h4>Before: Iteration 1</h4>
+              <img src="images/olympic-sport selection-iteration1.png" alt="Original sport selection with poor visibility">
+            </div>
+            <div class="iteration-column">
+              <h4>After: Iteration 2</h4>
+              <img src="images/olympic-sport selection-iteration2.png" alt="Improved sport selection with visual feedback">
+            </div>
+          </div>
+        </div>
+
+        <div class="heuristic-table-container">
+          <h3>Features That Were Tested With The Experts</h3>
+          <table class="heuristic-table">
+            <thead>
+              <tr>
+                <th>Features</th>
+                <th>Usability Test Goals</th>
+                <th>Task Scenarios</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Feature 4 - Olympic sport viewing selection screen (TV)</td>
+                <td>Memorability</td>
+                <td>On the TV screen, select football/soccer on TV screen grid</td>
+              </tr>
+              <tr>
+                <td>Feature 2 - Quiz and feedback screens (Phone)</td>
+                <td>Efficiency</td>
+                <td>On the TV screen, as soon as the quiz pop up. Select a quiz answer on the phone screen</td>
+              </tr>
+              <tr>
+                <td>Feature 1 - Home page (Phone)</td>
+                <td>Utility</td>
+                <td>On the Phone, navigate through home screen tabs to discover different information</td>
+              </tr>
+              <tr>
+                <td>Feature 6 - Bottom navigation bar (Phone)</td>
+                <td>Utility</td>
+                <td>On the Phone, use the bottom navigation bar to navigate through different screens, send a question to the chat</td>
+              </tr>
+              <tr>
+                <td>Feature 5 - Leaderboard screen (Phone)</td>
+                <td>Learnability</td>
+                <td>On the Phone, Navigate to the leaderboard screen, check your current ranking, and explore the difference between the global and friends' rankings</td>
+              </tr>
+              <tr>
+                <td>Feature 10 - Replay and Summary screen (Phone)</td>
+                <td>Effectiveness</td>
+                <td>On the Phone, review what happened during the games using the companion app</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-
-      <!-- Version 2 -->
-      <div class="version-column version-2">
-        <h3>Version 2</h3>
-        <div class="version-meta">
-          <span class="preference-score">8/8 preferred this version</span>
-        </div>
-        <img src="images/AB testing - V2.png" alt="Version 2 color palette" class="version-img">
-        <div class="feedback-note improvement">
-          <p>Experts unanimously preferred Version 2, describing it as easy on the eye, highly readable, and much better aligned with a playful, sporty vibe for kids.</p>
-          <p class="feedback-source">Expert Feedback Summarised</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="testing-conclusion">
-      <h4>Key Findings</h4>
-      <ul>
-        <li>100% of experts preferred Version 2's color palette</li>
-        <li>Version 2's light purple improved readability while maintaining sporty energy</li>
-        <li>Version 1's colors were perceived as "cheap" and hard to read</li>
-      </ul>
-    </div>
-    <p class="appendix-links">
-      <a href="https://docs.google.com/document/d/11whn30TEOq88ay90-zRGmZFnui3fJEBoOz3DthXUto0/edit?usp=sharing" target="_blank">
-        Explore the A/B testing data from experts here
-      </a>
-    </p>
-  </div>
-</section>
-
-<!-- Heuristic Evaluation Section -->
-<section class="project-section heuristic-evaluation-section">
-  <div class="project-text-blur">
-    <h2>Heuristic Evaluation</h2>
-      <p>
-        The <span class="highlight">heuristic evaluation</span> method enabled us to efficiently identify usability flaws before user testing by leveraging <strong>Nielsen's 10 principles</strong> as a framework. Six experts analyzed key features like navigation and feedback systems, helping us <span class="highlight">pinpoint violations</span> of established usability standards. This structured approach ensured we addressed <strong>fundamental UX issues</strong> early, creating a more intuitive foundation for subsequent iterations.
-      </p>    
-    <div class="heuristic-table-container">
-      <table class="heuristic-table">
-        <thead>
-          <tr>
-            <th>Features</th>
-            <th>Usability Test Goals</th>
-            <th>Task Scenarios</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Feature 4 - Olympic sport viewing selection screen (TV)</td>
-            <td>Memorability</td>
-            <td>On the TV screen, select football/soccer on TV screen grid</td>
-          </tr>
-          <tr>
-            <td>Feature 2 - Quiz and feedback screens (Phone)</td>
-            <td>Efficiency</td>
-            <td>On the TV screen, as soon as the quiz pop up. Select a quiz answer on the phone screen</td>
-          </tr>
-          <tr>
-            <td>Feature 1 - Home page (Phone)</td>
-            <td>Utility</td>
-            <td>On the Phone, navigate through home screen tabs to discover different information</td>
-          </tr>
-          <tr>
-            <td>Feature 6 - Bottom navigation bar (Phone)</td>
-            <td>Utility</td>
-            <td>On the Phone, use the bottom navigation bar to navigate through different screens, send a question to the chat</td>
-          </tr>
-          <tr>
-            <td>Feature 5 - Leaderboard screen (Phone)</td>
-            <td>Learnability</td>
-            <td>On the Phone, Navigate to the leaderboard screen, check your current ranking, and explore the difference between the global and friends' rankings</td>
-          </tr>
-          <tr>
-            <td>Feature 10 - Replay and Summary screen (Phone)</td>
-            <td>Effectiveness</td>
-            <td>On the Phone, review what happened during the games using the companion app</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+    </section>
 
 
   </div> <!--Container close div tag-->
