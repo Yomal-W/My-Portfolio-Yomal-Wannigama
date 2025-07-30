@@ -24,7 +24,7 @@
       z-index: 10;
     }
 
-    .project-text-blur {
+    .project-hero-section .project-text-blur {
       background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(12px);
       border-radius: 20px;
@@ -132,7 +132,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 
 .research-questions-section h2 {
@@ -239,7 +239,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 
 .ethnography-section h2 {
@@ -294,7 +294,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 
 .secondary-research h2 {
@@ -333,7 +333,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
   overflow: hidden; /* Ensures rounded corners apply to children */
 }
 
@@ -570,7 +570,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 
 .interview-section h2 {
@@ -621,7 +621,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 
 .survey-section h2 {
@@ -748,7 +748,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
   overflow: hidden; /* Ensures rounded corners apply to children */
 }
 
@@ -793,7 +793,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
   overflow-x: hidden;
 }
 
@@ -1231,12 +1231,15 @@
 /* === Storyboards === */
 .storyboards-section .project-text-blur {
   max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
-  background: rgba(255,255,255,0.07);
-  border-radius: 18px;
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
   padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  backdrop-filter: blur(13px);
+  box-shadow: 0 14px 40px rgba(128,80,240,0.13);
 }
+
 
 .storyboards-section h2 {
   font-family: 'PT Sans Narrow', sans-serif;
@@ -1405,7 +1408,7 @@
   background: rgba(255,255,255,0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 .brainstorm-img-block {
   margin: 2.1rem 0 0.7rem 0;
@@ -1499,67 +1502,137 @@
 }
 
 
-/* === Low-Fidelity Wireframes Section === */
-.wireframes-section .project-text-blur {
+/* === Low-Fidelity Sketches Section === */
+.lofi-sketches-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 
-.wireframe-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  justify-content: center;
-  margin-top: 2rem;
+.lofi-sketches-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin: 2.5rem 0;
 }
 
-.wireframe-block {
-  flex: 1;
-  min-width: 300px;
-  max-width: 500px;
-  text-align: center;
+.lofi-sketch-card {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.8rem;
+  border-left: 4px solid #C1A8FF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.wireframe-block h3 {
+.lofi-sketch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(193, 168, 255, 0.15);
+}
+
+.sketch-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(193, 168, 255, 0.3);
+}
+
+.sketch-title {
   font-family: 'Rubik', sans-serif;
   font-size: 1.3rem;
   color: #C1A8FF;
-  margin-bottom: 1.5rem;
+  margin: 0 0 0.5rem 0;
 }
 
-.wireframe-img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
-  transition: transform 0.23s, box-shadow 0.22s;
-  cursor: zoom-in;
-}
-
-.wireframe-img:hover {
-  transform: scale(1.028);
-  box-shadow: 0 12px 30px rgba(193, 168, 255, 0.25);
-}
-
-.wireframe-caption {
+.sketch-author {
   font-family: 'Overpass', sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 203, 5, 0.8);
+  font-style: italic;
+}
+
+.sketch-visual {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.sketch-features {
+  padding-left: 1.2rem;
+  margin: 1rem 0 0 0;
+  font-family: 'Overpass', sans-serif;
   color: rgba(255, 255, 255, 0.85);
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+.sketch-features li {
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+
+
+/* Sketch Modal Styles */
+.sketch-modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 7, 30, 0.95);
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+.sketch-modal-overlay.active {
+  display: flex;
+}
+
+.sketch-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  text-align: center;
+}
+
+.sketch-modal-image {
+  max-height: 80vh;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  border: 2px solid #C1A8FF;
+}
+
+.sketch-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sketch-modal-caption {
   margin-top: 1rem;
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.8);
 }
 
 @media (max-width: 768px) {
-  .wireframe-grid {
-    flex-direction: column;
+  .lofi-sketches-container {
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
   
-  .wireframe-block {
-    max-width: 100%;
+  .lofi-sketch-card {
+    padding: 1.5rem;
+  }
+  
+  .sketch-modal-image {
+    max-height: 70vh;
   }
 }
 
@@ -1570,7 +1643,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 
 .solution-journey-grid {
@@ -1659,7 +1732,7 @@
   }
 }
 
-/* === Decision Matrix Section === */
+
 /* === Decision Matrix Section === */
 .decision-matrix-section .project-text-blur {
   max-width: 1000px;
@@ -1668,7 +1741,7 @@
   background: rgba(255,255,255,0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
   overflow-x: hidden;
 }
 
@@ -1866,7 +1939,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 
 .multimodality-section h2 {
@@ -2140,14 +2213,7 @@
 }
 
 @media (max-width: 768px) {
-  .multimodality-section .project-text-blur {
-    padding: 2.5rem;
-  }
-  
-  .multimodality-section h2 {
-    font-size: 1.8rem;
-  }
-  
+
   .feature-grid {
     grid-template-columns: 1fr;
   }
@@ -2166,9 +2232,7 @@
 }
 
 @media (max-width: 480px) {
-  .multimodality-section .project-text-blur {
-    padding: 1.5rem;
-  }
+
   
   .dual-screen-container {
     gap: 1rem;
@@ -2208,7 +2272,7 @@
     background: rgba(255, 255, 255, 0.07);
     border-radius: 16px;
     backdrop-filter: blur(15px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 14px 40px rgba(100,70,190,0.11);
   }
 
   .goals-grid {
@@ -2413,7 +2477,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 
 .mid-fidelity-grid {
@@ -2426,8 +2490,6 @@
 
 .mid-fidelity-column {
   flex: 1;
-  min-width: 300px;
-  max-width: 48%;
 }
 
 .mid-fidelity-column h3 {
@@ -2552,6 +2614,8 @@
   }
 }
 
+
+
 /* === Think Aloud Section Styling === */
 .think-aloud-section .project-text-blur {
   max-width: 1000px;
@@ -2560,7 +2624,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 20px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
   overflow: hidden;
 }
 
@@ -2764,7 +2828,7 @@
   width: 100%;
   min-width: 0;
   border-radius: 18px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
   font-family: 'Rubik', sans-serif;
   font-size: 1.18rem;
   font-weight: 500;
@@ -2905,13 +2969,12 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 20px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
   overflow: hidden;
 }
 
 .iteration-1-to-2-section .project-text-blur h2 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2.2rem;
   margin-bottom: 1.4rem;
   text-align: left;
   letter-spacing: 0.5px;
@@ -2958,8 +3021,10 @@
 }
 
 .iteration-img {
-  width: 55%; /* Adjust percentage as needed */
-  margin: 0 auto; /* Centers the smaller image */
+  display: block;
+  max-width: 280px;   /* Ensures they never get too big */
+  width: 95%;         /* Responsive, up to max */
+  margin: 0 auto;
   border-radius: 13px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.13);
   border: 1px solid rgba(255, 255, 255, 0.10);
@@ -3027,6 +3092,7 @@
     gap: 0.8rem;
   }
   .iteration-img {
+    max-width: 95vw; /* Makes it fit on very small screens */
     border-radius: 8px;
   }
   .feedback-note {
@@ -3043,7 +3109,7 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 20px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 
 .ab-testing-section h2 {
@@ -3192,7 +3258,8 @@
   background: rgba(255, 255, 255, 0.07);
   border-radius: 20px;
   backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  overflow: hidden;
 }
 
 .heuristic-evaluation-section h2 {
@@ -3347,8 +3414,29 @@
 
 /* Existing Table Styling */
 .heuristic-table-container {
-  margin: 2.5rem 0;
+  width: 100%;
   overflow-x: auto;
+  margin: 2rem 0;
+  background: rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 0.25rem 0.1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #c1a8ff #23222e;
+}
+.heuristic-table-container::-webkit-scrollbar {
+  height: 8px;
+  border-radius: 7px;
+  background: #23222e;
+}
+.heuristic-table-container::-webkit-scrollbar-thumb {
+  background: #c1a8ff;
+  border-radius: 7px;
+}
+.heuristic-table-container::-webkit-scrollbar-track {
+  background: #23222e;
+  border-radius: 7px;
 }
 
 .heuristic-table {
@@ -3384,10 +3472,6 @@
 
 /* Responsive Adjustments */
 @media (max-width: 900px) {
-  .heuristic-evaluation-section .project-text-blur {
-    padding: 1.8rem;
-  }
-  
   .feedback-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -3405,26 +3489,97 @@
 }
 
 @media (max-width: 600px) {
-  .heuristic-evaluation-section .project-text-blur {
-    padding: 1.2rem;
-  }
-  
-  .expert-feedback-case {
-    padding: 1.2rem;
-  }
-  
   .heuristic-table th, 
   .heuristic-table td {
     padding: 0.6rem;
     font-size: 0.9rem;
   }
-  
-  .heuristic-evaluation-section h2 {
-    font-size: 1.8rem;
-  }
-  
-  .expert-feedback-case h3 {
-    font-size: 1.2rem;
+}
+
+
+/* === Second Think Aloud Section Styling === */
+.thinkaloud-section .project-text-blur {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+}
+
+.thinkaloud-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.8rem;
+  color: #FFFFFF;
+}
+
+.feedback-case {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 14px;
+}
+
+.feedback-case h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.4rem;
+  color: #C1A8FF;
+  margin-bottom: 1.5rem;
+}
+
+/* Your existing affinity diagram styling will apply to the negative feedback card */
+
+.solution-container {
+  margin: 1.8rem 0;
+  padding: 1.5rem;
+  background: rgba(193, 168, 255, 0.1);
+  border-radius: 12px;
+  border-left: 4px solid #C1A8FF;
+}
+
+.solution-container h4 {
+  font-family: 'Rubik', sans-serif;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.solution-steps {
+  counter-reset: step;
+  padding-left: 1.5rem;
+}
+
+.solution-steps li {
+  position: relative;
+  margin-bottom: 0.8rem;
+  padding-left: 2rem;
+  list-style: none;
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.6;
+}
+
+.solution-steps li:before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  background: #4C00AE;
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .feedback-case {
+    padding: 1rem;
   }
 }
 
@@ -4371,46 +4526,67 @@
       </div>
     </section>
 
-    <!-- Low-Fidelity Wireframes Section -->
-    <section class="project-section wireframes-section">
+    <!-- Low-Fidelity Sketches Section -->
+    <section class="project-section lofi-sketches-section">
       <div class="project-text-blur">
-        <h2>Sketching: Low-Fidelity Wireframe</h2>
+        <h2>Sketching: Low-Fidelity (Iteration 1)</h2>
         <p>
-          We each created wireframes for our solutions. For an example Yomal's initial wireframe sketches were created to explore the core functionality and layout of both the <span class="highlight">mobile companion app</span> and <span class="highlight">TV overlay interface</span>. These low-fidelity concepts helped visualize key interactions before moving to digital prototypes. <span class="concept-author">(Yomal – displayed below)</span>
+          Our team created initial hand-drawn wireframes to explore different approaches to solving the Olympic engagement problem. These rough sketches helped us visualize core interactions before committing to digital prototypes. Below is my contribution focusing on a dual-screen experience.
         </p>
 
-        <div class="wireframe-grid">
-          <!-- Mobile Wireframe -->
-          <div class="wireframe-block">
-            <h3>Mobile Companion App</h3>
-            <img 
-              src="images/mobile-low-fidelity-wireframe-yomal.JPG" 
-              alt="Mobile companion app wireframe sketch" 
-              class="wireframe-img journey-map-img"
-              style="max-width: 320px;"
-            />
-            <p class="wireframe-caption">
-              <strong>Key features:</strong> Live sport explanations, interactive quizzes, athlete profiles, and synchronized viewing with TV broadcast.
-            </p>
+        <div class="lofi-sketches-container">
+          <!-- Mobile Sketch -->
+          <div class="lofi-sketch-card">
+            <div class="sketch-header">
+              <h3 class="sketch-title">Mobile Companion App</h3>
+              <span class="sketch-author">Yomal's Concept</span>
+            </div>
+            <div class="sketch-visual">
+              <img 
+                  src="images/mobile-low-fidelity-wireframe-yomal.JPG" 
+                  alt="Mobile companion app wireframe sketch" 
+                  class="wireframe-img journey-map-img"
+                  style="max-width: 320px;"
+                />
+            </div>
+            <div class="sketch-details">
+              <ul class="sketch-features">
+                <li>Live sport explanations with simple illustrations</li>
+                <li>Interactive quizzes tied to current broadcast</li>
+                <li>Athlete profiles with fun facts</li>
+                <li>TV sync for contextual information</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- TV Wireframe -->
-          <div class="wireframe-block">
-            <h3>TV Overlay Interface</h3>
-            <img 
-              src="images/tv-low-fidelity-wireframe-yomal.JPG" 
-              alt="TV overlay wireframe sketch" 
-              class="wireframe-img journey-map-img"
-              style="max-width: 400px;"
-            />
-            <p class="wireframe-caption">
-              <strong>Key features:</strong> Simplified scoreboards, rule explanations, and visual indicators that sync with the mobile app.
-            </p>
+          <!-- TV Sketch -->
+          <div class="lofi-sketch-card">
+            <div class="sketch-header">
+              <h3 class="sketch-title">TV Overlay Interface</h3>
+              <span class="sketch-author">Yomal's Concept</span>
+            </div>
+            <div class="sketch-visual">
+              <img 
+                  src="images/tv-low-fidelity-wireframe-yomal.JPG" 
+                  alt="TV overlay wireframe sketch" 
+                  class="wireframe-img journey-map-img"
+                  style="max-width: 400px;"
+                />
+            </div>
+            <div class="sketch-details">
+              <ul class="sketch-features">
+                <li>Simplified scoreboards with visual cues</li>
+                <li>Rule explanations triggered by events</li>
+                <li>Color-coded indicators for key moments</li>
+                <li>Mobile app synchronization points</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <p class="appendix-links" style="margin-top:1.2rem;">
+
+        <p class="appendix-links">
           <a href="https://www.figma.com/board/dOAdCMhKWvdag9kuwXI4kH/DECO2200-A1---A2---A3-Appendix-J-NATHAN-YOMAL?node-id=0-1&t=Dc7oiXWvw4pEsxry-1" target="_blank">
-            Explore the other 2 low-fidelity sketches here
+            View all team sketches in our Figma appendix
           </a>
         </p>
       </div>
@@ -4888,7 +5064,7 @@
     <!-- Mid-Fidelity Screens Section -->
     <section class="project-section mid-fidelity-section">
       <div class="project-text-blur">
-        <h2>Mid-Fidelity Screens</h2>
+        <h2>Mid-Fidelity Screens (Iteration 2)</h2>
         <p class="project-section-text">
           The creation of <span class="highlight">mid-fidelity wireframes</span> marked a pivotal stage in the design process, allowing us to move from conceptualisation into <strong>refined user experience testing</strong>. These wireframes provided a <span class="highlight">functional representation</span> of the app’s layout, navigation, and features—<strong>without the distractions of high-detail visuals</strong>. This balance enabled us to conduct meaningful usability testing, specifically through the <span class="highlight">think-aloud method</span>, to gather real-time feedback on the app’s structure and flow.<br><br>
           By focusing on key elements like <span class="highlight">content placement</span>, <strong>user paths</strong>, and interactive features, we refined the app’s usability. The <span class="highlight">flexibility</span> of mid-fidelity wireframes made it easy to <strong>quickly iterate</strong> and implement changes based on user feedback, as opposed to high-fidelity wireframes, which require more time and resources to adjust. This approach minimised the cost of redesign and allowed us to <span class="highlight">explore multiple interaction possibilities</span>.<br><br>
@@ -4937,15 +5113,7 @@
       <div class="project-text-blur">
         <h2>Usability Testing: Think Aloud Method</h2>
         <div class="method-justification">
-          <p>
-            From the card sorting method we got a basic sitemap of what content and visual hierarchy the screens should look like for both TV and phones. This information was used to create our mid-fidelity wireframes on Figma. To assess how intuitive our features and navigation are, we needed to understand user thoughts as they moved through the interface of our mobile application and TV screens.
-          </p>
-          <p>
-            The think aloud testing method allows users to verbalise their thoughts, provoked by scenarios we give them. Consequently, we can hear their misconceptions about the design of our user interface and use this data to redesign it for our mockups (hi-fidelity wireframes). Additionally, the think aloud method has many benefits consisting of being <span class="highlight">cheap, robust, flexible, convincing and easy to learn</span>.
-          </p>
-          <p>
-            The participants from the card sorting were re-used for the think aloud. We decided this would be optimal as they already had a grasp of our concept. Hence their responses and thoughts will be more detailed as they already have a brief on what the app might've looked like before we showed them our mid-fidelity wireframes.
-          </p>
+          <p> From the <span class="highlight">card sorting method</span>, we developed a basic sitemap of what content and <strong>visual hierarchy</strong> the screens should have for both TV and phones. This information was then used to create our <strong>mid-fidelity wireframes</strong> in Figma. To assess <span class="highlight">how intuitive our features and navigation</span> were, we needed to understand user thoughts as they moved through the interface of our mobile application and TV screens. </p> <p> The <strong>think aloud testing method</strong> allows users to <span class="highlight">verbalise their thoughts</span>, prompted by scenarios we provide. This process lets us hear any misconceptions about our interface and use this data to <strong>redesign and improve our high-fidelity mockups</strong>. Additionally, the think aloud method is <span class="highlight">cheap, robust, flexible, convincing,</span> and <span class="highlight">easy to learn</span>. </p> <p> We conducted think aloud sessions with the <strong>same five participants</strong> from the card sorting: <span class="highlight">three children and two parents</span>. This was optimal as they already had a grasp of our concept, so their responses and feedback were more detailed, having been briefed on what the app might look like before seeing the mid-fidelity wireframes. </p>
         </div>
 
         <div class="research-block">
@@ -5169,7 +5337,7 @@
     <!-- Iteration 1 to Iteration 2 Section -->
     <section class="project-section iteration-1-to-2-section">
       <div class="project-text-blur">
-        <h2>Iteration 1 (Mid-Fidelity) to Iteration 2 (Hi-Fidelity)</h2>
+        <h2>Mid-Fidelity to Hi-Fidelity (Iteration 2 to 3)</h2>
         <p>
           Our design evolved significantly based on user feedback from think-aloud testing. Below are two key examples where critical feedback directly informed improvements from mid-fidelity to high-fidelity versions.
         </p>
@@ -5179,7 +5347,7 @@
           <h3>1. Navigation Bar Redesign</h3>
           <div class="iteration-comparison">
             <div class="iteration-column">
-              <h4>Mid-Fidelity (Iteration 1)</h4>
+              <h4>Mid-Fidelity (Iteration 2)</h4>
               <img src="images/mid - fid - iteration 1 - navigation bar.png" alt="Mid-fidelity navigation bar with confusing 'Reels' label" class="iteration-img iteration-enlargeable">
               <div class="feedback-note negative">
                 <strong>Severity: High</strong><br>
@@ -5187,7 +5355,7 @@
               </div>
             </div>
             <div class="iteration-column">
-              <h4>Hi-Fidelity (Iteration 2)</h4>
+              <h4>Hi-Fidelity (Iteration 3)</h4>
               <img src="images/high - fid - iteration 2 - navigation bar.png" alt="Improved hi-fidelity navigation bar with 'Replay' label" class="iteration-img iteration-enlargeable">
               <div class="feedback-note improvement">
                 <strong>Key Changes:</strong>
@@ -5207,7 +5375,7 @@
           <h3>2. Player Position Enhancement</h3>
           <div class="iteration-comparison">
             <div class="iteration-column">
-              <h4>Mid-Fidelity (Iteration 1)</h4>
+              <h4>Mid-Fidelity (Iteration 2)</h4>
               <img src="images/mid - fid - iteration 1 - player position.png" alt="Basic player position display" class="iteration-img iteration-enlargeable">
               <div class="feedback-note negative">
                 <strong>Severity: Moderate</strong><br>
@@ -5215,7 +5383,7 @@
               </div>
             </div>
             <div class="iteration-column">
-              <h4>Hi-Fidelity (Iteration 2)</h4>
+              <h4>Hi-Fidelity (Iteration 3)</h4>
               <img src="images/high - fid - iteration 2 - player position.png" alt="Enhanced player position information" class="iteration-img iteration-enlargeable">
               <div class="feedback-note improvement">
                 <strong>Key Changes:</strong>
@@ -5235,7 +5403,7 @@
           <h3>3. Question posed by viewers to commentators overlay Enhancement</h3>
           <div class="iteration-comparison">
             <div class="iteration-column">
-              <h4>Mid-Fidelity (Iteration 1)</h4>
+              <h4>Mid-Fidelity (Iteration 2)</h4>
               <img src="images/mid - fid - iteration 1 - Olympic sport selection (TV).png" alt="Basic player position display" class="iteration-img iteration-enlargeable">
               <div class="feedback-note negative">
                 <strong>Severity: Moderate</strong><br>
@@ -5243,7 +5411,7 @@
               </div>
             </div>
             <div class="iteration-column">
-              <h4>Hi-Fidelity (Iteration 2)</h4>
+              <h4>Hi-Fidelity (Iteration 3)</h4>
               <img src="images/high - fid - iteration 2 - Olympic sport selection (TV).png" alt="Enhanced player position information" class="iteration-img iteration-enlargeable">
               <div class="feedback-note improvement">
                 <strong>Key Changes:</strong>
@@ -5266,7 +5434,7 @@
     <!-- A/B Testing Section -->
     <section class="project-section ab-testing-section">
       <div class="project-text-blur">
-        <h2>A/B Testing: Color Palette Exploration</h2>
+        <h2>A/B Testing: Color Palette Exploration (Iteration 3 to 4)</h2>
         <p>
           Based on feedback about our visual style needing to better reflect our younger target audience, we conducted A/B testing with 8 design experts to evaluate two new color palettes inspired by sports and playfulness.
         </p>
@@ -5318,7 +5486,7 @@
     <!-- Heuristic Evaluation Section -->
     <section class="project-section heuristic-evaluation-section">
       <div class="project-text-blur">
-        <h2>Heuristic Evaluation</h2>
+        <h2>Heuristic Evaluation (Iteration 4 to 5)</h2>
           <p>
             The <span class="highlight">heuristic evaluation</span> method enabled us to efficiently identify usability flaws before user testing by leveraging <strong>Nielsen's 10 principles</strong> as a framework. Six experts analyzed key features like navigation and feedback systems, helping us <span class="highlight">pinpoint violations</span> of established usability standards. This structured approach ensured we addressed <strong>fundamental UX issues</strong> early, creating a more intuitive foundation for subsequent iterations.
           </p>  
@@ -5351,18 +5519,18 @@
           </div>
           <div class="iteration-comparison">
             <div class="iteration-column">
-              <h4>Before: Iteration 1</h4>
-              <img src="images/olympic-sport selection-iteration1.png" alt="Original sport selection with poor visibility">
+              <h4>Before: Iteration 4</h4>
+              <img src="images/olympic-sport selection-iteration1.png" alt="Original sport selection with poor visibility" class="iteration-img iteration-enlargeable">
             </div>
             <div class="iteration-column">
-              <h4>After: Iteration 2</h4>
-              <img src="images/olympic-sport selection-iteration2.png" alt="Improved sport selection with visual feedback">
+              <h4>After: Iteration 5</h4>
+              <img src="images/olympic-sport selection-iteration2.png" alt="Improved sport selection with visual feedback" class="iteration-img iteration-enlargeable">
             </div>
           </div>
         </div>
-
+        <h3>Features That Were Tested With The Experts</h3>
+        
         <div class="heuristic-table-container">
-          <h3>Features That Were Tested With The Experts</h3>
           <table class="heuristic-table">
             <thead>
               <tr>
@@ -5405,6 +5573,66 @@
             </tbody>
           </table>
         </div>
+        <p class="appendix-links">
+          <a href="https://docs.google.com/spreadsheets/d/1EubqLTOfcZ3M-QE5AMsdh8vAAnRjQ93T3zeZ6V-XIF8/edit?usp=sharing" target="_blank">
+            Explore the Heuristic Evaluation data from experts here
+          </a>
+        </p>
+      </div>
+    </section>
+
+
+    <!-- Second Round of Think Aloud Section -->
+    <section class="project-section thinkaloud-section">
+      <div class="project-text-blur">
+        <h2>Second Round of Think Aloud & Top Down Analysis (Iteration 5 to 6)</h2>
+        
+        <p class="method-justification">
+          Building on our initial findings, we conducted a <span class="highlight">second round of testing with 9 participants</span> (expanded from 5) to validate improvements and uncover new insights. The <strong>Replay & Summary screen</strong> emerged as a key area for refinement through this deeper analysis.
+        </p>
+
+        <div class="feedback-case">
+          <h3>Replay & Summary Screen Iteration</h3>
+          
+          <!-- Negative Feedback Card (using your existing structure) -->
+          <div class="affinity-bottom-row">
+            <div class="affinity-cluster-box affinity-negative">
+              <div class="affinity-cluster-title title-negative">
+                Negative Feedback
+              </div>
+              <div class="sticky-note note-negative">
+                "...but I got a little confused reading the descriptions. Also I can't organise which media I want to see. I don't even know what I had previously watched" - Kid participant
+              </div>
+            </div>
+          </div>
+
+          <!-- Implemented Solutions -->
+          <div class="solution-container">
+            <h4>Implemented Solutions</h4>
+            <ol class="solution-steps">
+              <li>Added a game-specific filter at the top (e.g. BRA vs USA)</li>
+              <li>Introduced a visual progress bar for watched clips (similar to YouTube)</li>
+              <li>Added chronological filtering by date</li>
+            </ol>
+          </div>
+                                                         
+          <!-- Visual Comparison -->
+          <div class="iteration-comparison">
+            <div class="iteration-column">
+              <h4>Before: Iteration 5</h4>
+                <img src="images/replay-and-summary-screen-iteration1.png" alt="Original replay screen without filters" class="iteration-img iteration-enlargeable">
+            </div>
+            <div class="iteration-column">
+              <h4>After: Iteration 6</h4>
+              <img src="images/replay-and-summary-screen-iteration2.png" alt="Improved replay screen with filtering options" class="iteration-img iteration-enlargeable">
+            </div>
+          </div>
+        </div>
+        <p class="appendix-links">
+          <a href="https://docs.google.com/spreadsheets/d/1EubqLTOfcZ3M-QE5AMsdh8vAAnRjQ93T3zeZ6V-XIF8/edit?usp=sharing" target="_blank">
+            Explore the second round of think aloud data here
+          </a>
+        </p>
       </div>
     </section>
 

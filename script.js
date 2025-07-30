@@ -215,4 +215,22 @@ function closeIterationModal() {
 document.addEventListener('keydown', function (e) {
   if (e.key === "Escape") closeIterationModal();
 });
+fr
+
+document.querySelectorAll('.enlargeable').forEach(img => {
+  img.addEventListener('click', function() {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    modal.style.display = "flex";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+  });
+});
+
+document.querySelector('.image-modal-close').onclick = function() {
+  document.getElementById('image-modal').style.display = "none";
+};
+document.getElementById('image-modal').onclick = function(e) {
+  if(e.target === this) this.style.display = "none";
+};
 
