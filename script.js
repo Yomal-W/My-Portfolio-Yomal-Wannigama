@@ -215,7 +215,6 @@ function closeIterationModal() {
 document.addEventListener('keydown', function (e) {
   if (e.key === "Escape") closeIterationModal();
 });
-fr
 
 document.querySelectorAll('.enlargeable').forEach(img => {
   img.addEventListener('click', function() {

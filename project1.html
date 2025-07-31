@@ -189,13 +189,6 @@
 }
 
 
-/* Highlight effect */
-.highlight {
-  background: rgba(255, 203, 5, 0.2); /* subtle yellow */
-  padding: 0 4px;
-  border-radius: 4px;
-}
-
 /* === Research Stage Heading === */
 .research-stage-heading {
   padding: 40px 5% 20px;
@@ -267,6 +260,21 @@
   color: rgba(255, 255, 255, 0.88);
 }
 
+.ethnography-block a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+  opacity: 0.88; /* Slightly faded by default */
+  transition: 
+    opacity 0.24s cubic-bezier(0.4,0,0.2,1);
+}
+
+.ethnography-block a:hover {
+  color: #C1A8FF;
+  opacity: 1;
+  text-decoration: none;
+}
+
 .ethnography-img {
   width: 100%;
   max-width: 800px;
@@ -311,7 +319,7 @@
 .research-block h3 {
   font-size: 1.25rem;
   font-family: 'Rubik', sans-serif;
-  color: #A88BFF;
+  color: #C1A8FF;
   margin-bottom: 0.5rem;
 }
 
@@ -320,6 +328,21 @@
   font-size: 1.05rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.88);
+}
+
+.research-block a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+  opacity: 0.88; /* Slightly faded by default */
+  transition: 
+    opacity 0.24s cubic-bezier(0.4,0,0.2,1);
+}
+
+.research-block a:hover {
+  color: #C1A8FF;
+  opacity: 1;
+  text-decoration: none;
 }
 
 
@@ -1243,7 +1266,7 @@
 
 .storyboards-section h2 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2.1rem;
+  font-size: 2rem;
   color: #fff;
   margin-bottom: 1.1rem;
   letter-spacing: 0.5px;
@@ -2617,7 +2640,7 @@
 
 
 /* === Think Aloud Section Styling === */
-.think-aloud-section .project-text-blur {
+.think-aloud-section-1 .project-text-blur {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2.5rem;
@@ -2628,7 +2651,7 @@
   overflow: hidden;
 }
 
-.think-aloud-section h2 {
+.think-aloud-section-1 h2 {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 2rem;
   color: #fff;
@@ -2802,7 +2825,7 @@
 }
 
 @media (max-width: 600px) {
-  .think-aloud-section .project-text-blur {
+  .think-aloud-section-1 .project-text-blur {
     border-radius: 13px;
   }
   .goal-card {
@@ -3114,7 +3137,7 @@
 
 .ab-testing-section h2 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   color: #FFFFFF;
 }
@@ -3264,7 +3287,7 @@
 
 .heuristic-evaluation-section h2 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 1.8rem;
   color: #FFFFFF;
 }
@@ -3498,7 +3521,7 @@
 
 
 /* === Second Think Aloud Section Styling === */
-.thinkaloud-section .project-text-blur {
+.thinkaloud-section-2 .project-text-blur {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 2.5rem;
@@ -3508,9 +3531,9 @@
   box-shadow: 0 14px 40px rgba(100,70,190,0.11);
 }
 
-.thinkaloud-section h2 {
+.thinkaloud-section-2 h2 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 1.8rem;
   color: #FFFFFF;
 }
@@ -3580,6 +3603,192 @@
 @media (max-width: 768px) {
   .feedback-case {
     padding: 1rem;
+  }
+}
+
+/* === SUS Survey Section === */
+.sus-survey-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+}
+
+.sus-methodology h3,
+.sus-results h3,
+.sus-questions h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin: 2rem 0 1.5rem;
+}
+
+.sus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.sus-card {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #C1A8FF;
+}
+
+.sus-card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.sus-card h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0 0 0.8rem 0;
+  font-size: 1.1rem;
+}
+
+.sus-card p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.sus-score-display {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border-top: 4px solid #FFCB05;
+}
+
+.sus-score-value {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 3.5rem;
+  color: white;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.sus-score-label {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.sus-score-rating {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.sus-score-rating.excellent {
+  background: rgba(76, 175, 80, 0.2);
+  color: #81C784;
+}
+
+.sus-score-comparison {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.sus-scale {
+  margin: 2rem 0;
+}
+
+.sus-scale-range {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.range-label {
+  font-family: 'Overpass Mono', monospace;
+  color: white;
+  width: 60px;
+  font-size: 0.9rem;
+}
+
+.range-bar {
+  height: 20px;
+  width: 100px;
+  margin: 0 1rem;
+  border-radius: 4px;
+}
+
+.range-bar.poor {
+  background: #f44336;
+}
+.range-bar.fair {
+  background: #FF8A80;
+}
+.range-bar.good {
+  background: #FFCB05;
+}
+.range-bar.excellent {
+  background: #4CAF50;
+}
+
+.range-description {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+}
+
+.question-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.question-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1.2rem;
+  border-left: 3px solid rgba(193, 168, 255, 0.5);
+}
+
+.question-number {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: #C1A8FF;
+  color: #0e0e0e;
+  border-radius: 50%;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  margin-right: 0.8rem;
+  line-height: 24px;
+  font-size: 0.9rem;
+}
+
+.question-card p {
+  display: inline;
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sus-score-value {
+    font-size: 2.8rem;
+  }
+  
+  .question-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -3697,7 +3906,7 @@
         </p>
 
         <div class="ethnography-block">
-          <h3>Children/toddlers watching sports on TV – Reddit</h3>
+          <h3><a href="https://www.reddit.com/r/ScienceBasedParenting/comments/1ccj0yh/childrentoddlers_watching_sports_on_tv_research/" target="_blank">Children/toddlers watching sports on TV – Reddit 🔗</a></h3>
           <p>
             A Reddit user highlighted the impact of traditional TV on young viewers, emphasizing 
             <span class="highlight">overstimulation, reduced social interaction</span>, and 
@@ -3708,7 +3917,7 @@
         </div>
 
         <div class="ethnography-block">
-          <h3>Why don't children like watching sports on TV? – Quora</h3>
+          <h3><a href="https://www.quora.com/Why-dont-children-like-watching-sports-on-TV" target="_blank">Why don't children like watching sports on TV? – Quora 🔗</a></h3>
           <p>
             On Quora, users shared how children often feel frustrated by the lack of interactivity in 
             sports broadcasts. Compared to video games where they have agency, 
@@ -3727,35 +3936,35 @@
           <p> To complement our <span class="highlight">ethnographic insights</span>, we reviewed <span class="highlight">research articles</span> and <span class="highlight">opinion pieces</span> that explore how <strong class="highlight">interactive features</strong> can support children's engagement with sports and the Olympics. These articles reinforce our <span class="highlight">problem scenario</span> by showing how <strong class="highlight">participation</strong>, <strong class="highlight">emotional connection</strong>, and <strong class="highlight">interactivity</strong> improve <span class="highlight">learning</span> and <span class="highlight">retention</span> for young viewers. </p>
 
         <div class="research-block">
-          <h3>How to Make Watching Sport at Home as Immersive as Possible</h3>
+          <h3><a href="https://designbeep.com/2024/01/18/how-to-make-watching-sport-at-home-as-immersive-as-possible/#:~:text=Embrace%20the%20community&text=Of%20course%2C%20some%20light%2C%20good,the%20game%20is%20being%20played" target="_blank">How to Make Watching Sport at Home as Immersive as Possible 🔗</a></h3>
           <p>
             This article highlights how features like <span class="highlight">live stats, fan polls, and discussions</span> enhance broadcasts by making them more <strong>engaging and participatory</strong>. These tools help bridge the gap between <span class="highlight">passive viewing</span> and <span class="highlight">active interaction</span>, especially effective for kids raised on interactive platforms.
           </p>
         </div>
 
         <div class="research-block">
-          <h3>Investigating the Use of Interactive Features for Children’s Television Programming</h3>
+          <h3><a href="https://studios.disneyresearch.com/wp-content/uploads/2019/04/Investigating-the-Effects-of-Interactive-Features-for-Preschool-Television-Programming.pdf" target="_blank">Investigating the Use of Interactive Features for Children’s Television Programming 🔗</a></h3>
           <p>
             This research explores how <span class="highlight">characters directly asking questions</span> and interactive segments improve learning. These features help children <strong>retain knowledge and stay engaged</strong>, especially when watching unfamiliar or complex content. It strongly supports our aim to use interactive tools during Olympic broadcasts.
           </p>
         </div>
 
         <div class="research-block">
-          <h3>Why It’s Important to Encourage Your Child to Watch the Olympics</h3>
+          <h3><a href="https://academyoffencingmasters.com/blog/encourage-child-watch-the-olympics/" target="_blank">Why It’s Important to Encourage Your Child to Watch the Olympics 🔗</a></h3>
           <p>
             This article emphasizes that the Olympics can teach values like <span class="highlight">heroism, perseverance, and patriotism</span>. Interactive features help <strong>translate these values</strong> to kids in more accessible ways, improving their emotional connection to the events.
           </p>
         </div>
 
         <div class="research-block">
-          <h3>From Sedentary Viewer to Active Athlete</h3>
+          <h3><a href="https://educationdaily.au/general/from-sedentary-viewer-to-active-athlete-can-encouraging-kids-to-watch-the-olympic-games-help-them-go-for-gold/" target="_blank">From Sedentary Viewer to Active Athlete 🔗</a></h3>
           <p>
             Watching the Olympics has been shown to <span class="highlight">inspire children to try new sports</span>. In Australia, admiration for athletes drives motivation. This underscores how <strong>interactive experiences can amplify inspiration</strong> and turn passive watching into active interest.
           </p>
         </div>
 
         <div class="research-block">
-          <h3>A Lot Can Be Learned from Watching the Olympics with the Kids</h3>
+          <h3><a href="https://medium.com/thrive-global/a-lot-can-be-learned-from-watching-the-olympics-with-the-kids-2a93be90b2b8" target="_blank">A Lot Can Be Learned from Watching the Olympics with the Kids 🔗</a></h3>
           <p>
             This article discusses how <span class="highlight">interactive storytelling</span> can help bridge knowledge gaps and make Olympic values more relatable. With tools that foster <strong>emotional understanding</strong>, even unfamiliar sports become meaningful.
           </p>
@@ -4884,8 +5093,25 @@
       <div class="project-text-blur">
         <h2>Card Sorting Research</h2>
           <p>
-            Our <span class="highlight">multi-device ecosystem</span> creates a <strong>seamless dual-screen experience</strong> that keeps young viewers engaged through synchronized content and complementary features across platforms. This experience was <span class="highlight">tested with five participants</span>, including <strong>three children and two parents</strong>, to ensure its effectiveness and appeal for both kids and their families.
+            We used <span class="highlight">card sorting</span> to organise the features and content within both the <span class="highlight">augmented TV experience</span> and its <span class="highlight">companion mobile app</span>. This method gave us insight into how children and parents naturally classify elements like quizzes, statistics, and interactive overlays, helping us build a layout that better aligns with their expectations.
           </p>
+
+          <p>
+            Card sorting was introduced after analysing our <span class="highlight">low-fidelity sketches</span>, where we discovered key usability issues—such as the absence of navigation elements and an overcrowded home screen. These early designs mixed too many features, which would have made the app overwhelming to use, especially for children.
+          </p>
+
+          <p>
+            By applying card sorting at this stage, we were able to understand users’ <span class="highlight">mental models</span> and restructure the app's information architecture accordingly. The data gathered was directly used to inform the layout of our <span class="highlight">mid-fidelity wireframes</span>, helping simplify navigation and reduce cognitive load.
+          </p>
+
+          <p>
+            We tested with both <span class="highlight">children and parents</span> to reflect the needs of our dual-audience experience. Children helped us identify how interactive elements should be grouped to feel intuitive and playful, while parents provided feedback on how to structure content that balances <span class="highlight">safety, trust, and clarity</span>.
+          </p>
+
+          <p>
+            This dual-perspective approach allowed us to design a system that feels <span class="highlight">engaging for kids</span> and <span class="highlight">reassuring for parents</span>, improving both navigation and usability across the TV interface and mobile application.
+          </p>
+
 
         <div class="research-block">
           <h3>Test Goals</h3>
@@ -4926,16 +5152,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="research-block">
-          <h3>Method Explanation & Justification</h3>
-          <p>
-            Card sorting helped organize features and content for both the augmented TV experience and companion mobile app. Participants classified content like athlete trivia, statistics, and sport explanations according to their intuitive understanding, ensuring alignment with user expectations.
-          </p>
-          <p>
-            We conducted card sorting after analyzing low-fidelity sketches, which revealed navigation issues. The initial designs lacked clear navigation elements and had overcrowded screens. Card sorting provided essential data on users' mental models, which we used to refine our mid-fidelity wireframes and simplify the experience.
-          </p>
         </div>
 
         <div class="research-block">
@@ -5109,7 +5325,7 @@
     </section>
 
     <!-- Think Aloud Method Section -->
-    <section class="project-section think-aloud-section"> 
+    <section class="project-section think-aloud-section-1"> 
       <div class="project-text-blur">
         <h2>Usability Testing: Think Aloud Method</h2>
         <div class="method-justification">
@@ -5253,7 +5469,7 @@
     </section>
 
     <!-- Top Down User Testing Synthesis Section -->
-    <section class="project-section think-aloud-section">
+    <section class="project-section think-aloud-section-1">
       <div class="project-text-blur">
         <h2>Top Down User Testing Synthesis</h2>
         <p class="method-justification">
@@ -5338,9 +5554,15 @@
     <section class="project-section iteration-1-to-2-section">
       <div class="project-text-blur">
         <h2>Mid-Fidelity to Hi-Fidelity (Iteration 2 to 3)</h2>
-        <p>
-          Our design evolved significantly based on user feedback from think-aloud testing. Below are two key examples where critical feedback directly informed improvements from mid-fidelity to high-fidelity versions.
-        </p>
+          <p>
+            During the <span class="highlight">think-aloud testing</span> of our mid-fidelity wireframes, participants verbalised their thoughts as they interacted with the interface. This allowed us to identify several <span class="highlight">misconceptions</span> and moments of confusion regarding layout, labelling, and navigation flow.
+          </p>
+          <p>
+            These insights were critical in shaping our design decisions. By understanding <span class="highlight">how users interpreted each element</span>, we were able to refine and improve the interface for the next iteration.
+          </p>
+          <p>
+            The <strong>hi-fidelity mockups</strong> therefore reflect direct improvements informed by user feedback — offering clearer visual hierarchy, improved iconography, and more intuitive interaction patterns to enhance usability and engagement.
+          </p>
 
         <!-- Navigation Bar Example -->
         <div class="iteration-block">
@@ -5435,9 +5657,13 @@
     <section class="project-section ab-testing-section">
       <div class="project-text-blur">
         <h2>A/B Testing: Color Palette Exploration (Iteration 3 to 4)</h2>
-        <p>
-          Based on feedback about our visual style needing to better reflect our younger target audience, we conducted A/B testing with 8 design experts to evaluate two new color palettes inspired by sports and playfulness.
-        </p>
+<p>
+  Based on earlier <span class="highlight">expert feedback</span> that our visual style did not <strong>resonate well with younger audiences</strong>, we conducted a focused <strong>A/B testing session</strong> with <strong>8 design experts</strong>. The goal was to evaluate two newly developed color palettes that were <span class="highlight">inspired by sports, vibrancy, and playfulness</span>.
+</p>
+<p>
+  This iterative approach allowed us to identify which palette better supported <strong>readability, aesthetic appeal,</strong> and <strong>emotional resonance</strong>, all of which are crucial when designing for <strong>younger viewers</strong>.
+</p>
+
 
         <div class="ab-testing-comparison">
           <!-- Version 1 -->
@@ -5583,7 +5809,7 @@
 
 
     <!-- Second Round of Think Aloud Section -->
-    <section class="project-section thinkaloud-section">
+    <section class="project-section thinkaloud-section-2">
       <div class="project-text-blur">
         <h2>Second Round of Think Aloud & Top Down Analysis (Iteration 5 to 6)</h2>
         
@@ -5629,8 +5855,126 @@
           </div>
         </div>
         <p class="appendix-links">
-          <a href="https://docs.google.com/spreadsheets/d/1EubqLTOfcZ3M-QE5AMsdh8vAAnRjQ93T3zeZ6V-XIF8/edit?usp=sharing" target="_blank">
+          <a href="https://docs.google.com/document/d/11whn30TEOq88ay90-zRGmZFnui3fJEBoOz3DthXUto0/edit?usp=sharing" target="_blank">
             Explore the second round of think aloud data here
+          </a> and <a href="https://www.figma.com/board/dOAdCMhKWvdag9kuwXI4kH/DECO2200-A1---A2---A3-Appendix-J-NATHAN-YOMAL?node-id=0-1&t=vjSCpjVxBzPfU1Gy-1" target="_blank">top down analysis here</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- SUS Survey Section -->
+    <section class="project-section sus-survey-section">
+      <div class="project-text-blur">
+        <h2>Usability Evaluation: System Usability Scale (SUS)</h2>
+        
+        <div class="sus-methodology">
+          <h3>Methodology</h3>
+          <p>Following each Think Aloud session, participants completed the standardized SUS questionnaire to quantitatively assess the system's usability. The survey was administered to all 9 participants (5 from initial testing and 4 from follow-up sessions).</p>
+          
+          <div class="sus-grid">
+            <div class="sus-card">
+              <div class="sus-card-icon">📊</div>
+              <h4>Objective</h4>
+              <p>Measure overall usability perception through a validated 10-item questionnaire using a 5-point Likert scale.</p>
+            </div>
+            
+            <div class="sus-card">
+              <div class="sus-card-icon">👥</div>
+              <h4>Participants</h4>
+              <p>9 total respondents including both children (ages 8-12) and parents to capture diverse perspectives.</p>
+            </div>
+            
+            <div class="sus-card">
+              <div class="sus-card-icon">📝</div>
+              <h4>Administration</h4>
+              <p>Conducted immediately after Think Aloud sessions to capture fresh impressions while experiences were recent.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sus-results">
+          <h3>Survey Results</h3>
+          <div class="sus-score-display">
+            <div class="sus-score-value">86.67</div>
+            <div class="sus-score-label">Average SUS Score</div>
+            <div class="sus-score-rating excellent">Excellent</div>
+            <div class="sus-score-comparison">(Industry Average: 68)</div>
+          </div>
+          
+          <div class="sus-scale">
+            <div class="sus-scale-range">
+              <span class="range-label">1-49</span>
+              <span class="range-bar poor"></span>
+              <span class="range-description">Needs serious improvement</span>
+            </div>
+            <div class="sus-scale-range">
+              <span class="range-label">50-69</span>
+              <span class="range-bar fair"></span>
+              <span class="range-description">Needs improvement</span>
+            </div>
+            <div class="sus-scale-range">
+              <span class="range-label">70-84</span>
+              <span class="range-bar good"></span>
+              <span class="range-description">Good</span>
+            </div>
+            <div class="sus-scale-range">
+              <span class="range-label">85-100</span>
+              <span class="range-bar excellent"></span>
+              <span class="range-description">Excellent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sus-questions">
+          <h3>Survey Questions</h3>
+          <p>The SUS questionnaire consisted of 10 statements rated on a 5-point scale from Strongly Disagree (1) to Strongly Agree (5):</p>
+          
+          <div class="question-grid">
+            <div class="question-card">
+              <span class="question-number">1</span>
+              <p>I think that I would like to use this system frequently</p>
+            </div>
+            <div class="question-card">
+              <span class="question-number">2</span>
+              <p>I found the system unnecessarily complex</p>
+            </div>
+            <div class="question-card">
+              <span class="question-number">3</span>
+              <p>I thought that the system was easy to use</p>
+            </div>
+            <div class="question-card">
+              <span class="question-number">4</span>
+              <p>I think that I would need technical support to use this system</p>
+            </div>
+            <div class="question-card">
+              <span class="question-number">5</span>
+              <p>I found the various functions were well integrated</p>
+            </div>
+            <div class="question-card">
+              <span class="question-number">6</span>
+              <p>I thought there was too much inconsistency</p>
+            </div>
+            <div class="question-card">
+              <span class="question-number">7</span>
+              <p>Most people would learn to use this system very quickly</p>
+            </div>
+            <div class="question-card">
+              <span class="question-number">8</span>
+              <p>I found the system cumbersome and inefficient</p>
+            </div>
+            <div class="question-card">
+              <span class="question-number">9</span>
+              <p>I felt very confident using the system</p>
+            </div>
+            <div class="question-card">
+              <span class="question-number">10</span>
+              <p>I needed to learn many things before getting started</p>
+            </div>
+          </div>
+        </div>
+        <p class="appendix-links">
+          <a href="https://www.figma.com/board/dOAdCMhKWvdag9kuwXI4kH/DECO2200-A1---A2---A3-Appendix-J-NATHAN-YOMAL?node-id=0-1&t=LdaFcOwu077YAKlu-1" target="_blank">
+            Explore the individual SUS responses and detailed analysis here
           </a>
         </p>
       </div>
