@@ -220,65 +220,145 @@ line-height: 1.6;
 
 
 
-/* ===== OLYMPICS PROJECT ===== */
-    .project-hero-section {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 140px 5% 60px;
-      gap: 2rem;
-      position: relative;
-      z-index: 10;
-    }
+/* ===== INDIVIDUAL PROJECTS ===== */
+/* ===== INDIVIDUAL PROJECTS ===== */
+.project-hero-section { 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 50px;
+  background: none;
+  box-sizing: border-box;
+}
 
-    .project-hero-section .project-text-blur {
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      padding: 2rem;
-      max-width: 600px;
-      color: white;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    }
+.project-hero-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.3rem;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+}
 
-    .project-text h1 {
-      font-family: 'PT Sans Narrow', sans-serif;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
+.project-hero-text {
+  background: rgba(0, 0, 0, 0.60);
+  backdrop-filter: blur(12px);
+  border-radius: 28px;
+  padding: 2.1rem 2rem 2rem; /* Default padding */
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.19);
+  flex: 1 1 380px;
+  min-width: 0;
+  max-width: 600px;
+  margin: 2.3rem 0 0 0;
+}
 
-    .project-text p {
-      font-family: 'Overpass', sans-serif;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
+.project-hero-text h1 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.12;
+  letter-spacing: 0.2px;
+}
 
-    .meta {
-      font-family: 'Rubik', sans-serif;
-      font-size: 0.95rem;
-      margin-top: 1rem;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.85);
-    }
+.project-hero-text p {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.12rem;
+  line-height: 1.65;
+  margin-bottom: 0.8rem;
+}
 
-    .project-gif img {
-      max-width: 300px;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    }
+.project-hero-meta {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.98rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.86);
+}
 
-    @media (max-width: 768px) {
-      .project-gif img {
-        max-width: 100%;
-      }
+.project-hero-image {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-      .project-hero-section {
-        flex-direction: column;
-        padding-top: 100px;
-      }
-    }
+.project-hero-image img {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  border-radius: 24px;
+  height: auto;
+  margin-top: 2.3rem;
+}
+
+.project-hero-image.desktop img {
+  max-width: 600px;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  border-radius: 24px;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .project-hero-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    max-width: 97vw;
+    padding: 0 0.7rem;
+  }
+  
+  .project-hero-text {
+    padding: 1.5rem 1.5rem;
+    max-width: 100%;
+    margin: 1.3rem 0 0 0;
+    border-radius: 18px;
+  }
+  
+  .project-hero-image img,
+  .project-hero-image.desktop img {
+    max-width: 94vw;
+    margin: 1.2rem auto 0 auto;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-hero-section {
+    flex-direction: column;
+    padding-top: 80px;
+  }
+  
+  .project-hero-inner {
+    gap: 1rem;
+  }
+  
+  .project-hero-text {
+    padding: 1.5rem 2rem; 
+    border-radius: 13px;
+    margin: 1.1rem 0 0 0;
+  }
+  
+  .project-hero-image img,
+  .project-hero-image.desktop img {
+    border-radius: 13px;
+    max-width: 98vw;
+    margin-top: 1rem;
+  }
+  
+  .project-hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .project-hero-meta {
+    font-size: 0.93rem;
+  }
+}
+
+
 
 /* Problem section styling */
 .project-section {
