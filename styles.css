@@ -215,12 +215,11 @@ line-height: 1.6;
 
 
 
+/* ======================================================================================================================== */
 
 
 
 
-
-/* ===== INDIVIDUAL PROJECTS ===== */
 /* ===== INDIVIDUAL PROJECTS ===== */
 .project-hero-section { 
   width: 100%;
@@ -4079,4 +4078,516 @@ line-height: 1.6;
   .question-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+
+
+
+/* ======================================================================================================================== */
+
+
+
+
+/* === IEQ Dashboard === */
+/* === Data Origin Section === */
+.data-origin-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+}
+
+.data-origin-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.data-origin-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(193, 168, 255, 0.15);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.badge-icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.badge-text {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.9rem;
+  color: #C1A8FF;
+  font-weight: 500;
+}
+
+.data-origin-header h3 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.8rem;
+  color: white;
+  margin: 0.5rem 0;
+}
+
+.data-context {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.data-card {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-top: 3px solid #C1A8FF;
+}
+
+.data-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.data-card-icon {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+.data-card h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.data-card p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.sensor-variables h3 {
+  font-family: 'Rubik', sans-serif;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.sensor-category {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.sensor-category h4 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.sensor-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sensor-list li {
+  font-family: 'Overpass Mono', monospace;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sensor-list li:last-child {
+  border-bottom: none;
+}
+
+.data-purpose {
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.purpose-statement {
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 1.5rem 0; 
+  text-align: left;
+}
+
+.purpose-highlight {
+  display: flex;
+  justify-content: center;  /* This centers the content */
+  align-items: center;
+  background: rgba(255, 203, 5, 0.15);
+  border-radius: 20px;
+  padding: 0.8rem 1.5rem;
+  margin: 1rem auto 0 auto;  /* Auto margins center block element */
+  max-width: max-content;    /* Shrink to fit content */
+}
+
+.highlight-icon {
+  font-size: 1.3rem;
+  margin-right: 0.8rem;
+}
+
+.highlight-text {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .data-origin-header h3 {
+    font-size: 1.5rem;
+  }
+  
+  .sensor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================ CO₂ Insight Section Styling ============================= */
+/* === Clean CO₂ Insight Section === */
+.co2-insight-section .project-text-blur {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: rgba(255,255,255,0.07);
+  border-radius: 18px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px rgba(100,70,190,0.14);
+}
+
+.co2-vital-signs {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid rgba(100, 220, 255, 0.3);
+}
+
+.vital-sign {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sign-label {
+  font-family: 'Rubik', sans-serif;
+  color: #64DCFF;
+  font-size: 1.1rem;
+  word-break: break-word;
+}
+
+.co2-comparison-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.co2-state {
+  flex: 1;
+  max-width: 200px;
+  min-width: 0; /* Prevent flex item overflow */
+}
+
+.state-illustration {
+  background: rgba(255,255,255,0.09);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.office-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+}
+
+.state-illustration.active .dot {
+  background: #FFCB05;
+}
+
+.co2-value {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  word-break: break-word;
+}
+
+.state-label {
+  display: inline-block;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.3em 1em;
+  border-radius: 15px;
+  background: #ebeaea;
+  color: #181a21;
+  white-space: nowrap;
+}
+
+.state-label.off-hours { background: #bae2e8; }
+.state-label.peak-hours { background: #ffe3c5; }
+
+.co2-transition {
+  flex: 1;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0; /* Prevent flex item overflow */
+}
+
+.transition-arrow {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  margin: 20px 0;
+}
+
+.transition-arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #C1A8FF;
+  border-top: 2px solid #C1A8FF;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.transition-label {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: #FFCB05;
+  text-align: center;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.co2-diagnosis {
+  margin-bottom: 2rem;
+}
+
+.diagnosis-card {
+  background: rgba(193, 168, 255, 0.13);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #64DCFF;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.diagnosis-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.diagnosis-card h3 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1rem;
+  word-break: break-word;
+}
+
+.diagnosis-card p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.93);
+  line-height: 1.6;
+  margin: 0;
+  word-break: break-word;
+}
+
+.co2-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.impact-item {
+  background: rgba(100, 220, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  min-width: 0; /* Prevent grid item overflow */
+}
+
+.impact-value {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #64DCFF;
+  word-break: break-word;
+}
+
+.impact-desc {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.86);
+  margin-top: 0.3rem;
+  word-break: break-word;
+}
+
+.co2-key-findings {
+  margin-bottom: 2rem;
+}
+
+.co2-key-findings h3 {
+  font-size: 1.25rem;
+  font-family: 'Rubik', sans-serif;
+  color: #64DCFF;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.co2-trend-visual h3 {
+  font-size: 1.25rem;
+  font-family: 'Rubik', sans-serif;
+  color: #64DCFF;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.findings-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.6;
+}
+
+.findings-list li {
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.co2-trend-visual {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .co2-insight-section .project-text-blur {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .co2-insight-section .project-text-blur {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+  
+  .co2-vital-signs {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sign-label {
+    text-align: center;
+  }
+  
+  .co2-comparison-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.25rem;
+  }
+  
+  .co2-state {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .state-illustration {
+    padding: 1.25rem 1rem;
+  }
+  
+  .co2-value {
+    font-size: 1.6rem;
+  }
+  
+  .transition-arrow {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+  }
+  
+  .transition-arrow::after {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  
+  .transition-label {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .diagnosis-card {
+    padding: 1.25rem;
+  }
+  
+  .diagnosis-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .co2-impact-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .impact-item {
+    padding: 0.75rem;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .co2-insight-section .project-text-blur {
+    padding: 2.5rem;
+  }
+  
+  .diagnosis-card {
+    padding: 1rem;
+  }
+  
+
 }

@@ -56,28 +56,263 @@
     <section class="project-section">
       <div class="project-text-blur highlighted-problem">
         <h2>The Problem Statement</h2>
-          <p>
-            Despite the Olympics' global appeal, <span class="highlight">young viewers consistently struggle to engage</span> with Olympic broadcasts, especially when it comes to <strong>lesser-known sports</strong> with complex or unfamiliar rules. <span class="highlight">Traditional, passive TV formats</span> do not resonate with children who are used to <strong>interactive, dynamic digital experiences</strong> such as games and apps.
-          </p>
-          <p>
-            This results in <span class="highlight">reduced interest, confusion, and missed educational opportunities</span> for young audiences. Parents also express concern about <strong>overstimulation and the developmental impact</strong> of extended, unengaging screen time.
-          </p>
-          <p>
-            <strong>There is a clear need</strong> for <span class="highlight">engaging, interactive, and educational solutions</span> that bridge the understanding gap for young viewers, making Olympic broadcasts not just more accessible, but also supportive of <strong>children’s well-being and learning</strong>.
-          </p>
+<p>
+  Facility managers often lack <span class="highlight">real-time, actionable insights</span> into indoor office comfort, resulting in <strong>inefficient building management</strong>. <span class="highlight">Static HVAC schedules</span> fail to adjust to actual occupancy, causing <strong>CO₂ spikes during peak office hours</strong> and leading to <span class="highlight">discomfort, complaints, and wasted energy</span>.
+</p>
+<p>
+  Additionally, <strong>sound pressure levels vary significantly across zones</strong>, with some areas experiencing <span class="highlight">excessive noise that disrupts focus and productivity</span>.
+</p>
+<p>
+  There is a need for <strong>data-driven tools</strong> that enable facility managers to proactively address <span class="highlight">air quality</span> and <strong>noise issues</strong>, helping to <span class="highlight">improve occupant comfort</span> and <strong>reduce operational inefficiencies</strong>.
+</p>
 
 
         <!-- NEW: Appendix Links -->
         <p class="appendix-links">
-          <a href="https://docs.google.com/document/d/1rCW3o-gO-Hc4va4n0nS-tEKPMtV5UiAl8XSl12exC3s/edit?usp=sharing" target="_blank">Research Appendix</a> 
+          <a href="https://github.com/Yomal-W/Indoor-Environmental-Quality-Application/tree/main" target="_blank">GitHub</a> 
           → 
-          <a href="https://docs.google.com/document/d/1YF4vDwqQKHgSkcHpmQbhVzU4qH2uHwqKfTe5tRI9E0o/edit?usp=sharing" target="_blank">Usability Testing Appendix</a> 
+          <a href="https://docs.google.com/document/d/1iy9ciIZ6htd56BM-MboF2Nh5U6vCnzP49lHf93gUGjU/edit?usp=sharing" target="_blank">Documentation</a> 
           → 
-          <a href="https://docs.google.com/document/d/1DAW19Hl10ZcTGFVtcKre2JJLXi2fUpI9b8bgkZuj5-w/edit?usp=sharing" target="_blank">Final Visual Report</a>
+          <a href="https://www.canva.com/design/DAGlXfLkDYw/GwIm8ujO55Ume7QX5wAaew/edit?utm_content=DAGlXfLkDYw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Initial Idea Proposal</a>
         </p>
 
       </div>
     </section>
+
+    <!-- Research Stage Heading -->
+    <section class="project-section research-stage-heading">
+      <div class="section-title-blur">
+        <h2>Research Stage</h2>
+        <p class="subtitle">A multi-method approach to uncover insights about how building occupants and facility managers experience and respond to indoor environmental quality data.</p>
+      </div>
+    </section>
+
+    <!-- Research Questions Section -->
+    <section class="project-section research-questions-section">
+      <div class="project-text-blur">
+        <h2>Research Questions</h2>
+        <p>These guiding questions shaped our investigation into how building stakeholders engage with indoor environmental quality data and what design interventions can enhance comfort and operational efficiency:</p>
+
+          <div class="questions-grid">
+            <div class="question-card">
+              How can real-time visualisation of indoor environmental data (e.g., CO₂, temperature, noise) help facility managers and building occupants quickly identify areas of discomfort or inefficiency within office spaces?
+            </div>
+            <div class="question-card">
+              Which environmental variables (e.g., sound levels, air quality, temperature) have the most significant impact on perceived comfort in office buildings, and how do these vary across different zones and times of day?
+            </div>
+            <div class="question-card">
+              What types of interactive data visualisation features (e.g., zone comparison, trend analysis, real-time alerts) are most effective in enabling stakeholders to make data-driven decisions about building management?
+            </div>
+            <div class="question-card">
+              How can combining IEQ sensor data with additional datasets (such as occupancy or HVAC energy use) reveal patterns or insights that would otherwise remain hidden in traditional building management approaches?
+            </div>
+          </div>
+      </div>
+    </section>
+    
+
+<!-- Where the Data is From Section -->
+<section class="project-section data-origin-section">
+  <div class="project-text-blur">
+    <h2>The Science Behind the Dashboard</h2>
+    
+    <div class="data-origin-header">
+      <div class="data-origin-badge">
+        <span class="badge-icon">🔬</span>
+        <span class="badge-text">Research Partnership</span>
+      </div>
+      <h3>Indoor Environmental Quality Lab</h3>
+      <p class="data-context">Working with real sensor data from the IEQ Lab's SAMBA system</p>
+    </div>
+
+    <div class="data-grid">
+      <!-- Data Source Card -->
+      <div class="data-card">
+        <div class="data-card-header">
+          <span class="data-card-icon">🏢</span>
+          <h4>The Building Ecosystem</h4>
+        </div>
+        <p>Our dashboard visualizes data from a network of sensors monitoring a real office building throughout 2019, capturing the complex interplay of environmental factors that shape our indoor experiences.</p>
+      </div>
+      
+      <!-- Sensor Network Card -->
+      <div class="data-card">
+        <div class="data-card-header">
+          <span class="data-card-icon">📡</span>
+          <h4>Sensor Network</h4>
+        </div>
+        <p>The SAMBA system tracked 10 key variables every 5 minutes across multiple floors and zones, creating a rich dataset of over 2.6 million data points.</p>
+      </div>
+    </div>
+
+    <div class="sensor-variables">
+      <h3>Key Environmental Variables Tracked</h3>
+      <div class="sensor-grid">
+        <div class="sensor-category">
+          <h4>Physical Measurements</h4>
+          <ul class="sensor-list">
+            <li>Air temperature (ta)</li>
+            <li>Globe temperature (tg)</li>
+            <li>Relative humidity (rh)</li>
+            <li>Airspeed (a_s)</li>
+            <li>Sound level (spl)</li>
+            <li>Light level (lux)</li>
+            <li>CO₂ concentration (co2)</li>
+          </ul>
+        </div>
+        
+        <div class="sensor-category">
+          <h4>Comfort Indices</h4>
+          <ul class="sensor-list">
+            <li>Mean radiant temperature (tmrt)</li>
+            <li>Predicted Mean Vote (pmv)</li>
+            <li>Predicted Percentage Dissatisfied (ppd)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-purpose">
+      <h3>Why This Matters</h3>
+      <p class="purpose-statement">
+        Buildings account for nearly 40% of global energy consumption, yet many fail to provide basic comfort. By visualizing this data, we reveal patterns that can help optimize both occupant experience and energy efficiency.
+      </p>
+      <div class="purpose-highlight">
+        <span class="highlight-icon">💡</span>
+        <span class="highlight-text">Our goal: Transform raw sensor data into actionable insights for smarter building management</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Insight 1: CO₂ Spikes When Occupancy Peaks -->
+<section class="project-section co2-insight-section">
+  <div class="project-text-blur">
+    <h2>Insight 1: The Breath of Your Office</h2>
+
+    
+    <p class="project-section-text">
+      Your office breathes with its occupants. Like a living organism, CO₂ levels rise and fall with the rhythm of the workday. During <span class="highlight">morning surges (9–12PM)</span> and <span class="highlight">afternoon waves (1–3PM)</span>, concentrations swell to <strong>575ppm</strong>—a <span class="highlight">28% respiratory spike</span> from the resting rate of ~450ppm.
+    </p>
+
+    <div class="co2-vital-signs">
+      <div class="vital-sign">
+        <div class="sign-label">CO₂ Rhythm - Off-Hours to Peak office hour spike 9AM-3PM</div>
+      </div>
+      
+      <div class="co2-comparison-container">
+        <div class="co2-state">
+          <div class="state-illustration resting">
+            <div class="office-dots">
+              <div class="dot"></div><div class="dot"></div>
+            </div>
+            <div class="co2-value">~450ppm</div>
+            <div class="state-label off-hours">Resting Rate</div>
+          </div>
+        </div>
+        
+        <div class="co2-transition">
+          <div class="transition-arrow">
+            <div class="arrow-line"></div>
+            <div class="arrow-head"></div>
+          </div>
+          <div class="transition-label">+28% During Activity</div>
+        </div>
+        
+        <div class="co2-state">
+          <div class="state-illustration active">
+            <div class="office-dots">
+              <div class="dot"></div><div class="dot"></div>
+              <div class="dot"></div><div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="co2-value">~575ppm</div>
+            <div class="state-label peak-hours">Peak Activity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="co2-diagnosis">
+      <div class="diagnosis-card">
+        <div class="diagnosis-icon">⚠️</div>
+        <h3>System Diagnosis</h3>
+        <p>Your HVAC operates like a metronome—steady, unchanging—while your office breathes like a marathon runner. This mismatch wastes <span class="highlight">20–30% in energy</span> while leaving employees gasping for cognitive clarity.</p>
+      </div>
+      
+      <div class="co2-impact-grid">
+        <div class="impact-item">
+          <div class="impact-value">4hrs/day</div>
+          <div class="impact-desc">Above ideal CO₂ levels</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-value">2–5%</div>
+          <div class="impact-desc">Cognitive decline</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-value">28%</div>
+          <div class="impact-desc">Concentration swing</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="co2-key-findings">
+      <h3>The Breathing Pattern Reveals:</h3>
+      <ul class="findings-list">
+        <li>
+          <div class="finding-marker"></div>
+          <span>CO₂ peaks mirror <span class="highlight">occupancy patterns</span> with uncanny precision</span>
+        </li>
+        <li>
+          <div class="finding-marker"></div>
+          <span>Air quality <span class="highlight">weakens</span> precisely when mental demands peak</span>
+        </li>
+        <li>
+          <div class="finding-marker"></div>
+          <span>Your HVAC <span class="highlight">breathes at one speed</span> while your team needs dynamic respiration</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="co2-trend-visual">
+      <h3>The Daily Respiratory Cycle</h3>
+        <div class="brainstorm-img-block">
+          <img 
+            src="images/average-hourly-co2-concentration-in-office-spaces-(2019).JPG" 
+            alt="Average Hourly CO2 Concentration in Office Spaces" 
+            class="brainstorm-img"
+            id="brainstormTrigger"
+            style="cursor: zoom-in;"
+            tabindex="0"
+            aria-label="Enlarge brainstorm sketch"
+          />
+          <div class="brainstorm-img-caption">
+            <strong>hourly CO₂ concentration in office spaces (2019)</strong>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Modals for Journey Maps and Images -->
+  <div id="journeyMapModal" class="modal-overlay" onclick="closeModal()">
+    <img id="modalImg" src="" alt="Full Journey Map" class="modal-img"/>
+  </div>
+  <div id="imgModal" class="modal-overlay" onclick="closeImgModal()">
+    <img id="imgModalImg" src="" alt="Enlarged Image" class="modal-img"/>
+  </div>
+  <div id="brainstormModal" class="brainstorm-modal" tabindex="-1" aria-modal="true" role="dialog">
+    <img src="" alt="Enlarged Brainstorm Sketch" class="brainstorm-modal-img" id="brainstormModalImg">
+  </div>
+  <!-- Iteration Modal 1 to 2 Overlay -->
+  <div id="iterationModal" class="modal-overlay" onclick="closeIterationModal()">
+    <img id="iterationModalImg" class="modal-img" src="" alt="Full Screen View"/>
+  </div>
+
     <script src="script.js"></script>
 </body>
 </html>
