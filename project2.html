@@ -197,7 +197,7 @@
 
     <div class="co2-vital-signs">
       <div class="vital-sign">
-        <div class="sign-label">CO₂ Rhythm - Off-Hours to Peak office hour spike 9AM-3PM</div>
+        <h3 class="sign-label">CO₂ Rhythm - Off-Hours to Peak office hour spike 9AM-3PM</h3>
       </div>
       
       <div class="co2-comparison-container">
@@ -276,22 +276,260 @@
 
     <div class="co2-trend-visual">
       <h3>The Daily Respiratory Cycle</h3>
-        <div class="brainstorm-img-block">
+        <div>
           <img 
             src="images/average-hourly-co2-concentration-in-office-spaces-(2019).JPG" 
             alt="Average Hourly CO2 Concentration in Office Spaces" 
-            class="brainstorm-img"
-            id="brainstormTrigger"
-            style="cursor: zoom-in;"
-            tabindex="0"
-            aria-label="Enlarge brainstorm sketch"
+            class="co2-2019-img iteration-enlargeable"
           />
           <div class="brainstorm-img-caption">
             <strong>hourly CO₂ concentration in office spaces (2019)</strong>
           </div>
         </div>
+    </div>
+  </div>
+</section>
 
+<!-- Why Facility Managers Care Section -->
+<section class="project-section fm-care-section">
+  <div class="project-text-blur">
+    <h2>Why Facility Managers Should Care</h2>
+    
+    <div class="fm-impact-grid">
+      <!-- Energy Waste Card -->
+      <div class="impact-card">
+        <div class="impact-card-header">
+          <span class="impact-icon">⚡</span>
+          <h3>Energy Waste & System Strain</h3>
+        </div>
+        <p>High or inconsistent CO₂ levels lead to more complaints, prompting frequent manual HVAC adjustments that waste energy and strain systems.</p>
+        <div class="impact-source">
+          <div class="source-badge">U.S. DOE</div>
+          <p>"Frequent manual adjustments reduce HVAC efficiency and waste energy."</p>
+        </div>
+      </div>
+      
+      <!-- Comfort & Productivity Card -->
+      <div class="impact-card">
+        <div class="impact-card-header">
+          <span class="impact-icon">📉</span>
+          <h3>Complaints & Productivity Loss</h3>
+        </div>
+        <p>Employees feel "stuffy air" and complain when CO₂ levels rise, leading to discomfort and cognitive performance declines of 2-5%.</p>
+        <div class="impact-source">
+          <div class="source-badge">LBNL Study</div>
+          <p>"Without data-driven adjustments, you're either over-ventilating empty spaces or under-ventilating crowded ones."</p>
+        </div>
+      </div>
+      
+      <!-- Optimization Opportunity Card -->
+      <div class="impact-card">
+        <div class="impact-card-header">
+          <span class="impact-icon">💸</span>
+          <h3>Significant Savings Potential</h3>
+        </div>
+        <p>Smart, occupancy-based controls could cut HVAC energy use by up to 10% while improving comfort, according to ENERGY STAR guidelines.</p>
+        <div class="impact-source">
+          <div class="source-badge">EPA</div>
+          <p>"Proper scheduling and smart thermostats can dramatically improve efficiency."</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="fm-key-statistics">
+      <h3>The High Cost of Inaction</h3>
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-value">20-30%</div>
+          <div class="stat-label">Energy wasted by mismatched ventilation</div>
+          <footer>(DOE, CIBSE)</footer>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">10%</div>
+          <div class="stat-label">Potential HVAC energy savings</div>
+          <footer>(ENERGY STAR)</footer>
+        </div>
+      </div>
+    </div>
+    
+    <div class="fm-callout">
+      <div class="callout-icon">⚠️</div>
+      <div class="callout-text">
+        <strong>Missed Opportunities:</strong> Without data-driven adjustments, facilities either over-ventilate empty spaces or under-ventilate crowded ones - wasting energy while compromising comfort.
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Noise Insight Section -->
+<section class="project-section noise-insight-section">
+  <div class="project-text-blur">
+    <h2>Insight 2: The Silent Productivity Killer</h2>
+    
+    <p class="project-section-text">
+      Your office's soundscape tells a story of uneven comfort. While most zones on <span class="highlight">Floor 0</span> maintain optimal sound levels (~50dB), <span class="highlight">Zone 243</span> screams with disruptive noise at <strong>72dB</strong>—<span class="highlight">1.44× louder</span> than recommended levels, creating an acoustic minefield for productivity.
+    </p>
+
+    <div class="noise-comparison">
+      <div class="noise-zone optimal">
+        <h3 class="zone-label">Optimal Zones (402, 403, 430, 431)</h3>
+        <div class="noise-visual">
+          <img 
+            src="images/optimal-spl-floorlevel0-zones-402-403-430-431.JPG" 
+            alt="Optimal SPL in zones 402, 403, 430, 431 at ~50dB" 
+            class="noise-img iteration-enlargeable"
+          />
+          <div class="noise-level">
+            <span class="level-value">~50dB</span>
+            <span class="level-label">Recommended</span>
+          </div>
+        </div>
+        <div class="zone-description">
+          <p>These zones maintain the University of Arizona's recommended sound levels for productive workspaces.</p>
+        </div>
+      </div>
+      
+      <div class="noise-divider">
+        <div class="divider-line"></div>
+        <div class="divider-text">vs</div>
+        <div class="divider-line"></div>
+      </div>
+      
+      <div class="noise-zone problematic">
+        <h3 class="zone-label">Problematic Zone (243)</h3>
+        <div class="noise-visual">
+          <img 
+            src="images/uncomfortable-spl-floorlevel0-zone-243.JPG" 
+            alt="High SPL in zone 243 at 72dB" 
+            class="noise-img iteration-enlargeable"
+          />
+          <div class="noise-level">
+            <span class="level-value">72dB</span>
+            <span class="level-label">Disruptive</span>
+          </div>
+        </div>
+        <div class="zone-description">
+          <p>This outlier zone operates at 1.44× recommended levels, creating cognitive interference equivalent to constant office chatter.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="noise-impact">
+      <div class="impact-header">
+        <span class="impact-icon">⚠️</span>
+        <h3>Productivity Impact</h3>
+      </div>
+      
+      <div class="impact-stats">
+        <div class="stat-item">
+          <div class="stat-value">44%</div>
+          <div class="stat-label">Louder than optimal</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">2.5×</div>
+          <div class="stat-label">More distractions</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">27%</div>
+          <div class="stat-label">Longer task completion</div>
+        </div>
+      </div>
+      
+      <div class="impact-quote">
+        <blockquote>
+          "The University of Arizona research shows sound levels above 50dB significantly impact cognitive performance and employee comfort."
+          <footer>— Kyle Mittan, University Communications</footer>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="noise-recommendations">
+      <h3>Acoustic Optimization Opportunities</h3>
+      <ul class="recommendation-list">
+        <li>
+          <div class="recommendation-marker">🔇</div>
+          <span>Targeted soundproofing for <span class="highlight">Zone 243</span> to bring SPL down to recommended levels</span>
+        </li>
+        <li>
+          <div class="recommendation-marker">📊</div>
+          <span>Continuous SPL monitoring to identify and address outlier zones</span>
+        </li>
+        <li>
+          <div class="recommendation-marker">🔄</div>
+          <span>Re-evaluate space allocation based on acoustic profiles</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Why Facility Managers Care Section -->
+<section class="project-section fm-care-section">
+  <div class="project-text-blur">
+    <h2>Why Facility Managers Should Care</h2>
+    
+    <div class="fm-impact-grid">
+      <!-- Energy Waste Card -->
+      <div class="impact-card">
+        <div class="impact-card-header">
+          <span class="impact-icon">💤</span>
+          <h3>Loss Of Concentration And Greater Fatigue</h3>
+        </div>
+        <p>Optimizing HVAC systems to reduce workplace noise is essential, not only for maintaining thermal comfort, but also for minimizing distractions, fatigue, and stress among occupants.</p>
+        <div class="impact-source">
+          <div class="source-badge">NIOSH</div>
+          <p>"Workplace noise affects concentration and can lead to greater fatigue and stress, as NIOSH points out. Effective noise control can help mitigate these issues."</p>
+        </div>
+      </div>
+      
+      <!-- Comfort & Productivity Card -->
+      <div class="impact-card">
+        <div class="impact-card-header">
+          <span class="impact-icon">🦻</span>
+          <h3>Risk Of Hearing Loss</h3>
+        </div>
+        <p>Ensuring HVAC systems don’t add to high office noise levels is crucial, as prolonged exposure can cause fatigue and even hearing loss, making noise control vital for workplace management.</p>
+        <div class="impact-source">
+          <div class="source-badge">OSHA</div>
+          <p>"High noise levels can cause fatigue and hearing loss, as noted by OSHA, making effective noise control an important part of office management."</p>
+        </div>
+      </div>
+      
+      <!-- Optimization Opportunity Card -->
+      <div class="impact-card">
+        <div class="impact-card-header">
+          <span class="impact-icon">🏅</span>
+          <h3>Importance Of Sound Guidelines</h3>
+        </div>
+        <p>Following WELL guidelines by controlling HVAC noise is essential, since poor acoustics can cause discomfort and distraction in office environments.</p>
+        <div class="impact-source">
+          <div class="source-badge">WELL</div>
+          <p>"WELL guidelines emphasize the importance of controlling noise levels, noting that poor acoustics can lead to discomfort and distraction in office environments."</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="fm-key-statistics">
+      <h3>The High Cost of Inaction</h3>
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-value">66%</div>
+          <div class="stat-label">Report noise as the top productivity disruptor</div>
+          <footer>(Leesman Index, 2021)</footer>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">25%</div>
+          <div class="stat-label">More errors with excessive office noise</div>
+          <footer>(Banbury & Berry, 2005)</footer>
+        </div>
+      </div>
+    </div>
+    
+    <div class="fm-callout">
+      <div class="callout-icon">⚠️</div>
+      <div class="callout-text">
+        <strong>Missed Opportunities:</strong> Without data-driven adjustments, facilities either over-ventilate empty spaces or under-ventilate crowded ones - wasting energy while compromising comfort.
+      </div>
     </div>
   </div>
 </section>

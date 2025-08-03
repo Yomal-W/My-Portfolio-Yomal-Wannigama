@@ -4281,11 +4281,11 @@ line-height: 1.6;
 }
 
 .co2-vital-signs {
-  background: rgba(193, 168, 255, 0.08);
-  border-radius: 16px;
+  margin: 1.8rem 0;
   padding: 1.5rem;
-  margin-bottom: 2rem;
-  border-top: 1px solid rgba(100, 220, 255, 0.3);
+  background: rgba(193, 168, 255, 0.1);
+  border-radius: 12px;
+  border-left: 4px solid #C1A8FF;
 }
 
 .vital-sign {
@@ -4296,7 +4296,7 @@ line-height: 1.6;
 
 .sign-label {
   font-family: 'Rubik', sans-serif;
-  color: #64DCFF;
+  color: #C1A8FF;
   font-size: 1.1rem;
   word-break: break-word;
 }
@@ -4337,7 +4337,7 @@ line-height: 1.6;
 }
 
 .state-illustration.active .dot {
-  background: #FFCB05;
+  background: #C1A8FF;
 }
 
 .co2-value {
@@ -4361,8 +4361,10 @@ line-height: 1.6;
   white-space: nowrap;
 }
 
-.state-label.off-hours { background: #bae2e8; }
-.state-label.peak-hours { background: #ffe3c5; }
+.state-label.off-hours { background: #C1A8FF
+; }
+.state-label.peak-hours { background: #C1A8FF
+; }
 
 .co2-transition {
   flex: 1;
@@ -4411,7 +4413,7 @@ line-height: 1.6;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  border-left: 4px solid #64DCFF;
+  border-left: 4px solid #C1A8FF;
   overflow: hidden; /* Prevent content overflow */
 }
 
@@ -4454,7 +4456,7 @@ line-height: 1.6;
   font-family: 'Rubik', sans-serif;
   font-size: 1.8rem;
   font-weight: 600;
-  color: #64DCFF;
+  color: #C1A8FF;
   word-break: break-word;
 }
 
@@ -4473,7 +4475,7 @@ line-height: 1.6;
 .co2-key-findings h3 {
   font-size: 1.25rem;
   font-family: 'Rubik', sans-serif;
-  color: #64DCFF;
+  color: #C1A8FF;
   margin-bottom: 0.5rem;
   word-break: break-word;
 }
@@ -4481,7 +4483,7 @@ line-height: 1.6;
 .co2-trend-visual h3 {
   font-size: 1.25rem;
   font-family: 'Rubik', sans-serif;
-  color: #64DCFF;
+  color: #C1A8FF;
   margin-bottom: 0.5rem;
   word-break: break-word;
 }
@@ -4501,6 +4503,25 @@ line-height: 1.6;
 
 .co2-trend-visual {
   text-align: center;
+}
+
+.co2-2019-img {
+  display: block;
+  max-width: 500px;   /* Ensures they never get too big */
+  width: 95%;         /* Responsive, up to max */
+  margin: 0 auto;
+  margin-bottom: 0.8rem;
+  border-radius: 13px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  transition: transform 0.23s, box-shadow 0.22s;
+}
+
+.co2-2019-img:hover,
+.co2-2019-img:focus-visible {
+  transform: scale(1.028);
+  box-shadow: 0 4px 32px 0 rgba(193,168,255,0.20), 0 2px 16px rgba(0,0,0,0.17);
+  z-index: 2;
 }
 
 @media (max-width: 900px) {
@@ -4588,6 +4609,416 @@ line-height: 1.6;
   .diagnosis-card {
     padding: 1rem;
   }
-  
+}
 
+
+
+/* === Why Facility Managers Care Section === */
+.fm-care-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+}
+
+.fm-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.impact-card {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-top: 3px solid #C1A8FF;
+}
+
+.impact-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.impact-icon {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+.impact-card h3 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.impact-card p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.impact-source {
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin-top: 1rem;
+}
+
+.source-badge {
+  display: inline-block;
+  background: rgba(193, 168, 255, 0.3);
+  color: #C1A8FF;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-family: 'Overpass Mono', monospace;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.impact-source p {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.fm-key-statistics {
+  margin: 2.5rem 0;
+}
+
+.fm-key-statistics h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.stat-value {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #C1A8FF;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.fm-callout {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(255, 203, 5, 0.15);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.callout-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.callout-text {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.95);
+  line-height: 1.6;
+}
+
+.stat-item footer {
+  font-family: 'Overpass Mono', monospace;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .fm-impact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .fm-callout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .callout-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+/* === Noise Insight Section === */
+.noise-insight-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+}
+
+.noise-comparison {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2.5rem 0;
+  justify-content: center;
+}
+
+.noise-zone {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-top: 3px solid #C1A8FF;
+}
+
+.noise-zone.problematic {
+  border-top-color: #FF6B6B;
+}
+
+.zone-label {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.noise-visual {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.noise-zone.problematic .noise-visual {
+  width: 30%;
+  margin: 0 auto 1rem;
+  padding: 10px; /* Adds some breathing room */
+}
+
+.noise-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  transition: transform 0.23s;
+}
+
+.noise-img:hover {
+  transform: scale(1.03);
+}
+
+.noise-level {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noise-zone.problematic .noise-level {
+  bottom: 15px; /* Adjust position for smaller image */
+}
+
+.level-value {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.level-label {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.zone-description p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+.noise-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 200px;
+  align-self: center;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.3);
+}
+
+.divider-text {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  font-weight: bold;
+}
+
+.noise-impact {
+  margin: 2.5rem 0;
+}
+
+.impact-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.impact-icon {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+.impact-header h3 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.stat-item {
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-value {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #FF6B6B;
+}
+
+.stat-label {
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.impact-quote {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-left: 3px solid #C1A8FF;
+}
+
+.impact-quote blockquote {
+  font-family: 'Overpass', sans-serif;
+  font-style: italic;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.impact-quote footer {
+  font-family: 'Overpass Mono', monospace;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: 0.5rem;
+}
+
+.noise-recommendations {
+  margin-top: 2rem;
+}
+
+.noise-recommendations h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 1rem;
+}
+
+.recommendation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recommendation-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  background: rgba(193, 168, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.recommendation-marker {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.recommendation-list li span {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .noise-comparison {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .noise-zone {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .noise-divider {
+    flex-direction: row;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+  
+  .impact-stats {
+    grid-template-columns: 1fr;
+  }
 }
