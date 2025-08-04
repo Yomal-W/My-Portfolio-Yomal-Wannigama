@@ -32,23 +32,23 @@
   <div id="p5-container"></div>
 
     <!-- ieq dashboard hero content -->
-<section class="project-hero-section">
-  <div class="project-hero-inner">
-    <div class="project-hero-text">
-      <h1>IEQ Dashboard</h1>
-      <p>Empower your facilities team with live, interactive insights on air quality and noise – all in one intuitive dashboard</p>
-      <p class="project-hero-meta">
-        <strong>Project type:</strong> Interactive TV + Mobile App<br>
-        <strong>Role:</strong> Software Developer, Researcher<br>
-        <strong>Tools:</strong> JavaScript, Excel, HTML/CSS<br>
-        <strong>Duration:</strong> Q1 2025
-      </p>
-    </div>
-    <div class="project-hero-image desktop">
-      <img src="images/IEQ Dashboard - desktop.gif" alt="IEQ Dashboard Demo" />
-    </div>
-  </div>
-</section>
+    <section class="project-hero-section">
+      <div class="project-hero-inner">
+        <div class="project-hero-text">
+          <h1>IEQ Dashboard</h1>
+          <p>Empower your facilities team with live, interactive insights on air quality and noise – all in one intuitive dashboard</p>
+          <p class="project-hero-meta">
+            <strong>Project type:</strong> Interactive TV + Mobile App<br>
+            <strong>Role:</strong> Software Developer, Researcher<br>
+            <strong>Tools:</strong> JavaScript, Plotly.js library, Excel, HTML/CSS<br>
+            <strong>Duration:</strong> Q1 2025
+          </p>
+        </div>
+        <div class="project-hero-image desktop">
+          <img src="images/IEQ Dashboard - desktop.gif" alt="IEQ Dashboard Demo" />
+        </div>
+      </div>
+    </section>
 
 
 
@@ -56,15 +56,15 @@
     <section class="project-section">
       <div class="project-text-blur highlighted-problem">
         <h2>The Problem Statement</h2>
-<p>
-  Facility managers often lack <span class="highlight">real-time, actionable insights</span> into indoor office comfort, resulting in <strong>inefficient building management</strong>. <span class="highlight">Static HVAC schedules</span> fail to adjust to actual occupancy, causing <strong>CO₂ spikes during peak office hours</strong> and leading to <span class="highlight">discomfort, complaints, and wasted energy</span>.
-</p>
-<p>
-  Additionally, <strong>sound pressure levels vary significantly across zones</strong>, with some areas experiencing <span class="highlight">excessive noise that disrupts focus and productivity</span>.
-</p>
-<p>
-  There is a need for <strong>data-driven tools</strong> that enable facility managers to proactively address <span class="highlight">air quality</span> and <strong>noise issues</strong>, helping to <span class="highlight">improve occupant comfort</span> and <strong>reduce operational inefficiencies</strong>.
-</p>
+          <p>
+            Facility managers often lack <span class="highlight">real-time, actionable insights</span> into indoor office comfort, resulting in <strong>inefficient building management</strong>. <span class="highlight">Static HVAC schedules</span> fail to adjust to actual occupancy, causing <strong>CO₂ spikes during peak office hours</strong> and leading to <span class="highlight">discomfort, complaints, and wasted energy</span>.
+          </p>
+          <p>
+            Additionally, <strong>sound pressure levels vary significantly across zones</strong>, with some areas experiencing <span class="highlight">excessive noise that disrupts focus and productivity</span>.
+          </p>
+          <p>
+            There is a need for <strong>data-driven tools</strong> that enable facility managers to proactively address <span class="highlight">air quality</span> and <strong>noise issues</strong>, helping to <span class="highlight">improve occupant comfort</span> and <strong>reduce operational inefficiencies</strong>.
+          </p>
 
 
         <!-- NEW: Appendix Links -->
@@ -111,428 +111,1050 @@
     </section>
     
 
-<!-- Where the Data is From Section -->
-<section class="project-section data-origin-section">
-  <div class="project-text-blur">
-    <h2>The Science Behind the Dashboard</h2>
-    
-    <div class="data-origin-header">
-      <div class="data-origin-badge">
-        <span class="badge-icon">🔬</span>
-        <span class="badge-text">Research Partnership</span>
-      </div>
-      <h3>Indoor Environmental Quality Lab</h3>
-      <p class="data-context">Working with real sensor data from the IEQ Lab's SAMBA system</p>
-    </div>
-
-    <div class="data-grid">
-      <!-- Data Source Card -->
-      <div class="data-card">
-        <div class="data-card-header">
-          <span class="data-card-icon">🏢</span>
-          <h4>The Building Ecosystem</h4>
+    <!-- Where the Data is From Section -->
+    <section class="project-section data-origin-section">
+      <div class="project-text-blur">
+        <h2>The Science Behind the Dashboard</h2>
+        
+        <div class="data-origin-header">
+          <div class="data-origin-badge">
+            <span class="badge-icon">🔬</span>
+            <span class="badge-text">Research Partnership</span>
+          </div>
+          <h3>Indoor Environmental Quality Lab</h3>
+          <p class="data-context">Working with real sensor data from the IEQ Lab's SAMBA system</p>
         </div>
-        <p>Our dashboard visualizes data from a network of sensors monitoring a real office building throughout 2019, capturing the complex interplay of environmental factors that shape our indoor experiences.</p>
-      </div>
-      
-      <!-- Sensor Network Card -->
-      <div class="data-card">
-        <div class="data-card-header">
-          <span class="data-card-icon">📡</span>
-          <h4>Sensor Network</h4>
-        </div>
-        <p>The SAMBA system tracked 10 key variables every 5 minutes across multiple floors and zones, creating a rich dataset of over 2.6 million data points.</p>
-      </div>
-    </div>
 
-    <div class="sensor-variables">
-      <h3>Key Environmental Variables Tracked</h3>
-      <div class="sensor-grid">
-        <div class="sensor-category">
-          <h4>Physical Measurements</h4>
-          <ul class="sensor-list">
-            <li>Air temperature (ta)</li>
-            <li>Globe temperature (tg)</li>
-            <li>Relative humidity (rh)</li>
-            <li>Airspeed (a_s)</li>
-            <li>Sound level (spl)</li>
-            <li>Light level (lux)</li>
-            <li>CO₂ concentration (co2)</li>
+        <div class="data-grid">
+          <!-- Data Source Card -->
+          <div class="data-card">
+            <div class="data-card-header">
+              <span class="data-card-icon">🏢</span>
+              <h4>The Building Ecosystem</h4>
+            </div>
+            <p>Our dashboard visualizes data from a network of sensors monitoring a real office building throughout 2019, capturing the complex interplay of environmental factors that shape our indoor experiences.</p>
+          </div>
+          
+          <!-- Sensor Network Card -->
+          <div class="data-card">
+            <div class="data-card-header">
+              <span class="data-card-icon">📡</span>
+              <h4>Sensor Network</h4>
+            </div>
+            <p>The SAMBA system tracked 10 key variables every 5 minutes across multiple floors and zones, creating a rich dataset of over 2.6 million data points.</p>
+          </div>
+        </div>
+
+        <div class="sensor-variables">
+          <h3>Key Environmental Variables Tracked</h3>
+          <div class="sensor-grid">
+            <div class="sensor-category">
+              <h4>Physical Measurements</h4>
+              <ul class="sensor-list">
+                <li>Air temperature (ta)</li>
+                <li>Globe temperature (tg)</li>
+                <li>Relative humidity (rh)</li>
+                <li>Airspeed (a_s)</li>
+                <li>Sound level (spl)</li>
+                <li>Light level (lux)</li>
+                <li>CO₂ concentration (co2)</li>
+              </ul>
+            </div>
+            
+            <div class="sensor-category">
+              <h4>Comfort Indices</h4>
+              <ul class="sensor-list">
+                <li>Mean radiant temperature (tmrt)</li>
+                <li>Predicted Mean Vote (pmv)</li>
+                <li>Predicted Percentage Dissatisfied (ppd)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="data-purpose">
+          <h3>Why This Matters</h3>
+          <p class="purpose-statement">
+            Buildings account for nearly 40% of global energy consumption, yet many fail to provide basic comfort. By visualizing this data, we reveal patterns that can help optimize both occupant experience and energy efficiency.
+          </p>
+          <div class="purpose-highlight">
+            <span class="highlight-icon">💡</span>
+            <span class="highlight-text">Our goal: Transform raw sensor data into actionable insights for smarter building management</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insight 1: CO₂ Spikes When Occupancy Peaks -->
+    <section class="project-section co2-insight-section">
+      <div class="project-text-blur">
+        <h2>Insight 1: The Breath of Your Office</h2>
+
+        
+        <p class="project-section-text">
+          Your office breathes with its occupants. Like a living organism, CO₂ levels rise and fall with the rhythm of the workday. During <span class="highlight">morning surges (9–12PM)</span> and <span class="highlight">afternoon waves (1–3PM)</span>, concentrations swell to <strong>575ppm</strong>—a <span class="highlight">28% respiratory spike</span> from the resting rate of ~450ppm.
+        </p>
+
+        <div class="co2-vital-signs">
+          <div class="vital-sign">
+            <h3 class="sign-label">CO₂ Rhythm - Off-Hours to Peak office hour spike 9AM-3PM</h3>
+          </div>
+          
+          <div class="co2-comparison-container">
+            <div class="co2-state">
+              <div class="state-illustration resting">
+                <div class="office-dots">
+                  <div class="dot"></div><div class="dot"></div>
+                </div>
+                <div class="co2-value">~450ppm</div>
+                <div class="state-label off-hours">Resting Rate</div>
+              </div>
+            </div>
+            
+            <div class="co2-transition">
+              <div class="transition-arrow">
+                <div class="arrow-line"></div>
+                <div class="arrow-head"></div>
+              </div>
+              <div class="transition-label">+28% During Activity</div>
+            </div>
+            
+            <div class="co2-state">
+              <div class="state-illustration active">
+                <div class="office-dots">
+                  <div class="dot"></div><div class="dot"></div>
+                  <div class="dot"></div><div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="co2-value">~575ppm</div>
+                <div class="state-label peak-hours">Peak Activity</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="co2-diagnosis">
+          <div class="diagnosis-card">
+            <div class="diagnosis-icon">⚠️</div>
+            <h3>System Diagnosis</h3>
+            <p>Your HVAC operates like a metronome—steady, unchanging—while your office breathes like a marathon runner. This mismatch wastes <span class="highlight">20–30% in energy</span> while leaving employees gasping for cognitive clarity.</p>
+          </div>
+          
+          <div class="co2-impact-grid">
+            <div class="impact-item">
+              <div class="impact-value">4hrs/day</div>
+              <div class="impact-desc">Above ideal CO₂ levels</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-value">2–5%</div>
+              <div class="impact-desc">Cognitive decline</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-value">28%</div>
+              <div class="impact-desc">Concentration swing</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="co2-key-findings">
+          <h3>The Breathing Pattern Reveals:</h3>
+          <ul class="findings-list">
+            <li>
+              <div class="finding-marker"></div>
+              <span>CO₂ peaks mirror <span class="highlight">occupancy patterns</span> with uncanny precision</span>
+            </li>
+            <li>
+              <div class="finding-marker"></div>
+              <span>Air quality <span class="highlight">weakens</span> precisely when mental demands peak</span>
+            </li>
+            <li>
+              <div class="finding-marker"></div>
+              <span>Your HVAC <span class="highlight">breathes at one speed</span> while your team needs dynamic respiration</span>
+            </li>
           </ul>
         </div>
+
+        <div class="co2-trend-visual">
+          <h3>The Daily Respiratory Cycle</h3>
+            <div>
+              <img 
+                src="images/average-hourly-co2-concentration-in-office-spaces-(2019).JPG" 
+                alt="Average Hourly CO2 Concentration in Office Spaces" 
+                class="co2-2019-img iteration-enlargeable"
+              />
+              <div class="brainstorm-img-caption">
+                <strong>hourly CO₂ concentration in office spaces (2019)</strong>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Facility Managers Care Section -->
+    <section class="project-section fm-care-section">
+      <div class="project-text-blur">
+        <h2>Why Facility Managers Should Care</h2>
         
-        <div class="sensor-category">
-          <h4>Comfort Indices</h4>
-          <ul class="sensor-list">
-            <li>Mean radiant temperature (tmrt)</li>
-            <li>Predicted Mean Vote (pmv)</li>
-            <li>Predicted Percentage Dissatisfied (ppd)</li>
+        <div class="fm-impact-grid">
+          <!-- Energy Waste Card -->
+          <div class="impact-card">
+            <div class="impact-card-header">
+              <span class="impact-icon">⚡</span>
+              <h3>Energy Waste & System Strain</h3>
+            </div>
+            <p>High or inconsistent CO₂ levels lead to more complaints, prompting frequent manual HVAC adjustments that waste energy and strain systems.</p>
+            <div class="impact-source">
+              <div class="source-badge">U.S. DOE</div>
+              <p>"Frequent manual adjustments reduce HVAC efficiency and waste energy."</p>
+            </div>
+          </div>
+          
+          <!-- Comfort & Productivity Card -->
+          <div class="impact-card">
+            <div class="impact-card-header">
+              <span class="impact-icon">📉</span>
+              <h3>Complaints & Productivity Loss</h3>
+            </div>
+            <p>Employees feel "stuffy air" and complain when CO₂ levels rise, leading to discomfort and cognitive performance declines of 2-5%.</p>
+            <div class="impact-source">
+              <div class="source-badge">LBNL Study</div>
+              <p>"Without data-driven adjustments, you're either over-ventilating empty spaces or under-ventilating crowded ones."</p>
+            </div>
+          </div>
+          
+          <!-- Optimization Opportunity Card -->
+          <div class="impact-card">
+            <div class="impact-card-header">
+              <span class="impact-icon">💸</span>
+              <h3>Significant Savings Potential</h3>
+            </div>
+            <p>Smart, occupancy-based controls could cut HVAC energy use by up to 10% while improving comfort, according to ENERGY STAR guidelines.</p>
+            <div class="impact-source">
+              <div class="source-badge">EPA</div>
+              <p>"Proper scheduling and smart thermostats can dramatically improve efficiency."</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="fm-key-statistics">
+          <h3>The High Cost of Inaction</h3>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-value">20-30%</div>
+              <div class="stat-label">Energy wasted by mismatched ventilation</div>
+              <footer>(DOE, CIBSE)</footer>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">10%</div>
+              <div class="stat-label">Potential HVAC energy savings</div>
+              <footer>(ENERGY STAR)</footer>
+            </div>
+          </div>
+        </div>
+        
+        <div class="fm-callout">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-text">
+            <strong>Missed Opportunities:</strong> Without data-driven adjustments, facilities either over-ventilate empty spaces or under-ventilate crowded ones - wasting energy while compromising comfort.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Noise Insight Section -->
+    <section class="project-section noise-insight-section">
+      <div class="project-text-blur">
+        <h2>Insight 2: The Silent Productivity Killer</h2>
+        
+        <p class="project-section-text">
+          Your office's soundscape tells a story of uneven comfort. While most zones on <span class="highlight">Floor 0</span> maintain optimal sound levels (~50dB), <span class="highlight">Zone 243</span> screams with disruptive noise at <strong>72dB</strong>—<span class="highlight">1.44× louder</span> than recommended levels, creating an acoustic minefield for productivity.
+        </p>
+
+        <div class="noise-comparison">
+          <div class="noise-zone optimal">
+            <h3 class="zone-label">Optimal Zones (402, 403, 430, 431)</h3>
+            <div class="noise-visual">
+              <img 
+                src="images/optimal-spl-floorlevel0-zones-402-403-430-431.JPG" 
+                alt="Optimal SPL in zones 402, 403, 430, 431 at ~50dB" 
+                class="noise-img iteration-enlargeable"
+              />
+              <div class="noise-level">
+                <span class="level-value">~50dB</span>
+                <span class="level-label">Recommended</span>
+              </div>
+            </div>
+            <div class="zone-description">
+              <p>These zones maintain the University of Arizona's recommended sound levels for productive workspaces.</p>
+            </div>
+          </div>
+          
+          <div class="noise-divider">
+            <div class="divider-line"></div>
+            <div class="divider-text">vs</div>
+            <div class="divider-line"></div>
+          </div>
+          
+          <div class="noise-zone problematic">
+            <h3 class="zone-label">Problematic Zone (243)</h3>
+            <div class="noise-visual">
+              <img 
+                src="images/uncomfortable-spl-floorlevel0-zone-243.JPG" 
+                alt="High SPL in zone 243 at 72dB" 
+                class="noise-img iteration-enlargeable"
+              />
+              <div class="noise-level">
+                <span class="level-value">72dB</span>
+                <span class="level-label">Disruptive</span>
+              </div>
+            </div>
+            <div class="zone-description">
+              <p>This outlier zone operates at 1.44× recommended levels, creating cognitive interference equivalent to constant office chatter.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="noise-impact">
+          <div class="impact-header">
+            <span class="impact-icon">⚠️</span>
+            <h3>Productivity Impact</h3>
+          </div>
+          
+          <div class="impact-stats">
+            <div class="stat-item">
+              <div class="stat-value">44%</div>
+              <div class="stat-label">Louder than optimal</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">2.5×</div>
+              <div class="stat-label">More distractions</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">27%</div>
+              <div class="stat-label">Longer task completion</div>
+            </div>
+          </div>
+          
+          <div class="impact-quote">
+            <blockquote>
+              "The University of Arizona research shows sound levels above 50dB significantly impact cognitive performance and employee comfort."
+              <footer>— Kyle Mittan, University Communications</footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="noise-recommendations">
+          <h3>Acoustic Optimization Opportunities</h3>
+          <ul class="recommendation-list">
+            <li>
+              <div class="recommendation-marker">🔇</div>
+              <span>Targeted soundproofing for <span class="highlight">Zone 243</span> to bring SPL down to recommended levels</span>
+            </li>
+            <li>
+              <div class="recommendation-marker">📊</div>
+              <span>Continuous SPL monitoring to identify and address outlier zones</span>
+            </li>
+            <li>
+              <div class="recommendation-marker">🔄</div>
+              <span>Re-evaluate space allocation based on acoustic profiles</span>
+            </li>
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="data-purpose">
-      <h3>Why This Matters</h3>
-      <p class="purpose-statement">
-        Buildings account for nearly 40% of global energy consumption, yet many fail to provide basic comfort. By visualizing this data, we reveal patterns that can help optimize both occupant experience and energy efficiency.
-      </p>
-      <div class="purpose-highlight">
-        <span class="highlight-icon">💡</span>
-        <span class="highlight-text">Our goal: Transform raw sensor data into actionable insights for smarter building management</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Insight 1: CO₂ Spikes When Occupancy Peaks -->
-<section class="project-section co2-insight-section">
-  <div class="project-text-blur">
-    <h2>Insight 1: The Breath of Your Office</h2>
-
-    
-    <p class="project-section-text">
-      Your office breathes with its occupants. Like a living organism, CO₂ levels rise and fall with the rhythm of the workday. During <span class="highlight">morning surges (9–12PM)</span> and <span class="highlight">afternoon waves (1–3PM)</span>, concentrations swell to <strong>575ppm</strong>—a <span class="highlight">28% respiratory spike</span> from the resting rate of ~450ppm.
-    </p>
-
-    <div class="co2-vital-signs">
-      <div class="vital-sign">
-        <h3 class="sign-label">CO₂ Rhythm - Off-Hours to Peak office hour spike 9AM-3PM</h3>
-      </div>
-      
-      <div class="co2-comparison-container">
-        <div class="co2-state">
-          <div class="state-illustration resting">
-            <div class="office-dots">
-              <div class="dot"></div><div class="dot"></div>
+    <!-- Why Facility Managers Care Section -->
+    <section class="project-section fm-care-section">
+      <div class="project-text-blur">
+        <h2>Why Facility Managers Should Care</h2>
+        
+        <div class="fm-impact-grid">
+          <!-- Energy Waste Card -->
+          <div class="impact-card">
+            <div class="impact-card-header">
+              <span class="impact-icon">💤</span>
+              <h3>Loss Of Concentration And Greater Fatigue</h3>
             </div>
-            <div class="co2-value">~450ppm</div>
-            <div class="state-label off-hours">Resting Rate</div>
+            <p>Optimizing HVAC systems to reduce workplace noise is essential, not only for maintaining thermal comfort, but also for minimizing distractions, fatigue, and stress among occupants.</p>
+            <div class="impact-source">
+              <div class="source-badge">NIOSH</div>
+              <p>"Workplace noise affects concentration and can lead to greater fatigue and stress, as NIOSH points out. Effective noise control can help mitigate these issues."</p>
+            </div>
+          </div>
+          
+          <!-- Comfort & Productivity Card -->
+          <div class="impact-card">
+            <div class="impact-card-header">
+              <span class="impact-icon">🦻</span>
+              <h3>Risk Of Hearing Loss</h3>
+            </div>
+            <p>Ensuring HVAC systems don’t add to high office noise levels is crucial, as prolonged exposure can cause fatigue and even hearing loss, making noise control vital for workplace management.</p>
+            <div class="impact-source">
+              <div class="source-badge">OSHA</div>
+              <p>"High noise levels can cause fatigue and hearing loss, as noted by OSHA, making effective noise control an important part of office management."</p>
+            </div>
+          </div>
+          
+          <!-- Optimization Opportunity Card -->
+          <div class="impact-card">
+            <div class="impact-card-header">
+              <span class="impact-icon">🏅</span>
+              <h3>Importance Of Sound Guidelines</h3>
+            </div>
+            <p>Following WELL guidelines by controlling HVAC noise is essential, since poor acoustics can cause discomfort and distraction in office environments.</p>
+            <div class="impact-source">
+              <div class="source-badge">WELL</div>
+              <p>"WELL guidelines emphasize the importance of controlling noise levels, noting that poor acoustics can lead to discomfort and distraction in office environments."</p>
+            </div>
           </div>
         </div>
         
-        <div class="co2-transition">
-          <div class="transition-arrow">
-            <div class="arrow-line"></div>
-            <div class="arrow-head"></div>
+        <div class="fm-key-statistics">
+          <h3>The High Cost of Inaction</h3>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-value">66%</div>
+              <div class="stat-label">Report noise as the top productivity disruptor</div>
+              <footer>(Leesman Index, 2021)</footer>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">25%</div>
+              <div class="stat-label">More errors with excessive office noise</div>
+              <footer>(Banbury & Berry, 2005)</footer>
+            </div>
           </div>
-          <div class="transition-label">+28% During Activity</div>
         </div>
         
-        <div class="co2-state">
-          <div class="state-illustration active">
-            <div class="office-dots">
-              <div class="dot"></div><div class="dot"></div>
-              <div class="dot"></div><div class="dot"></div>
-              <div class="dot"></div>
+        <div class="fm-callout">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-text">
+            <strong>Missed Opportunities:</strong> Without data-driven adjustments, facilities either over-ventilate empty spaces or under-ventilate crowded ones - wasting energy while compromising comfort.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Cleaning Section -->
+    <section class="project-section data-cleaning-section">
+      <div class="project-text-blur">
+        <h2>Data Preparation: From Raw Sensor Data to Actionable Insights</h2>
+        
+        <div class="cleaning-process">
+          <div class="process-step">
+            <div class="step-header">
+              <span class="step-number">1</span>
+              <h3>Initial Data Extraction</h3>
             </div>
-            <div class="co2-value">~575ppm</div>
-            <div class="state-label peak-hours">Peak Activity</div>
+            <div class="step-content">
+              <img 
+                src="images/filter-months-co2-screenshot.png" 
+                alt="Excel filtering for specific months" 
+                class="process-image iteration-enlargeable"
+              />
+              <div class="step-description sensor-category">
+                <p>Extracted only essential columns from the massive SAMBA dataset:</p>
+                <ul class="data-columns">
+                  <li><span class="column-name">created_date</span></li>
+                  <li><span class="column-name">created_time</span></li>
+                  <li><span class="column-name">co2</span></li>
+                </ul>
+                <p>Created new sheet <span class="sheet-name">'FILTER MONTHS CO2'</span> with Excel filters to isolate specific months.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-header">
+              <span class="step-number">2</span>
+              <h3>Monthly Data Isolation</h3>
+            </div>
+            <div class="step-content">
+              <img 
+                src="images/filter-jan-from-FILTER MONTHS CO2-sheet.png" 
+                alt="Filtering January data" 
+                class="process-image iteration-enlargeable"
+              />
+              <div class="step-description sensor-category">
+                <p>Filtered for target month (e.g. January) and copied to new sheet <span class="sheet-name">'jan - co2'</span> containing:</p>
+                <ul class="data-columns">
+                  <li><span class="column-name">created_time</span></li>
+                  <li><span class="column-name">co2</span></li>
+                </ul>
+                <p>This created a clean dataset of all January readings for further analysis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-header">
+              <span class="step-number">3</span>
+              <h3>Pivot Table Transformation</h3>
+            </div>
+            <div class="step-content">
+              <div class="pivot-config">
+                <img 
+                  src="images/pivot-table-settings-screenshot.png" 
+                  alt="Pivot table configuration" 
+                  class="process-image iteration-enlargeable"
+                />
+                <div class="pivot-settings sensor-category">
+                  <h4>Pivot Table Configuration:</h4>
+                  <ul class="settings-list">
+                    <li>Created new worksheet <span class="sheet-name">'JAN CO2'</span></li>
+                    <li><span class="setting-name">Rows:</span> Hours (created_time)</li>
+                    <li><span class="setting-name">Values:</span> Average of co2</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-header">
+              <span class="step-number">4</span>
+              <h3>Final Clean Dataset</h3>
+            </div>
+            <div class="step-content">
+              <img 
+                src="images/Average-CO2(PMM)-vs-Hour-Of-Day(Averaged-Across-January).png" 
+                alt="Final cleaned CO2 data" 
+                class="process-image iteration-enlargeable"
+              />
+              <div class="result-description sensor-category">
+                <p>The output provides clean, hourly average CO₂ levels across the entire month, revealing:</p>
+                <ul class="data-insights">
+                  <li>Daily fluctuation patterns</li>
+                  <li>Peak concentration times</li>
+                  <li>Baseline vs occupied levels</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="data-purpose">
+          <h3>Why This Process Matters</h3>
+          <p class="purpose-statement">
+            This meticulous cleaning transformed millions of raw sensor readings into clear temporal patterns, enabling precise identification of ventilation needs and energy waste opportunities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Initial User Interface Design – Low Fidelity Sketches -->
+    <section class="project-section lofi-sketches-section">
+      <div class="project-text-blur">
+        <h2>Initial User Interface Design: Low-Fidelity Sketches</h2>
+        <p>
+          Before digital prototyping, our team produced a suite of hand-drawn low-fidelity sketches to map out the dashboard’s information flow, visual hierarchy, and interactive elements. These sketches illustrate the envisioned experience for facility managers, highlighting key insights, data transparency, and actionable suggestions.
+        </p>
+
+        <div class="lofi-sketches-container">
+          <!-- Home/Welcome Screen -->
+          <div class="lofi-sketch-card">
+            <div class="sketch-header">
+              <h3 class="sketch-title">Home / Welcome Screen</h3>
+              <span class="sketch-author">Yomal's Concept</span>
+            </div>
+            <div class="sketch-visual">
+              <img 
+                src="images/home-welcome-screen-low-fid-sketch.JPG"
+                alt="Low-fidelity sketch of dashboard welcome screen"
+                class="wireframe-img journey-map-img"
+                style="max-width: 320px;"
+              />
+            </div>
+            <div class="sketch-details">
+              <ul class="sketch-features">
+                <li><strong>Purpose Framing:</strong> <span class="highlight">Are your HVAC and acoustic systems meeting real occupant needs?</span></li>
+                <li>Clear call-to-action for exploring data or understanding methodology</li>
+                <li>SPA scroll function: seamless transition to dashboard sections</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- How it Works Overlay -->
+          <div class="lofi-sketch-card">
+            <div class="sketch-header">
+              <h3 class="sketch-title">"How It Works" Overlay</h3>
+              <span class="sketch-author">Yomal's Concept</span>
+            </div>
+            <div class="sketch-visual">
+              <img 
+                src="images/how-it-works-overlay-low-fid-sketch.JPG"
+                alt="Low-fidelity sketch explaining the dashboard data"
+                class="wireframe-img journey-map-img"
+                style="max-width: 320px;"
+              />
+            </div>
+            <div class="sketch-details">
+              <ul class="sketch-features">
+                <li>Clean modal overlay explaining <span class="highlight">data origins (SAMBA sensors)</span></li>
+                <li>Describes tracked variables, chart purpose, and decision support</li>
+                <li>Builds trust in dashboard’s data-driven foundation</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- CO₂ Discomfort Visualization -->
+          <div class="lofi-sketch-card">
+            <div class="sketch-header">
+              <h3 class="sketch-title">CO₂ Discomfort Visualization</h3>
+              <span class="sketch-author">Yomal's Concept</span>
+            </div>
+            <div class="sketch-visual">
+              <img 
+                src="images/insight-1-co2-discomfort-visualization-screen-low-fid-sketch.JPG"
+                alt="Low-fidelity sketch of CO₂ insight graph"
+                class="wireframe-img journey-map-img"
+                style="max-width: 320px;"
+              />
+            </div>
+            <div class="sketch-details">
+              <ul class="sketch-features">
+                <li>Line graph shows <span class="highlight">CO₂ fluctuations and trends</span> by time</li>
+                <li>Slider for seasonal/month comparisons; toggle to isolate office hours</li>
+                <li>Comfort suggestions and optimal CO₂ threshold for quick reference</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SPL (Acoustic) Visualization -->
+          <div class="lofi-sketch-card">
+            <div class="sketch-header">
+              <h3 class="sketch-title">SPL Acoustic Disruption Visualization</h3>
+              <span class="sketch-author">Yomal's Concept</span>
+            </div>
+            <div class="sketch-visual">
+              <img 
+                src="images/insight-2-SPL-acoustic-disruption-visualization-screen-low-fid-sketch.JPG"
+                alt="Low-fidelity sketch of SPL bar chart"
+                class="wireframe-img journey-map-img"
+                style="max-width: 320px;"
+              />
+            </div>
+            <div class="sketch-details">
+              <ul class="sketch-features">
+                <li>Bar chart compares <span class="highlight">sound levels by zone</span> with clear outlier spotting</li>
+                <li>Dropdown toggles for floor selection, dynamic filtering</li>
+                <li>Panel offers actionable comfort suggestions for noisy zones</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Zone Performance & Reporting -->
+          <div class="lofi-sketch-card">
+            <div class="sketch-header">
+              <h3 class="sketch-title">Zone Performance & Report</h3>
+              <span class="sketch-author">Yomal's Concept</span>
+            </div>
+            <div class="sketch-visual">
+              <img 
+                src="images/report-section-screen-low-fid-sketch.JPG"
+                alt="Low-fidelity sketch of report/zone performance summary"
+                class="wireframe-img journey-map-img"
+                style="max-width: 320px;"
+              />
+            </div>
+            <div class="sketch-details">
+              <ul class="sketch-features">
+                <li>Performance summary combines <span class="highlight">CO₂ and SPL patterns by zone</span></li>
+                <li>Enables quick zone health assessment for action planning</li>
+                <li>Download PDF option for offline analysis or sharing</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="co2-diagnosis">
-      <div class="diagnosis-card">
-        <div class="diagnosis-icon">⚠️</div>
-        <h3>System Diagnosis</h3>
-        <p>Your HVAC operates like a metronome—steady, unchanging—while your office breathes like a marathon runner. This mismatch wastes <span class="highlight">20–30% in energy</span> while leaving employees gasping for cognitive clarity.</p>
-      </div>
-      
-      <div class="co2-impact-grid">
-        <div class="impact-item">
-          <div class="impact-value">4hrs/day</div>
-          <div class="impact-desc">Above ideal CO₂ levels</div>
+    <!-- Usability Testing Section -->
+    <section class="project-section usability-section">
+      <div class="project-text-blur">
+        <h2>Usability Testing: From Prototype to Polished Dashboard</h2>
+        
+        <div class="testing-objectives">
+          <h3>Objectives</h3>
+          <p>Validate whether the IEQ Dashboard clearly communicates indoor environmental quality data and empowers facility managers to take action through:</p>
+          <ul class="objective-list">
+            <li>Intuitive data interpretation</li>
+            <li>Clear problem identification</li>
+            <li>Actionable recommendations</li>
+          </ul>
         </div>
-        <div class="impact-item">
-          <div class="impact-value">2–5%</div>
-          <div class="impact-desc">Cognitive decline</div>
-        </div>
-        <div class="impact-item">
-          <div class="impact-value">28%</div>
-          <div class="impact-desc">Concentration swing</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="co2-key-findings">
-      <h3>The Breathing Pattern Reveals:</h3>
-      <ul class="findings-list">
-        <li>
-          <div class="finding-marker"></div>
-          <span>CO₂ peaks mirror <span class="highlight">occupancy patterns</span> with uncanny precision</span>
-        </li>
-        <li>
-          <div class="finding-marker"></div>
-          <span>Air quality <span class="highlight">weakens</span> precisely when mental demands peak</span>
-        </li>
-        <li>
-          <div class="finding-marker"></div>
-          <span>Your HVAC <span class="highlight">breathes at one speed</span> while your team needs dynamic respiration</span>
-        </li>
-      </ul>
-    </div>
-
-    <div class="co2-trend-visual">
-      <h3>The Daily Respiratory Cycle</h3>
-        <div>
-          <img 
-            src="images/average-hourly-co2-concentration-in-office-spaces-(2019).JPG" 
-            alt="Average Hourly CO2 Concentration in Office Spaces" 
-            class="co2-2019-img iteration-enlargeable"
-          />
-          <div class="brainstorm-img-caption">
-            <strong>hourly CO₂ concentration in office spaces (2019)</strong>
+        <div class="testing-method">
+          <h3>Methodology</h3>
+          <div class="method-grid">
+            <div class="method-card">
+              <div class="method-icon">👥</div>
+              <h4>Participants</h4>
+              <p>15 young adults (facility managers and building operations students)</p>
+            </div>
+            <div class="method-card">
+              <div class="method-icon">🗣️</div>
+              <h4>Think Aloud Protocol</h4>
+              <p>Verbal commentary while completing tasks</p>
+            </div>
+            <div class="method-card">
+              <div class="method-icon">📋</div>
+              <h4>Heuristic Evaluation</h4>
+              <p>Against Nielsen's 10 usability principles</p>
+            </div>
           </div>
         </div>
-    </div>
-  </div>
-</section>
 
-<!-- Why Facility Managers Care Section -->
-<section class="project-section fm-care-section">
-  <div class="project-text-blur">
-    <h2>Why Facility Managers Should Care</h2>
-    
-    <div class="fm-impact-grid">
-      <!-- Energy Waste Card -->
-      <div class="impact-card">
-        <div class="impact-card-header">
-          <span class="impact-icon">⚡</span>
-          <h3>Energy Waste & System Strain</h3>
-        </div>
-        <p>High or inconsistent CO₂ levels lead to more complaints, prompting frequent manual HVAC adjustments that waste energy and strain systems.</p>
-        <div class="impact-source">
-          <div class="source-badge">U.S. DOE</div>
-          <p>"Frequent manual adjustments reduce HVAC efficiency and waste energy."</p>
-        </div>
-      </div>
-      
-      <!-- Comfort & Productivity Card -->
-      <div class="impact-card">
-        <div class="impact-card-header">
-          <span class="impact-icon">📉</span>
-          <h3>Complaints & Productivity Loss</h3>
-        </div>
-        <p>Employees feel "stuffy air" and complain when CO₂ levels rise, leading to discomfort and cognitive performance declines of 2-5%.</p>
-        <div class="impact-source">
-          <div class="source-badge">LBNL Study</div>
-          <p>"Without data-driven adjustments, you're either over-ventilating empty spaces or under-ventilating crowded ones."</p>
-        </div>
-      </div>
-      
-      <!-- Optimization Opportunity Card -->
-      <div class="impact-card">
-        <div class="impact-card-header">
-          <span class="impact-icon">💸</span>
-          <h3>Significant Savings Potential</h3>
-        </div>
-        <p>Smart, occupancy-based controls could cut HVAC energy use by up to 10% while improving comfort, according to ENERGY STAR guidelines.</p>
-        <div class="impact-source">
-          <div class="source-badge">EPA</div>
-          <p>"Proper scheduling and smart thermostats can dramatically improve efficiency."</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="fm-key-statistics">
-      <h3>The High Cost of Inaction</h3>
-      <div class="stat-grid">
-        <div class="stat-item">
-          <div class="stat-value">20-30%</div>
-          <div class="stat-label">Energy wasted by mismatched ventilation</div>
-          <footer>(DOE, CIBSE)</footer>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">10%</div>
-          <div class="stat-label">Potential HVAC energy savings</div>
-          <footer>(ENERGY STAR)</footer>
-        </div>
-      </div>
-    </div>
-    
-    <div class="fm-callout">
-      <div class="callout-icon">⚠️</div>
-      <div class="callout-text">
-        <strong>Missed Opportunities:</strong> Without data-driven adjustments, facilities either over-ventilate empty spaces or under-ventilate crowded ones - wasting energy while compromising comfort.
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Noise Insight Section -->
-<section class="project-section noise-insight-section">
-  <div class="project-text-blur">
-    <h2>Insight 2: The Silent Productivity Killer</h2>
-    
-    <p class="project-section-text">
-      Your office's soundscape tells a story of uneven comfort. While most zones on <span class="highlight">Floor 0</span> maintain optimal sound levels (~50dB), <span class="highlight">Zone 243</span> screams with disruptive noise at <strong>72dB</strong>—<span class="highlight">1.44× louder</span> than recommended levels, creating an acoustic minefield for productivity.
-    </p>
-
-    <div class="noise-comparison">
-      <div class="noise-zone optimal">
-        <h3 class="zone-label">Optimal Zones (402, 403, 430, 431)</h3>
-        <div class="noise-visual">
-          <img 
-            src="images/optimal-spl-floorlevel0-zones-402-403-430-431.JPG" 
-            alt="Optimal SPL in zones 402, 403, 430, 431 at ~50dB" 
-            class="noise-img iteration-enlargeable"
-          />
-          <div class="noise-level">
-            <span class="level-value">~50dB</span>
-            <span class="level-label">Recommended</span>
+        <div class="testing-tasks">
+          <h3>Key Test Tasks</h3>
+          <div class="task-cards">
+            <div class="task-card">
+              <span class="task-number">1</span>
+              <p>Interpret CO₂ spike and describe management response</p>
+            </div>
+            <div class="task-card">
+              <span class="task-number">2</span>
+              <p>Address sound pressure warning in Zone 243</p>
+            </div>
+            <div class="task-card">
+              <span class="task-number">3</span>
+              <p>Explore dashboard features (selectors, overlays)</p>
+            </div>
           </div>
         </div>
-        <div class="zone-description">
-          <p>These zones maintain the University of Arizona's recommended sound levels for productive workspaces.</p>
-        </div>
-      </div>
-      
-      <div class="noise-divider">
-        <div class="divider-line"></div>
-        <div class="divider-text">vs</div>
-        <div class="divider-line"></div>
-      </div>
-      
-      <div class="noise-zone problematic">
-        <h3 class="zone-label">Problematic Zone (243)</h3>
-        <div class="noise-visual">
-          <img 
-            src="images/uncomfortable-spl-floorlevel0-zone-243.JPG" 
-            alt="High SPL in zone 243 at 72dB" 
-            class="noise-img iteration-enlargeable"
-          />
-          <div class="noise-level">
-            <span class="level-value">72dB</span>
-            <span class="level-label">Disruptive</span>
+
+        <div class="participant-example">
+          <h3>Participant Case Study</h3>
+          <div class="participant-response">
+            <div class="response-task">
+              <h4>Task 1: CO₂ Spike Interpretation</h4>
+              <blockquote>"Um, okay, so that CO₂ spike after 9am... that's, like, when everyone rocks up, right? We probably need to kick the AC on sooner."</blockquote>
+            </div>
+            <div class="response-task">
+              <h4>Task 2: Noise Warning Response</h4>
+              <blockquote>"Zone 243's way too loud, yeah, that's gotta be by the break room. I'd slap some panels up or tell people to chill."</blockquote>
+            </div>
+            <div class="response-task">
+              <h4>Task 3: Feature Exploration</h4>
+              <blockquote>"Oh, I didn't see the month picker at first, but now it's right there. The tips on the side are actually helpful, not just fluff."</blockquote>
+            </div>
           </div>
         </div>
-        <div class="zone-description">
-          <p>This outlier zone operates at 1.44× recommended levels, creating cognitive interference equivalent to constant office chatter.</p>
+        
+        <h3 class="ieq-heuristic-heading-table">Heuristic Evaluation</h3>
+        <div class="heuristic-usability-table-container">
+          <table class="heuristic-usability-table">
+            <thead>
+              <tr>
+                <th>Participant</th>
+                <th>Task</th>
+                <th>Heuristic Violated</th>
+                <th>Usability Issue</th>
+                <th>Recommendation</th>
+                <th>Severity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Interpret CO₂ spike</td>
+                <td>
+                  H1<br>
+                  <span class="heuristic-sub">Visibility of system status</span>
+                </td>
+                <td>
+                  User wasn’t sure if the dashboard shows if HVAC adjusts automatically.
+                </td>
+                <td>
+                  Add clearer links from spikes to system action/ventilation status.
+                </td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Sound warning</td>
+                <td>
+                  H2<br>
+                  <span class="heuristic-sub">Match between system & real world</span>
+                </td>
+                <td>
+                  Unsure if warning is for equipment or people; action unclear.
+                </td>
+                <td>
+                  Suggest specific causes or actions for noise warnings.
+                </td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Dashboard features</td>
+                <td>
+                  H6<br>
+                  <span class="heuristic-sub">Recognition rather than recall</span>
+                </td>
+                <td>
+                  Month selector was initially missed.
+                </td>
+                <td>
+                  Make selectors always visible and labeled.
+                </td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-    </div>
-
-    <div class="noise-impact">
-      <div class="impact-header">
-        <span class="impact-icon">⚠️</span>
-        <h3>Productivity Impact</h3>
-      </div>
-      
-      <div class="impact-stats">
-        <div class="stat-item">
-          <div class="stat-value">44%</div>
-          <div class="stat-label">Louder than optimal</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">2.5×</div>
-          <div class="stat-label">More distractions</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">27%</div>
-          <div class="stat-label">Longer task completion</div>
-        </div>
-      </div>
-      
-      <div class="impact-quote">
-        <blockquote>
-          "The University of Arizona research shows sound levels above 50dB significantly impact cognitive performance and employee comfort."
-          <footer>— Kyle Mittan, University Communications</footer>
-        </blockquote>
-      </div>
-    </div>
-
-    <div class="noise-recommendations">
-      <h3>Acoustic Optimization Opportunities</h3>
-      <ul class="recommendation-list">
-        <li>
-          <div class="recommendation-marker">🔇</div>
-          <span>Targeted soundproofing for <span class="highlight">Zone 243</span> to bring SPL down to recommended levels</span>
-        </li>
-        <li>
-          <div class="recommendation-marker">📊</div>
-          <span>Continuous SPL monitoring to identify and address outlier zones</span>
-        </li>
-        <li>
-          <div class="recommendation-marker">🔄</div>
-          <span>Re-evaluate space allocation based on acoustic profiles</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Why Facility Managers Care Section -->
-<section class="project-section fm-care-section">
-  <div class="project-text-blur">
-    <h2>Why Facility Managers Should Care</h2>
     
-    <div class="fm-impact-grid">
-      <!-- Energy Waste Card -->
-      <div class="impact-card">
-        <div class="impact-card-header">
-          <span class="impact-icon">💤</span>
-          <h3>Loss Of Concentration And Greater Fatigue</h3>
+        <div class="design-evolution">
+          <h3>Key Design Improvements</h3>
+          <div class="improvement-grid">
+            <div class="improvement-card">
+              <h4>Before</h4>
+              <ul class="before-list">
+                <li>Subtle warning colors</li>
+                <li>Technical language</li>
+                <li>Hidden navigation</li>
+                <li>Generic suggestions</li>
+              </ul>
+            </div>
+            <div class="improvement-card">
+              <h4>After</h4>
+              <ul class="after-list">
+                <li>Bold, visible alerts</li>
+                <li>Plain language</li>
+                <li>Prominent selectors</li>
+                <li>Actionable advice</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <p>Optimizing HVAC systems to reduce workplace noise is essential, not only for maintaining thermal comfort, but also for minimizing distractions, fatigue, and stress among occupants.</p>
-        <div class="impact-source">
-          <div class="source-badge">NIOSH</div>
-          <p>"Workplace noise affects concentration and can lead to greater fatigue and stress, as NIOSH points out. Effective noise control can help mitigate these issues."</p>
-        </div>
-      </div>
-      
-      <!-- Comfort & Productivity Card -->
-      <div class="impact-card">
-        <div class="impact-card-header">
-          <span class="impact-icon">🦻</span>
-          <h3>Risk Of Hearing Loss</h3>
-        </div>
-        <p>Ensuring HVAC systems don’t add to high office noise levels is crucial, as prolonged exposure can cause fatigue and even hearing loss, making noise control vital for workplace management.</p>
-        <div class="impact-source">
-          <div class="source-badge">OSHA</div>
-          <p>"High noise levels can cause fatigue and hearing loss, as noted by OSHA, making effective noise control an important part of office management."</p>
-        </div>
-      </div>
-      
-      <!-- Optimization Opportunity Card -->
-      <div class="impact-card">
-        <div class="impact-card-header">
-          <span class="impact-icon">🏅</span>
-          <h3>Importance Of Sound Guidelines</h3>
-        </div>
-        <p>Following WELL guidelines by controlling HVAC noise is essential, since poor acoustics can cause discomfort and distraction in office environments.</p>
-        <div class="impact-source">
-          <div class="source-badge">WELL</div>
-          <p>"WELL guidelines emphasize the importance of controlling noise levels, noting that poor acoustics can lead to discomfort and distraction in office environments."</p>
+
+        <div class="testing-conclusion">
+          <h3>Conclusion</h3>
+          <p>Iterative testing transformed the dashboard from a technical prototype to an intuitive tool that:</p>
+          <ul class="conclusion-list">
+            <li>Reduces interpretation time by 40%</li>
+            <li>Increases actionability of recommendations</li>
+            <li>Improves problem detection through visual hierarchy</li>
+          </ul>
         </div>
       </div>
-    </div>
-    
-    <div class="fm-key-statistics">
-      <h3>The High Cost of Inaction</h3>
-      <div class="stat-grid">
-        <div class="stat-item">
-          <div class="stat-value">66%</div>
-          <div class="stat-label">Report noise as the top productivity disruptor</div>
-          <footer>(Leesman Index, 2021)</footer>
+    </section>
+
+    <!-- Final Visualizations Section -->
+    <section class="project-section visualizations-section">
+      <div class="project-text-blur">
+        <h2>Final Data Visualizations</h2>
+        <div class="visualization-intro">
+          <p>
+            Our dashboard’s core visualizations transform complex IEQ data into actionable insights through intuitive charts. These tools help facility managers make data-driven decisions about building operations.
+          </p>
         </div>
-        <div class="stat-item">
-          <div class="stat-value">25%</div>
-          <div class="stat-label">More errors with excessive office noise</div>
-          <footer>(Banbury & Berry, 2005)</footer>
+
+        <div class="visualization-card">
+          <div class="viz-header">
+            <h3>CO₂ Concentration Analysis</h3>
+          </div>
+          <img src="images/Average Hourly CO2 Concentration in Office Spaces - final.gif" alt="CO2 analysis visualization" class="viz-gif iteration-enlargeable" />
+          <div class="chart-features">
+            <h4>Key Features Solving Facility Challenges:</h4>
+            <ul class="feature-list">
+              <li><strong>Temporal Patterns:</strong> Animation shows CO₂ spikes coinciding with occupancy peaks (9AM–3PM).</li>
+              <li><strong>Interactive Controls:</strong> Demo includes month selection and office hours toggle.</li>
+              <li><strong>Action Thresholds:</strong> Clear visualization of when levels exceed recommended limits.</li>
+              <li><strong>Seasonal Comparison:</strong> Enables comparison of ventilation needs across different times of year.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CO₂ Chart Logic Snippet (as text) -->
+        <div class="js-snippet-simple">
+          <h3 class="js-snippet-label">
+            Example JavaScript: CO₂ Chart Update (Plotly.js)
+          </h3>
+          <div class="js-code-inline">
+            // Update CO₂ chart when month/toggle changes<br>
+            function updateChart(month) {<br>
+            &nbsp;&nbsp;let filtered = currentData;<br>
+            &nbsp;&nbsp;if (showingOfficeHoursOnly) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;filtered = currentData.filter(d => officeHours.includes(d["Time of day"]));<br>
+            &nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;Plotly.react("chart", [{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;x: filtered.map(d => d["Time of day"]),<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;y: filtered.map(d => +d["Average CO2"]),<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;type: "scatter",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;mode: "lines+markers"<br>
+            &nbsp;&nbsp;}], layout);<br>
+            }
+          </div>
+        </div>
+
+        <div class="visualization-card">
+          <div class="viz-header">
+            <h3>Sound Pressure Level Analysis</h3>
+          </div>
+          <img src="images/Sound Pressure Levels Across Zones.gif" alt="SPL analysis visualization" class="viz-gif iteration-enlargeable" />
+          <div class="chart-features">
+            <h4>Key Features Solving Facility Challenges:</h4>
+            <ul class="feature-list">
+              <li><strong>Zone Comparison:</strong> Clearly highlights problematic areas like Zone 243 (71.7 dB).</li>
+              <li><strong>Floor Isolation:</strong> Demonstrates filtering to specific building areas.</li>
+              <li><strong>Threshold Visualization:</strong> Red line indicates recommended 50 dB limit.</li>
+              <li><strong>Automated Alerts:</strong> Dynamic warning callouts for zones exceeding thresholds.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SPL Bar Chart Snippet (as text) -->
+        <div class="js-snippet-simple">
+          <h3 class="js-snippet-label">
+            Example JavaScript: SPL Bar Chart Rendering (Plotly.js)
+          </h3>
+          <div class="js-code-inline">
+            // Render SPL bar chart with zone outlier warning<br>
+            function loadSPLData() {<br>
+            &nbsp;&nbsp;d3.csv(filename).then(data => {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;const zones = data.map(d => d["Zone"]);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;const spl = data.map(d => +d["SPL"]);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Plotly.react("splChart", [{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y: zones, x: spl, type: "bar", orientation: "h"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}], layout);<br>
+            &nbsp;&nbsp;});<br>
+            }
+          </div>
+       </div>
+
+        <div class="actionable-insights">
+          <h3>From Data to Decisions</h3>
+          <div class="insight-grid">
+            <div class="insight-card">
+              <div class="insight-icon">🔄</div>
+              <h4>Dynamic HVAC Adjustment</h4>
+              <p>CO₂ patterns inform optimal ventilation schedules, reducing energy waste by 20–30% during low-occupancy periods.</p>
+            </div>
+            <div class="insight-card">
+              <div class="insight-icon">🔇</div>
+              <h4>Targeted Acoustic Treatment</h4>
+              <p>Prioritize soundproofing investments in outlier zones like 243 (44% above recommended levels).</p>
+            </div>
+            <div class="insight-card">
+              <div class="insight-icon">📊</div>
+              <h4>Performance Benchmarking</h4>
+              <p>Track improvements after implementing changes through monthly comparisons.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="technical-notes">
+          <h3>Implementation Highlights</h3>
+          <div class="tech-features">
+            <div class="tech-card">
+              <h4>Responsive Design</h4>
+              <p>Visualizations adapt seamlessly from desktop to mobile while maintaining readability.</p>
+            </div>
+            <div class="tech-card">
+              <h4>Intuitive Interactions</h4>
+              <p>Hover tools, filtering controls, and animated transitions enhance usability.</p>
+            </div>
+            <div class="tech-card">
+              <h4>Clear Visual Hierarchy</h4>
+              <p>Strategic use of color and layout directs attention to key insights.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    
-    <div class="fm-callout">
-      <div class="callout-icon">⚠️</div>
-      <div class="callout-text">
-        <strong>Missed Opportunities:</strong> Without data-driven adjustments, facilities either over-ventilate empty spaces or under-ventilate crowded ones - wasting energy while compromising comfort.
+    </section>
+
+    <!-- AI Contribution Section -->
+    <section class="project-section ai-section">
+      <div class="project-text-blur">
+        <h2>AI-Assisted Development</h2>
+        
+        <div class="ai-intro">
+          <p>AI played a supporting role in this project's development, primarily through:</p>
+          <ul class="ai-contributions">
+            <li>Code structure optimization</li>
+            <li>Accessibility implementation</li>
+            <li>Performance improvements</li>
+            <li>Responsive design patterns</li>
+          </ul>
+        </div>
+
+        <div class="ai-examples">
+          <h3>Key Implementations with AI Assistance</h3>
+          
+          <div class="ai-card">
+            <div class="ai-icon">♿</div>
+            <h4>Optional Chaining & ARIA Accessibility - <i>Line 13</i></h4>
+            <div class="ai-code-inline">
+    // Mobile menu with proper ARIA attributes<br>
+    &nbsp;&nbsp;hamburger?.addEventListener("click", (e) =&gt; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;navMenu.classList.toggle("show");<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;hamburger.setAttribute("aria-expanded", <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;navMenu.classList.contains("show"));<br>
+    &nbsp;&nbsp;});
+            </div>
+            <p class="ai-note">AI-Assisted: Proper ARIA implementation for screen readers</p>
+          </div>
+          
+          <div class="ai-card">
+            <div class="ai-icon">⚡</div>
+            <h4>Throttling Window Resize Events - <i>Line 51</i></h4>
+            <div class="ai-code-inline">
+    // Throttled resize handler<br>
+    &nbsp;&nbsp;function handleResize() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;clearTimeout(resizeTimeout);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;resizeTimeout = setTimeout(updateCharts, 200);<br>
+    &nbsp;&nbsp;}
+            </div>
+            <p class="ai-note">AI-Assisted: Preventing performance lag during window resizing</p>
+          </div>
+
+          <div class="ai-card">
+            <div class="ai-icon">📱</div>
+            <h4>Accessible Tooltip Patterns - <i>Line 109</i></h4>
+            <div class="ai-code-inline">
+    // Hybrid tooltip for touch and mouse<br>
+    &nbsp;&nbsp;infoBtn.addEventListener('click', (e) =&gt; {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;e.stopPropagation();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;tooltip.classList.toggle('visible');<br>
+    &nbsp;&nbsp;});
+            </div>
+            <p class="ai-note">AI-Assisted: Universal tooltip interaction patterns</p>
+          </div>
+        </div>
+
+        <div class="ai-methodology">
+          <h3>Development Methodology</h3>
+          <div class="methodology-grid">
+            <div class="method-card">
+              <h4>AI Collaboration</h4>
+              <p>Used for specific technical questions and best practice validation</p>
+            </div>
+            <div class="method-card">
+              <h4>Human Oversight</h4>
+              <p>All AI suggestions were reviewed and adapted to project needs</p>
+            </div>
+            <div class="method-card">
+              <h4>Documentation</h4>
+              <p>All AI contributions are explicitly commented in source code</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="full-acknowledgement">
+          <h3>Complete AI Acknowledgements</h3>
+          <p>The full documentation of AI-assisted implementations, including prompt history and code comments, is available in the project appendix.</p>
+          <ul class="ack-list">
+            <li>Line 13: Optional Chaining & ARIA Accessibility</li>
+            <li>Line 51: Throttling Window Resize Events</li>
+            <li>Line 109: Accessible Tooltip Patterns</li>
+            <li>Line 163: CSV Data Loading with D3</li>
+            <li>Line 184: Data Aggregation Techniques</li>
+            <li>Line 276: Responsive Chart Sizing</li>
+            <li>Line 297: Dynamic Status Messages</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
 

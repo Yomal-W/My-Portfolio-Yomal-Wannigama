@@ -1116,6 +1116,13 @@ line-height: 1.6;
   margin-top: 2.2rem;
 }
 
+.affinity-stack h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.3rem;
+  color: #C1A8FF;
+  margin-bottom: 0.8rem;
+}
+
 /* Top synthesis cards */
 .synth-card {
   width: 100%;
@@ -5019,6 +5026,901 @@ line-height: 1.6;
   }
   
   .impact-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* === Data Cleaning Section === */
+.data-cleaning-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+}
+
+.cleaning-process {
+  margin: 2rem 0;
+}
+
+.process-step {
+  margin-bottom: 3rem;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #C1A8FF;
+  color: #181a21;
+  border-radius: 50%;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.step-header h3 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.step-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.process-image {
+  display: block;
+  max-width: 500px;   /* Ensures they never get too big */
+  width: 95%;         /* Responsive, up to max */
+  margin: 0 auto;
+  margin-bottom: 0.8rem;
+  border-radius: 13px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  transition: transform 0.23s, box-shadow 0.22s;
+}
+
+.process-image:hover,
+.process-image:focus-visible {
+  transform: scale(1.028);
+  box-shadow: 0 4px 32px 0 rgba(193,168,255,0.20), 0 2px 16px rgba(0,0,0,0.17);
+  z-index: 2;
+}
+
+.step-description {
+  flex: 1;
+}
+
+.data-columns {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.data-columns li {
+  font-family: 'Overpass Mono', monospace;
+  background: rgba(193, 168, 255, 0.15);
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.sheet-name {
+  font-family: 'Overpass Mono', monospace;
+  color: #C1A8FF;
+  background: rgba(193, 168, 255, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.pivot-config {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+
+.pivot-settings {
+  flex: 1;
+}
+
+.settings-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.settings-list li {
+  font-family: 'Overpass', sans-serif;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.setting-name {
+  font-family: 'Overpass Mono', monospace;
+  color: #C1A8FF;
+}
+
+.result-description {
+  flex: 1;
+}
+
+.data-insights {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  font-family: 'Overpass', sans-serif;
+}
+
+.data-insights li {
+  margin-bottom: 0.5rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.data-purpose {
+  margin-top: 3rem;
+}
+
+.data-purpose h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 1rem;
+}
+
+.purpose-statement {
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .step-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .process-image {
+    width: 100%;
+  }
+  
+  .pivot-config {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+/* === Usability Testing Section === */
+.usability-section {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.usability-section .project-text-blur {
+  max-width: 100%;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Typography */
+.testing-objectives h3,
+.testing-method h3,
+.testing-tasks h3,
+.participant-example h3,
+.design-evolution h3,
+.testing-conclusion h3,
+.ieq-heuristic-heading-table {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+.objective-list,
+.conclusion-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.5;
+}
+
+.objective-list li,
+.conclusion-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Method Cards Grid */
+.method-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.method-card {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.method-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.method-card h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.method-card p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Task Cards */
+.task-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.task-card {
+  background: rgba(100, 220, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.task-number {
+  position: absolute;
+  top: -12px;
+  left: 15px;
+  background: #C1A8FF;
+  color: #181a21;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.task-card p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Participant Responses */
+.participant-response {
+  background: rgba(193, 168, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  box-sizing: border-box;
+}
+
+.response-task {
+  margin-bottom: 1.25rem;
+}
+
+.response-task:last-child {
+  margin-bottom: 0;
+}
+
+.response-task h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+blockquote {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.9);
+  border-left: 3px solid #C1A8FF;
+  padding-left: 1rem;
+  margin: 0;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Table Component */
+.heuristic-usability-table-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: rgba(40,35,65,0.12);
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 16px rgba(100,70,190,0.09);
+  scrollbar-width: thin;
+  scrollbar-color: #c1a8ff #1a1a28;
+}
+
+.heuristic-usability-table-container::-webkit-scrollbar {
+  height: 6px;
+  border-radius: 7px;
+  background: #1a1a28;
+}
+
+.heuristic-usability-table-container::-webkit-scrollbar-thumb {
+  background: #c1a8ff;
+  border-radius: 7px;
+}
+
+.heuristic-usability-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-family: 'Overpass', sans-serif;
+  background: rgba(255,255,255,0.06);
+}
+
+.heuristic-usability-table th {
+  background: rgba(193, 168, 255, 0.25);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.85rem;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.heuristic-usability-table td {
+  padding: 0.85rem;
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+  color: rgba(255,255,255,0.92);
+  font-size: 0.92rem;
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+.heuristic-usability-table tr:last-child td {
+  border-bottom: none;
+}
+
+.heuristic-usability-table tr:hover td {
+  background: rgba(193,168,255,0.10);
+}
+
+.heuristic-sub {
+  display: block;
+  font-size: 0.85em;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 0.15em;
+  line-height: 1.4;
+}
+
+/* Improvement Grid */
+.improvement-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.improvement-card {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+.improvement-card h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.before-list,
+.after-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.before-list li,
+.after-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.before-list li:last-child,
+.after-list li:last-child {
+  border-bottom: none;
+}
+
+.before-list li::before {
+  content: "❌";
+  margin-right: 0.8rem;
+  color: #FF6B6B;
+}
+
+.after-list li::before {
+  content: "✅";
+  margin-right: 0.8rem;
+  color: #4CAF50;
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (min-width: 768px) {
+  .usability-section .project-text-blur {
+    padding: 2rem;
+  }
+  
+  .method-grid,
+  .task-cards,
+  .improvement-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .heuristic-usability-table {
+    min-width: 700px;
+  }
+  
+  .heuristic-usability-table th,
+  .heuristic-usability-table td {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .heuristic-sub {
+    font-size: 0.9em;
+  }
+  
+  .testing-objectives h3,
+  .testing-method h3,
+  .testing-tasks h3,
+  .participant-example h3,
+  .design-evolution h3,
+  .testing-conclusion h3 {
+    font-size: 1.35rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .usability-section .project-text-blur {
+    padding: 2.5rem;
+    max-width: 1000px;
+  }
+  
+  .heuristic-usability-table th,
+  .heuristic-usability-table td {
+    font-size: 0.99rem;
+  }
+  
+  .testing-objectives h3,
+  .testing-method h3,
+  .testing-tasks h3,
+  .participant-example h3,
+  .design-evolution h3,
+  .testing-conclusion h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Edge Case Fixes for Mobile */
+@media (max-width: 480px) {
+  .usability-section .project-text-blur {
+    padding: 2.5rem;
+  }
+  
+  .task-card {
+    padding: 1rem 1rem 1rem 2.25rem;
+  }
+  
+  .heuristic-usability-table th,
+  .heuristic-usability-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.88rem;
+  }
+}
+
+
+
+
+
+/* === Final Visualizations Section === */
+.visualizations-section .project-text-blur {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+}
+
+.visualizations-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.visualization-intro p {
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.visualization-card {
+  background: rgba(193, 168, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.viz-header h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin: 0 0 1rem 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.viz-gif {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(193, 168, 255, 0.17);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.11);
+  margin-bottom: 1.5rem;
+  background: #fff;
+  transition: transform 0.23s, box-shadow 0.22s;
+}
+
+.viz-gif:hover,
+.viz-gif:focus-visible {
+  transform: scale(1.028);
+  box-shadow: 0 4px 32px 0 rgba(193,168,255,0.20), 0 2px 16px rgba(0,0,0,0.17);
+  z-index: 2;
+}
+
+.chart-features {
+  margin: 1.5rem 0 0;
+}
+
+.chart-features h4 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 1rem;
+  font-size: 1.07rem;
+  font-weight: 600;
+}
+
+.feature-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(193, 168, 255, 0.15);
+  font-family: 'Overpass', sans-serif;
+  font-size: 1rem;
+}
+
+.feature-list li:last-child {
+  border-bottom: none;
+}
+
+.actionable-insights {
+  margin: 3rem 0;
+}
+
+.actionable-insights h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 1.5rem;
+  font-size: 1.19rem;
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.insight-card {
+  background: rgba(193, 168, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.insight-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.insight-card h4 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.insight-card p {
+  font-family: 'Overpass', sans-serif;
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.technical-notes {
+  margin-top: 2.5rem;
+}
+
+.technical-notes h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 1.5rem;
+  font-size: 1.19rem;
+}
+
+.tech-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tech-card {
+  background: rgba(193, 168, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.tech-card h4 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.tech-card p {
+  font-family: 'Overpass', sans-serif;
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.js-snippet-simple {
+  background: rgba(193, 168, 255, 0.10);
+  border-left: 4px solid #C1A8FF;
+  border-radius: 10px;
+  margin: 2rem 0 2.5rem;
+  padding: 1rem 1.2rem 1.2rem 1.2rem;
+}
+
+.js-snippet-label {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 1rem;
+  font-size: 1.07rem;
+  font-weight: 600;
+}
+
+.js-code-inline {
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 0.72rem;
+  color: #C1A8FF;
+  background: rgba(0,0,0,0.3);
+  border-radius: 6px;
+  padding: 0.7em 1em;
+  word-break: break-word;
+  white-space: pre-line;
+  line-height: 1.7;
+  box-shadow: 0 2px 8px rgba(193,168,255,0.06);
+}
+
+/* Responsive grid for mobile */
+@media (max-width: 768px) {
+  .insight-grid,
+  .tech-features {
+    grid-template-columns: 1fr;
+  }
+  .project-text-blur {
+    padding: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+/* === AI Section Styles === */
+.ai-section .project-text-blur {
+  max-width: 1000px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+}
+
+.ai-intro p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1rem;
+}
+
+.ai-contributions {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.ai-contributions li {
+  background: rgba(193, 168, 255, 0.1);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-family: 'Overpass', sans-serif;
+}
+
+.ai-examples {
+  margin: 2.5rem 0;
+}
+
+.ai-card {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  border-left: 3px solid #C1A8FF;
+}
+
+.ai-icon {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background: #181a21;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border: 2px solid #C1A8FF;
+}
+
+.ai-card h4 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.1rem;
+  color: white;
+  margin: 0.5rem 0 1rem 2.5rem;
+}
+
+/* New: Inline code snippet styling for readable, wrapped, indented code */
+.ai-code-inline {
+  font-family: 'Overpass Mono', monospace;
+  color: #C1A8FF;
+  font-size: 0.72rem;
+  background: rgba(0,0,0,0.22);
+  padding: 0.85em 1em;
+  border-radius: 6px;
+  margin-bottom: 0.6em;
+  word-break: break-word;
+  white-space: pre-line;
+  line-height: 1.7;
+  box-shadow: 0 2px 8px rgba(193,168,255,0.04);
+}
+
+.ai-note {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  margin: 0.8rem 0 0;
+  font-style: italic;
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.method-card {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.method-card h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0 0 0.5rem 0;
+}
+
+.method-card p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.full-acknowledgement {
+  margin-top: 3rem;
+  background: rgba(193, 168, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.ack-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  columns: 2;
+}
+
+.ack-list li {
+  font-family: 'Overpass Mono', monospace;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+@media (max-width: 768px) {
+  .ack-list {
+    columns: 1;
+  }
+  
+  .methodology-grid {
     grid-template-columns: 1fr;
   }
 }
