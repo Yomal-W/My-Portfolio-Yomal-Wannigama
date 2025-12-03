@@ -4099,8 +4099,10 @@ line-height: 1.6;
 
 /* === IEQ Dashboard === */
 /* === Data Origin Section === */
+/* === Redesigned Data Origin Section === */
 .data-origin-section .project-text-blur {
   max-width: 1000px;
+  margin: 0 auto;
   padding: 2.5rem;
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
@@ -4110,8 +4112,7 @@ line-height: 1.6;
 
 .data-origin-header {
   text-align: center;
-  margin-bottom: 2.5rem;
-  position: relative;
+  margin-bottom: 3rem;
 }
 
 .data-origin-badge {
@@ -4119,7 +4120,7 @@ line-height: 1.6;
   align-items: center;
   background: rgba(193, 168, 255, 0.15);
   border-radius: 20px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   margin-bottom: 1rem;
 }
 
@@ -4139,7 +4140,7 @@ line-height: 1.6;
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1.8rem;
   color: white;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 1rem;
 }
 
 .data-context {
@@ -4147,57 +4148,68 @@ line-height: 1.6;
   color: rgba(255, 255, 255, 0.8);
   font-size: 1.1rem;
   margin: 0;
+  line-height: 1.6;
 }
 
-.data-grid {
+/* Main content grid */
+.data-overview {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
 }
 
-.data-card {
+.data-overview-card {
   background: rgba(193, 168, 255, 0.08);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.8rem;
   border-top: 3px solid #C1A8FF;
 }
 
-.data-card-header {
+.overview-header {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
-.data-card-icon {
+.overview-icon {
   font-size: 1.8rem;
   margin-right: 1rem;
+  flex-shrink: 0;
 }
 
-.data-card h4 {
+.overview-header h4 {
   font-family: 'Rubik', sans-serif;
   color: white;
   margin: 0;
   font-size: 1.2rem;
 }
 
-.data-card p {
+.data-overview-card p {
   font-family: 'Overpass', sans-serif;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
   margin: 0;
+  font-size: 1rem;
 }
 
-.sensor-variables h3 {
+/* Sensor variables section */
+.sensor-section {
+  margin: 2.5rem 0;
+}
+
+.sensor-section h3 {
   font-family: 'Rubik', sans-serif;
-  margin: 2.5rem 0 1.5rem;
+  color: #C1A8FF;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
-.sensor-grid {
+.sensor-categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 1.5rem 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .sensor-category {
@@ -4212,6 +4224,8 @@ line-height: 1.6;
   margin: 0 0 1rem 0;
   font-size: 1.1rem;
   text-align: center;
+  border-bottom: 1px solid rgba(193, 168, 255, 0.3);
+  padding-bottom: 0.8rem;
 }
 
 .sensor-list {
@@ -4223,36 +4237,53 @@ line-height: 1.6;
 .sensor-list li {
   font-family: 'Overpass Mono', monospace;
   color: rgba(255, 255, 255, 0.9);
-  padding: 0.6rem 0;
+  padding: 0.7rem 0;
+  font-size: 0.95rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
 }
 
 .sensor-list li:last-child {
   border-bottom: none;
 }
 
+.sensor-list li::before {
+  content: "•";
+  color: #C1A8FF;
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+}
+
+/* Purpose statement */
 .data-purpose {
   margin-top: 3rem;
-  text-align: left;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.data-purpose h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
 }
 
 .purpose-statement {
   font-family: 'Overpass', sans-serif;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.9);
-  margin: 0 0 1.5rem 0; 
-  text-align: left;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.05rem;
 }
 
 .purpose-highlight {
-  display: flex;
-  justify-content: center;  /* This centers the content */
+  display: inline-flex;
   align-items: center;
   background: rgba(255, 203, 5, 0.15);
   border-radius: 20px;
   padding: 0.8rem 1.5rem;
-  margin: 1rem auto 0 auto;  /* Auto margins center block element */
-  max-width: max-content;    /* Shrink to fit content */
+  margin-top: 1rem;
 }
 
 .highlight-icon {
@@ -4262,16 +4293,21 @@ line-height: 1.6;
 
 .highlight-text {
   font-family: 'Rubik', sans-serif;
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
+/* Simple mobile responsiveness */
 @media (max-width: 768px) {
-  .data-origin-header h3 {
-    font-size: 1.5rem;
+  .data-overview,
+  .sensor-categories {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
-  .sensor-grid {
-    grid-template-columns: 1fr;
+  .data-overview-card {
+    padding: 1.5rem;
   }
 }
 
