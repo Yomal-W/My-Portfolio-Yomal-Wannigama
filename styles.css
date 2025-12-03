@@ -172,7 +172,7 @@ transform: translateY(-5px);
 
 .project-card h2 {
 font-family: 'Rubik', sans-serif;
-font-size: 1.5rem;
+font-size: 2rem;
 margin-bottom: 1rem;
 color: white;
 }
@@ -499,7 +499,7 @@ line-height: 1.6;
 
 .section-title-blur h2 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #FFCB05;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
@@ -3293,6 +3293,7 @@ line-height: 1.6;
 
 .iteration-1-to-2-section .project-text-blur h2 {
   font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2rem;
   margin-bottom: 1.4rem;
   text-align: left;
   letter-spacing: 0.5px;
@@ -5619,7 +5620,7 @@ blockquote {
 
 .visualizations-section h2 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
@@ -6098,10 +6099,9 @@ blockquote {
 
 .technical-implementation-section h2 {
   font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: white;
   margin-bottom: 1.5rem;
-  text-align: center;
 }
 
 /* Architecture Overview */
@@ -6472,7 +6472,7 @@ blockquote {
   font-size: 1.05rem;
 }
 
-/* ==================== RESPONSIVE DESIGN ==================== */
+/* === RESPONSIVE DESIGN === */
 
 /* Tablet Styles (768px - 1023px) */
 @media (max-width: 1023px) {
@@ -6499,8 +6499,6 @@ blockquote {
     gap: 2rem;
   }
   
-
-  
   .flow-step {
     max-width: 100%;
   }
@@ -6513,11 +6511,7 @@ blockquote {
     padding: 2rem;
     margin: 0 auto;
   }
-  
-  .technical-implementation-section h2 {
-    font-size: 2rem;
-  }
-  
+
   .arch-overview h3,
   .implementation-section h3,
   .data-flow-section h3,
@@ -6543,7 +6537,6 @@ blockquote {
   
   .layer-icon {
     margin-right: 0;
-    font-size: 1.8rem;
   }
   
   .layer-content {
@@ -6568,8 +6561,6 @@ blockquote {
     gap: 2rem;
     padding: 1.8rem;
   }
-  
-
   
   .impl-header,
   .challenge-header {
@@ -6597,10 +6588,6 @@ blockquote {
   .code-snippet {
     padding: 1.2rem;
   }
-  
-  .code-snippet code {
-    font-size: 0.85rem;
-  }
 }
 
 /* Small Mobile Styles (up to 480px) */
@@ -6608,15 +6595,7 @@ blockquote {
   .technical-implementation-section .project-text-blur {
     padding: 2.5rem;
   }
-  
-  .technical-implementation-section h2 {
-    font-size: 1.8rem;
-  }
-  
-  .arch-description {
-    font-size: 1rem;
-  }
-  
+
   .diagram-layer,
   .impl-card,
   .flow-step,
@@ -6626,15 +6605,9 @@ blockquote {
   }
   
   .tech-pill {
-    font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
   }
-  
-  .impl-content li,
-  .challenge-content p,
-  .solution p {
-    font-size: 0.95rem;
-  }
+
   
   .flow-diagram {
     padding: 1.5rem;
