@@ -5989,16 +5989,6 @@ blockquote {
   font-size: 2rem;
   color: white;
   margin-bottom: 0.5rem;
-  text-align: center;
-}
-
-.project-subtitle {
-  font-family: 'Rubik', sans-serif;
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 2.5rem;
-  text-align: center;
-  line-height: 1.5;
 }
 
 /* Features Grid */
@@ -6054,61 +6044,6 @@ blockquote {
   font-size: 0.95rem;
 }
 
-
-
-/* Technical Implementation */
-.technical-implementation {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.technical-implementation h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
-  margin-bottom: 1.5rem;
-  font-size: 1.4rem;
-  text-align: center;
-}
-
-.tech-details {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.tech-card {
-  background: rgba(193, 168, 255, 0.1);
-  border-radius: 12px;
-  padding: 1.5rem;
-}
-
-.tech-card h4 {
-  font-family: 'Rubik', sans-serif;
-  color: #FFCB05;
-  margin: 0 0 0.8rem 0;
-  font-size: 1.1rem;
-}
-
-.tech-card ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.tech-card li {
-  font-family: 'Overpass', sans-serif;
-  color: rgba(255, 255, 255, 0.85);
-  padding: 0.4rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.95rem;
-}
-
-.tech-card li:last-child {
-  border-bottom: none;
-}
-
 .feature-visual.checkbox-image {
   max-width: 80%; /* Makes it smaller than other images */
   max-height: 250px; /* Limits the height */
@@ -6121,10 +6056,6 @@ blockquote {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .muscle-mission-features .project-text-blur {
-    padding: 1.5rem;
-  }
-  
   .features-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -6141,20 +6072,572 @@ blockquote {
 }
 
 @media (max-width: 480px) {
-  .muscle-mission-features h2 {
-    font-size: 1.8rem;
-  }
-  
-  .project-subtitle {
-    font-size: 1rem;
-  }
-  
-  .feature-content h3 {
-    font-size: 1.1rem;
-  }
-  
   .highlight-item,
   .tech-card {
     padding: 1rem;
+  }
+}
+
+
+
+/* === Technical Implementation Section === */
+/* === Technical Implementation Section === */
+.technical-implementation-section {
+  padding: 2rem 0;
+}
+
+.technical-implementation-section .project-text-blur {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+}
+
+.technical-implementation-section h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2.4rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Architecture Overview */
+.arch-overview {
+  margin-bottom: 3rem;
+}
+
+.arch-overview h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.arch-description {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Architecture Diagram */
+.arch-diagram {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-top: 2rem;
+}
+
+.diagram-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.diagram-layer {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+  border-left: 4px solid;
+  box-sizing: border-box;
+}
+
+.frontend-layer {
+  border-left-color: #FFCB05;
+}
+
+.statemanagement-layer {
+  border-left-color: #C1A8FF;
+}
+
+.datalayer-layer {
+  border-left-color: #4CAF50;
+}
+
+.layer-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.layer-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.layer-header h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.layer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tech-pill {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-family: 'Overpass Mono', monospace;
+  font-size: 0.95rem;
+}
+
+.diagram-arrow {
+  font-size: 2rem;
+  color: #C1A8FF;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+/* Section Headers */
+.implementation-section h3,
+.data-flow-section h3,
+.code-examples-section h3,
+.challenges-section h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #C1A8FF;
+  margin: 3rem 0 2rem 0;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(193, 168, 255, 0.2);
+}
+
+/* Implementation Grid */
+.implementation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.impl-card {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.8rem;
+  border-top: 3px solid #C1A8FF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.impl-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(193, 168, 255, 0.15);
+}
+
+.impl-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.impl-icon {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+.impl-header h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.impl-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.impl-content li {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.impl-content li:last-child {
+  border-bottom: none;
+}
+
+.impl-content li::before {
+  content: "✓";
+  color: #4CAF50;
+  font-weight: bold;
+  margin-right: 0.8rem;
+}
+
+/* Data Flow */
+.flow-diagram {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.flow-step {
+  background: rgba(193, 168, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.8rem;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFCB05;
+  color: #181a21;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-content h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+}
+
+.step-content p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+
+/* Code Examples */
+.code-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.code-card {
+  background: rgba(30, 30, 46, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(193, 168, 255, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.code-header {
+  background: rgba(193, 168, 255, 0.15);
+  padding: 1.2rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-header h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.code-language {
+  font-family: 'Overpass Mono', monospace;
+  color: #FFCB05;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+}
+
+.code-snippet {
+  padding: 1.8rem;
+}
+
+.code-snippet pre {
+  margin: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #c1a8ff #23222e;
+  border-radius: 8px;
+}
+
+.code-snippet code {
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Challenges Grid */
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.challenge-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  border-left: 4px solid #FF8A80;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.challenge-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.challenge-badge {
+  background: #FF8A80;
+  color: #181a21;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.challenge-header h4 {
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.challenge-content p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.solution {
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 3px solid #4CAF50;
+}
+
+.solution-badge {
+  background: #4CAF50;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-right: 0.8rem;
+}
+
+.solution p {
+  font-family: 'Overpass', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 1rem 0 0 0;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Tablet Styles (768px - 1023px) */
+@media (max-width: 1023px) {
+  .technical-implementation-section .project-text-blur {
+    max-width: 95%;
+    padding: 2.5rem;
+  }
+  
+  .diagram-layer {
+    max-width: 100%;
+    padding: 1.8rem;
+  }
+  
+  .implementation-grid,
+  .code-grid,
+  .challenges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .flow-diagram {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2rem;
+  }
+  
+
+  
+  .flow-step {
+    max-width: 100%;
+  }
+}
+
+/* Mobile Styles (up to 767px) */
+@media (max-width: 767px) {
+  .technical-implementation-section .project-text-blur {
+    max-width: 92%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  
+  .technical-implementation-section h2 {
+    font-size: 2rem;
+  }
+  
+  .arch-overview h3,
+  .implementation-section h3,
+  .data-flow-section h3,
+  .code-examples-section h3,
+  .challenges-section h3 {
+    font-size: 1.3rem;
+    margin: 2.5rem 0 1.5rem 0;
+  }
+  
+  .arch-diagram,
+  .impl-card,
+  .flow-step,
+  .code-card,
+  .challenge-card {
+    padding: 1.5rem;
+  }
+  
+  .layer-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  
+  .layer-icon {
+    margin-right: 0;
+    font-size: 1.8rem;
+  }
+  
+  .layer-content {
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  
+  .tech-pill {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .implementation-grid,
+  .code-grid,
+  .challenges-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .flow-diagram {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.8rem;
+  }
+  
+
+  
+  .impl-header,
+  .challenge-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  
+  .impl-icon {
+    margin-right: 0;
+  }
+  
+  .challenge-badge {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .code-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  
+  .code-snippet {
+    padding: 1.2rem;
+  }
+  
+  .code-snippet code {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Mobile Styles (up to 480px) */
+@media (max-width: 480px) {
+  .technical-implementation-section .project-text-blur {
+    padding: 2.5rem;
+  }
+  
+  .technical-implementation-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .arch-description {
+    font-size: 1rem;
+  }
+  
+  .diagram-layer,
+  .impl-card,
+  .flow-step,
+  .code-card,
+  .challenge-card {
+    padding: 1.2rem;
+  }
+  
+  .tech-pill {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .impl-content li,
+  .challenge-content p,
+  .solution p {
+    font-size: 0.95rem;
+  }
+  
+  .flow-diagram {
+    padding: 1.5rem;
+    gap: 1.5rem;
   }
 }
