@@ -97,9 +97,13 @@ blockquote {
 .burger {
   display: none;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .burger .line {
+  display: block;
   width: 25px;
   height: 3px;
   background-color: white;
@@ -226,11 +230,14 @@ gap: 2rem;
 }
 
 .project-card {
+display: block;
 background: rgba(255, 255, 255, 0.1);
 border-radius: 10px;
 padding: 1.5rem;
 transition: transform 0.3s ease;
 cursor: pointer;
+text-decoration: none;
+color: inherit;
 }
 
 .project-card:hover {

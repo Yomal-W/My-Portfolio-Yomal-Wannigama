@@ -22,16 +22,16 @@
   const navHTML = `
   <nav class="navbar">
     <div class="logo"><a href="home.html">YW</a></div>
-    <ul class="nav-links">
+    <ul class="nav-links" id="primary-nav">
       ${links.map(({ href, label }) =>
-        `<li><a href="${href}"${isActive(href) ? ' class="active"' : ''}>${label}</a></li>`
+        `<li><a href="${href}"${isActive(href) ? ' class="active" aria-current="page"' : ''}>${label}</a></li>`
       ).join('\n      ')}
     </ul>
-    <div class="burger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
+    <button class="burger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="line" aria-hidden="true"></span>
+      <span class="line" aria-hidden="true"></span>
+      <span class="line" aria-hidden="true"></span>
+    </button>
   </nav>`;
 
   document.body.insertAdjacentHTML('afterbegin', navHTML);
@@ -41,14 +41,19 @@
   const navLinksEl = document.querySelector('.nav-links');
 
   burger.addEventListener('click', () => {
+    const isExpanded = burger.getAttribute('aria-expanded') === 'true';
     navLinksEl.classList.toggle('active');
     burger.classList.toggle('active');
+    burger.setAttribute('aria-expanded', String(!isExpanded));
+    burger.setAttribute('aria-label', !isExpanded ? 'Close navigation menu' : 'Open navigation menu');
   });
 
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       navLinksEl.classList.remove('active');
       burger.classList.remove('active');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.setAttribute('aria-label', 'Open navigation menu');
     });
   });
 })();
