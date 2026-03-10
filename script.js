@@ -60,26 +60,50 @@
   });
 })();
 
-// ===== YOUR ORIGINAL p5.js CODE =====
+// ===== p5.js GENERATIVE BACKGROUND =====
 var points = [];
 var speedMultiplier = 0.005;
 var r1, r2, g1, g2, b1, b2;
+var restartTimer;
 
 function setup() {
+  // Skip sketch entirely for users who prefer reduced motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('p5-container');
   angleMode(DEGREES);
   noiseDetail(1);
   restartSketch();
   canvas.mousePressed(changeColors);
-  setInterval(restartSketch, 5000);
+  restartTimer = setInterval(restartSketch, 5000);
+
+  // Pause in background tabs; resume when the tab becomes visible again
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      noLoop();
+      clearInterval(restartTimer);
+    } else {
+      loop();
+      restartTimer = setInterval(restartSketch, 5000);
+    }
+  });
+
+  // Halve frame rate on mobile to reduce CPU load
+  if (window.innerWidth < 768) {
+    frameRate(30);
+  }
 }
 
 function restartSketch() {
   background(10);
   points = [];
-  var density = 40;
-  var space = width / density;
+  // Space particles by area so count stays ~800 on any screen size.
+  // The old formula (width / 40) gave ~900 on desktop but ~3,500 on
+  // a portrait phone because height was unconstrained.
+  var space = Math.sqrt((width * height) / 800);
 
   for (var x = 0; x < width; x += space) {
     for (var y = 0; y < height; y += space) {
@@ -107,7 +131,9 @@ function draw() {
 
     fill(r, g, b, alpha);
     var angle = map(noise(points[i].x * speedMultiplier, points[i].y * speedMultiplier), 0, 1, 0, 720);
-    points[i].add(createVector(cos(angle), sin(angle)));
+    // Inline x/y update — avoids allocating a new Vector object every frame
+    points[i].x += cos(angle);
+    points[i].y += sin(angle);
     var size = map(width, 0, 1920, 1, 4);
     ellipse(points[i].x, points[i].y, size);
   }
@@ -150,8 +176,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Close modal when clicking overlay or pressing Escape
 function closeModal() {
-  document.getElementById('journeyMapModal').classList.remove('active');
-  document.getElementById('modalImg').src = '';
+  const m = document.getElementById('journeyMapModal');
+  const img = document.getElementById('modalImg');
+  if (m) m.classList.remove('active');
+  if (img) img.src = '';
 }
 document.addEventListener('keydown', function(e) {
   if (e.key === "Escape") closeModal();
@@ -178,8 +206,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Close modal for storyboard images
 function closeImgModal() {
-  document.getElementById('imgModal').classList.remove('active');
-  document.getElementById('imgModalImg').src = '';
+  const m = document.getElementById('imgModal');
+  const img = document.getElementById('imgModalImg');
+  if (m) m.classList.remove('active');
+  if (img) img.src = '';
 }
 document.addEventListener('keydown', function(e) {
   if (e.key === "Escape") closeImgModal();
@@ -250,8 +280,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 function closeIterationModal() {
-  document.getElementById('iterationModal').classList.remove('active');
-  document.getElementById('iterationModalImg').src = '';
+  const m = document.getElementById('iterationModal');
+  const img = document.getElementById('iterationModalImg');
+  if (m) m.classList.remove('active');
+  if (img) img.src = '';
 }
 document.addEventListener('keydown', function (e) {
   if (e.key === "Escape") closeIterationModal();
@@ -267,10 +299,10 @@ document.querySelectorAll('.enlargeable').forEach(img => {
   });
 });
 
-document.querySelector('.image-modal-close').onclick = function() {
-  document.getElementById('image-modal').style.display = "none";
-};
-document.getElementById('image-modal').onclick = function(e) {
-  if(e.target === this) this.style.display = "none";
-};
+const imageModalClose = document.querySelector('.image-modal-close');
+const imageModal = document.getElementById('image-modal');
+if (imageModalClose && imageModal) {
+  imageModalClose.onclick = function() { imageModal.style.display = "none"; };
+  imageModal.onclick = function(e) { if (e.target === imageModal) imageModal.style.display = "none"; };
+}
 
