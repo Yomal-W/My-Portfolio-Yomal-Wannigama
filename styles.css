@@ -38,6 +38,17 @@ body {
   overflow-x: hidden;
 }
 
+blockquote {
+  font-family: var(--font-body);
+  color: rgba(255,255,255,0.9);
+  border-left: 3px solid var(--color-purple);
+  padding-left: 1rem;
+  margin: 0;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 /* ===== NAVIGATION ===== */
 .navbar {
   display: flex;
@@ -276,7 +287,7 @@ line-height: 1.6;
 
 
 
-/* ===== INDIVIDUAL PROJECTS ===== */
+/* ===== PROJECTS — SHARED ===== */
 .project-hero-section { 
   width: 100%;
   display: flex;
@@ -468,6 +479,8 @@ line-height: 1.6;
   color: var(--color-purple);
   text-decoration: underline;
 }
+
+/* ===== PROJECT 1 — Olympics Companion App ===== */
 
 /* === Research questions section styling === */
 .research-questions-section .project-text-blur {
@@ -4149,8 +4162,8 @@ line-height: 1.6;
 
 
 
-/* === IEQ Dashboard === */
-/* === Data Origin Section === */
+/* ===== PROJECT 2 — IEQ Dashboard ===== */
+
 /* === Redesigned Data Origin Section === */
 .data-origin-section .project-text-blur {
   max-width: 1000px;
@@ -4995,11 +5008,6 @@ line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-.impact-icon {
-  font-size: 1.8rem;
-  margin-right: 1rem;
-}
-
 .impact-header h3 {
   font-family: var(--font-ui);
   color: white;
@@ -5441,17 +5449,6 @@ line-height: 1.6;
   color: white;
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
-}
-
-blockquote {
-  font-family: var(--font-body);
-  color: rgba(255,255,255,0.9);
-  border-left: 3px solid var(--color-purple);
-  padding-left: 1rem;
-  margin: 0;
-  font-style: italic;
-  font-size: 0.95rem;
-  line-height: 1.5;
 }
 
 /* Table Component */
@@ -6024,7 +6021,8 @@ blockquote {
 
 
 
-/* Muscle Mission Application Styles */
+/* ===== PROJECT 3 — Muscle Mission ===== */
+
 /* === Muscle Mission Application Features Section === */
 .muscle-mission-features .project-text-blur {
   max-width: 1000px;
@@ -6132,7 +6130,6 @@ blockquote {
 
 
 
-/* === Technical Implementation Section === */
 /* === Technical Implementation Section === */
 .technical-implementation-section {
   padding: 2rem 0;
