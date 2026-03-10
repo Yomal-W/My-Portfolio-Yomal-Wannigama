@@ -1,3 +1,25 @@
+/* ===== DESIGN TOKENS ===== */
+:root {
+  /* Fonts */
+  --font-heading: 'PT Sans Narrow', sans-serif;
+  --font-body:    'Overpass', sans-serif;
+  --font-ui:      'Rubik', sans-serif;
+
+  /* Colours */
+  --color-purple: #c1a8ff;
+  --color-gold:   #FFCB05;
+  --color-yellow: #ffe16b;
+
+  /* Glassmorphism */
+  --glass-bg:     rgba(255, 255, 255, 0.07);
+  --glass-blur:   blur(15px);
+  --glass-shadow: 0 14px 40px rgba(100, 70, 190, 0.11);
+  --radius-card:  16px;
+
+  /* Text */
+  --text-muted:   rgba(255, 255, 255, 0.88);
+}
+
 /* ===== BASE STYLES ===== */
 body {
   margin: 0;
@@ -25,7 +47,7 @@ body {
 
 .logo a {
   font-size: 1.8rem;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   color: white;
   text-decoration: none;
@@ -40,7 +62,7 @@ body {
 }
 
 .nav-links a {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   text-decoration: none;
   font-size: 1rem;
@@ -83,7 +105,7 @@ body {
 }
 
 .hero-content h1 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700; /* Bold */
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 0.25rem;
@@ -91,7 +113,7 @@ body {
 }
 
 .subtitle {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.2rem;
   margin: 0; /* Removed all margins */
   line-height: 1.6;
@@ -144,7 +166,7 @@ margin: 0 auto;
 }
 
 .projects-title {
-font-family: 'PT Sans Narrow', sans-serif;
+font-family: var(--font-heading);
 font-weight: 700; /* Bold */
 font-size: 2.5rem;
 margin-bottom: 2rem;
@@ -171,7 +193,7 @@ transform: translateY(-5px);
 }
 
 .project-card h2 {
-font-family: 'Rubik', sans-serif;
+font-family: var(--font-ui);
 font-size: 2rem;
 margin-bottom: 1rem;
 color: white;
@@ -194,7 +216,7 @@ margin-right: 10px;
 }
 
 .project-description {
-font-family: 'Overpass', sans-serif;
+font-family: var(--font-body);
 font-weight: 300; /* Light */
 color: rgba(255, 255, 255, 0.8);
 line-height: 1.6;
@@ -256,7 +278,7 @@ line-height: 1.6;
 }
 
 .project-hero-text h1 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2.5rem;
   margin-bottom: 1rem;
   line-height: 1.12;
@@ -264,14 +286,14 @@ line-height: 1.6;
 }
 
 .project-hero-text p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.12rem;
   line-height: 1.65;
   margin-bottom: 0.8rem;
 }
 
 .project-hero-meta {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.98rem;
   margin-top: 1rem;
   line-height: 1.5;
@@ -372,25 +394,25 @@ line-height: 1.6;
 .project-text-blur.highlighted-problem {
   max-width: 880px;
   padding: 2rem 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-  border-left: 6px solid #FFCB05; /* Olympic gold */
+  border-left: 6px solid var(--color-gold); /* Olympic gold */
 }
 
 .project-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   margin-bottom: 1rem;
   color: white;
 }
 
 .project-section p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.1rem;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--text-muted);
   margin-bottom: 1.2rem;
 }
 
@@ -409,7 +431,7 @@ line-height: 1.6;
 }
 
 .appendix-links a:hover {
-  color: #C1A8FF;
+  color: var(--color-purple);
   text-decoration: underline;
 }
 
@@ -417,21 +439,21 @@ line-height: 1.6;
 .research-questions-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .research-questions-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: white;
   margin-bottom: 1rem;
 }
 
 .research-questions-section p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
@@ -449,9 +471,9 @@ line-height: 1.6;
 .question-card {
   background: linear-gradient(135deg, rgba(168,139,255,0.2), rgba(255,255,255,0.05));
   border: 1px solid rgba(168,139,255,0.3);
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   padding: 1.5rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1rem;
   color: rgba(255,255,255,0.95);
   line-height: 1.6;
@@ -489,24 +511,24 @@ line-height: 1.6;
 .section-title-blur {
   max-width: 880px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   padding: 2rem 2.5rem;
   text-align: center;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 .section-title-blur h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
-  color: #FFCB05;
+  color: var(--color-gold);
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
 }
 
 .section-title-blur .subtitle {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
@@ -517,14 +539,14 @@ line-height: 1.6;
 .ethnography-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .ethnography-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: white;
   margin-bottom: 1.5rem;
@@ -536,16 +558,16 @@ line-height: 1.6;
 
 .ethnography-block h3 {
   font-size: 1.3rem;
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 0.5rem;
 }
 
 .ethnography-block p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--text-muted);
 }
 
 .ethnography-block a {
@@ -558,7 +580,7 @@ line-height: 1.6;
 }
 
 .ethnography-block a:hover {
-  color: #C1A8FF;
+  color: var(--color-purple);
   opacity: 1;
   text-decoration: none;
 }
@@ -579,7 +601,7 @@ line-height: 1.6;
 }
 
 .highlight-purple {
-  color: #c1a8ff;
+  color: var(--color-purple);
   font-weight: 500;
 }
 
@@ -587,14 +609,14 @@ line-height: 1.6;
 .secondary-research .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .secondary-research h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: white;
   margin-bottom: 1.5rem;
@@ -606,16 +628,16 @@ line-height: 1.6;
 
 .research-block h3 {
   font-size: 1.25rem;
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 0.5rem;
 }
 
 .research-block p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--text-muted);
 }
 
 .research-block a {
@@ -628,7 +650,7 @@ line-height: 1.6;
 }
 
 .research-block a:hover {
-  color: #C1A8FF;
+  color: var(--color-purple);
   opacity: 1;
   text-decoration: none;
 }
@@ -641,15 +663,15 @@ line-height: 1.6;
   width: 100%;
   margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
   overflow: hidden; /* Ensures rounded corners apply to children */
 }
 
 .competitor-analysis h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: white;
   margin-bottom: 2rem;
@@ -660,10 +682,10 @@ line-height: 1.6;
 }
 
 .competitor-block h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
 }
 
 .competitor-columns {
@@ -679,7 +701,7 @@ line-height: 1.6;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
   
   /* Centering */
@@ -698,10 +720,10 @@ line-height: 1.6;
 .competitor-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(168,139,255,0.2);
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   padding: 2rem 1.5rem 1.5rem;
   color: rgba(255, 255, 255, 0.9);
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.7;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -713,14 +735,14 @@ line-height: 1.6;
   padding: 0.35rem 0.85rem;
   border-radius: 8px;
   font-size: 0.85rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-weight: 500;
   color: #0e0e0e;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .card-label.strength {
-  background-color: #c1a8ff;
+  background-color: var(--color-purple);
 }
 
 .card-label.limitation {
@@ -736,7 +758,7 @@ line-height: 1.6;
 }
 
 .feature-table-heading {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.6rem;
   color: white;
   margin-bottom: 1.5rem;
@@ -756,7 +778,7 @@ line-height: 1.6;
   border-radius: 12px;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
-  scrollbar-color: #c1a8ff #23222e;
+  scrollbar-color: var(--color-purple) #23222e;
 }
 
 .feature-table,
@@ -764,7 +786,7 @@ line-height: 1.6;
   min-width: 650px;
   width: 100%;
   border-collapse: collapse;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: white;
   background: rgba(255, 255, 255, 0.06);
@@ -777,7 +799,7 @@ line-height: 1.6;
   background: rgba(255, 255, 255, 0.06);
   border-radius: 12px;
   overflow: hidden;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: white;
 }
@@ -795,7 +817,7 @@ line-height: 1.6;
 
 .feature-table td:first-child {
   font-weight: 600;
-  color: #C1A8FF;
+  color: var(--color-purple);
   width: 230px;
 }
 
@@ -814,7 +836,7 @@ line-height: 1.6;
   background: #23222e;
 }
 .observation-table-wrapper::-webkit-scrollbar-thumb {
-  background: #c1a8ff;
+  background: var(--color-purple);
   border-radius: 7px;
 }
 .observation-table-wrapper::-webkit-scrollbar-track {
@@ -878,31 +900,31 @@ line-height: 1.6;
 .interview-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .interview-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: white;
   margin-bottom: 1.5rem;
 }
 
 .method-justification {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--text-muted);
   margin-bottom: 1.2rem;
 }
 
 .interview-questions h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.3rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -910,7 +932,7 @@ line-height: 1.6;
 .interview-questions ul {
   list-style-type: disc;
   padding-left: 1.2rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.92);
   line-height: 1.7;
   font-size: 1rem;
@@ -929,30 +951,30 @@ line-height: 1.6;
 .survey-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .survey-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: white;
   margin-bottom: 1.5rem;
 }
 
 .survey-section-block h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.4rem;
-  color: #c1a8ff;
+  color: var(--color-purple);
   margin-top: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .survey-question-image h4 {
   font-size: 1.1rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin-bottom: 1rem;
 }
@@ -967,7 +989,7 @@ line-height: 1.6;
 
 .open-ended-response-block h4 {
   font-size: 1.1rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin-bottom: 1rem;
 }
@@ -976,7 +998,7 @@ line-height: 1.6;
   list-style-type: disc;
   padding-left: 1.5rem;
   color: rgba(255, 255, 255, 0.9);
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -1001,7 +1023,7 @@ line-height: 1.6;
 }
 
 .contextual-observation h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: white;
   margin-bottom: 1.5rem;
@@ -1010,7 +1032,7 @@ line-height: 1.6;
 .observation-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: white;
   border-radius: 12px;
@@ -1029,7 +1051,7 @@ line-height: 1.6;
 }
 
 .observation-table td a {
-  color: #c1a8ff;
+  color: var(--color-purple);
   text-decoration: underline;
 }
 
@@ -1056,10 +1078,10 @@ line-height: 1.6;
   width: 100%;
   margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
   overflow: hidden; /* Ensures rounded corners apply to children */
 }
 
@@ -1068,7 +1090,7 @@ line-height: 1.6;
   gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.85);
   flex-wrap: wrap;
@@ -1086,7 +1108,7 @@ line-height: 1.6;
 
 
 .observation-table td a {
-  color: #c1a8ff; /* soft purple that matches your headings */
+  color: var(--color-purple); /* soft purple that matches your headings */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -1101,10 +1123,10 @@ line-height: 1.6;
 .affinity-synthesis .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
   overflow-x: hidden;
 }
 
@@ -1117,9 +1139,9 @@ line-height: 1.6;
 }
 
 .affinity-stack h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.3rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-bottom: 0.8rem;
 }
 
@@ -1129,7 +1151,7 @@ line-height: 1.6;
   min-width: 0;
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.16rem;
   color: #2a164b;
   font-weight: 500;
@@ -1137,7 +1159,7 @@ line-height: 1.6;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-left: 6px solid #C1A8FF;
+  border-left: 6px solid var(--color-purple);
   background: #d5b3ff;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -1174,7 +1196,7 @@ line-height: 1.6;
 
 .affinity-cluster-box {
   background: #d7eaff;
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   box-shadow: 0 4px 14px rgba(34,68,122,0.08);
   padding: 1.5rem 1.2rem;
   min-width: 220px;
@@ -1189,7 +1211,7 @@ line-height: 1.6;
 }
 
 .affinity-cluster-title {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.04rem;
   color: #2075b7;
   background: #e6f2ff;
@@ -1205,7 +1227,7 @@ line-height: 1.6;
   background: #fff6b8;
   color: #473700;
   font-size: 1.02rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   border-radius: 10px;
   box-shadow: 0 3px 9px rgba(180,160,80,0.10);
   margin-bottom: 1.1rem;
@@ -1285,9 +1307,9 @@ line-height: 1.6;
 }
 
 .personas-justification {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.13rem;
-  color: rgba(255,255,255,0.88);
+  color: var(--text-muted);
   margin-bottom: 2.2rem;
   line-height: 1.7;
 }
@@ -1304,7 +1326,7 @@ line-height: 1.6;
 }
 
 .user-personas-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: #fff; /* White heading */
   margin-bottom: 1.2rem;
@@ -1323,11 +1345,11 @@ line-height: 1.6;
   border-radius: 15px;
   box-shadow: 0 7px 28px rgba(160, 130, 250, 0.12);
   padding: 2rem 1.5rem 1.3rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.04rem;
   color: rgba(255,255,255,0.98);
   transition: transform 0.23s, box-shadow 0.22s;
-  border-left: 5px solid #c1a8ff;
+  border-left: 5px solid var(--color-purple);
   border-top: 3px solid #fff4ad;
 }
 
@@ -1337,14 +1359,14 @@ line-height: 1.6;
 }
 
 .parent-card {
-  border-left: 5px solid #ffe16b;
-  border-top: 3px solid #ffe16b;
+  border-left: 5px solid var(--color-yellow);
+  border-top: 3px solid var(--color-yellow);
   background: linear-gradient(115deg, rgba(255,226,107,0.16), rgba(255,255,255,0.03));
 }
 
 .kid-card {
-  border-left: 5px solid #c1a8ff;
-  border-top: 3px solid #c1a8ff;
+  border-left: 5px solid var(--color-purple);
+  border-top: 3px solid var(--color-purple);
   background: linear-gradient(125deg, rgba(193,168,255,0.19), rgba(255,255,255,0.03));
 }
 
@@ -1359,22 +1381,22 @@ line-height: 1.6;
 }
 
 .persona-role {
-  color: #ffe16b;
+  color: var(--color-yellow);
   font-size: 1.07rem;
   letter-spacing: 1.5px;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-weight: 700;
   margin-bottom: 2px;
   text-shadow: 0 1px 8px rgba(0,0,0,0.10);
 }
 
 .kid-card .persona-role {
-  color: #c1a8ff;
+  color: var(--color-purple);
 }
 
 .persona-name {
   font-size: 1.28rem;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   color: #fff;
   margin-top: 1px;
   margin-bottom: 1px;
@@ -1387,7 +1409,7 @@ line-height: 1.6;
 }
 
 .persona-body {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: rgba(255,255,255,0.93);
   line-height: 1.68;
@@ -1428,7 +1450,7 @@ line-height: 1.6;
 }
 
 .user-journey-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: #fff;
   margin-bottom: 1.2rem;
@@ -1437,9 +1459,9 @@ line-height: 1.6;
 }
 
 .journey-justification {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.13rem;
-  color: rgba(255,255,255,0.88);
+  color: var(--text-muted);
   margin-bottom: 2.2rem;
   line-height: 1.7;
 }
@@ -1455,7 +1477,7 @@ line-height: 1.6;
   border-radius: 14px;
   box-shadow: 0 7px 28px rgba(160, 130, 250, 0.10);
   padding: 1.2rem 1rem 1rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: rgba(255,255,255,0.98);
   text-align: center;
   display: flex;
@@ -1472,27 +1494,27 @@ line-height: 1.6;
 }
 
 .journey-map-card h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.11rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-bottom: 1.1rem;
   font-weight: 700;
 }
 
 .journey-map-card.parent {
   background: linear-gradient(120deg, rgba(255, 203, 5, 0.11), rgba(255,255,255,0.06));
-  border-left: 5px solid #ffe16b;
-  border-top: 3px solid #ffe16b;
+  border-left: 5px solid var(--color-yellow);
+  border-top: 3px solid var(--color-yellow);
 }
 
 .journey-map-card.kid {
   background: linear-gradient(120deg, rgba(255, 203, 5, 0.11), rgba(255,255,255,0.06));
-  border-left: 5px solid #c1a8ff;
-  border-top: 3px solid #c1a8ff;
+  border-left: 5px solid var(--color-purple);
+  border-top: 3px solid var(--color-purple);
 }
 
 .journey-map-card.parent h3 {
-  color: #ffe16b;
+  color: var(--color-yellow);
 }
 
 .journey-map-img {
@@ -1542,7 +1564,7 @@ line-height: 1.6;
   border-radius: 18px;
   box-shadow: 0 12px 60px rgba(40,20,70,0.46);
   background: #222;
-  outline: 4px solid #ffe16b;
+  outline: 4px solid var(--color-yellow);
   cursor: default;
 }
 
@@ -1560,7 +1582,7 @@ line-height: 1.6;
 
 
 .storyboards-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: #fff;
   margin-bottom: 1.1rem;
@@ -1568,7 +1590,7 @@ line-height: 1.6;
 }
 
 .storyboard-justification {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.13rem;
   color: rgba(255,255,255,0.89);
   margin-bottom: 2.3rem;
@@ -1581,7 +1603,7 @@ line-height: 1.6;
 
 .persona-label {
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-weight: 700;
   font-size: 1.04rem;
   letter-spacing: 0.3px;
@@ -1593,12 +1615,12 @@ line-height: 1.6;
 
 .parent-label {
   background: rgba(255,225,107,0.14);
-  color: #ffe16b;
+  color: var(--color-yellow);
 }
 
 .kid-label {
   background: rgba(193,168,255,0.13);
-  color: #c1a8ff;
+  color: var(--color-purple);
 }
 
 .storyboard-flex {
@@ -1612,7 +1634,7 @@ line-height: 1.6;
 .storyboard-glass-card {
   background: rgba(255,255,255,0.11);
   backdrop-filter: blur(9px);
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   box-shadow: 0 6px 24px rgba(34, 16, 80, 0.16);
   transition: transform 0.23s, box-shadow 0.22s;
   width: 180px;
@@ -1638,7 +1660,7 @@ line-height: 1.6;
 }
 
 .storyboard-caption {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.98rem;
   color: #fff;
   text-align: center;
@@ -1723,10 +1745,10 @@ line-height: 1.6;
 .brainstorming-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255,255,255,0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 .brainstorm-img-block {
   margin: 2.1rem 0 0.7rem 0;
@@ -1745,12 +1767,12 @@ line-height: 1.6;
   transition: transform 0.23s, box-shadow 0.22s;
 }
 .brainstorm-img:focus-visible {
-  outline: 3px solid #FFCB05;
+  outline: 3px solid var(--color-gold);
   box-shadow: 0 0 0 6px rgba(255,203,5,0.11);
 }
 .brainstorm-img-caption {
-  font-family: 'Rubik', sans-serif;
-  color: #c1a8ff;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   font-size: 1.03rem;
   text-align: center;
   margin-bottom: 0.2rem;
@@ -1777,16 +1799,16 @@ line-height: 1.6;
   display: block;
   max-width: 94vw;
   max-height: 83vh;
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   box-shadow: 0 8px 38px rgba(0,0,0,0.44);
-  outline: 3px solid #c1a8ff;
+  outline: 3px solid var(--color-purple);
   background: #181818;
 }
 
 .brainstorm-numbered {
   margin: 1.2rem 0 0.5rem 1.3rem;
   padding-left: 1.4rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.09rem;
   color: rgba(255,255,255,0.92);
 }
@@ -1824,10 +1846,10 @@ line-height: 1.6;
 .lofi-sketches-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .lofi-sketches-container {
@@ -1839,9 +1861,9 @@ line-height: 1.6;
 
 .lofi-sketch-card {
   background: rgba(193, 168, 255, 0.08);
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   padding: 1.8rem;
-  border-left: 4px solid #C1A8FF;
+  border-left: 4px solid var(--color-purple);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1857,14 +1879,14 @@ line-height: 1.6;
 }
 
 .sketch-title {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.3rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin: 0 0 0.5rem 0;
 }
 
 .sketch-author {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: rgba(255, 203, 5, 0.8);
   font-style: italic;
@@ -1878,7 +1900,7 @@ line-height: 1.6;
 .sketch-features {
   padding-left: 1.2rem;
   margin: 1rem 0 0 0;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
 }
@@ -1920,7 +1942,7 @@ line-height: 1.6;
   max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-  border: 2px solid #C1A8FF;
+  border: 2px solid var(--color-purple);
 }
 
 .sketch-modal-close {
@@ -1935,7 +1957,7 @@ line-height: 1.6;
 
 .sketch-modal-caption {
   margin-top: 1rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.8);
 }
 
@@ -1958,10 +1980,10 @@ line-height: 1.6;
 .solution-journey-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .solution-journey-grid {
@@ -1973,22 +1995,22 @@ line-height: 1.6;
 
 .solution-journey-card {
   background: linear-gradient(120deg, rgba(193,168,255,0.14) 70%, rgba(255,255,255,0.06) 100%);
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   padding: 2rem;
   box-shadow: 0 7px 28px rgba(160, 130, 250, 0.12);
-  border-left: 5px solid #c1a8ff;
+  border-left: 5px solid var(--color-purple);
 }
 
 .solution-journey-card h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.4rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-bottom: 0.5rem;
 }
 
 .solution-meta {
   margin-bottom: 1.5rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -1996,7 +2018,7 @@ line-height: 1.6;
 .solution-author {
   display: block;
   font-weight: 600;
-  color: #FFCB05;
+  color: var(--color-gold);
 }
 
 .solution-concept {
@@ -2023,15 +2045,15 @@ line-height: 1.6;
 }
 
 .solution-key-points h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.1rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-bottom: 0.8rem;
 }
 
 .solution-key-points ul {
   padding-left: 1.2rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
 }
@@ -2056,10 +2078,10 @@ line-height: 1.6;
   max-width: 1000px;
   margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255,255,255,0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
   overflow-x: hidden;
 }
 
@@ -2069,13 +2091,13 @@ line-height: 1.6;
   border-radius: 12px;
   padding: 1.2rem 1rem 1.3rem 1.1rem;
   margin: 1.6rem 0 1.7rem 0;
-  border-left: 4px solid #FFCB05;
+  border-left: 4px solid var(--color-gold);
 }
 
 .matrix-key h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.08rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-bottom: 0.75rem;
 }
 
@@ -2090,7 +2112,7 @@ line-height: 1.6;
   align-items: center;
   font-size: 1rem;
   color: rgba(255,255,255,0.87);
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-weight: 500;
   gap: 0.6em;
 }
@@ -2120,7 +2142,7 @@ line-height: 1.6;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
-  scrollbar-color: #c1a8ff #23222e;
+  scrollbar-color: var(--color-purple) #23222e;
 }
 
 .matrix-scroll-container::-webkit-scrollbar {
@@ -2129,7 +2151,7 @@ line-height: 1.6;
   background: #23222e;
 }
 .matrix-scroll-container::-webkit-scrollbar-thumb {
-  background: #c1a8ff;
+  background: var(--color-purple);
   border-radius: 7px;
 }
 .matrix-scroll-container::-webkit-scrollbar-track {
@@ -2142,7 +2164,7 @@ line-height: 1.6;
   width: 100%;
   min-width: 720px;
   border-collapse: collapse;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.97rem;
   color: white;
   border-radius: 12px;
@@ -2176,7 +2198,7 @@ line-height: 1.6;
 
 .decision-matrix td:nth-child(2) {
   font-weight: 600;
-  color: #ffe16b;
+  color: var(--color-yellow);
 }
 
 /* Cell Color Types */
@@ -2218,19 +2240,19 @@ line-height: 1.6;
   background: rgba(255,255,255,0.12);
 }
 .final-score {
-  color: #C1A8FF;
+  color: var(--color-purple);
 }
 
 .matrix-conclusion {
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(193, 168, 255, 0.3);
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.9);
   line-height: 1.7;
 }
 .matrix-conclusion strong {
-  color: #FFCB05;
+  color: var(--color-gold);
 }
 
 @media (max-width: 768px) {
@@ -2254,24 +2276,24 @@ line-height: 1.6;
 .multimodality-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .multimodality-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: white;
   margin-bottom: 1.5rem;
 }
 
 .multimodality-section p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.1rem;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--text-muted);
   margin-bottom: 1.2rem;
 }
 
@@ -2316,11 +2338,11 @@ line-height: 1.6;
 }
 
 .tv-demo {
-  border-top: 4px solid #FFCB05;
+  border-top: 4px solid var(--color-gold);
 }
 
 .mobile-demo {
-  border-top: 4px solid #C1A8FF;
+  border-top: 4px solid var(--color-purple);
 }
 
 .device-header {
@@ -2331,7 +2353,7 @@ line-height: 1.6;
 }
 
 .device-header h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.3rem;
   color: white;
   margin: 0;
@@ -2344,7 +2366,7 @@ line-height: 1.6;
   background: rgba(255,255,255,0.1);
   padding: 0 0.8rem;              /* horizontal padding only */
   border-radius: 20px;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   color: rgba(255,255,255,0.9);
   height: 32px;                   /* Fixed height ensures vertical center */
@@ -2365,7 +2387,7 @@ line-height: 1.6;
 .sync-line {
   height: 40px;
   width: 2px;
-  background: linear-gradient(to bottom, #C1A8FF, #FFCB05);
+  background: linear-gradient(to bottom, var(--color-purple), var(--color-gold));
 }
 
 .sync-icon {
@@ -2378,7 +2400,7 @@ line-height: 1.6;
   justify-content: center;
   font-size: 1.5rem;
   color: white;
-  border: 2px solid #FFCB05;
+  border: 2px solid var(--color-gold);
 }
 
 /* Quiz Interface */
@@ -2390,7 +2412,7 @@ line-height: 1.6;
 }
 
 .quiz-question {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: white;
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -2406,7 +2428,7 @@ line-height: 1.6;
   background: rgba(255, 203, 5, 0.2);
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: white;
   border: 1px solid rgba(255, 203, 5, 0.5);
@@ -2436,22 +2458,22 @@ line-height: 1.6;
 }
 
 .tv-feature {
-  border-left-color: #FFCB05;
+  border-left-color: var(--color-gold);
 }
 
 .mobile-feature {
-  border-left-color: #C1A8FF;
+  border-left-color: var(--color-purple);
 }
 
 .feature-card h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin-bottom: 0.7rem;
   font-size: 1.1rem;
 }
 
 .feature-card p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.6;
@@ -2461,14 +2483,14 @@ line-height: 1.6;
 /* Synergy Box */
 .synergy-box {
   background: linear-gradient(135deg, rgba(193, 168, 255, 0.1), rgba(255, 203, 5, 0.1));
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   padding: 2rem;
   margin-top: 2rem;
   border: 1px solid rgba(193, 168, 255, 0.3);
 }
 
 .synergy-box h3 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   color: white;
   text-align: center;
   margin-bottom: 1.5rem;
@@ -2493,14 +2515,14 @@ line-height: 1.6;
 }
 
 .synergy-point p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
   margin: 0;
 }
 
 .synergy-point strong {
-  color: #C1A8FF;
+  color: var(--color-purple);
 }
 
 /* Responsive Adjustments */
@@ -2518,7 +2540,7 @@ line-height: 1.6;
   .sync-line {
     width: 40px;
     height: 2px;
-    background: linear-gradient(to right, #C1A8FF, #FFCB05);
+    background: linear-gradient(to right, var(--color-purple), var(--color-gold));
   }
   
   .device-demo {
@@ -2587,10 +2609,10 @@ line-height: 1.6;
   .card-sorting-section .project-text-blur {
     max-width: 1000px;
     padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.07);
-    border-radius: 16px;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+    background: var(--glass-bg);
+    border-radius: var(--radius-card);
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow);
   }
 
   .goals-grid {
@@ -2616,19 +2638,19 @@ line-height: 1.6;
   }
 
   .goal-number {
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: var(--font-heading);
     font-size: 1.8rem;
-    color: #FFCB05;
+    color: var(--color-gold);
     line-height: 1;
     min-width: 40px;
   }
 
   .goal-content {
-    font-family: 'Overpass', sans-serif;
+    font-family: var(--font-body);
   }
 
   .goal-content strong {
-    color: #C1A8FF;
+    color: var(--color-purple);
     font-size: 1.05rem;
     display: block;
     margin-bottom: 0.5rem;
@@ -2658,15 +2680,15 @@ line-height: 1.6;
   }
 
   .participant-card:nth-child(1) {
-    border-left-color: #C1A8FF;
+    border-left-color: var(--color-purple);
   }
 
   .participant-card:nth-child(2) {
-    border-left-color: #FFCB05;
+    border-left-color: var(--color-gold);
   }
 
   .participant-card h4 {
-    font-family: 'Rubik', sans-serif;
+    font-family: var(--font-ui);
     color: white;
     margin-bottom: 1rem;
     font-size: 1.2rem;
@@ -2674,7 +2696,7 @@ line-height: 1.6;
 
   .participant-card ul {
     padding-left: 1.2rem;
-    font-family: 'Overpass', sans-serif;
+    font-family: var(--font-body);
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.7;
     font-size: 0.95rem;
@@ -2696,7 +2718,7 @@ line-height: 1.6;
     border: 1px solid rgba(193, 168, 255, 0.3);
     border-radius: 8px;
     padding: 0.8rem 1rem;
-    font-family: 'Overpass', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
@@ -2716,7 +2738,7 @@ line-height: 1.6;
   }
 
   .sorting-results h5 {
-    font-family: 'Rubik', sans-serif;
+    font-family: var(--font-ui);
     color: white;
     margin-bottom: 1rem;
     font-size: 1rem;
@@ -2727,7 +2749,7 @@ line-height: 1.6;
   }
 
   .group-label {
-    font-family: 'Overpass', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.85rem;
     font-weight: 600;
     color: white;
@@ -2748,7 +2770,7 @@ line-height: 1.6;
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 6px;
     padding: 0.4rem 0.7rem;
-    font-family: 'Overpass', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.8rem;
     color: rgba(255,255,255,0.9);
   }
@@ -2792,10 +2814,10 @@ line-height: 1.6;
 .mid-fidelity-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .mid-fidelity-grid {
@@ -2811,9 +2833,9 @@ line-height: 1.6;
 }
 
 .mid-fidelity-column h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.3rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid rgba(193, 168, 255, 0.3);
@@ -2858,12 +2880,12 @@ line-height: 1.6;
 
 .screen-caption {
   margin-top: 1rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
 }
 
 .screen-caption h4 {
-  font-family: 'Rubik', sans-serif;
-  color: #FFCB05;
+  font-family: var(--font-ui);
+  color: var(--color-gold);
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
 }
@@ -2882,9 +2904,9 @@ line-height: 1.6;
 }
 
 .mid-fidelity-features h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.3rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-bottom: 1.5rem;
 }
 
@@ -2908,14 +2930,14 @@ line-height: 1.6;
 }
 
 .mid-fidelity-features .feature-card h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin-bottom: 0.7rem;
   font-size: 1.1rem;
 }
 
 .mid-fidelity-features .feature-card p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.6;
@@ -2939,15 +2961,15 @@ line-height: 1.6;
   max-width: 1000px;
   margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--glass-bg);
   border-radius: 20px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
   overflow: hidden;
 }
 
 .think-aloud-section-1 h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: #fff;
   margin-bottom: 1.4rem;
@@ -2956,7 +2978,7 @@ line-height: 1.6;
 }
 
 .method-justification {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.12rem;
   color: rgba(255,255,255,0.90);
   margin-bottom: 2.2rem;
@@ -2971,11 +2993,11 @@ line-height: 1.6;
 }
 .goal-card {
   background: rgba(193,168,255,0.11);
-  border-left: 4px solid #C1A8FF;
+  border-left: 4px solid var(--color-purple);
   border-radius: 14px;
   box-shadow: 0 7px 28px rgba(160, 130, 250, 0.10);
   padding: 1.2rem 1rem 1rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: rgba(255,255,255,0.98);
   min-width: 185px;
   flex: 1 1 180px;
@@ -2990,10 +3012,10 @@ line-height: 1.6;
 }
 .goal-number {
   font-size: 2rem;
-  color: #c1a8ff;
+  color: var(--color-purple);
   font-weight: 800;
   margin-right: 0.8rem;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   margin-top: -0.25rem;
   line-height: 1;
 }
@@ -3001,14 +3023,14 @@ line-height: 1.6;
   flex: 1;
 }
 .goal-content strong {
-  color: #c1a8ff;
+  color: var(--color-purple);
   font-size: 1.07rem;
   display: block;
   margin-bottom: 0.15rem;
 }
 .highlight-goal {
   background: rgba(255,203,5,0.15) !important;
-  border-left: 4px solid #FFCB05 !important;
+  border-left: 4px solid var(--color-gold) !important;
 }
 
 .feature-test-details-row {
@@ -3025,7 +3047,7 @@ line-height: 1.6;
   border-radius: 12px;
   padding: 1.25rem 1.1rem 1.1rem 1.1rem;
   box-shadow: 0 2px 12px rgba(193,168,255,0.10);
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.97);
   min-width: 240px;
   flex: 1 1 0px;
@@ -3035,8 +3057,8 @@ line-height: 1.6;
 }
 
 .detail-card h4 {
-  font-family: 'Rubik', sans-serif;
-  color: #c1a8ff;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   font-size: 1.09rem;
   margin-bottom: 0.38rem;
   margin-top: 0; /* Good */
@@ -3075,11 +3097,11 @@ line-height: 1.6;
   min-width: 0;
   max-width: 100%;
   background: rgba(193,168,255,0.11);
-  border-left: 4px solid #C1A8FF;
+  border-left: 4px solid var(--color-purple);
   border-radius: 14px;
   padding: 1.5rem 1.1rem;
   margin-bottom: 0.7rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.98);
   box-shadow: 0 5px 18px rgba(128,80,240,0.07);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -3087,11 +3109,11 @@ line-height: 1.6;
 }
 .participant-card.parent {
   background: rgba(255,203,5,0.10);
-  border-left: 4px solid #FFCB05;
+  border-left: 4px solid var(--color-gold);
 }
 .participant-card h4 {
   color: #fff;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.07rem;
   margin-bottom: 1rem;
 }
@@ -3103,7 +3125,7 @@ line-height: 1.6;
   padding-left: 1.2rem;
 }
 .participant-card li strong {
-  color: #c1a8ff;
+  color: var(--color-purple);
 }
 
 @media (max-width: 900px) {
@@ -3146,8 +3168,8 @@ line-height: 1.6;
   width: 100%;
   min-width: 0;
   border-radius: 18px;
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
-  font-family: 'Rubik', sans-serif;
+  box-shadow: var(--glass-shadow);
+  font-family: var(--font-ui);
   font-size: 1.18rem;
   font-weight: 500;
   padding: 1.05rem 1.4rem;
@@ -3178,7 +3200,7 @@ line-height: 1.6;
 
 /* Feedback Cluster Cards */
 .affinity-cluster-box {
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   padding: 1.3rem 1.2rem 1.2rem 1.2rem;
   min-width: 220px;
   max-width: 430px;
@@ -3209,7 +3231,7 @@ line-height: 1.6;
 
 /* Cluster Titles */
 .affinity-cluster-title {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.06rem;
   font-weight: 700;
   border-radius: 8px;
@@ -3236,7 +3258,7 @@ line-height: 1.6;
   border-radius: 9px;
   padding: 1rem;
   font-size: 1.03rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
@@ -3284,15 +3306,15 @@ line-height: 1.6;
   max-width: 1000px;
   margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--glass-bg);
   border-radius: 20px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
   overflow: hidden;
 }
 
 .iteration-1-to-2-section .project-text-blur h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   margin-bottom: 1.4rem;
   text-align: left;
@@ -3300,7 +3322,7 @@ line-height: 1.6;
 }
 
 .iteration-1-to-2-section .project-text-blur h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   margin-top: 2.2rem;
   margin-bottom: 1.2rem;
   font-weight: 700;
@@ -3332,8 +3354,8 @@ line-height: 1.6;
 }
 
 .iteration-column h4 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 0.8rem;
   font-size: 1.13rem;
   font-weight: 600;
@@ -3362,7 +3384,7 @@ line-height: 1.6;
   padding: 1rem 1.1rem;
   border-radius: 11px;
   margin-top: 0.8rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.01rem;
   line-height: 1.65;
 }
@@ -3425,14 +3447,14 @@ line-height: 1.6;
   max-width: 1000px;
   margin: 2rem auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--glass-bg);
   border-radius: 20px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .ab-testing-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: #FFFFFF;
@@ -3457,7 +3479,7 @@ line-height: 1.6;
 }
 
 .version-column h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #FFFFFF;
@@ -3479,7 +3501,7 @@ line-height: 1.6;
   display: inline-block;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -3504,7 +3526,7 @@ line-height: 1.6;
 .feedback-note {
   padding: 1.2rem;
   border-radius: 10px;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
 }
 
@@ -3529,12 +3551,12 @@ line-height: 1.6;
   padding: 1.5rem;
   border-radius: 12px;
   margin-top: 2rem;
-  border-left: 4px solid #C1A8FF;
+  border-left: 4px solid var(--color-purple);
 }
 
 .testing-conclusion h4 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
 }
@@ -3547,7 +3569,7 @@ line-height: 1.6;
 
 .testing-conclusion li {
   margin-bottom: 0.5rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
 }
 
 /* Responsive */
@@ -3574,22 +3596,22 @@ line-height: 1.6;
   max-width: 1000px;
   margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--glass-bg);
   border-radius: 20px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
   overflow: hidden;
 }
 
 .heuristic-evaluation-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   margin-bottom: 1.8rem;
   color: #FFFFFF;
 }
 
 .heuristic-evaluation-section p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2rem;
@@ -3601,18 +3623,18 @@ line-height: 1.6;
   padding: 1.8rem;
   background: rgba(193, 168, 255, 0.08);
   border-radius: 14px;
-  border-left: 4px solid #C1A8FF;
+  border-left: 4px solid var(--color-purple);
 }
 
 .expert-feedback-case h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.4rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-bottom: 1.5rem;
 }
 
 .expert-feedback-case h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
   color: rgba(255, 255, 255, 0.9);
@@ -3644,7 +3666,7 @@ line-height: 1.6;
 
 .severity-meter {
   margin-top: 1rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
 }
 
 .severity-meter span {
@@ -3685,7 +3707,7 @@ line-height: 1.6;
   margin-bottom: 0.8rem;
   padding-left: 2rem;
   list-style: none;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
 }
 
@@ -3718,8 +3740,8 @@ line-height: 1.6;
 }
 
 .iteration-column h4 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
 }
@@ -3742,7 +3764,7 @@ line-height: 1.6;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
-  scrollbar-color: #c1a8ff #23222e;
+  scrollbar-color: var(--color-purple) #23222e;
 }
 .heuristic-table-container::-webkit-scrollbar {
   height: 8px;
@@ -3750,7 +3772,7 @@ line-height: 1.6;
   background: #23222e;
 }
 .heuristic-table-container::-webkit-scrollbar-thumb {
-  background: #c1a8ff;
+  background: var(--color-purple);
   border-radius: 7px;
 }
 .heuristic-table-container::-webkit-scrollbar-track {
@@ -3761,7 +3783,7 @@ line-height: 1.6;
 .heuristic-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   overflow: hidden;
@@ -3821,14 +3843,14 @@ line-height: 1.6;
   max-width: 1000px;
   margin: 2rem auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--glass-bg);
   border-radius: 20px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .thinkaloud-section-2 h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   margin-bottom: 1.8rem;
   color: #FFFFFF;
@@ -3842,9 +3864,9 @@ line-height: 1.6;
 }
 
 .feedback-case h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.4rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-bottom: 1.5rem;
 }
 
@@ -3855,11 +3877,11 @@ line-height: 1.6;
   padding: 1.5rem;
   background: rgba(193, 168, 255, 0.1);
   border-radius: 12px;
-  border-left: 4px solid #C1A8FF;
+  border-left: 4px solid var(--color-purple);
 }
 
 .solution-container h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -3874,7 +3896,7 @@ line-height: 1.6;
   margin-bottom: 0.8rem;
   padding-left: 2rem;
   list-style: none;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
 }
 
@@ -3906,17 +3928,17 @@ line-height: 1.6;
 .sus-survey-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .sus-methodology h3,
 .sus-results h3,
 .sus-questions h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin: 2rem 0 1.5rem;
 }
 
@@ -3931,7 +3953,7 @@ line-height: 1.6;
   background: rgba(193, 168, 255, 0.08);
   border-radius: 12px;
   padding: 1.5rem;
-  border-left: 4px solid #C1A8FF;
+  border-left: 4px solid var(--color-purple);
 }
 
 .sus-card-icon {
@@ -3940,14 +3962,14 @@ line-height: 1.6;
 }
 
 .sus-card h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0 0 0.8rem 0;
   font-size: 1.1rem;
 }
 
 .sus-card p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
   margin: 0;
@@ -3960,11 +3982,11 @@ line-height: 1.6;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  border-top: 4px solid #FFCB05;
+  border-top: 4px solid var(--color-gold);
 }
 
 .sus-score-value {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 3.5rem;
   color: white;
   line-height: 1;
@@ -3972,7 +3994,7 @@ line-height: 1.6;
 }
 
 .sus-score-label {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 0.5rem;
 }
@@ -3981,7 +4003,7 @@ line-height: 1.6;
   display: inline-block;
   padding: 0.4rem 1.2rem;
   border-radius: 20px;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-weight: 600;
   margin: 0.5rem 0;
 }
@@ -3992,7 +4014,7 @@ line-height: 1.6;
 }
 
 .sus-score-comparison {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.7);
   font-style: italic;
@@ -4029,14 +4051,14 @@ line-height: 1.6;
   background: #FF8A80;
 }
 .range-bar.good {
-  background: #FFCB05;
+  background: var(--color-gold);
 }
 .range-bar.excellent {
   background: #4CAF50;
 }
 
 .range-description {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
 }
@@ -4059,11 +4081,11 @@ line-height: 1.6;
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: #C1A8FF;
+  background: var(--color-purple);
   color: #0e0e0e;
   border-radius: 50%;
   text-align: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-weight: 600;
   margin-right: 0.8rem;
   line-height: 24px;
@@ -4072,7 +4094,7 @@ line-height: 1.6;
 
 .question-card p {
   display: inline;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
   margin: 0;
@@ -4105,10 +4127,10 @@ line-height: 1.6;
   max-width: 1000px;
   margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .data-origin-header {
@@ -4131,21 +4153,21 @@ line-height: 1.6;
 }
 
 .badge-text {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.9rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   font-weight: 500;
 }
 
 .data-origin-header h3 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.8rem;
   color: white;
   margin: 0.5rem 0 1rem;
 }
 
 .data-context {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.8);
   font-size: 1.1rem;
   margin: 0;
@@ -4164,7 +4186,7 @@ line-height: 1.6;
   background: rgba(193, 168, 255, 0.08);
   border-radius: 12px;
   padding: 1.8rem;
-  border-top: 3px solid #C1A8FF;
+  border-top: 3px solid var(--color-purple);
 }
 
 .overview-header {
@@ -4180,14 +4202,14 @@ line-height: 1.6;
 }
 
 .overview-header h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0;
   font-size: 1.2rem;
 }
 
 .data-overview-card p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
   margin: 0;
@@ -4200,8 +4222,8 @@ line-height: 1.6;
 }
 
 .sensor-section h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 1.5rem;
   font-size: 1.3rem;
   text-align: center;
@@ -4220,8 +4242,8 @@ line-height: 1.6;
 }
 
 .sensor-category h4 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin: 0 0 1rem 0;
   font-size: 1.1rem;
   text-align: center;
@@ -4251,7 +4273,7 @@ line-height: 1.6;
 
 .sensor-list li::before {
   content: "•";
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-right: 0.8rem;
   font-size: 1.2rem;
 }
@@ -4264,14 +4286,14 @@ line-height: 1.6;
 }
 
 .data-purpose h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
 
 .purpose-statement {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.9);
   margin: 0 0 1.5rem 0;
@@ -4293,7 +4315,7 @@ line-height: 1.6;
 }
 
 .highlight-text {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: rgba(255, 255, 255, 0.95);
   font-weight: 500;
   font-size: 0.95rem;
@@ -4318,9 +4340,9 @@ line-height: 1.6;
   max-width: 1000px;
   margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255,255,255,0.07);
+  background: var(--glass-bg);
   border-radius: 18px;
-  backdrop-filter: blur(15px);
+  backdrop-filter: var(--glass-blur);
   box-shadow: 0 12px 40px rgba(100,70,190,0.14);
 }
 
@@ -4329,7 +4351,7 @@ line-height: 1.6;
   padding: 1.5rem;
   background: rgba(193, 168, 255, 0.1);
   border-radius: 12px;
-  border-left: 4px solid #C1A8FF;
+  border-left: 4px solid var(--color-purple);
 }
 
 .vital-sign {
@@ -4339,8 +4361,8 @@ line-height: 1.6;
 }
 
 .sign-label {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   font-size: 1.1rem;
   word-break: break-word;
 }
@@ -4381,11 +4403,11 @@ line-height: 1.6;
 }
 
 .state-illustration.active .dot {
-  background: #C1A8FF;
+  background: var(--color-purple);
 }
 
 .co2-value {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.8rem;
   color: #fff;
   font-weight: 700;
@@ -4395,7 +4417,7 @@ line-height: 1.6;
 
 .state-label {
   display: inline-block;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.95rem;
   font-weight: 500;
   padding: 0.3em 1em;
@@ -4405,9 +4427,9 @@ line-height: 1.6;
   white-space: nowrap;
 }
 
-.state-label.off-hours { background: #C1A8FF
+.state-label.off-hours { background: var(--color-purple)
 ; }
-.state-label.peak-hours { background: #C1A8FF
+.state-label.peak-hours { background: var(--color-purple)
 ; }
 
 .co2-transition {
@@ -4434,15 +4456,15 @@ line-height: 1.6;
   top: 50%;
   width: 10px;
   height: 10px;
-  border-right: 2px solid #C1A8FF;
-  border-top: 2px solid #C1A8FF;
+  border-right: 2px solid var(--color-purple);
+  border-top: 2px solid var(--color-purple);
   transform: translateY(-50%) rotate(45deg);
 }
 
 .transition-label {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
-  color: #FFCB05;
+  color: var(--color-gold);
   text-align: center;
   line-height: 1.4;
   word-break: break-word;
@@ -4457,7 +4479,7 @@ line-height: 1.6;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  border-left: 4px solid #C1A8FF;
+  border-left: 4px solid var(--color-purple);
   overflow: hidden; /* Prevent content overflow */
 }
 
@@ -4467,7 +4489,7 @@ line-height: 1.6;
 }
 
 .diagnosis-card h3 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   color: #fff;
   font-size: 1.5rem;
   margin: 0.5rem 0 1rem;
@@ -4475,7 +4497,7 @@ line-height: 1.6;
 }
 
 .diagnosis-card p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.93);
   line-height: 1.6;
   margin: 0;
@@ -4497,15 +4519,15 @@ line-height: 1.6;
 }
 
 .impact-value {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.8rem;
   font-weight: 600;
-  color: #C1A8FF;
+  color: var(--color-purple);
   word-break: break-word;
 }
 
 .impact-desc {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: rgba(255,255,255,0.86);
   margin-top: 0.3rem;
@@ -4518,16 +4540,16 @@ line-height: 1.6;
 
 .co2-key-findings h3 {
   font-size: 1.25rem;
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 0.5rem;
   word-break: break-word;
 }
 
 .co2-trend-visual h3 {
   font-size: 1.25rem;
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 0.5rem;
   word-break: break-word;
 }
@@ -4536,7 +4558,7 @@ line-height: 1.6;
   list-style-type: disc;
   padding-left: 1.5rem;
   color: rgba(255, 255, 255, 0.9);
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
 }
 
@@ -4661,10 +4683,10 @@ line-height: 1.6;
 .fm-care-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .fm-impact-grid {
@@ -4678,7 +4700,7 @@ line-height: 1.6;
   background: rgba(193, 168, 255, 0.08);
   border-radius: 12px;
   padding: 1.5rem;
-  border-top: 3px solid #C1A8FF;
+  border-top: 3px solid var(--color-purple);
 }
 
 .impact-card-header {
@@ -4693,14 +4715,14 @@ line-height: 1.6;
 }
 
 .impact-card h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0;
   font-size: 1.2rem;
 }
 
 .impact-card p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
   margin: 0 0 1rem 0;
@@ -4716,7 +4738,7 @@ line-height: 1.6;
 .source-badge {
   display: inline-block;
   background: rgba(193, 168, 255, 0.3);
-  color: #C1A8FF;
+  color: var(--color-purple);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-family: 'Overpass Mono', monospace;
@@ -4735,8 +4757,8 @@ line-height: 1.6;
 }
 
 .fm-key-statistics h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -4748,15 +4770,15 @@ line-height: 1.6;
 }
 
 .stat-value {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.8rem;
   font-weight: 600;
-  color: #C1A8FF;
+  color: var(--color-purple);
   margin-bottom: 0.3rem;
 }
 
 .stat-label {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: rgba(255,255,255,0.8);
 }
@@ -4777,7 +4799,7 @@ line-height: 1.6;
 }
 
 .callout-text {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.95);
   line-height: 1.6;
 }
@@ -4816,10 +4838,10 @@ line-height: 1.6;
 .noise-insight-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .noise-comparison {
@@ -4836,7 +4858,7 @@ line-height: 1.6;
   background: rgba(193, 168, 255, 0.08);
   border-radius: 12px;
   padding: 1.5rem;
-  border-top: 3px solid #C1A8FF;
+  border-top: 3px solid var(--color-purple);
 }
 
 .noise-zone.problematic {
@@ -4844,7 +4866,7 @@ line-height: 1.6;
 }
 
 .zone-label {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0 0 1rem 0;
   font-size: 1.2rem;
@@ -4892,20 +4914,20 @@ line-height: 1.6;
 }
 
 .level-value {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
 }
 
 .level-label {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.8rem;
   color: rgba(255,255,255,0.9);
 }
 
 .zone-description p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.85);
   line-height: 1.6;
   margin: 0;
@@ -4929,8 +4951,8 @@ line-height: 1.6;
 }
 
 .divider-text {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   font-weight: bold;
 }
 
@@ -4950,7 +4972,7 @@ line-height: 1.6;
 }
 
 .impact-header h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0;
   font-size: 1.3rem;
@@ -4971,14 +4993,14 @@ line-height: 1.6;
 }
 
 .stat-value {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.8rem;
   font-weight: 600;
   color: #FF6B6B;
 }
 
 .stat-label {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: rgba(255,255,255,0.8);
 }
@@ -4988,11 +5010,11 @@ line-height: 1.6;
   border-radius: 12px;
   padding: 1.5rem;
   margin-top: 1.5rem;
-  border-left: 3px solid #C1A8FF;
+  border-left: 3px solid var(--color-purple);
 }
 
 .impact-quote blockquote {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-style: italic;
   color: rgba(255,255,255,0.9);
   margin: 0;
@@ -5011,8 +5033,8 @@ line-height: 1.6;
 }
 
 .noise-recommendations h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 1rem;
 }
 
@@ -5038,7 +5060,7 @@ line-height: 1.6;
 }
 
 .recommendation-list li span {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.9);
   line-height: 1.6;
 }
@@ -5074,10 +5096,10 @@ line-height: 1.6;
 .data-cleaning-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .cleaning-process {
@@ -5100,17 +5122,17 @@ line-height: 1.6;
   justify-content: center;
   width: 32px;
   height: 32px;
-  background: #C1A8FF;
+  background: var(--color-purple);
   color: #181a21;
   border-radius: 50%;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-weight: bold;
   margin-right: 1rem;
   flex-shrink: 0;
 }
 
 .step-header h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0;
   font-size: 1.3rem;
@@ -5162,7 +5184,7 @@ line-height: 1.6;
 
 .sheet-name {
   font-family: 'Overpass Mono', monospace;
-  color: #C1A8FF;
+  color: var(--color-purple);
   background: rgba(193, 168, 255, 0.1);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
@@ -5185,14 +5207,14 @@ line-height: 1.6;
 }
 
 .settings-list li {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   padding: 0.5rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .setting-name {
   font-family: 'Overpass Mono', monospace;
-  color: #C1A8FF;
+  color: var(--color-purple);
 }
 
 .result-description {
@@ -5202,7 +5224,7 @@ line-height: 1.6;
 .data-insights {
   list-style-type: disc;
   padding-left: 1.5rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
 }
 
 .data-insights li {
@@ -5215,13 +5237,13 @@ line-height: 1.6;
 }
 
 .data-purpose h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 1rem;
 }
 
 .purpose-statement {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.7;
   color: rgba(255,255,255,0.9);
   margin: 0;
@@ -5256,10 +5278,10 @@ line-height: 1.6;
 .usability-section .project-text-blur {
   max-width: 100%;
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
   overflow: hidden;
   margin: 0 auto;
 }
@@ -5272,8 +5294,8 @@ line-height: 1.6;
 .design-evolution h3,
 .testing-conclusion h3,
 .ieq-heuristic-heading-table {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin: 1.5rem 0 1rem;
   font-size: 1.3rem;
   line-height: 1.3;
@@ -5283,7 +5305,7 @@ line-height: 1.6;
 .conclusion-list {
   list-style-type: disc;
   padding-left: 1.5rem;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.9);
   line-height: 1.5;
 }
@@ -5315,14 +5337,14 @@ line-height: 1.6;
 }
 
 .method-card h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0.5rem 0;
   font-size: 1.1rem;
 }
 
 .method-card p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.85);
   margin: 0;
   font-size: 0.95rem;
@@ -5348,7 +5370,7 @@ line-height: 1.6;
   position: absolute;
   top: -12px;
   left: 15px;
-  background: #C1A8FF;
+  background: var(--color-purple);
   color: #181a21;
   width: 28px;
   height: 28px;
@@ -5356,13 +5378,13 @@ line-height: 1.6;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-weight: bold;
   font-size: 0.9rem;
 }
 
 .task-card p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.9);
   margin: 0;
   line-height: 1.5;
@@ -5386,16 +5408,16 @@ line-height: 1.6;
 }
 
 .response-task h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
 }
 
 blockquote {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.9);
-  border-left: 3px solid #C1A8FF;
+  border-left: 3px solid var(--color-purple);
   padding-left: 1rem;
   margin: 0;
   font-style: italic;
@@ -5414,7 +5436,7 @@ blockquote {
   margin: 1.5rem 0;
   box-shadow: 0 4px 16px rgba(100,70,190,0.09);
   scrollbar-width: thin;
-  scrollbar-color: #c1a8ff #1a1a28;
+  scrollbar-color: var(--color-purple) #1a1a28;
 }
 
 .heuristic-usability-table-container::-webkit-scrollbar {
@@ -5424,7 +5446,7 @@ blockquote {
 }
 
 .heuristic-usability-table-container::-webkit-scrollbar-thumb {
-  background: #c1a8ff;
+  background: var(--color-purple);
   border-radius: 7px;
 }
 
@@ -5432,7 +5454,7 @@ blockquote {
   width: 100%;
   min-width: 600px;
   border-collapse: collapse;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   background: rgba(255,255,255,0.06);
 }
 
@@ -5488,7 +5510,7 @@ blockquote {
 }
 
 .improvement-card h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0 0 1rem 0;
   text-align: center;
@@ -5506,7 +5528,7 @@ blockquote {
 .after-list li {
   padding: 0.6rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -5612,20 +5634,20 @@ blockquote {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .visualizations-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
 .visualization-intro p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   line-height: 1.6;
   margin-bottom: 2rem;
 }
@@ -5638,8 +5660,8 @@ blockquote {
 }
 
 .viz-header h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin: 0 0 1rem 0;
   font-size: 1.45rem;
   font-weight: 700;
@@ -5667,8 +5689,8 @@ blockquote {
 }
 
 .chart-features h4 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 1rem;
   font-size: 1.07rem;
   font-weight: 600;
@@ -5683,7 +5705,7 @@ blockquote {
 .feature-list li {
   padding: 0.7rem 0;
   border-bottom: 1px solid rgba(193, 168, 255, 0.15);
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
 }
 
@@ -5696,8 +5718,8 @@ blockquote {
 }
 
 .actionable-insights h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 1.5rem;
   font-size: 1.19rem;
 }
@@ -5721,14 +5743,14 @@ blockquote {
 }
 
 .insight-card h4 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
 }
 
 .insight-card p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   margin: 0;
   font-size: 0.98rem;
 }
@@ -5738,8 +5760,8 @@ blockquote {
 }
 
 .technical-notes h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 1.5rem;
   font-size: 1.19rem;
 }
@@ -5757,29 +5779,29 @@ blockquote {
 }
 
 .tech-card h4 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
 }
 
 .tech-card p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   margin: 0;
   font-size: 0.98rem;
 }
 
 .js-snippet-simple {
   background: rgba(193, 168, 255, 0.10);
-  border-left: 4px solid #C1A8FF;
+  border-left: 4px solid var(--color-purple);
   border-radius: 10px;
   margin: 2rem 0 2.5rem;
   padding: 1rem 1.2rem 1.2rem 1.2rem;
 }
 
 .js-snippet-label {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 1rem;
   font-size: 1.07rem;
   font-weight: 600;
@@ -5788,7 +5810,7 @@ blockquote {
 .js-code-inline {
   font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
   font-size: 0.72rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   background: rgba(0,0,0,0.3);
   border-radius: 6px;
   padding: 0.7em 1em;
@@ -5819,14 +5841,14 @@ blockquote {
 .ai-section .project-text-blur {
   max-width: 1000px;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .ai-intro p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.9);
   margin-bottom: 1rem;
 }
@@ -5844,7 +5866,7 @@ blockquote {
   background: rgba(193, 168, 255, 0.1);
   padding: 0.8rem 1rem;
   border-radius: 8px;
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
 }
 
 .ai-examples {
@@ -5857,7 +5879,7 @@ blockquote {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   position: relative;
-  border-left: 3px solid #C1A8FF;
+  border-left: 3px solid var(--color-purple);
 }
 
 .ai-icon {
@@ -5872,11 +5894,11 @@ blockquote {
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  border: 2px solid #C1A8FF;
+  border: 2px solid var(--color-purple);
 }
 
 .ai-card h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.1rem;
   color: white;
   margin: 0.5rem 0 1rem 2.5rem;
@@ -5885,7 +5907,7 @@ blockquote {
 /* New: Inline code snippet styling for readable, wrapped, indented code */
 .ai-code-inline {
   font-family: 'Overpass Mono', monospace;
-  color: #C1A8FF;
+  color: var(--color-purple);
   font-size: 0.72rem;
   background: rgba(0,0,0,0.22);
   padding: 0.85em 1em;
@@ -5898,7 +5920,7 @@ blockquote {
 }
 
 .ai-note {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.7);
   font-size: 0.9rem;
   margin: 0.8rem 0 0;
@@ -5919,13 +5941,13 @@ blockquote {
 }
 
 .method-card h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0 0 0.5rem 0;
 }
 
 .method-card p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255,255,255,0.85);
   margin: 0;
   font-size: 0.95rem;
@@ -5979,14 +6001,14 @@ blockquote {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .muscle-mission-features h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: white;
   margin-bottom: 0.5rem;
@@ -6004,7 +6026,7 @@ blockquote {
   background: rgba(193, 168, 255, 0.08);
   border-radius: 14px;
   padding: 1.5rem;
-  border-left: 4px solid #C1A8FF;
+  border-left: 4px solid var(--color-purple);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -6027,11 +6049,11 @@ blockquote {
 }
 
 .feature-content {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
 }
 
 .feature-content h3 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 1.2rem;
   color: white;
   margin-bottom: 0.8rem;
@@ -6091,14 +6113,14 @@ blockquote {
   max-width: 1000px;
   margin: 0 auto;
   padding: 3rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 14px 40px rgba(100,70,190,0.11);
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .technical-implementation-section h2 {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: var(--font-heading);
   font-size: 2rem;
   color: white;
   margin-bottom: 1.5rem;
@@ -6110,14 +6132,14 @@ blockquote {
 }
 
 .arch-overview h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
 .arch-description {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.7;
   margin-bottom: 2rem;
@@ -6127,7 +6149,7 @@ blockquote {
 /* Architecture Diagram */
 .arch-diagram {
   background: rgba(193, 168, 255, 0.08);
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   padding: 2.5rem;
   margin-top: 2rem;
 }
@@ -6150,11 +6172,11 @@ blockquote {
 }
 
 .frontend-layer {
-  border-left-color: #FFCB05;
+  border-left-color: var(--color-gold);
 }
 
 .statemanagement-layer {
-  border-left-color: #C1A8FF;
+  border-left-color: var(--color-purple);
 }
 
 .datalayer-layer {
@@ -6173,7 +6195,7 @@ blockquote {
 }
 
 .layer-header h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0;
   font-size: 1.3rem;
@@ -6196,7 +6218,7 @@ blockquote {
 
 .diagram-arrow {
   font-size: 2rem;
-  color: #C1A8FF;
+  color: var(--color-purple);
   font-weight: bold;
   padding: 0.5rem;
 }
@@ -6206,8 +6228,8 @@ blockquote {
 .data-flow-section h3,
 .code-examples-section h3,
 .challenges-section h3 {
-  font-family: 'Rubik', sans-serif;
-  color: #C1A8FF;
+  font-family: var(--font-ui);
+  color: var(--color-purple);
   margin: 3rem 0 2rem 0;
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
@@ -6225,7 +6247,7 @@ blockquote {
   background: rgba(193, 168, 255, 0.08);
   border-radius: 12px;
   padding: 1.8rem;
-  border-top: 3px solid #C1A8FF;
+  border-top: 3px solid var(--color-purple);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   box-sizing: border-box;
@@ -6248,7 +6270,7 @@ blockquote {
 }
 
 .impl-header h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0;
   font-size: 1.2rem;
@@ -6261,7 +6283,7 @@ blockquote {
 }
 
 .impl-content li {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.85);
   padding: 0.6rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -6283,7 +6305,7 @@ blockquote {
 /* Data Flow */
 .flow-diagram {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -6307,12 +6329,12 @@ blockquote {
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background: #FFCB05;
+  background: var(--color-gold);
   color: #181a21;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-weight: bold;
   font-size: 1rem;
   display: flex;
@@ -6321,14 +6343,14 @@ blockquote {
 }
 
 .step-content h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0.8rem 0;
   font-size: 1.1rem;
 }
 
 .step-content p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
   font-size: 1rem;
@@ -6362,7 +6384,7 @@ blockquote {
 }
 
 .code-header h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0;
   font-size: 1.2rem;
@@ -6370,7 +6392,7 @@ blockquote {
 
 .code-language {
   font-family: 'Overpass Mono', monospace;
-  color: #FFCB05;
+  color: var(--color-gold);
   font-size: 0.9rem;
   background: rgba(255, 255, 255, 0.1);
   padding: 0.4rem 1rem;
@@ -6386,7 +6408,7 @@ blockquote {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
-  scrollbar-color: #c1a8ff #23222e;
+  scrollbar-color: var(--color-purple) #23222e;
   border-radius: 8px;
 }
 
@@ -6425,21 +6447,21 @@ blockquote {
   color: #181a21;
   padding: 0.4rem 1rem;
   border-radius: 4px;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.9rem;
   font-weight: bold;
   margin-right: 1rem;
 }
 
 .challenge-header h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   color: white;
   margin: 0;
   font-size: 1.2rem;
 }
 
 .challenge-content p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.85);
   margin: 0 0 1.5rem 0;
   line-height: 1.7;
@@ -6458,14 +6480,14 @@ blockquote {
   color: white;
   padding: 0.4rem 1rem;
   border-radius: 4px;
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.9rem;
   font-weight: bold;
   margin-right: 0.8rem;
 }
 
 .solution p {
-  font-family: 'Overpass', sans-serif;
+  font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.9);
   margin: 1rem 0 0 0;
   line-height: 1.7;
