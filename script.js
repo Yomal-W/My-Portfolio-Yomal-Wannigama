@@ -1,23 +1,57 @@
-// ===== MOBILE NAVIGATION =====
-const burger = document.querySelector('.burger');
-const navLinks = document.querySelector('.nav-links');
-const navLinksItems = document.querySelectorAll('.nav-links a');
+// ===== NAVBAR COMPONENT =====
+// Injects the shared navbar into every page and highlights the active link.
+// script.js is loaded at the bottom of <body>, so document.body is ready.
+(function renderNavbar() {
+  // Derive the current filename from the URL path (works on file:// and http://)
+  const currentPage = window.location.pathname.split('/').pop() || 'home.html';
 
-// Toggle mobile menu
-const toggleMenu = () => {
-  navLinks.classList.toggle('active');
-  burger.classList.toggle('active');
-};
+  const links = [
+    { href: 'home.html',     label: 'Home' },
+    { href: 'projects.html', label: 'Projects' },
+    { href: 'about.html',    label: 'About' },
+  ];
 
-// Close mobile menu when link is clicked
-const closeMenu = () => {
-  navLinks.classList.remove('active');
-  burger.classList.remove('active');
-};
+  // Mark the matching link active.
+  // Individual project pages (project1/2/3.html) count as sub-pages of Projects.
+  function isActive(href) {
+    if (href === currentPage) return true;
+    if (href === 'projects.html' && /^project\d+\.html$/.test(currentPage)) return true;
+    return false;
+  }
 
-// Event listeners
-burger.addEventListener('click', toggleMenu);
-navLinksItems.forEach(item => item.addEventListener('click', closeMenu));
+  const navHTML = `
+  <nav class="navbar">
+    <div class="logo"><a href="home.html">YW</a></div>
+    <ul class="nav-links">
+      ${links.map(({ href, label }) =>
+        `<li><a href="${href}"${isActive(href) ? ' class="active"' : ''}>${label}</a></li>`
+      ).join('\n      ')}
+    </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>`;
+
+  document.body.insertAdjacentHTML('afterbegin', navHTML);
+
+  // Wire up mobile burger menu on the freshly-inserted elements
+  const burger    = document.querySelector('.burger');
+  const navLinksEl = document.querySelector('.nav-links');
+
+  burger.addEventListener('click', () => {
+    navLinksEl.classList.toggle('active');
+    burger.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinksEl.classList.remove('active');
+      burger.classList.remove('active');
+    });
+  });
+})();
 
 // ===== YOUR ORIGINAL p5.js CODE =====
 var points = [];

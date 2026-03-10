@@ -75,6 +75,12 @@ body {
   text-decoration: none;
   font-size: 1rem;
   white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-purple);
 }
 
 .burger {
