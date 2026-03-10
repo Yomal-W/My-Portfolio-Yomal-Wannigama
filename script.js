@@ -19,9 +19,11 @@
     return false;
   }
 
+  const skipHTML = `<a href="#main-content" class="skip-link">Skip to main content</a>`;
+
   const navHTML = `
   <nav class="navbar">
-    <div class="logo"><a href="home.html">YW</a></div>
+    <div class="logo"><a href="home.html" aria-label="Yomal W — Portfolio Home">YW</a></div>
     <ul class="nav-links" id="primary-nav">
       ${links.map(({ href, label }) =>
         `<li><a href="${href}"${isActive(href) ? ' class="active" aria-current="page"' : ''}>${label}</a></li>`
@@ -34,7 +36,7 @@
     </button>
   </nav>`;
 
-  document.body.insertAdjacentHTML('afterbegin', navHTML);
+  document.body.insertAdjacentHTML('afterbegin', skipHTML + navHTML);
 
   // Wire up mobile burger menu on the freshly-inserted elements
   const burger    = document.querySelector('.burger');
