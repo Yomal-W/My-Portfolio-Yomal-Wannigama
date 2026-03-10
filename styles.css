@@ -18,6 +18,14 @@
 
   /* Text */
   --text-muted:   rgba(255, 255, 255, 0.88);
+
+  /*
+   * Standard breakpoint scale — use these when adding new media queries:
+   *   480px  — small mobile (landscape phones)
+   *   768px  — tablet / large mobile
+   *   1024px — small desktop / large tablet
+   *   1280px — large desktop
+   */
 }
 
 /* ===== BASE STYLES ===== */
@@ -114,10 +122,10 @@ body {
 
 .subtitle {
   font-family: var(--font-ui);
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   margin: 0; /* Removed all margins */
   line-height: 1.6;
-  padding-left: 0; 
+  padding-left: 0;
 }
 
 /* ===== MOBILE STYLES ===== */
@@ -156,6 +164,26 @@ body {
   .burger.active .line:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
   }
+
+  /* Hero: switch from viewport-absolute to document-flow flex centering on mobile.
+     Keeps the text visually centred in the viewport but puts it in the document
+     flow so the navbar never overlaps it on short/landscape screens. */
+  .hero-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;  /* clear fixed navbar */
+    padding-bottom: 40px;
+    box-sizing: border-box;
+  }
 }
 
 /* ===== PROJECTS PAGE ===== */
@@ -176,7 +204,7 @@ color: white;
 
 .projects-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 gap: 2rem;
 }
 
@@ -847,30 +875,21 @@ line-height: 1.6;
 @media (max-width: 768px) {
   .competitor-columns {
     flex-direction: column;
-    gap: 1.5rem; /* Space between image & text cards */
+    gap: 1.5rem;
   }
 
-  /* 2. Make text cards full width */
   .text-cards {
     width: 100%;
   }
 
-  /* 3. Adjust card styling */
   .competitor-card {
     padding: 1.2rem;
     margin-bottom: 1rem;
   }
 
-  /* 4. Ensure image fits & centers */
   .competitor-img.side {
     max-width: 100%;
     margin: 0 auto;
-  }
-
-  .observation-table th,
-  .observation-table td {
-    font-size: 0.85rem;
-    padding: 0.6rem;
   }
 
   .observation-key {
@@ -879,17 +898,22 @@ line-height: 1.6;
     flex-direction: column;
     align-items: flex-start;
   }
-}
 
-@media (max-width: 768px) {
+  /* Table font and padding — order matters: 0.8rem overrides the 0.6rem above */
   .feature-table,
   .observation-table {
     font-size: 0.85rem;
   }
-  
-  .feature-table th, 
+
+  .observation-table th,
+  .observation-table td {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .feature-table th,
   .feature-table td,
-  .observation-table th, 
+  .observation-table th,
   .observation-table td {
     padding: 0.8rem;
   }
@@ -1018,7 +1042,6 @@ line-height: 1.6;
 .observation-table-wrapper {
   overflow-x: auto;
   margin-top: 2rem;
-  overflow-x: auto;
   width: 100%;
 }
 
