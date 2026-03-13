@@ -5195,21 +5195,6 @@ line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-.step-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background: var(--color-purple);
-  color: #181a21;
-  border-radius: 50%;
-  font-family: var(--font-ui);
-  font-weight: bold;
-  margin-right: 1rem;
-  flex-shrink: 0;
-}
-
 .step-header h3 {
   font-family: var(--font-ui);
   color: white;
