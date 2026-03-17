@@ -7024,6 +7024,8 @@ align-items:center;
 justify-content:center;
 width:42px;
 height:42px;
+flex-shrink:0;
+line-height:1;
 border-radius:50%;
 background:rgba(193,168,255,0.14);
 border:1px solid rgba(193,168,255,0.35);
