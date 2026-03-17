@@ -63,96 +63,96 @@
 })();
 
 // ===== p5.js GENERATIVE BACKGROUND =====
-var points = [];
-var speedMultiplier = 0.005;
-var r1, r2, g1, g2, b1, b2;
-var restartTimer;
+// Uses instance mode + DOMContentLoaded so the sketch starts as soon as the
+// DOM is parsed — not on window.load, which waits for all images/videos first.
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-function setup() {
-  // Skip sketch entirely for users who prefer reduced motion
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    return;
-  }
+  var sketch = function (p) {
+    var points = [];
+    var speedMultiplier = 0.005;
+    var r1, r2, g1, g2, b1, b2;
+    var restartTimer;
 
-  let canvas = createCanvas(windowWidth, windowHeight);
-  canvas.parent('p5-container');
-  angleMode(DEGREES);
-  noiseDetail(1);
-  restartSketch();
-  canvas.mousePressed(changeColors);
-  restartTimer = setInterval(restartSketch, 5000);
+    function restartSketch() {
+      p.background(10);
+      points = [];
+      // Space particles by area so count stays ~800 on any screen size.
+      var space = Math.sqrt((p.width * p.height) / 800);
+      for (var x = 0; x < p.width; x += space) {
+        for (var y = 0; y < p.height; y += space) {
+          var pt = p.createVector(x + p.random(-10, 10), y + p.random(-10, 10));
+          points.push(pt);
+        }
+      }
+      r1 = p.random(255); r2 = p.random(255);
+      g1 = p.random(255); g2 = p.random(255);
+      b1 = p.random(255); b2 = p.random(255);
+      speedMultiplier = p.random(0.002, 0.01);
+    }
 
-  // Pause in background tabs; resume when the tab becomes visible again
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      noLoop();
-      clearInterval(restartTimer);
-    } else {
-      loop();
+    function changeColors() {
+      r1 = p.random(255); r2 = p.random(255);
+      g1 = p.random(255); g2 = p.random(255);
+      b1 = p.random(255); b2 = p.random(255);
+    }
+
+    p.setup = function () {
+      var canvas = p.createCanvas(p.windowWidth, p.windowHeight);
+      canvas.parent('p5-container');
+      p.angleMode(p.DEGREES);
+      p.noiseDetail(1);
+      restartSketch();
+      canvas.mousePressed(changeColors);
       restartTimer = setInterval(restartSketch, 5000);
-    }
-  });
 
-  // Halve frame rate on mobile to reduce CPU load
-  if (window.innerWidth < 768) {
-    frameRate(30);
+      // Pause in background tabs; resume when the tab becomes visible again
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+          p.noLoop();
+          clearInterval(restartTimer);
+        } else {
+          p.loop();
+          restartTimer = setInterval(restartSketch, 5000);
+        }
+      });
+
+      // Halve frame rate on mobile to reduce CPU load
+      if (p.windowWidth < 768) {
+        p.frameRate(30);
+      }
+    };
+
+    p.draw = function () {
+      p.noStroke();
+      for (var i = 0; i < points.length; i++) {
+        var r = p.map(points[i].x, 0, p.width, r1, r2);
+        var g = p.map(points[i].y, 0, p.height, g1, g2);
+        var b = p.map(points[i].x, 0, p.width, b1, b2);
+        var alpha = p.map(p.dist(p.width / 2, p.height / 2, points[i].x, points[i].y), 0, 500, 255, 0);
+        p.fill(r, g, b, alpha);
+        var angle = p.map(p.noise(points[i].x * speedMultiplier, points[i].y * speedMultiplier), 0, 1, 0, 720);
+        // Inline x/y update — avoids allocating a new Vector object every frame
+        points[i].x += p.cos(angle);
+        points[i].y += p.sin(angle);
+        var size = p.map(p.width, 0, 1920, 1, 4);
+        p.ellipse(points[i].x, points[i].y, size);
+      }
+    };
+
+    p.windowResized = function () {
+      p.resizeCanvas(p.windowWidth, p.windowHeight);
+    };
+  };
+
+  // Start on DOMContentLoaded (DOM parsed) rather than window.load (all assets downloaded).
+  // This eliminates the multi-second delay on pages with large images or videos.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { new p5(sketch); });
+  } else {
+    new p5(sketch);
   }
-}
-
-function restartSketch() {
-  background(10);
-  points = [];
-  // Space particles by area so count stays ~800 on any screen size.
-  // The old formula (width / 40) gave ~900 on desktop but ~3,500 on
-  // a portrait phone because height was unconstrained.
-  var space = Math.sqrt((width * height) / 800);
-
-  for (var x = 0; x < width; x += space) {
-    for (var y = 0; y < height; y += space) {
-      var p = createVector(x + random(-10, 10), y + random(-10, 10));
-      points.push(p);
-    }
-  }
-
-  r1 = random(255);
-  r2 = random(255);
-  g1 = random(255);
-  g2 = random(255);
-  b1 = random(255);
-  b2 = random(255);
-  speedMultiplier = random(0.002, 0.01);
-}
-
-function draw() {
-  noStroke();
-  for (var i = 0; i < points.length; i++) {
-    var r = map(points[i].x, 0, width, r1, r2);
-    var g = map(points[i].y, 0, height, g1, g2);
-    var b = map(points[i].x, 0, width, b1, b2);
-    var alpha = map(dist(width/2, height/2, points[i].x, points[i].y), 0, 500, 255, 0);
-
-    fill(r, g, b, alpha);
-    var angle = map(noise(points[i].x * speedMultiplier, points[i].y * speedMultiplier), 0, 1, 0, 720);
-    // Inline x/y update — avoids allocating a new Vector object every frame
-    points[i].x += cos(angle);
-    points[i].y += sin(angle);
-    var size = map(width, 0, 1920, 1, 4);
-    ellipse(points[i].x, points[i].y, size);
-  }
-}
-
-function changeColors() {
-  r1 = random(255);
-  r2 = random(255);
-  g1 = random(255);
-  g2 = random(255);
-  b1 = random(255);
-  b2 = random(255);
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+}());
 
 // ===== JOURNEY MAP MODAL FUNCTIONALITY =====
 
