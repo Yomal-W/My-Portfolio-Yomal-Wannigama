@@ -6410,7 +6410,100 @@ line-height: 1.6;
   line-height: 1.5;
 }
 
+/* === Wireframe Sections Muscle Mission === */
+.wireframe-section {
+  max-width: 1000px;
+  width: 100%;
+  background: var(--glass-bg);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  padding: 2.5rem;
+}
 
+.wireframe-section h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.wireframe-intro {
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.wireframe-callouts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.wireframe-callout {
+  background: rgba(193, 168, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.2rem;
+  border-left: 3px solid var(--color-purple);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wireframe-callout:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(193, 168, 255, 0.15);
+}
+
+.wireframe-callout-label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: var(--color-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.45rem;
+}
+
+.wireframe-callout-text {
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.wireframe-image-frame {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(193, 168, 255, 0.2);
+  margin-top: 2rem;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wireframe-img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.wireframe-img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+  .wireframe-callouts {
+    grid-template-columns: 1fr;
+  }
+
+  .wireframe-section {
+    padding: 1.5rem;
+  }
+}
 
 /* Code Examples */
 .code-grid {
