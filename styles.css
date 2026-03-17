@@ -585,7 +585,9 @@ line-height: 1.6;
     flex-direction:column;
   }
   .contact-btn{
+    display:flex;
     width:100%;
+    box-sizing:border-box;
     justify-content:center;
   }
 }

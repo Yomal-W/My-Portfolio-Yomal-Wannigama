@@ -3,10 +3,10 @@
 // script.js is loaded at the bottom of <body>, so document.body is ready.
 (function renderNavbar() {
   // Derive the current filename from the URL path (works on file:// and http://)
-  const currentPage = window.location.pathname.split('/').pop() || 'home.html';
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
   const links = [
-    { href: 'home.html',     label: 'Home' },
+    { href: 'index.html',     label: 'Home' },
     { href: 'projects.html', label: 'Projects' },
     { href: 'about.html',    label: 'About' },
     { href: 'assets/Yomal-Wannigama-Resume.pdf', label: 'Resume', external: true },
@@ -25,7 +25,7 @@
 
   const navHTML = `
   <nav class="navbar">
-    <div class="logo"><a href="home.html" aria-label="Yomal W — Portfolio Home">YW</a></div>
+    <div class="logo"><a href="index.html" aria-label="Yomal W — Portfolio Home">YW</a></div>
     <ul class="nav-links" id="primary-nav">
       ${links.map(({ href, label, external }) =>
         `<li><a href="${href}"${isActive(href) ? ' class="active" aria-current="page"' : ''}${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${label}</a></li>`
