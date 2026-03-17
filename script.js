@@ -9,6 +9,8 @@
     { href: 'home.html',     label: 'Home' },
     { href: 'projects.html', label: 'Projects' },
     { href: 'about.html',    label: 'About' },
+    { href: 'assets/Yomal-Wannigama-Resume.pdf', label: 'Resume', external: true },
+    { href: 'https://www.linkedin.com/in/yomal-wannigama-0867921b1/', label: 'LinkedIn', external: true },
   ];
 
   // Mark the matching link active.
@@ -25,8 +27,8 @@
   <nav class="navbar">
     <div class="logo"><a href="home.html" aria-label="Yomal W — Portfolio Home">YW</a></div>
     <ul class="nav-links" id="primary-nav">
-      ${links.map(({ href, label }) =>
-        `<li><a href="${href}"${isActive(href) ? ' class="active" aria-current="page"' : ''}>${label}</a></li>`
+      ${links.map(({ href, label, external }) =>
+        `<li><a href="${href}"${isActive(href) ? ' class="active" aria-current="page"' : ''}${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${label}</a></li>`
       ).join('\n      ')}
     </ul>
     <button class="burger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">

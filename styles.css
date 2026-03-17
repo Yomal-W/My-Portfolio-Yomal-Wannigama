@@ -522,6 +522,74 @@ line-height: 1.6;
   text-decoration: underline;
 }
 
+/* Contact section buttons — scoped to the About page Contact card only */
+.contact-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.75rem;
+  margin-top:1.75rem;
+}
+
+.contact-btn{
+  display:inline-flex;
+  align-items:center;
+  font-family:var(--font-ui);
+  font-size:0.9rem;
+  font-weight:500;
+  text-decoration:none;
+  padding:0.6rem 1.4rem;
+  border-radius:8px;
+  transition:background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+  letter-spacing:0.02em;
+  white-space:nowrap;
+}
+
+.contact-btn--primary{
+  background:var(--color-purple);
+  color:#0e1315;
+  border:2px solid var(--color-purple);
+}
+
+.contact-btn--primary:hover{
+  background:#d4bdff;
+  border-color:#d4bdff;
+  box-shadow:0 4px 16px rgba(193,168,255,0.3);
+}
+
+.contact-btn--primary:focus-visible{
+  outline:3px solid #fff;
+  outline-offset:3px;
+  box-shadow:0 0 0 5px rgba(193,168,255,0.4);
+}
+
+.contact-btn--secondary{
+  background:transparent;
+  color:var(--color-purple);
+  border:2px solid rgba(193,168,255,0.45);
+}
+
+.contact-btn--secondary:hover{
+  border-color:var(--color-purple);
+  background:rgba(193,168,255,0.08);
+  box-shadow:0 4px 16px rgba(193,168,255,0.12);
+}
+
+.contact-btn--secondary:focus-visible{
+  outline:3px solid var(--color-purple);
+  outline-offset:3px;
+  box-shadow:0 0 0 5px rgba(193,168,255,0.2);
+}
+
+@media(max-width:480px){
+  .contact-links{
+    flex-direction:column;
+  }
+  .contact-btn{
+    width:100%;
+    justify-content:center;
+  }
+}
+
 /* ===== PROJECT 1 — Olympics Companion App ===== */
 
 /* === Research questions section styling === */
@@ -6912,6 +6980,27 @@ backdrop-filter:var(--glass-blur);
 -webkit-backdrop-filter:var(--glass-blur);
 box-shadow:var(--glass-shadow);
 border:1px solid rgba(255,255,255,0.08);
+transform:translateZ(0);
+overflow:hidden;
+}
+
+/* Contact section: backdrop-filter removed to eliminate compositing seam
+   over the animated p5 canvas. Brighter gradient + multi-edge inset glow
+   simulate the frosted glass look without live blur. */
+.about-section-blur--contact{
+backdrop-filter:none;
+-webkit-backdrop-filter:none;
+background:linear-gradient(
+  145deg,
+  rgba(255,255,255,0.16) 0%,
+  rgba(193,168,255,0.08) 45%,
+  rgba(255,255,255,0.10) 100%
+);
+box-shadow:
+  var(--glass-shadow),
+  inset 0 1px 0 rgba(255,255,255,0.22),
+  inset 0 -1px 0 rgba(255,255,255,0.06),
+  inset 1px 0 0 rgba(255,255,255,0.06);
 }
 
 .about-section-header{
