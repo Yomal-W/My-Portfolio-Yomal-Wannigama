@@ -175,7 +175,7 @@ blockquote {
   max-width: 720px;
   z-index: 10;
   text-align: left;
-  /* Glass panel — uses site-wide design tokens for consistency */
+  /* Glass panel — uses site-wide design tokens */
   padding: 2rem 2.5rem;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
@@ -183,6 +183,57 @@ blockquote {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-card);
   box-shadow: var(--glass-shadow);
+}
+
+.hero-tagline {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.42);
+  font-style: italic;
+  margin-top: 0.65rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* ===== TRON BIKE MICRO-INTERACTION ===== */
+@keyframes tron-ride {
+  0%   { opacity: 0; transform: translateX(0); }
+  15%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; transform: translateX(220px); }
+}
+
+.tron-bike {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 4rem;
+  width: 90px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Glowing trail: extends leftward behind the bike as it rides right */
+.tron-bike::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 2px;
+  background: linear-gradient(to left, rgba(120, 200, 255, 0.5), transparent);
+  border-radius: 1px;
+}
+
+.tron-bike__img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(120, 200, 255, 0.4)) brightness(0.85);
+}
+
+/* Trigger: fade in + ride across on hero card hover */
+.hero-content:hover .tron-bike {
+  animation: tron-ride 1.2s ease-out forwards;
 }
 
 .hero-content h1 {
@@ -283,7 +334,7 @@ blockquote {
 
   /* Hero: switch from viewport-absolute to document-flow on mobile so the
      fixed navbar never overlaps the card. Card sizes to content — no stretch.
-     Body flex handles all centering; no margin-top needed here. */
+     Body flex handles all centering. */
   .hero-content {
     position: relative;
     top: auto;
@@ -294,6 +345,11 @@ blockquote {
     margin: 0;
     padding: 1.75rem 1.5rem;
     box-sizing: border-box;
+  }
+
+  /* Disable bike animation entirely on touch/mobile — no hover on touch devices */
+  .tron-bike {
+    display: none;
   }
 }
 
@@ -321,8 +377,11 @@ gap: 2rem;
 
 .project-card {
 display: block;
-background: rgba(255, 255, 255, 0.1);
-border-radius: 10px;
+background: var(--glass-bg);
+border-radius: var(--radius-card);
+backdrop-filter: var(--glass-blur);
+-webkit-backdrop-filter: var(--glass-blur);
+box-shadow: var(--glass-shadow);
 padding: 1.5rem;
 transition: transform 0.3s ease;
 cursor: pointer;
