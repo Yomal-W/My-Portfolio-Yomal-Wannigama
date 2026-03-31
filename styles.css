@@ -156,6 +156,15 @@ blockquote {
   z-index: -1;
 }
 
+/* ===== HERO OVERLAY ===== */
+.hero-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  pointer-events: none;
+}
+
 /* ===== HERO CONTENT ===== */
 .hero-content {
   position: absolute;
@@ -163,9 +172,17 @@ blockquote {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 800px;
+  max-width: 720px;
   z-index: 10;
   text-align: left;
+  /* Glass panel — uses site-wide design tokens for consistency */
+  padding: 2rem 2.5rem;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-card);
+  box-shadow: var(--glass-shadow);
 }
 
 .hero-content h1 {
@@ -174,14 +191,17 @@ blockquote {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 0.25rem;
   line-height: 1.3;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
 }
 
 .subtitle {
   font-family: var(--font-ui);
   font-size: clamp(1rem, 3vw, 1.2rem);
-  margin: 0; /* Removed all margins */
-  line-height: 1.6;
+  margin: 0;
+  line-height: 1.7;
   padding-left: 0;
+  max-width: 58ch;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .hero-cta {
@@ -249,23 +269,30 @@ blockquote {
     transform: rotate(45deg) translate(-5px, -6px);
   }
 
-  /* Hero: switch from viewport-absolute to document-flow flex centering on mobile.
-     Keeps the text visually centred in the viewport but puts it in the document
-     flow so the navbar never overlaps it on short/landscape screens. */
+  /* Home page only: make body a full-height flex centering container.
+     Scoped via :has(.hero-content) so it never affects other pages. */
+  body:has(.hero-content) {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;   /* shifts the centering area below the fixed navbar */
+    box-sizing: border-box;
+  }
+
+  /* Hero: switch from viewport-absolute to document-flow on mobile so the
+     fixed navbar never overlaps the card. Card sizes to content — no stretch.
+     Body flex handles all centering; no margin-top needed here. */
   .hero-content {
     position: relative;
     top: auto;
     left: auto;
     transform: none;
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 80px;  /* clear fixed navbar */
-    padding-bottom: 40px;
+    width: 88%;
+    max-width: 720px;
+    margin: 0;
+    padding: 1.75rem 1.5rem;
     box-sizing: border-box;
   }
 }
