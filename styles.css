@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===== DESIGN TOKENS ===== */
 :root {
   /* Fonts */
@@ -7033,6 +7037,22 @@ font-family:var(--font-body);
 font-size:1.08rem;
 line-height:1.8;
 color:rgba(255,255,255,0.88);
+}
+
+.scroll-to-contact {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--color-purple);
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.scroll-to-contact:hover {
+  opacity: 1;
+  transform: translateY(2px);
 }
 
 
